@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/adysunventures.com/static/css/main.d45c061d.css",
+    "main.js": "/adysunventures.com/static/js/main.e1fce426.js",
+    "static/js/453.18f143fb.chunk.js": "/adysunventures.com/static/js/453.18f143fb.chunk.js",
+    "static/media/bg12.jpg": "/adysunventures.com/static/media/bg12.924636265364fb3002d4.jpg",
+    "static/media/logo.png": "/adysunventures.com/static/media/logo.dbaa4b73916b9a3893f6.png",
+    "index.html": "/adysunventures.com/index.html",
+    "main.d45c061d.css.map": "/adysunventures.com/static/css/main.d45c061d.css.map",
+    "main.e1fce426.js.map": "/adysunventures.com/static/js/main.e1fce426.js.map",
+    "453.18f143fb.chunk.js.map": "/adysunventures.com/static/js/453.18f143fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d45c061d.css",
+    "static/js/main.e1fce426.js"
+  ]
+}
