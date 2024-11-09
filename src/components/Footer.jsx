@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import bgImage from '../assets/images/bg/bg12.jpg'; // Import the background image
 
 function Footer() {
@@ -112,20 +113,20 @@ function Footer() {
         <div className="container">
           <div className="row mt-n1-9">
             <div className="col-lg-4 col-md-6 mt-1-9">
-              <a href="index.html" className="navbar-brand logodefault">
+              <Link to="/" className="navbar-brand logodefault">
                 <img src={require('../assets/images/logos/logo.png')} alt="logo" className="img-fluid" />
                 <span className="h3 text-white fw-bold mb-0">ADYSUN VENTURES</span>
-              </a>
+              </Link>
               <p className="mt-4 display-30 text-default-color">
                 We deliver high-performance services to help your business embrace innovation and tackle the ever-changing challenges of today's digital world. Designed to meet your specific needs, our services capture and deliver business value in a cost-effective way. Based on your strategic objectives, we focus on business outcomes in software engineering, advanced technology, development teams, digital consulting, and solution operations.
               </p>
               <div className="mt-4 footer-social-icons">
                 <ul className="mb-0 ps-0">
-                  <li><a href="#!"><i className="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#!"><i className="fab fa-twitter"></i></a></li>
-                  <li><a href="#!"><i className="fab fa-instagram"></i></a></li>
-                  <li><a href="#!"><i className="fab fa-youtube"></i></a></li>
-                  <li><a href="#!"><i className="fab fa-linkedin-in"></i></a></li>
+                  <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
+                  <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
+                  <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
+                  <li><Link to="#"><i className="fab fa-youtube"></i></Link></li>
+                  <li><Link to="#"><i className="fab fa-linkedin-in"></i></Link></li>
                 </ul>
               </div>
             </div>
@@ -135,20 +136,20 @@ function Footer() {
               <div className="row">
                 <div className="col-md-6 ps-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
-                    <li><a href="#!">News</a></li>
-                    <li><a href="#!">History</a></li>
-                    <li><a href="#!">Community</a></li>
-                    <li><a href="#!">Portfolio</a></li>
-                    <li><a href="#!">Safety</a></li>
+                    <li><Link to="/news">News</Link></li>
+                    <li><Link to="/history">History</Link></li>
+                    <li><Link to="/community">Community</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/safety">Safety</Link></li>
                   </ul>
                 </div>
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list ps-0">
-                    <li><a href="#!">Construction</a></li>
-                    <li><a href="#!">Case studies</a></li>
-                    <li><a href="#!">Blog detail</a></li>
-                    <li><a href="#!">Sales Services</a></li>
-                    <li><a href="#!">Services detail</a></li>
+                    <li><Link to="/construction">Construction</Link></li>
+                    <li><Link to="/case-studies">Case studies</Link></li>
+                    <li><Link to="/blog">Blog detail</Link></li>
+                    <li><Link to="/sales">Sales Services</Link></li>
+                    <li><Link to="/services">Services detail</Link></li>
                   </ul>
                 </div>
               </div>
@@ -182,7 +183,7 @@ function Footer() {
           <div className="container">
             <div className="row">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <p className="mb-0">&copy; Copyright fabrex <span className="current-year"></span>. All Rights Reserved.</p>
+                <p className="mb-0">&copy; Copyright {new Date().getFullYear()} ADYSUN VENTURES. All Rights Reserved.</p>
               </div>
             </div>
           </div>

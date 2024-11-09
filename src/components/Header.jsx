@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import adysun_ventures_logo from "../assets/images/logos/logo.png";
 import "../assets/styles/nav-menu.css";
 
@@ -30,22 +31,22 @@ function Header() {
                     style={{ display: "flex" }}
                   >
                     <li>
-                      <a href>Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a href>Services</a>
+                      <Link to="/services">Services</Link>
                     </li>
                     <li>
-                      <a href>Technologies</a>
+                      <Link to="/technologies">Technologies</Link>
                     </li>
                     <li>
-                      <a href>Careers</a>
+                      <Link to="/careers">Careers</Link>
                     </li>
                     <li>
-                      <a href>About</a>
+                      <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <a href>Contact</a>
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </nav>
