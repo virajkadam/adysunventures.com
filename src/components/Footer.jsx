@@ -1,8 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import bgImage from '../assets/images/bg/bg12.jpg'; // Import the background image
+import useCounter from '../hooks/useCounter';
 
 function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  const satisfiedVisitors = useCounter(isVisible ? 1826 : 0);
+  const happyClients = useCounter(isVisible ? 875 : 0);
+  const awardsWon = useCounter(isVisible ? 1412 : 0);
+  const constructions = useCounter(isVisible ? 100 : 0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const counterSection = document.querySelector('.counter-section');
+    if (counterSection) {
+      observer.observe(counterSection);
+    }
+
+    return () => {
+      if (counterSection) {
+        observer.unobserve(counterSection);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     // Initialize Owl Carousel when component mounts
     if (window.jQuery && window.jQuery.fn.owlCarousel) {
@@ -47,7 +77,7 @@ function Footer() {
     <>
       {/* COUNTER */}
       <section 
-        className="parallax md" 
+        className="parallax md counter-section" 
         style={{
           backgroundImage: `url(${bgImage})`,
           position: 'relative',
@@ -61,7 +91,7 @@ function Footer() {
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18"><i className="ti-user"></i></span>
-                <h4 className="countup text-white d-block">1826</h4>
+                <h4 className="countup text-white d-block">{satisfiedVisitors}</h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">Satisfied Visitors</p>
               </div>
@@ -69,7 +99,7 @@ function Footer() {
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18"><i className="ti-face-smile"></i></span>
-                <h4 className="countup text-white d-block">875</h4>
+                <h4 className="countup text-white d-block">{happyClients}</h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">Happy Clients</p>
               </div>
@@ -77,7 +107,7 @@ function Footer() {
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18"><i className="ti-world"></i></span>
-                <h4 className="countup text-white d-block">1412</h4>
+                <h4 className="countup text-white d-block">{awardsWon}</h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">Awards Wining</p>
               </div>
@@ -85,7 +115,7 @@ function Footer() {
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18"><i className="ti-vector"></i></span>
-                <h4 className="countup text-white d-block">100</h4>
+                <h4 className="countup text-white d-block">{constructions}</h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">Construction</p>
               </div>
