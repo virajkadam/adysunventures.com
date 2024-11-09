@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import adysun_ventures_logo from "../assets/images/logos/logo.png";
 import "../assets/styles/nav-menu.css";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="header-style7">
+    <header className="header-style7 fixedHeader">
       <div className="navbar-default">
         <div className="container">
           <div className="row align-items-center">
@@ -24,11 +30,17 @@ function Header() {
                       </div>
                     </a>
                   </div>
-                  <div className="navbar-toggler small" />
+                  <button
+                    className="navbar-toggler small"
+                    id="menuToggle"
+                    onClick={toggleMenu}
+                  >
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
                   <ul
-                    className="navbar-nav ms-auto"
+                    className={`navbar-nav ms-auto ${isMenuOpen ? 'show' : ''}`}
                     id="nav"
-                    style={{ display: "flex" }}
+                    style={{ display: isMenuOpen ? "flex" : "none" }}
                   >
                     <li>
                       <Link to="/">Home</Link>
