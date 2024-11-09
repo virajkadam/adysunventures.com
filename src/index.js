@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/styles/default.css';
+import './assets/styles/nav-menu.css';
+import './assets/styles/styles.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
