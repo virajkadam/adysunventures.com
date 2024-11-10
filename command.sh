@@ -39,31 +39,33 @@ npm run build || {
     exit 1
 }
 
-# Prepare main branch for deployment
-echo "Preparing deployment to main..."
-git checkout main 2>/dev/null || git checkout -b main
+# Create and switch to temporary deployment branch
+echo "Creating temporary deployment branch..."
+git checkout --orphan temp-deployment
 
-# Remove everything except .git and build
-find . -maxdepth 1 ! -name '.git' ! -name 'build' ! -name '.' -exec rm -rf {} +
-
-# Create CNAME file for custom domain
-echo "adysunventures.com" > CNAME
-
-# Copy build contents
-cp -r build/* .
+# Clear the working directory except build folder
+git rm -rf --cached .
+git clean -df
+mv build/* .
 rm -rf build
 
-# Add and commit build files
+# Create CNAME file
+echo "adysunventures.com" > CNAME
+
+# Stage all files
 git add -A
+
+# Commit
 git commit -m "Deploy: $1"
 
-# Push to main
-echo "Deploying to main branch..."
-git push origin main --force || {
-    echo "Error: Failed to deploy to main"
-}
+# Force push to main branch
+echo "Force pushing to main branch..."
+git push origin HEAD:main --force
 
 # Switch back to master
 git checkout master
 
-echo "Successfully pushed code to master and deployed to main!"
+# Clean up
+git branch -D temp-deployment
+
+echo "Successfully deployed to main branch!"
