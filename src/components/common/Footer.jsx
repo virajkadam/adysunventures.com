@@ -9,7 +9,7 @@ function Footer() {
   const satisfiedVisitors = useCounter(isVisible ? 1826 : 0);
   const happyClients = useCounter(isVisible ? 875 : 0);
   const awardsWon = useCounter(isVisible ? 1412 : 0);
-  const constructions = useCounter(isVisible ? 100 : 0);
+  const constructions = useCounter(isVisible ? 888 : 0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -210,7 +210,8 @@ function Footer() {
                 services capture and deliver business value in a cost-effective
                 way. Based on your strategic objectives, we focus on business
                 outcomes in software engineering, advanced technology,
-                development teams, digital consulting, and solution operations.
+                development teams, digital consulting, and solution operations.{" "}
+                {new Date().getFullYear()}
               </p>
               <div className="mt-4 footer-social-icons">
                 <ul className="mb-0 ps-0">
