@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/adysunventures.com/static/css/main.96d71f6c.css",
-    "main.js": "/adysunventures.com/static/js/main.456e201b.js",
-    "static/js/453.18f143fb.chunk.js": "/adysunventures.com/static/js/453.18f143fb.chunk.js",
-    "static/media/bg12.jpg": "/adysunventures.com/static/media/bg12.924636265364fb3002d4.jpg",
-    "static/media/logo.png": "/adysunventures.com/static/media/logo.dbaa4b73916b9a3893f6.png",
-    "index.html": "/adysunventures.com/index.html",
-    "main.96d71f6c.css.map": "/adysunventures.com/static/css/main.96d71f6c.css.map",
-    "main.456e201b.js.map": "/adysunventures.com/static/js/main.456e201b.js.map",
-    "453.18f143fb.chunk.js.map": "/adysunventures.com/static/js/453.18f143fb.chunk.js.map"
+    "main.css": "/static/css/main.d45c061d.css",
+    "main.js": "/static/js/main.83718ab6.js",
+    "static/js/453.18f143fb.chunk.js": "/static/js/453.18f143fb.chunk.js",
+    "static/media/bg12.jpg": "/static/media/bg12.924636265364fb3002d4.jpg",
+    "static/media/logo.png": "/static/media/logo.dbaa4b73916b9a3893f6.png",
+    "index.html": "/index.html",
+    "main.d45c061d.css.map": "/static/css/main.d45c061d.css.map",
+    "main.83718ab6.js.map": "/static/js/main.83718ab6.js.map",
+    "453.18f143fb.chunk.js.map": "/static/js/453.18f143fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96d71f6c.css",
-    "static/js/main.456e201b.js"
+    "static/css/main.d45c061d.css",
+    "static/js/main.83718ab6.js"
   ]
 }
