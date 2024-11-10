@@ -12,7 +12,9 @@ git commit -m "'$1'"
 
 git pull origin main
 
-chmod -R 777 ../adysunventures.com/
-chown -R root:root ../adysunventures.com/
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    chmod -R 777 ../adysunventures.com/
+    chown -R root:root ../adysunventures.com/
+fi
 
 git push origin HEAD:main
