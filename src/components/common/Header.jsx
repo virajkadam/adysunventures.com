@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="header-style7">
+    <header className="header-style7 bg-white">
       <div className="navbar-default">
         <div className="container">
           <div className="row align-items-center">
@@ -46,8 +46,10 @@ function Header() {
                   </div>
 
                   {/* Mobile Toggle Button */}
-                  <div 
-                    className={`navbar-toggler small ${isMenuOpen ? 'menu-opened' : ''}`}
+                  <div
+                    className={`navbar-toggler small ${
+                      isMenuOpen ? "menu-opened" : ""
+                    }`}
                     onClick={toggleMenu}
                   >
                     <span></span>
@@ -55,29 +57,69 @@ function Header() {
 
                   {/* Navigation Menu */}
                   <ul
-                    className={`navbar-nav ms-auto ${isMenuOpen ? 'show' : ''}`}
+                    className={`navbar-nav ms-auto ${isMenuOpen ? "show" : ""}`}
                     id="nav"
-                    style={{ 
-                      display: isDesktop ? 'flex' : isMenuOpen ? 'block' : 'none' 
+                    style={{
+                      display: isDesktop
+                        ? "flex"
+                        : isMenuOpen
+                        ? "block"
+                        : "none",
                     }}
                   >
                     <li className="nav-item">
-                      <Link className="nav-link" to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                      <Link
+                        className="nav-link"
+                        to="/"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Home
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
+                      <Link
+                        className="nav-link"
+                        to="/services"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Services
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/technologies" onClick={() => setIsMenuOpen(false)}>Technologies</Link>
+                      <Link
+                        className="nav-link"
+                        to="/technologies"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Technologies
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
+                      <Link
+                        className="nav-link"
+                        to="/careers"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Careers
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+                      <Link
+                        className="nav-link"
+                        to="/about-us"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        About
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                      <Link
+                        className="nav-link"
+                        to="/contact-us"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </nav>

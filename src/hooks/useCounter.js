@@ -1,47 +1,48 @@
 import { useState, useEffect } from 'react';
 
-const useCounter = (end, duration = 3000) => {
-  const [count, setCount] = useState(0);
+const useCounter = (end, startOnVisible = false, start = 0, duration = 3000) => {
+  const [count, setCount] = useState(start);
 
   useEffect(() => {
-    let startTime = null;
-    const startValue = 0;
+    if (startOnVisible && !end) return;
     
-    // Easing function for smooth animation
+    let startTime = null;
+    let animationFrame;
+
     const easeOutQuart = (x) => {
       return 1 - Math.pow(1 - x, 4);
     };
-    
+
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
       
-      // Apply easing function to the progress
       const easedProgress = easeOutQuart(progress);
-      const currentCount = Math.floor(easedProgress * (end - startValue) + startValue);
+      const currentCount = Math.floor(easedProgress * (end - start) + start);
       
       setCount(currentCount);
       
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       } else {
-        // Ensure we end exactly at the target number
         setCount(end);
       }
     };
-    
-    if (end > 0) {
-      requestAnimationFrame(animate);
+
+    if (end > start) {
+      animationFrame = requestAnimationFrame(animate);
     } else {
-      setCount(0);
+      setCount(start);
     }
 
-    // Cleanup
     return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
       startTime = null;
     };
-  }, [end, duration]);
+  }, [end, start, duration, startOnVisible]);
 
   return count;
 };

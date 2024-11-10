@@ -210,8 +210,7 @@ function Footer() {
                 services capture and deliver business value in a cost-effective
                 way. Based on your strategic objectives, we focus on business
                 outcomes in software engineering, advanced technology,
-                development teams, digital consulting, and solution operations.{" "}
-                {new Date().getFullYear()}
+                development teams, digital consulting, and solution operations.
               </p>
               <div className="mt-4 footer-social-icons">
                 <ul className="mb-0 ps-0">
@@ -260,44 +259,24 @@ function Footer() {
             </div>
 
             <div className="col-lg-4 col-md-6 mt-1-9">
-              <h3 className="footer-title-style2 text-primary">Quick Links</h3>
+              <h3 className="footer-title-style2 text-white">Quick Links</h3>
               <div className="row">
-                <div className="col-md-6 ps-md-0">
+                <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
-                    <li>
-                      <Link to="/news">News</Link>
-                    </li>
-                    <li>
-                      <Link to="/history">History</Link>
-                    </li>
-                    <li>
-                      <Link to="/community">Community</Link>
-                    </li>
-                    <li>
-                      <Link to="/portfolio">Portfolio</Link>
-                    </li>
-                    <li>
-                      <Link to="/safety">Safety</Link>
-                    </li>
+                    <li><a href="#!">News</a></li>
+                    <li><a href="#!">History</a></li>
+                    <li><a href="#!">Community</a></li>
+                    <li><a href="#!">Portfolio</a></li>
+                    <li><a href="#!">Safety</a></li>
                   </ul>
                 </div>
                 <div className="col-md-6 pe-md-0">
-                  <ul className="footer-list ps-0">
-                    <li>
-                      <Link to="/construction">Construction</Link>
-                    </li>
-                    <li>
-                      <Link to="/case-studies">Case studies</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog">Blog detail</Link>
-                    </li>
-                    <li>
-                      <Link to="/sales">Sales Services</Link>
-                    </li>
-                    <li>
-                      <Link to="/services">Services detail</Link>
-                    </li>
+                  <ul className="footer-list mb-0 ps-0">
+                    <li><a href="#!">Gifts</a></li>
+                    <li><a href="#!">Vourchers</a></li>
+                    <li><a href="#!">Our shop</a></li>
+                    <li><a href="#!">Secure shopping</a></li>
+                    <li><a href="#!">Privacy policy</a></li>
                   </ul>
                 </div>
               </div>
