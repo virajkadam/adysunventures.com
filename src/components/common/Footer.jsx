@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bgImage from "../../assets/images/bg/bg12.jpg"; // Import the background image
 import useCounter from "../../hooks/useCounter";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const satisfiedVisitors = useCounter(isVisible ? 1826 : 0);
   const happyClients = useCounter(isVisible ? 875 : 0);
   const awardsWon = useCounter(isVisible ? 1412 : 0);
   const constructions = useCounter(isVisible ? 888 : 0);
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -263,20 +272,40 @@ function Footer() {
               <div className="row">
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
-                    <li><a href="#!">News</a></li>
-                    <li><a href="#!">History</a></li>
-                    <li><a href="#!">Community</a></li>
-                    <li><a href="#!">Portfolio</a></li>
-                    <li><a href="#!">Safety</a></li>
+                    <li>
+                      <a onClick={() => handleNavigation('/about-us')} style={{ cursor: 'pointer' }}>About</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/contact-us')} style={{ cursor: 'pointer' }}>Contact</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/community')} style={{ cursor: 'pointer' }}>Community</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/portfolio')} style={{ cursor: 'pointer' }}>Portfolio</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/safety')} style={{ cursor: 'pointer' }}>Safety</a>
+                    </li>
                   </ul>
                 </div>
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-0 ps-0">
-                    <li><a href="#!">Gifts</a></li>
-                    <li><a href="#!">Vourchers</a></li>
-                    <li><a href="#!">Our shop</a></li>
-                    <li><a href="#!">Secure shopping</a></li>
-                    <li><a href="#!">Privacy policy</a></li>
+                    <li>
+                      <a onClick={() => handleNavigation('/gifts')} style={{ cursor: 'pointer' }}>Gifts</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/vouchers')} style={{ cursor: 'pointer' }}>Vouchers</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/shop')} style={{ cursor: 'pointer' }}>Our shop</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/secure-shopping')} style={{ cursor: 'pointer' }}>Secure shopping</a>
+                    </li>
+                    <li>
+                      <a onClick={() => handleNavigation('/privacy-policy')} style={{ cursor: 'pointer' }}>Privacy policy</a>
+                    </li>
                   </ul>
                 </div>
               </div>
