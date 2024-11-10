@@ -32,12 +32,22 @@ git push origin HEAD:master || {
     exit 1
 }
 
+# Build the React app
+echo "Building React app..."
+npm run build || {
+    echo "Error: Build failed"
+    exit 1
+}
+
 # Prepare main branch for deployment
 echo "Preparing deployment to main..."
 git checkout main 2>/dev/null || git checkout -b main
 
-# Remove everything except .git
-find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
+# Remove everything except .git and build
+find . -maxdepth 1 ! -name '.git' ! -name 'build' ! -name '.' -exec rm -rf {} +
+
+# Create CNAME file for custom domain
+echo "adysunventures.com" > CNAME
 
 # Copy build contents
 cp -r build/* .
@@ -55,16 +65,5 @@ git push origin main --force || {
 
 # Switch back to master
 git checkout master
-
-# Set permissions if on Linux
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    echo "Setting Linux permissions..."
-    chmod -R 777 ../adysunventures.com/ || {
-        echo "Warning: Failed to set permissions"
-    }
-    chown -R root:root ../adysunventures.com/ || {
-        echo "Warning: Failed to change ownership"
-    }
-fi
 
 echo "Successfully pushed code to master and deployed to main!"
