@@ -279,7 +279,7 @@ function Footer() {
                       <a onClick={() => handleNavigation('/contact-us')} style={{ cursor: 'pointer' }}>Contact</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/community')} style={{ cursor: 'pointer' }}>Community</a>
+                      <a onClick={() => handleNavigation('/services')} style={{ cursor: 'pointer' }}>Services</a>
                     </li>
                     <li>
                       <a onClick={() => handleNavigation('/portfolio')} style={{ cursor: 'pointer' }}>Portfolio</a>
