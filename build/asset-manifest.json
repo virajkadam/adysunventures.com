@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.079e399f.css",
-    "main.js": "/static/js/main.6af471c3.js",
+    "main.css": "/static/css/main.aafc6b8a.css",
+    "main.js": "/static/js/main.311dda7e.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/bg12.jpg": "/static/media/bg12.924636265364fb3002d4.jpg",
@@ -16,6 +16,7 @@
     "static/media/bg13.jpg": "/static/media/bg13.0be1b2b4d7b5778af93e.jpg",
     "static/media/team-01.png": "/static/media/team-01.41bb502bf774d642fdb7.png",
     "static/media/team-03.png": "/static/media/team-03.c734c7b271654c2b54d4.png",
+    "static/media/slice-2.png": "/static/media/slice-2.5befd6ffc7d4a210be0c.png",
     "static/media/team-02.png": "/static/media/team-02.e74f7444fc854f48eed6.png",
     "static/media/bg6.jpg": "/static/media/bg6.9fee82db897b2c685e33.jpg",
     "static/media/bg7.jpg": "/static/media/bg7.3c1c82238fcfd5506927.jpg",
@@ -31,6 +32,7 @@
     "static/media/pro-8.jpg": "/static/media/pro-8.2316f7667f27b0ed87bd.jpg",
     "static/media/blog-19.jpg": "/static/media/blog-19.a1cfaa64ad62ed375ba0.jpg",
     "static/media/pro-10.jpg": "/static/media/pro-10.a6c5cde22d8fa45c65b1.jpg",
+    "static/media/slide21.jpg": "/static/media/slide21.10320e45fecba301eeeb.jpg",
     "static/media/blog-3.jpg": "/static/media/blog-3.3c108de091c2c3f92b9c.jpg",
     "static/media/blog-6.jpg": "/static/media/blog-6.7843a184c80affbd24f5.jpg",
     "static/media/list-1.jpg": "/static/media/list-1.c7f53e88a179fcaa0f13.jpg",
@@ -59,11 +61,14 @@
     "static/media/blog-7.jpg": "/static/media/blog-7.7765bb31280fae578164.jpg",
     "static/media/logo.png": "/static/media/logo.dbaa4b73916b9a3893f6.png",
     "static/media/teammember-04.jpg": "/static/media/teammember-04.c9663d0cb6dbd33efbcb.jpg",
+    "static/media/content-01.jpg": "/static/media/content-01.404973c98abc163a839a.jpg",
+    "static/media/content-02.jpg": "/static/media/content-02.12d0add7c8b182d375ca.jpg",
     "static/media/teammember-02.jpg": "/static/media/teammember-02.1b35d75cc8c8330122f7.jpg",
     "static/media/blog-9.jpg": "/static/media/blog-9.929690c7fa8a30ae35de.jpg",
     "static/media/s-5.jpg": "/static/media/s-5.9894150a3c584cab7067.jpg",
     "static/media/feature-06.jpg": "/static/media/feature-06.fe8223a75e5fad02bcbe.jpg",
     "static/media/s-1.jpg": "/static/media/s-1.bbbce1f936af2760c130.jpg",
+    "static/media/content-03.jpg": "/static/media/content-03.077788435c917606c6b4.jpg",
     "static/media/feature-05.jpg": "/static/media/feature-05.de59c3ff65d671ae8df2.jpg",
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
@@ -79,12 +84,12 @@
     "static/media/t-6.jpg": "/static/media/t-6.bfd14ecd6d19e1fbc347.jpg",
     "static/media/t-5.jpg": "/static/media/t-5.6dbd2d32e82745e47525.jpg",
     "index.html": "/index.html",
-    "main.079e399f.css.map": "/static/css/main.079e399f.css.map",
-    "main.6af471c3.js.map": "/static/js/main.6af471c3.js.map",
+    "main.aafc6b8a.css.map": "/static/css/main.aafc6b8a.css.map",
+    "main.311dda7e.js.map": "/static/js/main.311dda7e.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.079e399f.css",
-    "static/js/main.6af471c3.js"
+    "static/css/main.aafc6b8a.css",
+    "static/js/main.311dda7e.js"
   ]
 }

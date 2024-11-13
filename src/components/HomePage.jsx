@@ -330,7 +330,7 @@ function HomePage() {
                 </div>
                 <div className="text-start w-100">
                   <p className="mb-0">
-                    <span className="font-weight-700 d-block">Anil Shinde</span>
+                    <span className="font-weight-700 d-block"></span>
                     CEO, Adysun Ventures
                   </p>
                 </div>
@@ -341,7 +341,7 @@ function HomePage() {
                   <LazyLoadImage
                     className="img-fluid rounded"
                     src={slice2}
-                    alt="Anil Shinde, CEO of Adysun Ventures - Leading IT Solutions Provider"
+                    alt=", CEO of Adysun Ventures - Leading IT Solutions Provider"
                     width={600}
                     height={500}
                   />
