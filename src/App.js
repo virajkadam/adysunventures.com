@@ -11,6 +11,7 @@ import AboutUs from "./components/screens/about-us/AboutUs";
 import ContactUs from "./components/screens/contact-us/ContactUs";
 import Services from "./components/screens/services/Services";
 import Technologies from "./components/screens/technologies/Technologies";
+import Careers from "./components/screens/careers/Careers";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/technologies" element={<Technologies />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
     </Router>
   );
