@@ -1,10 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import HomePage from "./components/HomePage";
 import MetaTags from "./components/common/MetaTags";
 import AboutUs from "./components/screens/about-us/AboutUs";
 import ContactUs from "./components/screens/contact-us/ContactUs";
 import Services from "./components/screens/services/Services";
+import Technologies from "./components/screens/technologies/Technologies";
 function App() {
   return (
     <Router>
@@ -15,6 +21,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/technologies" element={<Technologies />} />
       </Routes>
     </Router>
   );
