@@ -32,7 +32,7 @@ function Careers() {
                     <span className="separator-right bg-primary" />
                   </div>
                   <p className="mt-3 fs-5 fs-md-4 fs-lg-3 ">
-                    At Shekru Technologies, we're passionate about innovation
+                    At Adysun Ventures, we're passionate about innovation
                     and shaping the future. Be part of a team that's dedicated
                     to creating solutions that make a difference.
                   </p>
@@ -172,7 +172,7 @@ function Careers() {
         </section>
 
         <div className="my-lg-5 my-md-4 my-2 mx-4">
-          <h1>Who we hire: The Shekru Approach</h1>
+          <h1>Who we hire: The Adysun Approach</h1>
         </div>
         <section className="p-lg-8 p-4">
           <div class="row mt-n1-9">
@@ -302,7 +302,7 @@ function Careers() {
                     </span>
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">Email: </h6>
-                      <p>info@shekruweb.com</p>
+                      <p>info@adysunventures.com</p>
                     </div>
                   </div>
                 </div>
