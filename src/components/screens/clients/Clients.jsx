@@ -34,7 +34,7 @@ function Clients() {
     <div>
       {/* <Navbar2 /> */}
       <Header />
-      <div className="container-fluid px-0 position-relative">
+      <div className="container-fluid px-0 position-relative" style={{zIndex: -1}}>
         <div className="position-absolute top-20 left-lg-10 text-white p-4">
           <h1 className="text-white">Our Clients</h1>
 
@@ -51,10 +51,10 @@ function Clients() {
         <img
           src={clientBanner}
           alt="Client Banner"
-          className="img-fluid w-100 "
+          className="img-fluid w-100"
           style={{
             height: "370px",
-            objectFit: "cover",
+            objectFit: "cover", 
             objectPosition: "center",
           }}
         />

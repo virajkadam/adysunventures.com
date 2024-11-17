@@ -136,7 +136,7 @@ const Navbar = React.memo(() => {
                             }`
                           }
                         >
-                          MenuMitra
+                          DEMO2
                         </NavLink>
                       </li>
 
@@ -149,7 +149,7 @@ const Navbar = React.memo(() => {
                             }`
                           }
                         >
-                          AutoProfito
+                          DEMO
                         </NavLink>
                       </li>
                       <li>

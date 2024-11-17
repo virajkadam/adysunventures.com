@@ -82,7 +82,7 @@ function Navbar2() {
                                 }`
                               }
                             >
-                              MenuMitra
+                              DEMO2
                             </NavLink>
                           </li>
                           <li>
@@ -94,7 +94,7 @@ function Navbar2() {
                                 }`
                               }
                             >
-                              AutoProfito
+                              DEMO
                             </NavLink>
                           </li>
                           <li>

@@ -285,26 +285,26 @@ function Footer() {
                       <a onClick={() => handleNavigation('/technologies')} style={{ cursor: 'pointer' }}>Technologies</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/safety')} style={{ cursor: 'pointer' }}>Safety</a>
+                      <a onClick={() => handleNavigation('/careers')} style={{ cursor: 'pointer' }}>Careers</a>
                     </li>
                   </ul>
                 </div>
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-0 ps-0">
                     <li>
-                      <a onClick={() => handleNavigation('/gifts')} style={{ cursor: 'pointer' }}>Gifts</a>
+                      <a onClick={() => handleNavigation('/partners')} style={{ cursor: 'pointer' }}>Partners</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/vouchers')} style={{ cursor: 'pointer' }}>Vouchers</a>
+                      <a onClick={() => handleNavigation('/clients')} style={{ cursor: 'pointer' }}>Clients</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/shop')} style={{ cursor: 'pointer' }}>Our shop</a>
+                      <a onClick={() => handleNavigation('/industries/stock-exchange')} style={{ cursor: 'pointer' }}>Stock Exchange</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/secure-shopping')} style={{ cursor: 'pointer' }}>Secure shopping</a>
+                      <a onClick={() => handleNavigation('/industries/ecommerce')} style={{ cursor: 'pointer' }}>E-Commerce</a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/privacy-policy')} style={{ cursor: 'pointer' }}>Privacy policy</a>
+                      <a onClick={() => handleNavigation('/industries/transportation')} style={{ cursor: 'pointer' }}>Transportation</a>
                     </li>
                   </ul>
                 </div>

@@ -23,6 +23,7 @@ import commodities from "../../../../assets/images/bg/commodities.png";
 import energy from "../../../../assets/images/bg/energy.png";
 import whyChoose from "../../../../assets/images/bg/whyChoose.png";
 import Header from "../../../common/Header";
+import Footer from "../../../common/Footer";
 
 function StockExchange() {
   const [activeService, setActiveService] = useState("Trade Automation");
@@ -145,7 +146,7 @@ function StockExchange() {
         />
         <div className="position-absolute top-40 ms-lg-5 text-white p-3">
           <h1 className="fw-bold mb-2 text-white">
-            AutoProfito trading software
+            DEMO trading software
           </h1>
 
           <p className="lead mb-0 d-none d-lg-block d-md-block ">
@@ -216,7 +217,7 @@ function StockExchange() {
             </div>
             <div className="col-lg-6">
               <div className="section-heading title-style5 left half mt-3 ">
-                <h2>How AutoProfito approaches trading software </h2>
+                <h2>How DEMO approaches trading software </h2>
                 <div className="square">
                   <span className="separator-left bg-primary" />
                   <span className="separator-right bg-primary" />
@@ -483,7 +484,7 @@ function StockExchange() {
             {/* Content Section */}
             <div className="col-md-5 order-md-1 order-lg-1">
               <h1 className="h3 h-sm2 d-lg-block d-md-block d-none">
-                How AutoProfito helps to beat the competition
+                How DEMO helps to beat the competition
               </h1>
               <h2 className="h4">{activeMember.name}</h2>
               <h5 className="text-muted">{activeMember.position}</h5>
@@ -527,7 +528,7 @@ function StockExchange() {
 
       <div className="container">
         <h1 className=" text-center">
-          Why choose <span className="text-primary">AutoProfito</span> for your
+          Why choose <span className="text-primary">DEMO</span> for your
           trading software needs
         </h1>
 
@@ -602,7 +603,7 @@ function StockExchange() {
 
       <section className="bg-grey py-7">
         <div className="container text-center ">
-          <h1 className="mb-6">Join the trading revolution with Autoprofito</h1>
+          <h1 className="mb-6">Join the trading revolution with DEMO</h1>
           <div className="row">
             <div className="col-lg-4 col-md-6 d-flex align-items-center">
               <div className="p-1 position-relative">
@@ -664,7 +665,7 @@ function StockExchange() {
 
       <div className="container">
         <h1 className="text-lg-center text-md-center my-lg-5 my-2">
-          Our AutoProfito trading software services
+          Our DEMO trading software services
         </h1>
         <div className="row text-white ">
           <div className="col-md-6 col-lg-3">
@@ -680,7 +681,7 @@ function StockExchange() {
                   Automate trade from Master account to other child accounts
                   with cross broker operation.
                 </p>
-                <Link to="https://autoprofito.com" target="_blank" className="">
+                <Link to="https://DEMO.com" target="_blank" className="">
                   LEARN MORE &gt;
                 </Link>
               </div>
@@ -700,7 +701,7 @@ function StockExchange() {
                   Place trades in multiple custom quantities in child accounts.
                 </p>
                 <div className="pt-md-4 pt-lg-4">
-                  <Link to="https://autoprofito.com" target="_blank">
+                  <Link to="https://DEMO.com" target="_blank">
                     LEARN MORE &gt;
                   </Link>
                 </div>
@@ -722,7 +723,7 @@ function StockExchange() {
                 </p>
                 <div className="pt-lg-4 ">
                   <Link
-                    to="https://autoprofito.com"
+                    to="https://DEMO.com"
                     target="_blank"
                     className=""
                   >
@@ -748,7 +749,7 @@ function StockExchange() {
                 </p>
                 <div className=" ">
                   <Link
-                    to="https://autoprofito.com"
+                    to="https://DEMO.com"
                     target="_blank"
                     className=""
                   >
@@ -773,7 +774,7 @@ function StockExchange() {
         <div className="container text-center">
           <div className="section-heading title-style5 half white">
             <h2 className="mb-2">
-              Let’s discuss how AutoProfito trading software
+              Let’s discuss how DEMO trading software
             </h2>
             <h2 className="mb-2">expertise can help you attain your goals</h2>
           </div>
@@ -851,6 +852,7 @@ function StockExchange() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
