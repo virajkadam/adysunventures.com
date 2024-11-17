@@ -16,8 +16,8 @@ function Header() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleMenu = () => {
@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="header-style7 bg-white">
+    <header className="sticky-top bg-white shadow-sm">
       <div className="navbar-default">
         <div className="container">
           <div className="row align-items-center">
@@ -40,7 +40,7 @@ function Header() {
                           alt="logo"
                           className="img-fluid pe-3"
                         />
-                        <span className="h3 fw-bold mb-0">ADYSUN VENTURES</span>
+                        <span className="h5 fw-bold mb-0">ADYSUN VENTURES</span>
                       </div>
                     </Link>
                   </div>
@@ -79,10 +79,37 @@ function Header() {
                     <li className="nav-item">
                       <Link
                         className="nav-link"
+                        to="/about-us"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
                         to="/services"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Services
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
+                        to="/products"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Products
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
+                        to="/partners"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Partners
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -94,6 +121,93 @@ function Header() {
                         Technologies
                       </Link>
                     </li>
+                    <li className="nav-item dropdown">
+                      <Link
+                        className="nav-link dropdown-toggle"
+                        to="#"
+                        role="button"
+                        id="industriesDropdown"
+                        onMouseEnter={(e) => {
+                          const dropdown = document.querySelector(
+                            '[aria-labelledby="industriesDropdown"]'
+                          );
+                          dropdown.classList.add("show");
+                          e.currentTarget.setAttribute("aria-expanded", "true");
+                        }}
+                        onMouseLeave={(e) => {
+                          const dropdown = document.querySelector(
+                            '[aria-labelledby="industriesDropdown"]'
+                          );
+                          dropdown.classList.remove("show");
+                          e.currentTarget.setAttribute(
+                            "aria-expanded",
+                            "false"
+                          );
+                        }}
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        Industries
+                      </Link>
+                      <ul
+                        className="dropdown-menu animate slideIn"
+                        aria-labelledby="industriesDropdown"
+                        onMouseEnter={(e) =>
+                          e.currentTarget.classList.add("show")
+                        }
+                        onMouseLeave={(e) =>
+                          e.currentTarget.classList.remove("show")
+                        }
+                        style={{
+                          transition: "all 0.3s ease-in-out",
+                          transform: "translateY(10px)",
+                          opacity: 0,
+                        }}
+                      >
+                        <li>
+                          <Link
+                            className="dropdown-item"
+                            to="/industries/stock-exchange"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Stock Exchange
+                          </Link>
+                        </li>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+                        <li>
+                          <Link
+                            className="dropdown-item"
+                            to="/industries/ecommerce"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            E-Commerce
+                          </Link>
+                        </li>
+
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+
+                        <li>
+                          <Link
+                            className="dropdown-item"
+                            to="/industries/transportation"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Transportation
+                          </Link>
+                        </li>
+                      </ul>
+                      <style>
+                        {`
+                          .dropdown-menu.show {
+                            transform: translateY(0) !important;
+                            opacity: 1 !important;
+                          }
+                        `}
+                      </style>
+                    </li>
                     <li className="nav-item">
                       <Link
                         className="nav-link"
@@ -103,13 +217,14 @@ function Header() {
                         Careers
                       </Link>
                     </li>
+
                     <li className="nav-item">
                       <Link
                         className="nav-link"
-                        to="/about-us"
+                        to="/clients"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        About
+                        Clients
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -121,7 +236,6 @@ function Header() {
                         Contact
                       </Link>
                     </li>
-                 
                   </ul>
                 </nav>
               </div>

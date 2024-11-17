@@ -1,229 +1,101 @@
-import React from 'react'
-import Header from '../../common/Header'
-import Footer from '../../common/Footer'
-import { images, captchaImageExport } from "../../../assets";
+import React from "react";
+import bg15 from "../../../assets/images/content/tab-content-03.jpg";
+import Navbar2 from "../../common/Navbar2";
+import Header from "../../common/Header";
+import Footer from "../../common/Footer";
 
 function ContactUs() {
   return (
-    <div>
+    <>
+      {/* <Navbar2 /> */}
       <Header />
-      <div>
-        {/* PAGE TITLE
-  ================================================== */}
+
+      <div className="main-wrapper">
+        <div id="content3" />
+
         <section
-          className="page-title-section2 bg-img cover-background top-position1"
-          data-overlay-dark={4}
-          style={{ backgroundImage: `url(${images.bg.bg9})` }}
+          className="page-title-section2 bg-img cover-background "
+          data-overlay-dark={6}
+          style={{ backgroundImage: `url(${bg15})` }}
         >
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <h1>Contact style2</h1>
+                <h1>Contact </h1>
               </div>
               <div className="col-md-12">
                 <ul className="ps-0">
                   <li>
-                    <a href="home-default.html">Home</a>
+                    <a href="index.html">Home</a>
                   </li>
                   <li>
-                    <a href="#!">Contact style2</a>
+                    <a href="#!">Contact</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
-        {/* CONTACT
-  ================================================== */}
+
         <section>
           <div className="container">
-            <div className="text-center section-heading">
-              <h2>Let's talk about your business</h2>
+            <div className="section-heading">
+              <h2>Get in Touch</h2>
             </div>
-            {/* contact detail */}
-            <div className="row mb-1-9 mb-lg-6 mt-n1-9">
-              <div className="col-md-6 col-lg-3 mt-1-9">
-                <div className="contact-box">
-                  <i className="fas fa-phone" />
-                  <h4>Call Us</h4>
-                  <span>(+44) 123 456 789</span>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3 mt-1-9">
-                <div className="contact-box">
-                  <i className="fas fa-map-marker-alt" />
-                  <h4>Visit Us</h4>
-                  <span>Regina ST, London, SK 8GH.</span>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3 mt-1-9">
-                <div className="contact-box">
-                  <i className="far fa-envelope" />
-                  <h4>Mail Us</h4>
-                  <span>email@youradress.com</span>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3 mt-1-9">
-                <div className="contact-box">
-                  <i className="far fa-comments" />
-                  <h4>Live Chat</h4>
-                  <span>Chat with Us 24/7</span>
-                </div>
-              </div>
-            </div>
-            {/* end contact detail */}
-            <div className="row">
-              {/* contact form */}
-              <div className="col-lg-6 mb-1-9 mb-lg-0">
-                <form
-                  className="contact quform"
-                  action="https://fabrex.websitelayout.net/quform/contact.php"
-                  method="post"
-                  encType="multipart/form-data"
-                  onclick
-                >
-                  <div className="quform-elements">
-                    <div className="row">
-                      {/* Begin Text input element */}
-                      <div className="col-md-6">
-                        <div className="quform-element form-group">
-                          <div className="quform-input">
-                            <input
-                              className="form-control"
-                              id="name"
-                              type="text"
-                              name="name"
-                              placeholder="Your name here"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Text input element */}
-                      {/* Begin Text input element */}
-                      <div className="col-md-6">
-                        <div className="quform-element form-group">
-                          <div className="quform-input">
-                            <input
-                              className="form-control"
-                              id="email"
-                              type="text"
-                              name="email"
-                              placeholder="Your email here"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Text input element */}
-                      {/* Begin Text input element */}
-                      <div className="col-md-6">
-                        <div className="quform-element form-group">
-                          <div className="quform-input">
-                            <input
-                              className="form-control"
-                              id="subject"
-                              type="text"
-                              name="subject"
-                              placeholder="Your subject here"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Text input element */}
-                      {/* Begin Text input element */}
-                      <div className="col-md-6">
-                        <div className="quform-element form-group">
-                          <div className="quform-input">
-                            <input
-                              className="form-control"
-                              id="phone"
-                              type="text"
-                              name="phone"
-                              placeholder="Your phone here"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Text input element */}
-                      {/* Begin Textarea element */}
-                      <div className="col-md-12">
-                        <div className="quform-element form-group">
-                          <div className="quform-input">
-                            <textarea
-                              className="form-control h-100"
-                              id="message"
-                              name="message"
-                              rows={3}
-                              placeholder="Tell us a few words"
-                              defaultValue={""}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Textarea element */}
-                      {/* Begin Captcha element */}
-                      <div className="col-md-12">
-                        <div className="quform-element">
-                          <div className="form-group">
-                            <div className="quform-input">
-                              <input
-                                className="form-control"
-                                id="type_the_word"
-                                type="text"
-                                name="type_the_word"
-                                placeholder="Type the below word"
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group">
-                            <div className="quform-captcha">
-                              <div className="quform-captcha-inner">
-                                <img
-                                  src={captchaImageExport}
-                                  alt="..."
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      {/* End Captcha element */}
-                      {/* Begin Submit button */}
-                      <div className="col-md-12">
-                        <div className="quform-submit-inner">
-                          <button className="butn" type="submit">
-                            <span>Sumbit comment</span>
-                          </button>
-                        </div>
-                        <div className="quform-loading-wrap text-start">
-                          <span className="quform-loading" />
-                        </div>
-                      </div>
-                      {/* End Submit button */}
-                    </div>
-                  </div>
-                </form>
-              </div>
-              {/* end contact form  */}
-              {/* map section */}
-              <div className="col-lg-6">
+            <div className="row p-3">
+              <div className="col-lg-6 order-2 order-lg-1 border border-2 border-gray rounded px-0">
                 <iframe
-                  className="map"
-                  title="map"
-                  src="https://maps.google.com/maps?q=wakad+pune&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                  allowFullScreen="true"
-                  frameBorder="0"
+                  className="contact-map rounded"
+                  id="gmap_canvas"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.8959802261457!2d73.75774731489443!3d18.59177998736384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc048041bbb%3A0x7f2f04c0ca40235c!2sWakad%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411057!5e0!3m2!1sen!2sin!4v1629789876543!5m2!1sen!2sin"
+                  width="100%"
+                  height="400"
+                  style={{border: 0}}
+                  allowFullScreen=""
                   loading="lazy"
                 />
               </div>
-              {/* end map section */}
+
+              <div className="col-lg-6 order-1 order-lg-2 ">
+                <div className="contact-info ps-lg-1-9 mb-1-9 mb-lg-0">
+                  <div className="item bg-white">
+                    <span className="icon">
+                      <i className="fas fa-phone text-primary" />
+                    </span>
+                    <div className="cont">
+                      <h6 className="mb-1 font-weight-600">Phone: </h6>
+                      <p>+91 7777777777</p>
+                    </div>
+                  </div>
+                  <div className="item bg-white">
+                    <span className="icon">
+                      <i className="fas fa-map-marker-alt text-primary" />
+                    </span>
+                    <div className="cont">
+                      <h6 className="mb-1 font-weight-600">Address: </h6>
+                      <p className="m-0">
+                        Wakad, Pimpri-Chinchwad, Maharashtra-411057
+                      </p>
+                    </div>
+                  </div>
+                  <div className="item bg-white">
+                    <span className="icon">
+                      <i className="fas fa-envelope text-primary" />
+                    </span>
+                    <div className="cont">
+                      <h6 className="mb-1 font-weight-600">Email: </h6>
+                      <p>info@adysunventures.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default ContactUs
+export default ContactUs;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Header from './common/Header';
 import Footer from './common/Footer';
+import Navbar2 from './common/Navbar2';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
@@ -101,7 +102,7 @@ function HomePage() {
                   <li>Addressing Cybersecurity Concerns</li>
                   <li>Content Marketing for IT Services</li>
                   <li>
-                    Showcasing Cutting-Edge Software Solutions
+                    Showcasing Cutting-Edge Software Solutions 
                   </li>
                 </ul>
               </div>
@@ -166,6 +167,8 @@ function HomePage() {
   return (
     <div>
       <Header />
+      {/* <Navbar2 /> */}
+
       <div className="main-wrapper">
         <section
           className="bg-img cover-background"
