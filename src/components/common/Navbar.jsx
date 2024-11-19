@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo2 from "../../assets/images/logos/logo.png";
+import { Helmet } from "react-helmet-async";
 
 const Navbar = React.memo(() => {
   return (

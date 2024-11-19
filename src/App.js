@@ -74,6 +74,7 @@ import Transportation from "./components/screens/industries/transportation/Trans
 import PageNotFound from "./components/PageNotFound";
 import { HelmetProvider } from 'react-helmet-async';
 
+
 function App() {
   return (
     <HelmetProvider>
