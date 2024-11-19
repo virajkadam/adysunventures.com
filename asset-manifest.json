@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aafc6b8a.css",
-    "main.js": "/static/js/main.0adbeb26.js",
+    "main.js": "/static/js/main.d09ac26e.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -53,6 +53,7 @@
     "static/media/feature-02.jpg": "/static/media/feature-02.9cbd088ae695120387e0.jpg",
     "static/media/blog-03.jpg": "/static/media/blog-03.a364638b846db22aeb6d.jpg",
     "static/media/blog-01.jpg": "/static/media/blog-01.55fb1774a7ce0708c3af.jpg",
+    "static/media/industries.png": "/static/media/industries.fa8cb48f8f674335ae87.png",
     "static/media/blog-20.jpg": "/static/media/blog-20.2fc8aa1595e01efff263.jpg",
     "static/media/pro-11.jpg": "/static/media/pro-11.ca7adc2afc50e0e099fd.jpg",
     "static/media/pro-7.jpg": "/static/media/pro-7.0d619b06b3d952710778.jpg",
@@ -73,9 +74,11 @@
     "static/media/content-03.jpg": "/static/media/content-03.7342b9d1a71a6c7eeb2a.jpg",
     "static/media/teammember-02.jpg": "/static/media/teammember-02.1b35d75cc8c8330122f7.jpg",
     "static/media/blog-9.jpg": "/static/media/blog-9.929690c7fa8a30ae35de.jpg",
+    "static/media/transportation.png": "/static/media/transportation.34f00fe986f28f545c4b.png",
     "static/media/s-5.jpg": "/static/media/s-5.9894150a3c584cab7067.jpg",
     "static/media/feature-06.jpg": "/static/media/feature-06.fe8223a75e5fad02bcbe.jpg",
     "static/media/tab-content-03.jpg": "/static/media/tab-content-03.92a040dd0a5646bd3468.jpg",
+    "static/media/machine.png": "/static/media/machine.a264b3db56c45e8cd23e.png",
     "static/media/feature-05.jpg": "/static/media/feature-05.de59c3ff65d671ae8df2.jpg",
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
@@ -84,6 +87,7 @@
     "static/media/bg4.jpg": "/static/media/bg4.25f98a963aad1ab686db.jpg",
     "static/media/s-4.jpg": "/static/media/s-4.af7db47fa323d691b3d4.jpg",
     "static/media/content-02.jpg": "/static/media/content-02.c1cd7c3a870a66047dc2.jpg",
+    "static/media/eCommerce.png": "/static/media/eCommerce.c10f28a6047748214cf1.png",
     "static/media/s-6.jpg": "/static/media/s-6.b79b3732d4675eb93947.jpg",
     "static/media/t-4.jpg": "/static/media/t-4.b4a8d2b0517010105368.jpg",
     "static/media/tigera.png": "/static/media/tigera.ff5ed29c4c08c3dc0828.png",
@@ -109,11 +113,11 @@
     "index.html": "/index.html",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.f3c4e88171702061c0bc985806664788.svg",
     "main.aafc6b8a.css.map": "/static/css/main.aafc6b8a.css.map",
-    "main.0adbeb26.js.map": "/static/js/main.0adbeb26.js.map",
+    "main.d09ac26e.js.map": "/static/js/main.d09ac26e.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aafc6b8a.css",
-    "static/js/main.0adbeb26.js"
+    "static/js/main.d09ac26e.js"
   ]
 }
