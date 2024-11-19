@@ -124,7 +124,7 @@ function Header() {
                     <li className="nav-item dropdown">
                       <Link
                         className="nav-link dropdown-toggle"
-                        to="#"
+                        to="/industries"
                         role="button"
                         id="industriesDropdown"
                         onMouseEnter={(e) => {
@@ -139,24 +139,17 @@ function Header() {
                             '[aria-labelledby="industriesDropdown"]'
                           );
                           dropdown.classList.remove("show");
-                          e.currentTarget.setAttribute(
-                            "aria-expanded",
-                            "false"
-                          );
+                          e.currentTarget.setAttribute("aria-expanded", "false");
                         }}
-                        onClick={(e) => e.preventDefault()}
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         Industries
                       </Link>
                       <ul
                         className="dropdown-menu animate slideIn"
                         aria-labelledby="industriesDropdown"
-                        onMouseEnter={(e) =>
-                          e.currentTarget.classList.add("show")
-                        }
-                        onMouseLeave={(e) =>
-                          e.currentTarget.classList.remove("show")
-                        }
+                        onMouseEnter={(e) => e.currentTarget.classList.add("show")}
+                        onMouseLeave={(e) => e.currentTarget.classList.remove("show")}
                         style={{
                           transition: "all 0.3s ease-in-out",
                           transform: "translateY(10px)",
@@ -184,11 +177,9 @@ function Header() {
                             E-Commerce
                           </Link>
                         </li>
-
                         <li>
                           <hr className="dropdown-divider" />
                         </li>
-
                         <li>
                           <Link
                             className="dropdown-item"

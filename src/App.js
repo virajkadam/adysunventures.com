@@ -73,6 +73,7 @@ import ECommerce from "./components/screens/industries/ecommerce/ECommerce";
 import Transportation from "./components/screens/industries/transportation/Transportation";
 import PageNotFound from "./components/PageNotFound";
 import { HelmetProvider } from 'react-helmet-async';
+import Industries from "./components/screens/industries/Industries";
 
 
 function App() {
@@ -90,6 +91,7 @@ function App() {
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/clients" element={<Clients />} />
+          <Route path="/industries" element={<Industries />} />
           <Route path="/industries/stock-exchange" element={<StockExchange />} />
           <Route path="/industries/ecommerce" element={<ECommerce />} />
           <Route path="/industries/transportation" element={<Transportation />} />
