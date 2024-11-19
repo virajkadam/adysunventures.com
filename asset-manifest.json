@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aafc6b8a.css",
-    "main.js": "/static/js/main.823dd1c1.js",
+    "main.js": "/static/js/main.0adbeb26.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -109,11 +109,11 @@
     "index.html": "/index.html",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.f3c4e88171702061c0bc985806664788.svg",
     "main.aafc6b8a.css.map": "/static/css/main.aafc6b8a.css.map",
-    "main.823dd1c1.js.map": "/static/js/main.823dd1c1.js.map",
+    "main.0adbeb26.js.map": "/static/js/main.0adbeb26.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aafc6b8a.css",
-    "static/js/main.823dd1c1.js"
+    "static/js/main.0adbeb26.js"
   ]
 }
