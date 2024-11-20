@@ -80,6 +80,10 @@ header {
     transition-duration: 500ms
 }
 
+.navbar-nav>li>a.active {
+    color: #ff5a2e !important;  
+}
+
 .navbar-nav li.current>a {
     color: #000
 }
@@ -137,9 +141,11 @@ header {
 }
 
 .navbar-nav li>ul {
-    padding: 15px 0;
+    padding: 10px 0;
     margin: 0 0 0 10px;
-    background: #232323;
+    /* background: #232323; */
+    background: #fff;
+    color: #000;
     min-width: 225px;
     -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
     -ms-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);

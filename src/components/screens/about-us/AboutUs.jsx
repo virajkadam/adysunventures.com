@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import {Link} from 'react-router-dom'
 import Header from '../../common/Header'
 import Footer from '../../common/Footer'
 import { images } from '../../../assets'
@@ -205,15 +206,15 @@ function AboutUs() {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <h1>About Us 03</h1>
+                <h1>About Us</h1>
               </div>
               <div className="col-md-12">
                 <ul className="ps-0">
                   <li>
-                    <a href="home-default.html">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href="#!">About Us 03</a>
+                    <Link to="/about-us">About Us</Link>
                   </li>
                 </ul>
               </div>
@@ -231,7 +232,10 @@ function AboutUs() {
               <div className="col-md-4">
                 <div className="feature-box-07">
                   <div className="img-box">
-                    <img src={images.content.services.service2b} alt="Who We Are" />
+                    <img
+                      src={images.content.services.service2b}
+                      alt="Who We Are"
+                    />
                   </div>
                   <div className="feature-textbox p-2-2 text-center bg-light-gray">
                     <h4 className="title mb-2">Who We Are</h4>
@@ -249,7 +253,10 @@ function AboutUs() {
               <div className="col-md-4">
                 <div className="feature-box-07">
                   <div className="img-box">
-                    <img src={images.content.services.service4b} alt="What We Do" />
+                    <img
+                      src={images.content.services.service4b}
+                      alt="What We Do"
+                    />
                   </div>
                   <div className="feature-textbox p-2-2 text-center bg-light-gray">
                     <h4 className="title mb-2">What We Do</h4>
@@ -267,7 +274,10 @@ function AboutUs() {
               <div className="col-md-4">
                 <div className="feature-box-07">
                   <div className="img-box">
-                    <img src={images.content.services.service3b} alt="Our Success" />
+                    <img
+                      src={images.content.services.service3b}
+                      alt="Our Success"
+                    />
                   </div>
                   <div className="feature-textbox p-2-2 text-center bg-light-gray">
                     <h4 className="title mb-2">Our Success</h4>
@@ -400,22 +410,33 @@ function AboutUs() {
             <div className="row">
               <div className="col-lg-6 mb-4 mb-lg-0">
                 <div className="pe-lg-1-9">
-                  <h3 className="font-weight-600 mb-1-9">Our mission is to deliver growth to your business</h3>
+                  <h3 className="font-weight-600 mb-1-9">
+                    Our mission is to deliver growth to your business
+                  </h3>
                   <h5 className="font-weight-700 h6">Planning Strategies</h5>
-                  <p className="w-95">Excepteur integration aute irure design in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  <p className="w-95">
+                    Excepteur integration aute irure design in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                   <h5 className="font-weight-700 h6">Successful Marketing</h5>
-                  <p className="w-95 m-0">Duis Integration aute irure design in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  <p className="w-95 m-0">
+                    Duis Integration aute irure design in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="card">
-                  <div className="card-body" style={{ 
-                    height: '400px', 
-                    padding: '20px',
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #EAEAEA',
-                    borderRadius: '4px'
-                  }}>
+                  <div
+                    className="card-body"
+                    style={{
+                      height: "400px",
+                      padding: "20px",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid #EAEAEA",
+                      borderRadius: "4px",
+                    }}
+                  >
                     <canvas id="chBar" />
                   </div>
                 </div>

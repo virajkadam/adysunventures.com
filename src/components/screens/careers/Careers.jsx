@@ -1,4 +1,5 @@
 import React from "react";
+import {useEffect} from 'react'
 import { Link } from "react-router-dom";
 import career from "../../../assets/images/bg/bg13.jpg";
 import bg2 from "../../../assets/images/bg/bg2.jpg";
@@ -7,18 +8,24 @@ import Header from "../../common/Header";
 import Footer from "../../common/Footer";
 // import android from "../../../assets/images/brand-logos/android.png";
 function Careers() {
+  useEffect(() => {
+    // Apply color with !important to the separator-right span
+    const separatorRight = document.querySelector(".separator-right");
+    separatorRight.style.setProperty("color", "#ff5a2e", "important");
+  }, []);
   return (
     <div>
       <Header />
       <>
         <section
-          className="pt-4 p-lg-5  text-white"
+          className="pt-4 p-lg-5 text-white"
           style={{
             backgroundImage: `url(${career})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
+          data-overlay-dark="6"
         >
           <div className="container">
             <div className="row align-items-center">
@@ -29,12 +36,15 @@ function Careers() {
                   </h1>
                   <div className="square">
                     <span className="separator-left bg-primary" />
-                    <span className="separator-right bg-primary" />
+                    <span
+                      className="separator-right bg-primary"
+                      style={{ color: "#ff5a2e" }}
+                    />
                   </div>
                   <p className="mt-3 fs-5 fs-md-4 fs-lg-3 ">
-                    At Adysun Ventures, we're passionate about innovation
-                    and shaping the future. Be part of a team that's dedicated
-                    to creating solutions that make a difference.
+                    At Adysun Ventures, we're passionate about innovation and
+                    shaping the future. Be part of a team that's dedicated to
+                    creating solutions that make a difference.
                   </p>
                 </div>
               </div>
@@ -96,7 +106,7 @@ function Careers() {
           </div>
         </div>
 
-        <div className="container  mt-6">
+        <div className="container mt-6">
           <h1>Our Guiding Values</h1>
         </div>
         <section className="p-lg-8 p-4">

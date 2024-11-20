@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import adysun_ventures_logo from "../../assets/images/logos/logo.png";
 import "../../assets/styles/nav-menu.css";
 
@@ -40,7 +40,7 @@ function Header() {
                           alt="logo"
                           className="img-fluid pe-3"
                         />
-                        <span className="h5 fw-bold mb-0">ADYSUN VENTURES</span>
+                        <span className="h5 fw-bold mb-0 d-none d-xxl-flex  ">ADYSUN VENTURES</span>
                       </div>
                     </Link>
                   </div>
@@ -68,31 +68,31 @@ function Header() {
                     }}
                   >
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Home
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/about-us"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         About
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/services"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Services
-                      </Link>
+                      </NavLink>
                     </li>
                     {/* <li className="nav-item">
                       <Link
@@ -104,25 +104,25 @@ function Header() {
                       </Link>
                     </li> */}
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/partners"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Partners
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/technologies"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Technologies
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                      <Link
+                      <NavLink
                         className="nav-link dropdown-toggle"
                         to="/industries"
                         role="button"
@@ -144,7 +144,7 @@ function Header() {
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Industries
-                      </Link>
+                      </NavLink>
                       <ul
                         className="dropdown-menu animate slideIn"
                         aria-labelledby="industriesDropdown"
@@ -157,37 +157,38 @@ function Header() {
                         }}
                       >
                         <li>
-                          <Link
-                            className="dropdown-item"
+                          <NavLink
+                            className="dropdown-item" 
                             to="/industries/stock-exchange"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             Stock Exchange
-                          </Link>
+                          </NavLink>
                         </li>
                         <li>
                           <hr className="dropdown-divider" />
                         </li>
                         <li>
-                          <Link
+                          <NavLink
                             className="dropdown-item"
+                            style={{backgroundColor:"#ff5a2e;"}}
                             to="/industries/ecommerce"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             E-Commerce
-                          </Link>
+                          </NavLink>
                         </li>
                         <li>
                           <hr className="dropdown-divider" />
                         </li>
                         <li>
-                          <Link
+                          <NavLink
                             className="dropdown-item"
                             to="/industries/transportation"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             Transportation
-                          </Link>
+                          </NavLink>
                         </li>
                       </ul>
                       <style>
@@ -200,32 +201,32 @@ function Header() {
                       </style>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/careers"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Careers
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/clients"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Clients
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <Link
+                      <NavLink
                         className="nav-link"
                         to="/contact-us"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Contact
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </nav>

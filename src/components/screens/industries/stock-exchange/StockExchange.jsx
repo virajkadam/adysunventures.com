@@ -244,7 +244,7 @@ function StockExchange() {
         </div>
       </section>
 
-      <section className="p-lg-7 p-3">
+      {/* <section className="p-lg-7 p-3">
         <div className="container text-center ">
           <h1 className="mb-6">Asset classes we work with</h1>
         </div>
@@ -366,7 +366,7 @@ function StockExchange() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="p-2 m-3">
         <div className="container text-center ">
