@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ccad2c2e.css",
-    "main.js": "/static/js/main.9ab584b7.js",
+    "main.js": "/static/js/main.5b9ab989.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -107,17 +107,17 @@
     "static/media/manatarang.jpg": "/static/media/manatarang.3e9fb7afb5d721e6411f.jpg",
     "static/media/safeAndSecure.png": "/static/media/safeAndSecure.0ef1faf332455867e980.png",
     "static/media/greenbrier-living.jpg": "/static/media/greenbrier-living.93dd712883cd327e53eb.jpg",
+    "index.html": "/index.html",
     "static/media/cloudSolutions.svg": "/static/media/cloudSolutions.c8faa5ee350f416dc9f2d3db73e82b23.svg",
     "static/media/design.svg": "/static/media/design.aab8e83f86ebd44fb3f434d449b2ad43.svg",
     "static/media/dataAnalytics.svg": "/static/media/dataAnalytics.62b44815dd84ec3944335e265a88b002.svg",
-    "index.html": "/index.html",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.f3c4e88171702061c0bc985806664788.svg",
     "main.ccad2c2e.css.map": "/static/css/main.ccad2c2e.css.map",
-    "main.9ab584b7.js.map": "/static/js/main.9ab584b7.js.map",
+    "main.5b9ab989.js.map": "/static/js/main.5b9ab989.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ccad2c2e.css",
-    "static/js/main.9ab584b7.js"
+    "static/js/main.5b9ab989.js"
   ]
 }
