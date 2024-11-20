@@ -74,7 +74,8 @@
 
 a:hover,
 a:active {
-	color: #86bc42;
+	/* color: #86bc42; */
+	color: #ff5a2e;
 	text-decoration: none
 }
 
@@ -96,7 +97,8 @@ a:active {
 }
 
 .text-primary {
-	color: #86bc42 !important
+	/* color: #86bc42 !important */
+	color: #ff5a2e !important
 }
 
 .text-content-big p {
@@ -4236,7 +4238,8 @@ h6.title-style2.white {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #86bc42;
+	/* background: #86bc42; */
+	background-image: linear-gradient(to right, #f83600 0%, #f98723 100%);
 	opacity: .92;
 	content: "";
 	z-index: -1
@@ -10458,7 +10461,8 @@ footer h3:after {
 }
 
 .footer-list li a:hover {
-	color: #86bc42
+	/* color: #86bc42 */
+	color: #ff5a2e
 }
 
 .footer-list li a:hover:before {
@@ -11216,7 +11220,8 @@ footer h3.footer-title-style7:before {
 
 
 .primary-overlay[data-overlay-dark]:before {
-	background: #86bc42
+	/* background: #86bc42 */
+	background-image: linear-gradient(to right, #f83600 0%, #f98723 100%);
 }
 
 /* homepage tabs  */

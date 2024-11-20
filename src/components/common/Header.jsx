@@ -94,7 +94,7 @@ function Header() {
                         Services
                       </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link
                         className="nav-link"
                         to="/products"
@@ -102,7 +102,7 @@ function Header() {
                       >
                         Products
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                       <Link
                         className="nav-link"
