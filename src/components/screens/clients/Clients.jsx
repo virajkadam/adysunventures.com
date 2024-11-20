@@ -34,8 +34,12 @@ function Clients() {
     <div>
       {/* <Navbar2 /> */}
       <Header />
-      <div className="container-fluid px-0 position-relative" style={{zIndex: -1}}>
-        <div className="position-absolute top-20 left-lg-10 text-white p-4">
+      <div
+        className="container-fluid px-0 position-relative"
+        // style={{zIndex: -1}}
+        data-overlay-dark="6"
+      >
+        <div className="position-absolute top-20 left-lg-10 text-white p-4 z-1">
           <h1 className="text-white">Our Clients</h1>
 
           <div className="mt-5">
@@ -54,7 +58,7 @@ function Clients() {
           className="img-fluid w-100"
           style={{
             height: "370px",
-            objectFit: "cover", 
+            objectFit: "cover",
             objectPosition: "center",
           }}
         />
