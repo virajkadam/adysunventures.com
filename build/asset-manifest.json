@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ccad2c2e.css",
-    "main.js": "/static/js/main.5b9ab989.js",
+    "main.js": "/static/js/main.7cc2ed48.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -83,6 +83,7 @@
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
     "static/media/content-01.jpg": "/static/media/content-01.d363728612c66b2a1cbd.jpg",
+    "static/media/adysun_cover.png": "/static/media/adysun_cover.4dd6686ec66b1ae1de57.png",
     "static/media/teammember-01.jpg": "/static/media/teammember-01.c983de44c6329c041d01.jpg",
     "static/media/bg4.jpg": "/static/media/bg4.25f98a963aad1ab686db.jpg",
     "static/media/s-4.jpg": "/static/media/s-4.af7db47fa323d691b3d4.jpg",
@@ -113,11 +114,11 @@
     "static/media/dataAnalytics.svg": "/static/media/dataAnalytics.62b44815dd84ec3944335e265a88b002.svg",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.f3c4e88171702061c0bc985806664788.svg",
     "main.ccad2c2e.css.map": "/static/css/main.ccad2c2e.css.map",
-    "main.5b9ab989.js.map": "/static/js/main.5b9ab989.js.map",
+    "main.7cc2ed48.js.map": "/static/js/main.7cc2ed48.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ccad2c2e.css",
-    "static/js/main.5b9ab989.js"
+    "static/js/main.7cc2ed48.js"
   ]
 }

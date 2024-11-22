@@ -8,6 +8,7 @@ function PageNotFound() {
         className="error-box bg-img h-100 d-flex align-items-center"
         data-overlay-dark={0}
         data-background="img/bg/bg4.jpg"
+        // data-background="src/assets/images/meta/adysun_cover.png"
         style={{ 
         //   backgroundImage: `url(${bg4})`,
           backgroundSize: 'cover',
@@ -27,6 +28,9 @@ function PageNotFound() {
           </div>
         </div>
       </section>
+      <div className="d-none">
+        <img src={require("../assets/images/meta/adysun_cover.png")} alt="Adysun Ventures Logo" />
+      </div>
     </div>
   );
 }
