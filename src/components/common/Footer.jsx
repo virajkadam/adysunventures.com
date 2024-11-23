@@ -353,9 +353,9 @@ function Footer() {
 
         <div className="footer-bar">
           <div className="container">
-            <div className="row">
+            <div className="row d-flex justify-content-center">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <p className="mb-0">
+                <p className="mb-0 d-flex justify-content-center">
                   &copy; Copyright {new Date().getFullYear()} ADYSUN VENTURES.
                   All Rights Reserved.
                 </p>

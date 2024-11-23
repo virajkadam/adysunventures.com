@@ -9,6 +9,7 @@ import slice2 from "../assets/images/content/slice-2.png";
 import content1 from "../assets/images/content/content-01.jpg";
 import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
+import companyBanner from "../assets/images/meta/adysun_cover.png"
 
 
 function HomePage() {
@@ -173,7 +174,11 @@ function HomePage() {
         <section
           className="bg-img cover-background"
           data-overlay-dark={7}
-          style={{ backgroundImage: `url(${slider21})` }}
+          style={{ backgroundImage: `url(${companyBanner})`, 
+        width:"100%",
+        height:"100%"
+          
+        }}
         >
           <div className="container py-10">
             <div className="row align-items-center">
@@ -205,8 +210,8 @@ function HomePage() {
                     Expert IT Solutions with a Decade of Experience
                   </p>
                   <p className="text-white m-0">
-                    Adysun Ventures delivers professional IT services with unmatched
-                    expertise, ensuring timely delivery and utmost
+                    Adysun Ventures delivers professional IT services with
+                    unmatched expertise, ensuring timely delivery and utmost
                     confidentiality for all your technology needs.
                   </p>
                 </div>
@@ -222,7 +227,9 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h4>
                               <i class="fa-solid fa-money-bill me-2 text-white"></i>
-                              <span className="text-white">Saving Investments</span>
+                              <span className="text-white">
+                                Saving Investments
+                              </span>
                             </h4>
                             <p className="text-white">
                               Optimize your technology investments for long-term
@@ -243,7 +250,9 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h4>
                               <i class="fa-solid fa-globe me-2 text-white"></i>
-                              <span className="text-white">Online Consulting</span>
+                              <span className="text-white">
+                                Online Consulting
+                              </span>
                             </h4>
                             <p className="text-white">
                               Access expert IT consulting services anytime,
@@ -264,7 +273,9 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h4>
                               <i class="fa-solid fa-building-columns me-2 text-white"></i>
-                              <span className="text-white">Tech Innovation</span>
+                              <span className="text-white">
+                                Tech Innovation
+                              </span>
                             </h4>
                             <p className="text-white">
                               Stay ahead with our innovative tech solutions,
@@ -295,10 +306,10 @@ function HomePage() {
                   </div>
                 </div>
                 <p>
-                  At Adysun Ventures, we combine comprehensive business strategies
-                  with cutting-edge technology to deliver tailored IT solutions.
-                  Our focus is on fostering collaborative partnerships that
-                  drive your business forward.
+                  At Adysun Ventures, we combine comprehensive business
+                  strategies with cutting-edge technology to deliver tailored IT
+                  solutions. Our focus is on fostering collaborative
+                  partnerships that drive your business forward.
                 </p>
                 <p>
                   Founded in 2018, we've quickly become a leading IT service
@@ -307,8 +318,8 @@ function HomePage() {
                   reliability in modern business operations.
                 </p>
                 <p>
-                  Discover how Adysun Ventures can elevate your business with our
-                  premium IT services and products.
+                  Discover how Adysun Ventures can elevate your business with
+                  our premium IT services and products.
                 </p>
                 <div className="mb-4">
                   <span>
@@ -328,7 +339,9 @@ function HomePage() {
                     <strong className="font-weight-700 text-primary">or</strong>
                   </div>
                   <h4 className="d-inline-block h6 mb-0">
-                    <a href="mailto:info@adysunventures.com">info@adysunventures.com</a>
+                    <a href="mailto:info@adysunventures.com">
+                      info@adysunventures.com
+                    </a>
                   </h4>
                 </div>
                 <div className="text-start w-100">
@@ -378,12 +391,14 @@ function HomePage() {
                     {tabData.map((tab, index) => (
                       <li
                         key={tab.id}
-                        className={`ms-4 ${activeTab === index ? 'active' : ''}`}
+                        className={`ms-4 ${
+                          activeTab === index ? "active" : ""
+                        }`}
                         role="tab"
                         aria-controls={`tab-${tab.id}`}
                         aria-selected={activeTab === index}
                         onClick={() => setActiveTab(index)}
-                        style={{ cursor: 'pointer' }}
+                        style={{ cursor: "pointer" }}
                       >
                         <span className="count display-5 display-md-2 alt-font font-weight-700">
                           {tab.number}
@@ -395,7 +410,7 @@ function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="resp-tabs-container box-shadow-large bg-white hor_1">
                     {tabData.map((tab, index) => (
                       <div
@@ -403,7 +418,9 @@ function HomePage() {
                         id={`tab-${tab.id}`}
                         role="tabpanel"
                         aria-labelledby={`tab-${tab.id}-trigger`}
-                        style={{ display: activeTab === index ? 'block' : 'none' }}
+                        style={{
+                          display: activeTab === index ? "block" : "none",
+                        }}
                       >
                         {tab.content}
                       </div>
