@@ -273,38 +273,94 @@ function Footer() {
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
                     <li>
-                      <a onClick={() => handleNavigation('/about-us')} style={{ cursor: 'pointer' }}>About</a>
+                      <a
+                        onClick={() => handleNavigation("/about-us")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        About
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/contact-us')} style={{ cursor: 'pointer' }}>Contact</a>
+                      <a
+                        onClick={() => handleNavigation("/contact-us")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Contact
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/services')} style={{ cursor: 'pointer' }}>Services</a>
+                      <a
+                        onClick={() => handleNavigation("/services")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Services
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/technologies')} style={{ cursor: 'pointer' }}>Technologies</a>
+                      <a
+                        onClick={() => handleNavigation("/technologies")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Technologies
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/careers')} style={{ cursor: 'pointer' }}>Careers</a>
+                      <a
+                        onClick={() => handleNavigation("/careers")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Careers
+                      </a>
                     </li>
                   </ul>
                 </div>
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-0 ps-0">
                     <li>
-                      <a onClick={() => handleNavigation('/partners')} style={{ cursor: 'pointer' }}>Partners</a>
+                      <a
+                        onClick={() => handleNavigation("/partners")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Partners
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/clients')} style={{ cursor: 'pointer' }}>Clients</a>
+                      <a
+                        onClick={() => handleNavigation("/clients")}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Clients
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/industries/stock-exchange')} style={{ cursor: 'pointer' }}>Stock Exchange</a>
+                      <a
+                        onClick={() =>
+                          handleNavigation("/industries/stock-exchange")
+                        }
+                        style={{ cursor: "pointer" }}
+                      >
+                        Stock Exchange
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/industries/ecommerce')} style={{ cursor: 'pointer' }}>E-Commerce</a>
+                      <a
+                        onClick={() =>
+                          handleNavigation("/industries/ecommerce")
+                        }
+                        style={{ cursor: "pointer" }}
+                      >
+                        E-Commerce
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => handleNavigation('/industries/transportation')} style={{ cursor: 'pointer' }}>Transportation</a>
+                      <a
+                        onClick={() =>
+                          handleNavigation("/industries/transportation")
+                        }
+                        style={{ cursor: "pointer" }}
+                      >
+                        Transportation
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -356,8 +412,8 @@ function Footer() {
             <div className="row d-flex justify-content-center">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
                 <p className="mb-0 d-flex justify-content-center">
-                  &copy; Copyright {new Date().getFullYear()} ADYSUN VENTURES.
-                  All Rights Reserved.
+                  &copy; Copyright 2024 ADYSUN VENTURES PVT. LTD. All
+                  Rights Reserved.
                 </p>
               </div>
             </div>
