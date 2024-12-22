@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ccad2c2e.css",
-    "main.js": "/static/js/main.c0bd6dcd.js",
+    "main.js": "/static/js/main.1ea1c08b.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -9,8 +9,12 @@
     "static/media/blog2.jpg": "/static/media/blog2.d068ac28c5acb1666203.jpg",
     "static/media/bg12.jpg": "/static/media/bg12.924636265364fb3002d4.jpg",
     "static/media/approach.jpg": "/static/media/approach.0e757f1e0d9ef3daa700.jpg",
+    "static/media/team_wokring.png": "/static/media/team_wokring.7e535681673bb65c7f6b.png",
     "static/media/bg9.jpg": "/static/media/bg9.e1358859f46a16117174.jpg",
     "static/media/bg17.jpg": "/static/media/bg17.8029baec2b7e1d13e607.jpg",
+    "static/media/lady_working.png": "/static/media/lady_working.541cd024cd4a145e56d1.png",
+    "static/media/partners_content.png": "/static/media/partners_content.84928d546730ce483470.png",
+    "static/media/web_application_development.jpg": "/static/media/web_application_development.5faeb1c2a33276f6692b.jpg",
     "static/media/bg3.jpg": "/static/media/bg3.cdddc6382ddeda5e78d6.jpg",
     "static/media/agency-banner.jpg": "/static/media/agency-banner.8f93d3fb958aea46420a.jpg",
     "static/media/bg1.jpg": "/static/media/bg1.3925cccf054105604181.jpg",
@@ -21,7 +25,6 @@
     "static/media/blog3.jpg": "/static/media/blog3.923737c16706ac5c6159.jpg",
     "static/media/team-01.png": "/static/media/team-01.41bb502bf774d642fdb7.png",
     "static/media/team-03.png": "/static/media/team-03.c734c7b271654c2b54d4.png",
-    "static/media/slice-2.png": "/static/media/slice-2.5befd6ffc7d4a210be0c.png",
     "static/media/stockExchangeBanner.jpg": "/static/media/stockExchangeBanner.9d5c1d5177a237dcef88.jpg",
     "static/media/team-02.png": "/static/media/team-02.e74f7444fc854f48eed6.png",
     "static/media/bg6.jpg": "/static/media/bg6.9fee82db897b2c685e33.jpg",
@@ -37,6 +40,7 @@
     "static/media/list-3.jpg": "/static/media/list-3.2b501eb1e832e47fa353.jpg",
     "static/media/pro-8.jpg": "/static/media/pro-8.2316f7667f27b0ed87bd.jpg",
     "static/media/blog-19.jpg": "/static/media/blog-19.a1cfaa64ad62ed375ba0.jpg",
+    "static/media/landing_bg.jpg": "/static/media/landing_bg.497fa199605ae7725186.jpg",
     "static/media/pro-10.jpg": "/static/media/pro-10.a6c5cde22d8fa45c65b1.jpg",
     "static/media/slide21.jpg": "/static/media/slide21.10320e45fecba301eeeb.jpg",
     "static/media/blog-3.jpg": "/static/media/blog-3.3c108de091c2c3f92b9c.jpg",
@@ -79,6 +83,7 @@
     "static/media/feature-06.jpg": "/static/media/feature-06.fe8223a75e5fad02bcbe.jpg",
     "static/media/tab-content-03.jpg": "/static/media/tab-content-03.92a040dd0a5646bd3468.jpg",
     "static/media/machine.png": "/static/media/machine.a264b3db56c45e8cd23e.png",
+    "static/media/dynamic_website_development.jpg": "/static/media/dynamic_website_development.b2228bf9caaf067eba3c.jpg",
     "static/media/feature-05.jpg": "/static/media/feature-05.de59c3ff65d671ae8df2.jpg",
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
@@ -114,11 +119,11 @@
     "static/media/dataAnalytics.svg": "/static/media/dataAnalytics.62b44815dd84ec3944335e265a88b002.svg",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.f3c4e88171702061c0bc985806664788.svg",
     "main.ccad2c2e.css.map": "/static/css/main.ccad2c2e.css.map",
-    "main.c0bd6dcd.js.map": "/static/js/main.c0bd6dcd.js.map",
+    "main.1ea1c08b.js.map": "/static/js/main.1ea1c08b.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ccad2c2e.css",
-    "static/js/main.c0bd6dcd.js"
+    "static/js/main.1ea1c08b.js"
   ]
 }
