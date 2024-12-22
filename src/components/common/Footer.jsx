@@ -7,9 +7,9 @@ function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
-  const satisfiedVisitors = useCounter(isVisible ? 1826 : 0);
-  const happyClients = useCounter(isVisible ? 875 : 0);
-  const awardsWon = useCounter(isVisible ? 1412 : 0);
+  const satisfiedVisitors = useCounter(isVisible ? 50 : 0);
+  const happyClients = useCounter(isVisible ? 200 : 0);
+  const awardsWon = useCounter(isVisible ? 3 : 0);
   const constructions = useCounter(isVisible ? 888 : 0);
 
   const handleNavigation = (path) => {
@@ -96,7 +96,7 @@ function Footer() {
         data-overlay-dark="6"
       >
         <div className="container">
-          <div className="row mt-n1-9">
+          <div className="row mt-n1-9 justify-content-center">
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18">
@@ -107,7 +107,7 @@ function Footer() {
                 </h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
-                  Satisfied Visitors
+                  Total Projects
                 </p>
               </div>
             </div>
@@ -131,22 +131,11 @@ function Footer() {
                 <h4 className="countup text-white d-block">{awardsWon}</h4>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
-                  Awards Wining
+                  Awards
                 </p>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-3 mt-1-9">
-              <div className="counter-box">
-                <span className="icon mb-0 d-block text-white display-18">
-                  <i className="ti-vector"></i>
-                </span>
-                <h4 className="countup text-white d-block">{constructions}</h4>
-                <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
-                <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
-                  Construction
-                </p>
-              </div>
-            </div>
+        
           </div>
         </div>
       </section>
@@ -233,7 +222,8 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      target="_blank"
+                      to="https://x.com/adysunventures"
                       className="d-flex justify-content-center align-items-center"
                     >
                       <i className="fab fa-twitter"></i>
@@ -241,7 +231,8 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      target="_blank"
+                      to="https://www.instagram.com/adysunventures/"
                       className="d-flex justify-content-center align-items-center"
                     >
                       <i className="fab fa-instagram"></i>
@@ -257,7 +248,8 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      target="_blank"
+                      to="https://www.linkedin.com/in/adysun-ventures/"
                       className="d-flex justify-content-center align-items-center"
                     >
                       <i className="fab fa-linkedin-in"></i>
@@ -375,33 +367,34 @@ function Footer() {
                     <i className="fas fa-map-marker-alt"></i>
                   </span>
                   <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    74 Guild Street 542B, Great North Town 51 MT.
+                    A2-704, Apramey CHSL, Kanchanpushp Complex, Ghodbundar Road,
+                    Kavesar, Thane West, Maharashtra - 400615
                   </span>
                 </li>
-                <li>
+                {/* <li>
                   <span className="d-inline-block text-primary vertical-align-top">
                     <i className="fas fa-mobile-alt"></i>
                   </span>
                   <span className="d-inline-block w-85 vertical-align-top ps-2">
                     (+44) 123 456 789
                   </span>
-                </li>
+                </li> */}
                 <li>
                   <span className="d-inline-block text-primary vertical-align-top">
                     <i className="far fa-envelope"></i>
                   </span>
                   <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    addyour@emailhere
+                    info@adysunventures.com
                   </span>
                 </li>
-                <li>
+                {/* <li>
                   <span className="d-inline-block text-primary vertical-align-top">
                     <i className="fas fa-globe"></i>
                   </span>
                   <span className="d-inline-block w-85 vertical-align-top ps-2">
                     www.yourwebsitehere.com
                   </span>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

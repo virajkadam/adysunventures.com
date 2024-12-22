@@ -5,11 +5,11 @@ import Navbar2 from './common/Navbar2';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
-import slice2 from "../assets/images/content/slice-2.png";
+import slice2 from "../assets/images/content/lady_working.png";
 import content1 from "../assets/images/content/content-01.jpg";
 import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
-import companyBanner from "../assets/images/meta/adysun_cover.png"
+import companyBanner from "../assets/images/bg/landing_bg.jpg"
 
 
 function HomePage() {
@@ -35,7 +35,7 @@ function HomePage() {
             </div>
             <div className="col-lg-6">
               <h4 className="fw-bolder fs-3">Strategic Vision in IT</h4>
-              <div>
+              <div className="mt-4">
                 <span className="fw-bold me-1">
                   Long-term Goals:
                 </span>
@@ -44,20 +44,20 @@ function HomePage() {
                 standards and inspiring both our team and clients
                 to reach their full potential.
               </div>
-              <div>
+              <div className="mt-4">
                 <span className="fw-bold me-1">Innovation:</span>
                 We're at the forefront of technological
                 advancements, constantly exploring new ways to
                 enhance business operations through IT solutions.
               </div>
-              <div>
+              <div className="mt-4">
                 <span className="fw-bold me-1">
                   Customer Focus:
                 </span>
                 Our strategies are built around understanding and
                 exceeding client expectations in the IT sector.
               </div>
-              <div>
+              <div className="mt-4">
                 <span className="fw-bold me-1">
                   Market Leadership:
                 </span>
@@ -65,7 +65,7 @@ function HomePage() {
                 benchmarks in IT services that others aspire to
                 follow.
               </div>
-              <div>
+              <div className="mt-4">
                 <span className="fw-bold me-1">
                   Social Impact:
                 </span>
@@ -323,32 +323,26 @@ function HomePage() {
                 </p>
                 <div className="mb-4">
                   <span>
-                    24/7 Support Available. We're here to answer{" "}
+                    We're here to answer{" "}
                     <strong className="font-weight-600 lead">
                       all your IT-related questions.
                     </strong>
                   </span>
                 </div>
                 <div className="border-bottom mb-3 mb-lg-4 pb-3 pb-lg-4">
-                  <a href="tel:+91 7776827177">
+                  {/* <a href="tel:+91 7776827177">
                     <h4 className="d-inline-block h6 mb-0 me-4">
                       +91 7776827177
                     </h4>
                   </a>
                   <div className="d-inline-block me-4 align-top">
                     <strong className="font-weight-700 text-primary">or</strong>
-                  </div>
+                  </div> */}
                   <h4 className="d-inline-block h6 mb-0">
                     <a href="mailto:info@adysunventures.com">
                       info@adysunventures.com
                     </a>
                   </h4>
-                </div>
-                <div className="text-start w-100">
-                  <p className="mb-0">
-                    <span className="font-weight-700 d-block"></span>
-                    CEO, Adysun Ventures
-                  </p>
                 </div>
               </div>
 

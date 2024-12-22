@@ -5,6 +5,9 @@ import Footer from '../../common/Footer'
 import { images } from '../../../assets'
 import Chart from 'chart.js/auto';
 import useCounter from "../../../hooks/useCounter";
+import content1 from "../../../assets/images/content/team_wokring.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 // Images used in this component:
 // 1. Background images: bg9, bg3
@@ -188,10 +191,10 @@ function AboutUs() {
     };
   }, []);
 
-  const count1 = useCounter(isVisible ? 326 : 0, true);
-  const count2 = useCounter(isVisible ? 89 : 0, true);
-  const count3 = useCounter(isVisible ? 15 : 0, true);
-  const count4 = useCounter(isVisible ? 574 : 0, true);
+  const count1 = useCounter(isVisible ? 50 : 0, true);
+  const count2 = useCounter(isVisible ? 200 : 0, true);
+  const count3 = useCounter(isVisible ? 50 : 0, true);
+  const count4 = useCounter(isVisible ? 100 : 0, true);
 
   return (
     <>
@@ -243,9 +246,6 @@ function AboutUs() {
                       We help you to grow up your best business and solution for
                       your impressive projects.
                     </p>
-                    <a className="read-more" href="#!">
-                      <i className="fa fa-play-circle" /> read more
-                    </a>
                   </div>
                 </div>
               </div>
@@ -264,9 +264,6 @@ function AboutUs() {
                       We help you to grow up your best business and solution for
                       your impressive projects.
                     </p>
-                    <a className="read-more" href="#!">
-                      <i className="fa fa-play-circle" /> read more
-                    </a>
                   </div>
                 </div>
               </div>
@@ -285,9 +282,6 @@ function AboutUs() {
                       We help you to grow up your best business and solution for
                       your impressive projects.
                     </p>
-                    <a className="read-more" href="#!">
-                      <i className="fa fa-play-circle" /> read more
-                    </a>
                   </div>
                 </div>
               </div>
@@ -309,24 +303,22 @@ function AboutUs() {
                     <h4>Welcome To Our Consulting</h4>
                   </div>
                   <div className="inner-content">
-                    <h2>
+                    {/* <h2>
                       <span>
                         “ Pride of the Business For Over a Hundred Years."{" "}
                       </span>
                       for public &amp; private clients.
-                    </h2>
+                    </h2> */}
                     <p>
-                      perspiciatis unde omnis iste natus error sit voluptatem
-                      accusantium doloremque laudantium, totam rem aperiam,
-                      eaque ipsa quae ab illo inventore eritatis architecto
-                      beatae sunt explicabo
+                      We deliver high-performance services to help your business
+                      embrace innovation and tackle the ever-changing challenges
+                      of today’s digital world. Designed to meet your specific
+                      needs, our services capture and deliver business value in
+                      a cost-effective way. Based on your strategic objectives,
+                      we focus on business outcomes in software engineering,
+                      advanced technology, development teams, digital
+                      consulting, and solution operations.
                     </p>
-                    <div className="bottom">
-                      <p className="thm-clr">Founder: Keir Prestonly</p>
-                      <div className="signature">
-                        <img alt="Signature" src={images.content.signature} />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -339,13 +331,13 @@ function AboutUs() {
                           <span className="ti-cloud-up" />
                         </div>
                         <div className="title">
-                          <h3>Projects</h3>
+                          <h3>Total Projects</h3>
                           <span>By Our Experienced Team</span>
                         </div>
                       </div>
                       <div className="right-content float-end">
                         <div className="title">
-                          <h4 className="countup">{count1}</h4>
+                          <h4 className="countup">{count1}+</h4>
                         </div>
                       </div>
                     </li>
@@ -377,7 +369,7 @@ function AboutUs() {
                       </div>
                       <div className="right-content float-end">
                         <div className="title">
-                          <h4 className="countup">{count3}</h4>
+                          <h4 className="countup">{count3}+</h4>
                         </div>
                       </div>
                     </li>
@@ -426,189 +418,13 @@ function AboutUs() {
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="card">
-                  <div
-                    className="card-body"
-                    style={{
-                      height: "400px",
-                      padding: "20px",
-                      backgroundColor: "#ffffff",
-                      border: "1px solid #EAEAEA",
-                      borderRadius: "4px",
-                    }}
-                  >
-                    <canvas id="chBar" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Team Images */}
-        <section className="bg-light md">
-          <div className="container">
-            <div className="section-heading">
-              <h2>Our Team</h2>
-            </div>
-            <div className="row mt-n1-9">
-              <div className="col-lg-3 col-md-6 mt-1-9 text-center">
-                <div className="team-style1">
-                  <div className="team-member-img">
-                    <img
-                      className="img-responsive"
-                      src={images.team.teammember01}
-                      alt="Team Member"
-                    />
-                  </div>
-                  <div className="text-center mt-4 mb-3 pb-3 border-bottom">
-                    <div className="font-weight-600 text-uppercase alt-font">
-                      Jamara Karle
-                    </div>
-                    <div className="text-uppercase">Founder</div>
-                  </div>
-                  <ul className="social-icon-style3 ps-0">
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-linkedin-in" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mt-1-9 text-center">
-                <div className="team-style1">
-                  <div className="team-member-img">
-                    <img
-                      className="img-responsive"
-                      src={images.team.teammember02}
-                      alt="Team Member"
-                    />
-                  </div>
-                  <div className="text-center mt-4 mb-3 pb-3 border-bottom">
-                    <div className="font-weight-600 text-uppercase alt-font">
-                      Keir Prestonly
-                    </div>
-                    <div className="text-uppercase">Co-Founder</div>
-                  </div>
-                  <ul className="social-icon-style3 ps-0">
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-linkedin-in" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mt-1-9 text-center">
-                <div className="team-style1">
-                  <div className="team-member-img">
-                    <img
-                      className="img-responsive"
-                      src={images.team.teammember03}
-                      alt="Team Member"
-                    />
-                  </div>
-                  <div className="text-center mt-4 mb-3 pb-3 border-bottom">
-                    <div className="font-weight-600 text-uppercase alt-font">
-                      Finley Walkeror
-                    </div>
-                    <div className="text-uppercase">Developer</div>
-                  </div>
-                  <ul className="social-icon-style3 ps-0">
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-linkedin-in" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 mt-1-9 text-center">
-                <div className="team-style1">
-                  <div className="team-member-img">
-                    <img
-                      className="img-responsive"
-                      src={images.team.teammember04}
-                      alt="Team Member"
-                    />
-                  </div>
-                  <div className="text-center mt-4 mb-3 pb-3 border-bottom">
-                    <div className="font-weight-600 text-uppercase alt-font">
-                      Niamah Hower
-                    </div>
-                    <div className="text-uppercase">Designer</div>
-                  </div>
-                  <ul className="social-icon-style3 ps-0">
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!">
-                        <i className="fab fa-linkedin-in" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <LazyLoadImage
+                  src={content1}
+                  className="img-fluid rounded"
+                  alt="Strategic IT planning and vision at Adysun Ventures"
+                  width={545}
+                  height={348}
+                />
               </div>
             </div>
           </div>
