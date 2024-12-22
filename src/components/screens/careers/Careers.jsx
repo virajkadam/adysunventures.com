@@ -94,12 +94,6 @@ function Careers() {
                 Dive into endless job opportunities and discover your next big
                 career move!
               </h2>
-
-              <div className="ms-lg-5 mt-3">
-                <Link to="/contact" className="butn primary white-hover">
-                  <span>Explore Job Opportunities</span>
-                </Link>
-              </div>
             </div>
 
             <div className="col-lg-6 text-center order-1 order-lg-1"></div>
@@ -107,11 +101,11 @@ function Careers() {
         </div>
 
         <div className="container mt-6">
-          <h1>Our Guiding Values</h1>
+          <h1 className="text-center">Our Guiding Values</h1>
         </div>
-        <section className="p-lg-8 p-4">
-          <div class="row mt-n1-9">
-            <div class="col-md-6 col-lg-3 mt-1-9 text-center">
+        <section className="p-lg-8 p-4 text-center">
+          <div class="row mt-n1-9 justify-content-center">
+            <div class="col-md-6 col-lg-3 mt-1-9">
               <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-3">
                   <div class="features-icon">
@@ -128,7 +122,7 @@ function Careers() {
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 mt-1-9 text-center">
+            <div class="col-md-6 col-lg-3 mt-1-9">
               <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-3">
                   <div class="features-icon">
@@ -144,8 +138,12 @@ function Careers() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="col-md-6 col-lg-3 mt-1-9 text-center">
+        <section className="p-lg-8 p-4 d-flex justify-content-center">
+          <div class="row mt-n1-9 justify-content-center">
+            <div class="col-md-6 col-lg-3 mt-1-9">
               <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-3">
                   <div class="features-icon">
@@ -162,7 +160,7 @@ function Careers() {
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 mt-1-9 text-center">
+            <div class="col-md-6 col-lg-3 mt-1-9">
               <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-3">
                   <div class="features-icon">
@@ -182,22 +180,22 @@ function Careers() {
         </section>
 
         <div className="my-lg-5 my-md-4 my-2 mx-4">
-          <h1>Who we hire: The Adysun Approach</h1>
+          <h1 className="text-center">Who we hire: The Adysun Approach</h1>
         </div>
-        <section className="p-lg-8 p-4">
-          <div class="row mt-n1-9">
-            <div class="col-md-6 mt-1-9">
-              <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-start bg-secondary">
-                <div class="mb-3">
-                  <div class="features-icon">
-                    <i class="fa-solid fa-ship"></i>
+        <section className="p-lg-8 p-4 text-center">
+          <div className="row mt-n1-9 justify-content-center">
+            <div className="col-md-6 col-lg-3 mt-1-9">
+              <div className="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                <div className="mb-3">
+                  <div className="features-icon">
+                    <i className="fa-solid fa-ship"></i>
                   </div>
                 </div>
-                <div class="">
-                  <h4 class="font-weight-600 h5 mb-2 ">
+                <div className="text-center">
+                  <h4 className="font-weight-600 h5 mb-2">
                     Be the captain, of your own ship
                   </h4>
-                  <p class="mb-0">
+                  <p className="mb-0">
                     Our culture values self-directed individuals who can take
                     ownership of their work and be proactive in driving
                     themselves forward, advancing our mission.
@@ -205,16 +203,17 @@ function Careers() {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-1-9">
-              <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-start bg-secondary">
-                <div class="mb-3">
-                  <div class="features-icon">
-                    <i class="fa-solid fa-brain"></i>
+
+            <div className="col-md-6 col-lg-3 mt-1-9">
+              <div className="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                <div className="mb-3">
+                  <div className="features-icon">
+                    <i className="fa-solid fa-brain"></i>
                   </div>
                 </div>
-                <div class="">
-                  <h4 class="font-weight-600 h5 mb-2 ">Adaptable Mindset</h4>
-                  <p class="mb-0">
+                <div className="text-center">
+                  <h4 className="font-weight-600 h5 mb-2">Adaptable Mindset</h4>
+                  <p className="mb-0">
                     Change is Inevitable. We seek those who can readily adjust
                     to changes, embrace new opportunities, and thrive in
                     uncertain situations.
@@ -222,18 +221,20 @@ function Careers() {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-1-9">
-              <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-start bg-secondary">
-                <div class="mb-3">
-                  <div class="features-icon">
-                    <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div className="row  justify-content-center mt-4">
+            <div className="col-md-6 col-lg-3 mt-1-9">
+              <div className="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                <div className="mb-3">
+                  <div className="features-icon">
+                    <i className="fa-solid fa-spinner"></i>
                   </div>
                 </div>
-                <div class="">
-                  <h4 class="font-weight-600 h5 mb-2 ">
+                <div className="text-center">
+                  <h4 className="font-weight-600 h5 mb-2">
                     Progress-oriented outlook
                   </h4>
-                  <p class="mb-0">
+                  <p className="mb-0">
                     We value and encourage a continuous learning mindset because
                     we believe that learning never ends, and growth is a
                     lifelong process
@@ -241,16 +242,17 @@ function Careers() {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-1-9">
-              <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-start bg-secondary">
-                <div class="mb-3">
-                  <div class="features-icon">
-                    <i class="fas fa-hands-helping"></i>
+
+            <div className="col-md-6 col-lg-3 mt-1-9">
+              <div className="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+                <div className="mb-3">
+                  <div className="features-icon">
+                    <i className="fas fa-hands-helping"></i>
                   </div>
                 </div>
-                <div class="">
-                  <h4 class="font-weight-600 h5 mb-2 ">Empathy in Action</h4>
-                  <p class="mb-0">
+                <div className="text-center">
+                  <h4 className="font-weight-600 h5 mb-2">Empathy in Action</h4>
+                  <p className="mb-0">
                     We look for team members who embrace empathy and
                     collaboration, valuing the contributions of others and
                     working together towards a common goal.

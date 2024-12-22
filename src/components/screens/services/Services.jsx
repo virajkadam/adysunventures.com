@@ -35,6 +35,9 @@ import {
   faUsers
 } from '@fortawesome/free-solid-svg-icons';
 
+import web_application_development from "../../../assets/images/content/web_application_development.jpg";
+import dynamic_website_development from "../../../assets/images/content/dynamic_website_development.jpg";
+
 function Services() {
   useEffect(() => {
     if (window.jQuery && window.jQuery.fn.owlCarousel) {
@@ -70,13 +73,13 @@ function Services() {
 
   const serviceItems = [
     {
-      image: contentImages.services.service1b,
+      image: web_application_development,
       icon: "fa-solid fa-person-chalkboard",
       title: "Web Application Development",
       description: "Our web application development services deliver robust, scalable solutions tailored to your business needs."
     },
     {
-      image: contentImages.services.service2b,
+      image: dynamic_website_development,
       icon: "fa-solid fa-coins",
       title: "Dynamic Website Development",
       description: "Our dynamic website development services create interactive online experiences tailored to your audience."
@@ -211,6 +214,18 @@ function Services() {
                   specialized...
                 </p>
               </div>
+              <div className="col-md-4 mb-4 text-center">
+                <div className="mb-4">
+                  <i className="fa-solid fa-cogs fa-3x text-primary"></i>
+                </div>
+                <h5 className="mb-3">Product Development</h5>
+                <p>
+                  Product development is a comprehensive process that involves
+                  creating a new product or improving an existing one. It
+                  typically includes several stages, from initial idea to market
+                  launch.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -235,10 +250,10 @@ function Services() {
                 </p>
               </div>
               <div className="col-lg-5">
-                <h4 className="mb-4">
+                <h4 className="mb-4 text-center">
                   Adysun Ventures Web Developers are hired for -
                 </h4>
-                <ul className="list-unstyled">
+                <ul className="list-unstyled ">
                   <li className="mb-2">• Custom Website Development</li>
                   <li className="mb-2">• Content Management System (CMS)</li>
                   <li className="mb-2">• Front-end Design &amp; Development</li>
@@ -258,6 +273,10 @@ function Services() {
             <i className="fab fa-bootstrap me-3 fs-1 px-3"></i>
             <i className="fab fa-html5 me-3 fs-1 px-3"></i>
             <i className="fab fa-angular me-3 fs-1 px-3 mt-lg-0 mt-3"></i>
+            <i className="fab fa-react me-3 fs-1 px-3"></i>
+            <i className="fab fa-vuejs me-3 fs-1 px-3"></i>
+            <i className="fab fa-laravel me-3 fs-1 px-3"></i>
+            <i className="fab fa-docker me-3 fs-1 px-3"></i>
           </div>
         </section>
         <section className="py-5">
@@ -283,7 +302,7 @@ function Services() {
                 </p>
               </div>
               <div className="col-lg-5">
-                <h4 className="mb-4">
+                <h4 className="mb-4 text-center">
                   Adysun Ventures is Providing Mobile Apps Development for -
                 </h4>
                 <ul className="list-unstyled">
@@ -301,6 +320,10 @@ function Services() {
             <i className="fab fa-android me-3 fs-1 px-3"></i>
             <i className="fab fa-windows me-3 fs-1 px-3"></i>
             <i className="fab fa-java me-3 fs-1 px-3"></i>
+            <i className="fab fa-react me-3 fs-1 px-3"></i>
+            <i className="fab fa-angular me-3 fs-1 px-3"></i>
+            <i className="fab fa-vuejs me-3 fs-1 px-3"></i>
+            <i className="fab fa-node me-3 fs-1 px-3"></i>
           </div>
         </section>
         <section className="py-5">
@@ -320,9 +343,9 @@ function Services() {
                 </p>
               </div>
               <div className="col-lg-5">
-                <h4 className="mb-4">
-                  Adysun Ventures Business Intelligence (BI) Analytics are hired for
-                  -
+                <h4 className="mb-4 text-center">
+                  Adysun Ventures Business Intelligence (BI) Analytics are hired
+                  for -
                 </h4>
                 <ul className="list-unstyled">
                   <li className="mb-2">• Data Integration &amp; Processing</li>
@@ -339,6 +362,10 @@ function Services() {
             <i className="fab fa-android me-3 fs-1 px-3"></i>
             <i className="fab fa-windows me-3 fs-1 px-3"></i>
             <i className="fab fa-java me-3 fs-1 px-3"></i>
+            <i className="fab fa-php me-3 fs-1 px-3"></i>
+            <i className="fab fa-node me-3 fs-1 px-3"></i>
+            <i className="fab fa-html5 me-3 fs-1 px-3"></i>
+            <i className="fab fa-css3 me-3 fs-1 px-3"></i>
           </div>
         </section>
         <section className="py-5">
@@ -350,8 +377,8 @@ function Services() {
                   Our agile project management resources are available on-demand
                   to manage all your development projects with adaptive project
                   life cycle. Having delivered many successful projects using
-                  agile methodology, Adysun Ventures expertise will ensure reduced
-                  cost and rework by maintaining timelines.
+                  agile methodology, Adysun Ventures expertise will ensure
+                  reduced cost and rework by maintaining timelines.
                 </p>
                 <p>
                   To produce top quality work with deadlines, needs more than
@@ -359,7 +386,7 @@ function Services() {
                 </p>
               </div>
               <div className="col-lg-5">
-                <h4 className="mb-4">
+                <h4 className="mb-4 text-center">
                   Adysun Ventures on-demand Project Management resources -
                 </h4>
                 <ul className="list-unstyled">
@@ -375,6 +402,9 @@ function Services() {
             <i className="fab fa-slack me-3 fs-1 px-3"></i>
             <i className="fab fa-jira me-3 fs-1 px-3"></i>
             <i className="fab fa-git me-3 fs-1 px-3"></i>
+            <i className="fab fa-trello me-3 fs-1 px-3"></i>
+           
+            <i className="fab fa-free-code-camp me-3 fs-1 px-3"></i>
           </div>
         </section>
         <section className="py-5">
@@ -398,7 +428,7 @@ function Services() {
                 </p>
               </div>
               <div className="col-lg-5">
-                <h4 className="mb-4">
+                <h4 className="mb-4 text-center">
                   Adysun Ventures SEO experts are hired for -
                 </h4>
                 <ul className="list-unstyled">
@@ -413,6 +443,7 @@ function Services() {
           <div className="mt-4 text-center">
             <i className="fab fa-google me-3 fs-1 px-3"></i>
             <i className="fab fa-yahoo me-3 fs-1 px-3"></i>
+            <i className="fab fa-wordpress me-3 fs-1 px-3"></i>
           </div>
         </section>
       </div>

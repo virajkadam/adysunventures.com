@@ -70,6 +70,7 @@ import service5b from './images/content/services/service-5b.jpg'
 import service6b from './images/content/services/service-6b.jpg'
 import signature from './images/content/signature.png' // Added
 
+
 // Features
 import feature01 from './images/content/feature-01.jpg'
 import feature02 from './images/content/feature-02.jpg'

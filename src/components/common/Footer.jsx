@@ -84,6 +84,61 @@ function Footer() {
 
   return (
     <>
+      <div className="container mt-4  mb-4">
+        <h4 className="text-center  text-uppercase my-5">
+          Reach Out to Adysun Ventures
+        </h4>
+        <div className="row  p-3">
+          <div className="col-lg-6 order-2 order-lg-1 border border-2 border-gray rounded px-0">
+            <iframe
+              className="contact-map rounded"
+              id="gmap_canvas"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.562008566088!2d72.966231824157!3d19.25791113539065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bb9575b6d513%3A0x45cf3b57fef76be9!2sKanchanpushp%20Complex%2C%20KANCHAN%20PUSHP%20SOCIETY%2C%20Kavesar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400607!5e0!3m2!1sen!2sin!4v1734870578839!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          <div className="col-lg-6 order-1 order-lg-2 ">
+            <div className="contact-info ps-lg-1-9 mb-1-9 mb-lg-0">
+              {/* <div className="item bg-white">
+                <span className="icon">
+                  <i className="fas fa-phone text-primary" />
+                </span>
+                <div className="cont">
+                  <h6 className="mb-1 font-weight-600">Phone: </h6>
+                  <p>+91 7776827177</p>
+                </div>
+              </div> */}
+              <div className="item bg-white">
+                <span className="icon">
+                  <i className="fas fa-map-marker-alt text-primary" />
+                </span>
+                <div className="cont">
+                  <h6 className="mb-1 font-weight-600">Address: </h6>
+                  <p className="m-0">
+                    A2-704, Apramey CHSL, Kanchanpushp Complex, Ghodbundar Road,
+                    Kavesar, Thane West, Maharashtra - 400615
+                  </p>
+                </div>
+              </div>
+              <div className="item bg-white">
+                <span className="icon">
+                  <i className="fas fa-envelope text-primary" />
+                </span>
+                <div className="cont">
+                  <h6 className="mb-1 font-weight-600">Email: </h6>
+                  <p>info@adysunventures.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* COUNTER */}
       <section
         className="parallax md counter-section"
@@ -135,7 +190,6 @@ function Footer() {
                 </p>
               </div>
             </div>
-        
           </div>
         </div>
       </section>

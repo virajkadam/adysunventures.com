@@ -174,11 +174,11 @@ function HomePage() {
         <section
           className="bg-img cover-background"
           data-overlay-dark={7}
-          style={{ backgroundImage: `url(${companyBanner})`, 
-        width:"100%",
-        height:"100%"
-          
-        }}
+          style={{
+            backgroundImage: `url(https://c1.wallpaperflare.com/preview/652/531/737/wood-aerial-background-beverage.jpg)`,
+            width: "100%",
+            height: "100%",
+          }}
         >
           <div className="container py-10">
             <div className="row align-items-center">
@@ -201,7 +201,7 @@ function HomePage() {
         <section className="services-blocks p-0 bg-transparent">
           <div className="container">
             <div
-              className="bg-img cover-background primary-overlay"
+              className="bg-img cover-background primary-overlay  rounded-4"
               data-overlay-dark={9}
             >
               <div className="position-relative z-index-1 p-1-9 p-sm-2-3 p-md-2-9 p-lg-6">

@@ -87,40 +87,58 @@ function Technologies() {
                 <div>
                   <div className="row ">
                     {/* Each benefit column */}
-                    <div className="col-lg-6 col-12 col-md-6 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Upto 60% Cost Saving
                       </div>
                     </div>
-                    <div className="col-sm-6 col-12 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Source Code Authorization
                       </div>
                     </div>
-                    <div className="col-sm-6 col-12 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Non-Disclosure Agreement
                       </div>
                     </div>
-                    <div className="col-sm-6 col-12 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Experienced Coders
                       </div>
                     </div>
-                    <div className="col-sm-6 col-12 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Lean processes, Agile mindset
                       </div>
                     </div>
-                    <div className="col-sm-6 col-12 mb-3">
+                    <div className="col-lg-4 col-12 mb-3">
                       <div className="border-dotted p-2 text-white text-nowrap">
                         <i className="fa fa-check-circle text-white me-3 fs-4" />
                         Upto 2X less time
+                      </div>
+                    </div>
+                    <div className="col-lg-4 col-12 mb-3">
+                      <div className="border-dotted p-2 text-white text-nowrap">
+                        <i className="fa fa-check-circle text-white me-3 fs-4" />
+                        Enhanced Security Measures
+                      </div>
+                    </div>
+                    <div className="col-lg-4 col-12 mb-3">
+                      <div className="border-dotted p-2 text-white text-nowrap">
+                        <i className="fa fa-check-circle text-white me-3 fs-4" />
+                        Scalable Solutions
+                      </div>
+                    </div>
+                    <div className="col-lg-4 col-12 mb-3">
+                      <div className="border-dotted p-2 text-white text-nowrap">
+                        <i className="fa fa-check-circle text-white me-3 fs-4" />
+                        Flexible Engagement Models
                       </div>
                     </div>
                   </div>
@@ -158,85 +176,85 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={android}
                       alt="Android"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Android</span>
+                    <span className="fs-5">Android</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block ">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={IOS}
                       alt="IOS"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>IOS</span>
+                    <span className="fs-5">IOS</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={reactnative}
                       alt="react-native"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>React Naive</span>
+                    <span className="fs-5">React Native</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={flutter}
                       alt="flutter"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Flutter</span>
+                    <span className="fs-5">Flutter</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={ionic}
                       alt="ionic"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Ionic</span>
+                    <span className="fs-5">Ionic</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={xamarin}
                       alt="xamarin"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Xamarin</span>
+                    <span className="fs-5">Xamarin</span>
                   </a>
                 </div>
               </div>
@@ -246,85 +264,85 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={swift}
                       alt="swift"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Swift</span>
+                    <span className="fs-5">Swift</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={hybrid}
                       alt="hybrid-app"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Hybrid App</span>
+                    <span className="fs-5">Hybrid App</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={pwa}
                       alt="pwa"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>PWA</span>
+                    <span className="fs-5">PWA</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={phoneGap}
                       alt="phone-gap"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>PhoneGap</span>
+                    <span className="fs-5">PhoneGap</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={electronjs}
                       alt="electronjs"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Electron.js</span>
+                    <span className="fs-5">Electron.js</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={native}
                       alt="native-app"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Native App</span>
+                    <span className="fs-5">Native App</span>
                   </a>
                 </div>
               </div>
@@ -336,57 +354,57 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={javascript}
                       alt="javascript"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Javascript</span>
+                    <span className="fs-5">Javascript</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={angularjs}
                       alt="angularjs"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Angular</span>
+                    <span className="fs-5">Angular</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={vuejs}
                       alt="vuejs"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Vue.js</span>
+                    <span className="fs-5">Vue.js</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={reactjs}
                       alt="reactjs"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>React.js</span>
+                    <span className="fs-5">React.js</span>
                   </a>
                 </div>
               </div>
@@ -398,57 +416,57 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={hadoop}
                       alt="hadoop"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Hadoop</span>
+                    <span className="fs-5">Hadoop</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={powerbi}
                       alt="powerbi"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Power BI</span>
+                    <span className="fs-5">Power BI</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={bigdata}
                       alt="bigdata"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Big Data</span>
+                    <span className="fs-5">Big Data</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={spagobi}
                       alt="spogibi"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>SpagoBI</span>
+                    <span className="fs-5">SpagoBI</span>
                   </a>
                 </div>
               </div>
@@ -460,71 +478,71 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success  rounded"
+                    className="d-block p-3 text-center border border-success  rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={firebase}
                       alt="firebase"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Firebase</span>
+                    <span className="fs-5">Firebase</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={azure}
                       alt="azure"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Azure</span>
+                    <span className="fs-5">Azure</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={aws}
                       alt="aws"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>AWS</span>
+                    <span className="fs-5">AWS</span>
                   </a>
                 </div>
                 <div className="col-lg-2  col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={googleCloud}
                       alt="googleCloud"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Google</span>
+                    <span className="fs-5">Google</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={iCloud}
                       alt="iCloud"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>iCloud</span>
+                    <span className="fs-5">iCloud</span>
                   </a>
                 </div>
               </div>
@@ -536,85 +554,85 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={php}
                       alt="php"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>PHP</span>
+                    <span className="fs-5">PHP</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={laravel}
                       alt="laravel"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Laravel</span>
+                    <span className="fs-5">Laravel</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={java}
                       alt="java"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Java</span>
+                    <span className="fs-5">Java</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={python}
                       alt="python"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Python</span>
+                    <span className="fs-5">Python</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={nodejs}
                       alt="nodejs"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Node.js</span>
+                    <span className="fs-5">Node.js</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={objectivec}
                       alt="objectiveC"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Objective C</span>
+                    <span className="fs-5">Objective C</span>
                   </a>
                 </div>
               </div>
@@ -624,85 +642,85 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={cpp}
                       alt="cpp"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>C++</span>
+                    <span className="fs-5">C++</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={cHash}
                       alt="cHash"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>C#</span>
+                    <span className="fs-5">C#</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={ruby}
                       alt="ruby"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Ruby</span>
+                    <span className="fs-5">Ruby</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={coigniter}
                       alt="coigniter"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Coeigniter</span>
+                    <span className="fs-5">Coeigniter</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={symfony}
                       alt="symfony"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Symfony</span>
+                    <span className="fs-5">Symfony</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={wpf}
                       alt="wpf"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>WPF</span>
+                    <span className="fs-5">WPF</span>
                   </a>
                 </div>
               </div>
@@ -714,7 +732,7 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={blockchain}
@@ -722,35 +740,35 @@ function Technologies() {
                       className="me-2"
                       style={{ height: 25 }}
                     />
-                    <span>Blockchain</span>
+                    <span className="fs-5">Blockchain</span>
                   </a>
                 </div>
                 <div className="col-lg-3 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={machineLearning}
                       alt="machineLearning"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Machine Learning</span>
+                    <span className="fs-5">Machine Learning</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={tensorflow}
                       alt="tensorflow"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Tensorflow</span>
+                    <span className="fs-5">Tensorflow</span>
                   </a>
                 </div>
               </div>
@@ -762,49 +780,49 @@ function Technologies() {
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={drupal}
                       alt="drupal"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Drupal</span>
+                    <span className="fs-5">Drupal</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={magento}
                       alt="magento"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Magento</span>
+                    <span className="fs-5">Magento</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={wordpress}
                       alt="wordpress"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Wordpress</span>
+                    <span className="fs-5">Wordpress</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={opencart}
@@ -812,21 +830,21 @@ function Technologies() {
                       className="me-2"
                       style={{ height: 22 }}
                     />
-                    <span>Opencart</span>
+                    <span className="fs-5">Opencart</span>
                   </a>
                 </div>
                 <div className="col-lg-2 col-md-4 my-2 d-sm-block">
                   <a
                     href="#"
-                    className="d-block p-3 text-center border border-success rounded"
+                    className="d-block p-3 text-center border border-success rounded d-flex align-items-center justify-content-center"
                   >
                     <img
                       src={joomla}
                       alt="joomla"
                       className="me-2"
-                      style={{ height: 24 }}
+                      style={{ height: 28 }}
                     />
-                    <span>Joomla</span>
+                    <span className="fs-5">Joomla</span>
                   </a>
                 </div>
               </div>
@@ -894,7 +912,7 @@ function Technologies() {
             <div className="price-table-style3 border border-secondary text-center h-100 d-flex flex-column justify-content-between p-lg-3 ">
               <div className="price-table-content">
                 <div className="mb-4">
-                  <span className="d-inline-block text-black rounded-circle p-lg-2">
+                  <span className="d-inline-block text-black rounded-circle p-lg-2 fs-3">
                     1
                   </span>
                 </div>
@@ -918,7 +936,7 @@ function Technologies() {
             <div className="price-table-style3 border border-secondary text-center h-100 d-flex flex-column justify-content-between p-lg-3 ">
               <div className="price-table-content">
                 <div className="mb-4">
-                  <span className="d-inline-block text-black rounded-circle p-lg-2">
+                  <span className="d-inline-block text-black rounded-circle p-lg-2 fs-3">
                     2
                   </span>
                 </div>
@@ -935,7 +953,7 @@ function Technologies() {
             <div className="price-table-style3 border border-secondary text-center h-100 d-flex flex-column justify-content-between p-lg-3">
               <div className="price-table-content">
                 <div className="mb-4">
-                  <span className="d-inline-block text-black rounded-circle p-lg-2">
+                  <span className="d-inline-block text-black rounded-circle p-lg-2 fs-3">
                     3
                   </span>
                 </div>
@@ -997,7 +1015,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-life-ring text-success py-4"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">
@@ -1013,7 +1031,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-briefcase text-success py-2"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">
@@ -1029,7 +1047,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-handshake text-success py-3"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">Free no obligation quote</h5>
@@ -1046,7 +1064,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-database text-success py-4"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">Your local guy costs more</h5>
@@ -1060,7 +1078,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-thumbs-up text-success py-2"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">
@@ -1076,7 +1094,7 @@ function Technologies() {
                 <div className="mb-3">
                   <i
                     className="fa-solid fa-users text-success py-3"
-                    style={{ fontSize: "2rem" }}
+                    style={{ fontSize: "4rem" }}
                   />
                 </div>
                 <h5 className="mb-3 text-white">Free project management</h5>

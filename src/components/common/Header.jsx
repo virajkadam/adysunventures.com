@@ -40,7 +40,7 @@ function Header() {
                           alt="logo"
                           className="img-fluid pe-3"
                         />
-                        <span className="h5 fw-bold mb-0 d-none d-xxl-flex  ">ADYSUN VENTURES</span>
+                        <span className="h5 fw-bold mb-0 d-flex">ADYSUN VENTURES</span>
                       </div>
                     </Link>
                   </div>
@@ -156,7 +156,7 @@ function Header() {
                           opacity: 0,
                         }}
                       >
-                        <li>
+                        {/* <li>
                           <NavLink
                             className="dropdown-item" 
                             to="/industries/stock-exchange"
@@ -167,7 +167,7 @@ function Header() {
                         </li>
                         <li>
                           <hr className="dropdown-divider" />
-                        </li>
+                        </li> */}
                         <li>
                           <NavLink
                             className="dropdown-item"
