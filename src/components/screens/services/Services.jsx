@@ -232,9 +232,49 @@ function Services() {
         <section className="py-5">
           <div className="container">
             <div className="row">
-
-              //machine learning content
-
+              <div className="col-lg-7">
+                <h2 className="text-primary mb-4">Machine Learning & AI Solutions</h2>
+                <p className="mb-4">
+                  Our expert team of data scientists and ML engineers delivers cutting-edge artificial intelligence 
+                  and machine learning solutions to help businesses automate processes, gain insights, and make 
+                  data-driven decisions. We leverage state-of-the-art algorithms and frameworks to build 
+                  intelligent systems that drive innovation and efficiency.
+                </p>
+                <p>
+                  From predictive analytics to computer vision and natural language processing, we develop 
+                  custom AI solutions that address your specific business challenges while ensuring scalability, 
+                  accuracy, and ethical AI practices.
+                </p>
+              </div>
+              <div className="col-lg-5">
+                <h4 className="mb-4 text-center">
+                  Adysun Ventures Machine Learning Solutions include -
+                </h4>
+                <ul className="list-unstyled">
+                  <li className="mb-2">• Predictive Analytics & Forecasting</li>
+                  <li className="mb-2">• Natural Language Processing (NLP)</li>
+                  <li className="mb-2">• Computer Vision Solutions</li>
+                  <li className="mb-2">• Recommendation Systems</li>
+                  <li className="mb-2">• Deep Learning Models</li>
+                  <li className="mb-2">• AI Model Deployment & Maintenance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 text-center mb-5">
+            <i className="fas fa-brain me-3 fs-1 px-3" title="AI/ML"></i>
+            <i className="fab fa-python me-3 fs-1 px-3" title="Python"></i>
+            <i className="fab fa-js-square me-3 fs-1 px-3" title="TensorFlow.js"></i>
+            <i className="fas fa-robot me-3 fs-1 px-3" title="Deep Learning"></i>
+            <i className="fas fa-microchip me-3 fs-1 px-3" title="Neural Networks"></i>
+            <i className="fas fa-chart-bar me-3 fs-1 px-3" title="Analytics"></i>
+            <i className="fab fa-aws me-3 fs-1 px-3" title="AWS ML Services"></i>
+            <i className="fab fa-google me-3 fs-1 px-3" title="Google AI"></i>
+          </div>
+        </section>
+        <section className="py-5">
+          <div className="container">
+            <div className="row">
               <div className="col-lg-7">
                 <h2 className="text-primary mb-4">Web Development</h2>
                 <p className="mb-4">
