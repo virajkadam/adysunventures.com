@@ -2,15 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import bgImage from "../../assets/images/bg/bg12.jpg"; // Import the background image
 import useCounter from "../../hooks/useCounter";
+import companyInfo from "../../config/companyInfo";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
-  const satisfiedVisitors = useCounter(isVisible ? 50 : 0);
-  const happyClients = useCounter(isVisible ? 200 : 0);
-  const awardsWon = useCounter(isVisible ? 3 : 0);
+  const satisfiedVisitors = useCounter(isVisible ? companyInfo.stats.totalProjects : 0);
+  const happyClients = useCounter(isVisible ? companyInfo.stats.happyClients : 0);
+  const awardsWon = useCounter(isVisible ? companyInfo.stats.awards : 0);
   const constructions = useCounter(isVisible ? 888 : 0);
+
+  const primaryEmail = companyInfo.contact.emails.find(email => email.type === "primary");
+  const primaryLocation = companyInfo.contact.locations.find(location => location.type === "headquarters");
+  const primaryPhone = companyInfo.contact.phones.find(phone => phone.type === "primary");
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -82,60 +87,130 @@ function Footer() {
     };
   }, []);
 
+  const renderContactInfo = () => (
+    <div className="contact-info ps-lg-1-9 mb-1-9 mb-lg-0">
+      {primaryPhone && (
+        <div className="item bg-white">
+          <span className="icon">
+            <i className="fas fa-phone text-primary" />
+          </span>
+          <div className="cont">
+            <h6 className="mb-1 font-weight-600">Phone: </h6>
+            <p>{primaryPhone.number}</p>
+            <small className="text-muted">{primaryPhone.department}</small>
+          </div>
+        </div>
+      )}
+      
+      {primaryLocation && (
+        <div className="item bg-white">
+          <span className="icon">
+            <i className="fas fa-map-marker-alt text-primary" />
+          </span>
+          <div className="cont">
+            <h6 className="mb-1 font-weight-600">
+              {primaryLocation.name}
+            </h6>
+            <p className="m-0">
+              {primaryLocation.address.line1},
+              {primaryLocation.address.line2 && ` ${primaryLocation.address.line2},`}
+              {primaryLocation.address.area && ` ${primaryLocation.address.area},`}
+              {` ${primaryLocation.address.city},`}
+              {` ${primaryLocation.address.state} -`}
+              {` ${primaryLocation.address.pincode}`}
+            </p>
+          </div>
+        </div>
+      )}
+
+      <div className="item bg-white">
+        <span className="icon">
+          <i className="fas fa-envelope text-primary" />
+        </span>
+        <div className="cont">
+          <h6 className="mb-1 font-weight-600">Email Contacts:</h6>
+          {companyInfo.contact.emails.map((email, index) => (
+            <div key={email.type} className={index !== 0 ? 'mt-2' : ''}>
+              <p className="m-0">{email.address}</p>
+              <small className="text-muted">{email.department}</small>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSocialIcons = () => (
+    <div className="mt-4 footer-social-icons">
+      <ul className="mb-0 ps-0">
+        {companyInfo.social.platforms
+          .filter(platform => platform.isActive)
+          .map(platform => (
+            <li key={platform.name}>
+              <Link
+                to={platform.url}
+                target={platform.url !== "#" ? "_blank" : undefined}
+                className="d-flex justify-content-center align-items-center"
+                title={platform.name}
+              >
+                <i className={platform.icon}></i>
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+
+  const renderAllLocations = () => (
+    <div className="locations-grid mt-4">
+      {companyInfo.contact.locations.map(location => (
+        <div key={location.id} className="location-item mb-4">
+          <h6 className="text-primary mb-2">
+            {location.name}
+          </h6>
+          <p className="m-0">
+            {location.address.line1},
+            {location.address.line2 && ` ${location.address.line2},`}
+            {location.address.area && ` ${location.address.area},`}
+            {location.address.street && ` ${location.address.street},`}
+            {` ${location.address.city},`}
+            {` ${location.address.state} -`}
+            {` ${location.address.pincode}`}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <>
-      <div className="container mt-4  mb-4">
-        <h4 className="text-center  text-uppercase my-5">
-          Reach Out to Adysun Ventures
+      <div className="container mt-4 mb-4">
+        <h4 className="text-center text-uppercase my-5">
+          Reach Out to {companyInfo.name.short}
         </h4>
-        <div className="row  p-3">
+        <div className="row p-3">
           <div className="col-lg-6 order-2 order-lg-1 border border-2 border-gray rounded px-0">
-            <iframe
-              className="contact-map rounded"
-              id="gmap_canvas"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.562008566088!2d72.966231824157!3d19.25791113539065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bb9575b6d513%3A0x45cf3b57fef76be9!2sKanchanpushp%20Complex%2C%20KANCHAN%20PUSHP%20SOCIETY%2C%20Kavesar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400607!5e0!3m2!1sen!2sin!4v1734870578839!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            {primaryLocation && primaryLocation.googleMapsUrl ? (
+              <iframe
+                className="contact-map rounded"
+                id="gmap_canvas"
+                src={primaryLocation.googleMapsUrl}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            ) : (
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <p>Map location not available</p>
+              </div>
+            )}
           </div>
 
-          <div className="col-lg-6 order-1 order-lg-2 ">
-            <div className="contact-info ps-lg-1-9 mb-1-9 mb-lg-0">
-              {/* <div className="item bg-white">
-                <span className="icon">
-                  <i className="fas fa-phone text-primary" />
-                </span>
-                <div className="cont">
-                  <h6 className="mb-1 font-weight-600">Phone: </h6>
-                  <p>+91 7776827177</p>
-                </div>
-              </div> */}
-              <div className="item bg-white">
-                <span className="icon">
-                  <i className="fas fa-map-marker-alt text-primary" />
-                </span>
-                <div className="cont">
-                  <h6 className="mb-1 font-weight-600">Address: </h6>
-                  <p className="m-0">
-                    A2-704, Apramey CHSL, Kanchanpushp Complex, Ghodbundar Road,
-                    Kavesar, Thane West, Maharashtra - 400615
-                  </p>
-                </div>
-              </div>
-              <div className="item bg-white">
-                <span className="icon">
-                  <i className="fas fa-envelope text-primary" />
-                </span>
-                <div className="cont">
-                  <h6 className="mb-1 font-weight-600">Email: </h6>
-                  <p>info@adysunventures.com</p>
-                </div>
-              </div>
-            </div>
+          <div className="col-lg-6 order-1 order-lg-2">
+            {renderContactInfo()}
           </div>
         </div>
       </div>
@@ -251,66 +326,14 @@ function Footer() {
                     className="img-fluid pe-3"
                   />
                   <span className="h3 text-white fw-bold mb-0">
-                    ADYSUN VENTURES
+                    {companyInfo.name.short}
                   </span>
                 </div>
               </Link>
               <p className="mt-4 display-30 text-default-color">
-                We deliver high-performance services to help your business
-                embrace innovation and tackle the ever-changing challenges of
-                today's digital world. Designed to meet your specific needs, our
-                services capture and deliver business value in a cost-effective
-                way. Based on your strategic objectives, we focus on business
-                outcomes in software engineering, advanced technology,
-                development teams, digital consulting, and solution operations.
+                {companyInfo.about.shortDescription}
               </p>
-              <div className="mt-4 footer-social-icons">
-                <ul className="mb-0 ps-0">
-                  <li>
-                    <Link
-                      to="#"
-                      className="d-flex justify-content-center align-items-center"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://x.com/adysunventures"
-                      className="d-flex justify-content-center align-items-center"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://www.instagram.com/adysunventures/"
-                      className="d-flex justify-content-center align-items-center"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      className="d-flex justify-content-center align-items-center"
-                    >
-                      <i className="fab fa-youtube"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://www.linkedin.com/in/adysun-ventures/"
-                      className="d-flex justify-content-center align-items-center"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              {renderSocialIcons()}
             </div>
 
             <div className="col-lg-4 col-md-6 mt-1-9">
@@ -414,42 +437,8 @@ function Footer() {
             </div>
 
             <div className="col-lg-3 col-md-6 offset-lg-1 mt-1-9">
-              <h3 className="footer-title-style2 text-primary">Get in Touch</h3>
-              <ul className="footer-list ps-0">
-                <li>
-                  <span className="d-inline-block text-primary vertical-align-top">
-                    <i className="fas fa-map-marker-alt"></i>
-                  </span>
-                  <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    A2-704, Apramey CHSL, Kanchanpushp Complex, Ghodbundar Road,
-                    Kavesar, Thane West, Maharashtra - 400615
-                  </span>
-                </li>
-                {/* <li>
-                  <span className="d-inline-block text-primary vertical-align-top">
-                    <i className="fas fa-mobile-alt"></i>
-                  </span>
-                  <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    (+44) 123 456 789
-                  </span>
-                </li> */}
-                <li>
-                  <span className="d-inline-block text-primary vertical-align-top">
-                    <i className="far fa-envelope"></i>
-                  </span>
-                  <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    info@adysunventures.com
-                  </span>
-                </li>
-                {/* <li>
-                  <span className="d-inline-block text-primary vertical-align-top">
-                    <i className="fas fa-globe"></i>
-                  </span>
-                  <span className="d-inline-block w-85 vertical-align-top ps-2">
-                    www.yourwebsitehere.com
-                  </span>
-                </li> */}
-              </ul>
+              <h3 className="footer-title-style2 text-primary">Our Locations</h3>
+              {renderAllLocations()}
             </div>
           </div>
         </div>
@@ -459,8 +448,8 @@ function Footer() {
             <div className="row d-flex justify-content-center">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
                 <p className="mb-0 d-flex justify-content-center">
-                  &copy; Copyright 2024 ADYSUN VENTURES PVT. LTD. All
-                  Rights Reserved.
+                  &copy; Copyright {new Date().getFullYear()} {companyInfo.name.full} All
+                  Rights Reserved.
                 </p>
               </div>
             </div>
