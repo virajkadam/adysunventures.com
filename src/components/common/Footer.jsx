@@ -448,10 +448,10 @@ function Footer() {
                   {companyInfo.contact.emails.map((email) => (
                     <div key={email.type} className="mb-3">
                       <p className="text-white mb-1">{email.department}</p>
-                      <a 
-                        href={`mailto:${email.address}`} 
+                      <a
+                        href={`mailto:${email.address}`}
                         className="text-white"
-                        style={{ textDecoration: 'none', opacity: 0.8 }}
+                        style={{ textDecoration: "none", opacity: 0.8 }}
                       >
                         {email.address}
                       </a>
@@ -466,15 +466,15 @@ function Footer() {
                   {companyInfo.contact.phones.map((phone) => (
                     <div key={phone.type} className="mb-3">
                       <p className="text-white mb-1">{phone.department}</p>
-                      <a 
-                        href={`tel:${phone.number}`} 
+                      <a
+                        href={`tel:${phone.number}`}
                         className="text-white"
-                        style={{ 
-                          textDecoration: 'none', 
+                        style={{
+                          textDecoration: "none",
                           opacity: 0.8,
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px'
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
                         }}
                       >
                         <i className="fas fa-mobile-alt"></i>
@@ -485,17 +485,34 @@ function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
         <div className="footer-bar">
+          <div className="bg-light py-3 border-top">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <p className="text-center mb-0 text-muted small">
+                    Adysun Ventures Private Limited
+                  </p>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12">
+                  <p className="text-center mb-0 text-muted small">
+                    CIN : U72900PN2020PTC196380
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="container">
             <div className="row d-flex justify-content-center">
               <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
                 <p className="mb-0 d-flex justify-content-center">
-                  &copy; Copyright {new Date().getFullYear()} {companyInfo.name.full} All
-                  Rights Reserved.
+                  &copy; Copyright {new Date().getFullYear()}{" "}
+                  {companyInfo.name.full} All Rights Reserved.
                 </p>
               </div>
             </div>
