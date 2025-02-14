@@ -75,12 +75,12 @@ const companyInfo = {
   },
   social: {
     platforms: [
-      {
-        name: "Facebook",
-        url: "#",
-        icon: "fab fa-facebook-f",
-        isActive: true,
-      },
+    //   {
+    //     name: "Facebook",
+    //     url: "#",
+    //     icon: "fab fa-facebook-f",
+    //     isActive: true,
+    //   },
       {
         name: "Twitter",
         url: "https://x.com/adysunventures",
@@ -93,12 +93,12 @@ const companyInfo = {
         icon: "fab fa-instagram",
         isActive: true,
       },
-      {
-        name: "YouTube",
-        url: "#",
-        icon: "fab fa-youtube",
-        isActive: true,
-      },
+    //   {
+    //     name: "YouTube",
+    //     url: "#",
+    //     icon: "fab fa-youtube",
+    //     isActive: true,
+    //   },
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/adysun-ventures/",

@@ -176,6 +176,7 @@ function Footer() {
       {companyInfo.contact.locations.map(location => (
         <div key={location.id} className="location-item mb-4">
           <h6 className="text-primary mb-2">
+            <i className="fas fa-map-marker-alt text-primary me-2"></i>
             {location.name}
           </h6>
           <p className="m-0">
@@ -426,15 +427,24 @@ function Footer() {
             </div>
 
             <div className="col-lg-4 col-md-6 mt-1-9">
-              <h3 className="footer-title-style2 text-primary">Our Locations</h3>
+              <h3 className="footer-title-style2 text-primary">
+                <i className="fas fa-map-marked-alt me-2"></i>
+                Our Locations
+              </h3>
               {renderAllLocations()}
             </div>
 
             <div className="col-lg-2 col-md-6 mt-1-9">
-              <h3 className="footer-title-style2 text-primary">Contact Us</h3>
+              <h3 className="footer-title-style2 text-primary">
+                <i className="fas fa-address-book me-2"></i>
+                Contact Us
+              </h3>
               <div className="contact-details mt-4">
                 <div className="mb-4">
-                  <h6 className="text-primary mb-2">Email Addresses</h6>
+                  <h6 className="text-primary mb-2">
+                    <i className="fas fa-envelope me-2"></i>
+                    Email Addresses
+                  </h6>
                   {companyInfo.contact.emails.map((email) => (
                     <div key={email.type} className="mb-3">
                       <p className="text-white mb-1">{email.department}</p>
@@ -449,7 +459,10 @@ function Footer() {
                   ))}
                 </div>
                 <div>
-                  <h6 className="text-primary mb-2">Contact Number</h6>
+                  <h6 className="text-primary mb-2">
+                    <i className="fas fa-phone me-2"></i>
+                    Contact Number
+                  </h6>
                   {companyInfo.contact.phones.map((phone) => (
                     <div key={phone.type} className="mb-3">
                       <p className="text-white mb-1">{phone.department}</p>
@@ -464,7 +477,7 @@ function Footer() {
                           gap: '8px'
                         }}
                       >
-                        <i className="fas fa-phone-alt"></i>
+                        <i className="fas fa-mobile-alt"></i>
                         {phone.number}
                       </a>
                     </div>
