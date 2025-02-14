@@ -87,54 +87,64 @@ function Footer() {
     };
   }, []);
 
-  const renderContactInfo = () => (
-    <div className="contact-info ps-lg-1-9 mb-1-9 mb-lg-0">
-      {primaryPhone && (
-        <div className="item bg-white">
+  const renderLocationInfo = () => (
+    <div className="row">
+      {companyInfo.contact.locations.map(location => (
+        <div key={location.id} className="col-lg-6 mb-4">
+          <div className="item bg-white h-100">
+            <span className="icon">
+              <i className="fas fa-map-marker-alt text-primary" />
+            </span>
+            <div className="cont">
+              <h6 className="mb-1 font-weight-600">{location.name}</h6>
+              <p className="m-0">
+                {location.address.line1},
+                {location.address.line2 && ` ${location.address.line2},`}
+                {location.address.area && ` ${location.address.area},`}
+                {location.address.street && ` ${location.address.street},`}
+                {` ${location.address.city},`}
+                {` ${location.address.state} -`}
+                {` ${location.address.pincode}`}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderContactDetails = () => (
+    <div className="row mt-4">
+      <div className="col-lg-6 mb-4">
+        <div className="item bg-white h-100">
+          <span className="icon">
+            <i className="fas fa-envelope text-primary" />
+          </span>
+          <div className="cont">
+            <h6 className="mb-3 font-weight-600">Email Contacts</h6>
+            {companyInfo.contact.emails.map((email, index) => (
+              <div key={email.type} className={index !== 0 ? 'mt-3' : ''}>
+                <p className="m-0">{email.address}</p>
+                <small className="text-muted">{email.department}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-6 mb-4">
+        <div className="item bg-white h-100">
           <span className="icon">
             <i className="fas fa-phone text-primary" />
           </span>
           <div className="cont">
-            <h6 className="mb-1 font-weight-600">Phone: </h6>
-            <p>{primaryPhone.number}</p>
-            <small className="text-muted">{primaryPhone.department}</small>
+            <h6 className="mb-3 font-weight-600">Phone Numbers</h6>
+            {companyInfo.contact.phones.map((phone, index) => (
+              <div key={phone.type} className={index !== 0 ? 'mt-3' : ''}>
+                <p className="m-0">{phone.number}</p>
+                <small className="text-muted">{phone.department}</small>
+              </div>
+            ))}
           </div>
-        </div>
-      )}
-      
-      {primaryLocation && (
-        <div className="item bg-white">
-          <span className="icon">
-            <i className="fas fa-map-marker-alt text-primary" />
-          </span>
-          <div className="cont">
-            <h6 className="mb-1 font-weight-600">
-              {primaryLocation.name}
-            </h6>
-            <p className="m-0">
-              {primaryLocation.address.line1},
-              {primaryLocation.address.line2 && ` ${primaryLocation.address.line2},`}
-              {primaryLocation.address.area && ` ${primaryLocation.address.area},`}
-              {` ${primaryLocation.address.city},`}
-              {` ${primaryLocation.address.state} -`}
-              {` ${primaryLocation.address.pincode}`}
-            </p>
-          </div>
-        </div>
-      )}
-
-      <div className="item bg-white">
-        <span className="icon">
-          <i className="fas fa-envelope text-primary" />
-        </span>
-        <div className="cont">
-          <h6 className="mb-1 font-weight-600">Email Contacts:</h6>
-          {companyInfo.contact.emails.map((email, index) => (
-            <div key={email.type} className={index !== 0 ? 'mt-2' : ''}>
-              <p className="m-0">{email.address}</p>
-              <small className="text-muted">{email.department}</small>
-            </div>
-          ))}
         </div>
       </div>
     </div>
@@ -188,30 +198,9 @@ function Footer() {
         <h4 className="text-center text-uppercase my-5">
           Reach Out to {companyInfo.name.short}
         </h4>
-        <div className="row p-3">
-          <div className="col-lg-6 order-2 order-lg-1 border border-2 border-gray rounded px-0">
-            {primaryLocation && primaryLocation.googleMapsUrl ? (
-              <iframe
-                className="contact-map rounded"
-                id="gmap_canvas"
-                src={primaryLocation.googleMapsUrl}
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            ) : (
-              <div className="d-flex align-items-center justify-content-center h-100">
-                <p>Map location not available</p>
-              </div>
-            )}
-          </div>
-
-          <div className="col-lg-6 order-1 order-lg-2">
-            {renderContactInfo()}
-          </div>
+        <div className="contact-info">
+          {renderLocationInfo()}
+          {renderContactDetails()}
         </div>
       </div>
       {/* COUNTER */}
@@ -336,7 +325,7 @@ function Footer() {
               {renderSocialIcons()}
             </div>
 
-            <div className="col-lg-4 col-md-6 mt-1-9">
+            <div className="col-lg-2 col-md-6 mt-1-9">
               <h3 className="footer-title-style2 text-white">Quick Links</h3>
               <div className="row">
                 <div className="col-md-6 pe-md-0">
@@ -383,7 +372,7 @@ function Footer() {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-6 pe-md-0">
+                {/* <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-0 ps-0">
                     <li>
                       <a
@@ -432,14 +421,58 @@ function Footer() {
                       </a>
                     </li>
                   </ul>
+                </div> */}
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 mt-1-9">
+              <h3 className="footer-title-style2 text-primary">Our Locations</h3>
+              {renderAllLocations()}
+            </div>
+
+            <div className="col-lg-2 col-md-6 mt-1-9">
+              <h3 className="footer-title-style2 text-primary">Contact Us</h3>
+              <div className="contact-details mt-4">
+                <div className="mb-4">
+                  <h6 className="text-primary mb-2">Email Addresses</h6>
+                  {companyInfo.contact.emails.map((email) => (
+                    <div key={email.type} className="mb-3">
+                      <p className="text-white mb-1">{email.department}</p>
+                      <a 
+                        href={`mailto:${email.address}`} 
+                        className="text-white"
+                        style={{ textDecoration: 'none', opacity: 0.8 }}
+                      >
+                        {email.address}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <h6 className="text-primary mb-2">Contact Number</h6>
+                  {companyInfo.contact.phones.map((phone) => (
+                    <div key={phone.type} className="mb-3">
+                      <p className="text-white mb-1">{phone.department}</p>
+                      <a 
+                        href={`tel:${phone.number}`} 
+                        className="text-white"
+                        style={{ 
+                          textDecoration: 'none', 
+                          opacity: 0.8,
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}
+                      >
+                        <i className="fas fa-phone-alt"></i>
+                        {phone.number}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 offset-lg-1 mt-1-9">
-              <h3 className="footer-title-style2 text-primary">Our Locations</h3>
-              {renderAllLocations()}
-            </div>
           </div>
         </div>
 

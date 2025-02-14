@@ -11,11 +11,11 @@ const companyInfo = {
         address: "info@adysunventures.com",
         department: "General Inquiries",
       },
-    //   {
-    //     type: "support",
-    //     address: "support@adysunventures.com",
-    //     department: "Technical Support",
-    //   },
+      //   {
+      //     type: "support",
+      //     address: "support@adysunventures.com",
+      //     department: "Technical Support",
+      //   },
       {
         type: "careers",
         address: "hr@adysunventures.com",
@@ -24,10 +24,15 @@ const companyInfo = {
     ],
     phones: [
       {
-        type: "primary",
-        number: "+91 7776827177",
-        department: "Main Office",
+        type: "mobile",
+        number: "+91 9420245878",
+        department: "Mobile 1",
       },
+      //   {
+      //     type: "mobile2",
+      //     number: "+91 9420245878",
+      //     department: "Mobile 2",
+      //   },
     ],
     locations: [
       {
@@ -63,7 +68,7 @@ const companyInfo = {
           state: "Maharashtra",
           pincode: "411037",
           country: "India",
-          landmarks: ["Near Dena Bank", "Opposite Panchami Hotel"]
+          landmarks: ["Near Dena Bank", "Opposite Panchami Hotel"],
         },
       },
     ],
