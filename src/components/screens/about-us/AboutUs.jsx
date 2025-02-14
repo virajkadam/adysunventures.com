@@ -305,14 +305,14 @@ function AboutUs() {
                   <div className="inner-content">
                     {/* <h2>
                       <span>
-                        “ Pride of the Business For Over a Hundred Years."{" "}
+                        " Pride of the Business For Over a Hundred Years."{" "}
                       </span>
                       for public &amp; private clients.
                     </h2> */}
                     <p>
                       We deliver high-performance services to help your business
                       embrace innovation and tackle the ever-changing challenges
-                      of today’s digital world. Designed to meet your specific
+                      of today's digital world. Designed to meet your specific
                       needs, our services capture and deliver business value in
                       a cost-effective way. Based on your strategic objectives,
                       we focus on business outcomes in software engineering,
@@ -411,9 +411,19 @@ function AboutUs() {
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                   </p>
                   <h5 className="font-weight-700 h6">Successful Marketing</h5>
-                  <p className="w-95 m-0">
+                  <p className="w-95">
                     Duis Integration aute irure design in reprehenderit in
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
+                  <h5 className="font-weight-700 h6">Technology Innovation</h5>
+                  <p className="w-95">
+                    Leveraging cutting-edge technologies and innovative solutions to transform 
+                    your business processes and drive digital excellence.
+                  </p>
+                  <h5 className="font-weight-700 h6">Quality Assurance</h5>
+                  <p className="w-95 m-0">
+                    Ensuring highest standards of quality through rigorous testing
+                    and continuous improvement methodologies.
                   </p>
                 </div>
               </div>

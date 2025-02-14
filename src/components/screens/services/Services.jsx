@@ -232,6 +232,9 @@ function Services() {
         <section className="py-5">
           <div className="container">
             <div className="row">
+
+              //machine learning content
+
               <div className="col-lg-7">
                 <h2 className="text-primary mb-4">Web Development</h2>
                 <p className="mb-4">
@@ -318,12 +321,14 @@ function Services() {
           <div className="mt-4 text-center">
             <i className="fab fa-apple me-3 fs-1 px-3"></i>
             <i className="fab fa-android me-3 fs-1 px-3"></i>
-            <i className="fab fa-windows me-3 fs-1 px-3"></i>
+
             <i className="fab fa-java me-3 fs-1 px-3"></i>
-            <i className="fab fa-react me-3 fs-1 px-3"></i>
-            <i className="fab fa-angular me-3 fs-1 px-3"></i>
-            <i className="fab fa-vuejs me-3 fs-1 px-3"></i>
-            <i className="fab fa-node me-3 fs-1 px-3"></i>
+            <i className="fab fa-react me-3 fs-1 px-3" title="React Native"></i>
+            <i className="fab fa-js me-3 fs-1 px-3" title="JavaScript/TypeScript"></i>
+            <i className="fab fa-swift me-3 fs-1 px-3" title="Swift"></i>
+            <i className="fab fa-google me-3 fs-1 px-3" title="Flutter/Firebase"></i>
+            <i className="fab fa-npm me-3 fs-1 px-3" title="NPM/Node Packages"></i>
+            <i className="fab fa-github me-3 fs-1 px-3" title="Version Control"></i>
           </div>
         </section>
         <section className="py-5">
@@ -358,14 +363,16 @@ function Services() {
             </div>
           </div>
           <div className="mt-4 text-center">
-            <i className="fab fa-apple me-3 fs-1 px-3"></i>
-            <i className="fab fa-android me-3 fs-1 px-3"></i>
-            <i className="fab fa-windows me-3 fs-1 px-3"></i>
-            <i className="fab fa-java me-3 fs-1 px-3"></i>
-            <i className="fab fa-php me-3 fs-1 px-3"></i>
-            <i className="fab fa-node me-3 fs-1 px-3"></i>
-            <i className="fab fa-html5 me-3 fs-1 px-3"></i>
-            <i className="fab fa-css3 me-3 fs-1 px-3"></i>
+            <i className="fas fa-database me-3 fs-1 px-3" title="Database Management"></i>
+            <i className="fas fa-chart-line me-3 fs-1 px-3" title="Data Analytics"></i>
+            <i className="fas fa-chart-pie me-3 fs-1 px-3" title="Data Visualization"></i>
+            <i className="fas fa-brain me-3 fs-1 px-3" title="Machine Learning"></i>
+            <i className="fab fa-python me-3 fs-1 px-3" title="Python"></i>
+            <i className="fab fa-r-project me-3 fs-1 px-3" title="R Programming"></i>
+            <i className="fas fa-table me-3 fs-1 px-3" title="Data Processing"></i>
+            <i className="fab fa-aws me-3 fs-1 px-3" title="AWS Analytics"></i>
+            <i className="fab fa-microsoft me-3 fs-1 px-3" title="Power BI"></i>
+            <i className="fas fa-cloud me-3 fs-1 px-3" title="Cloud Analytics"></i>
           </div>
         </section>
         <section className="py-5">
@@ -399,12 +406,16 @@ function Services() {
             </div>
           </div>
           <div className="mt-4 text-center">
-            <i className="fab fa-slack me-3 fs-1 px-3"></i>
-            <i className="fab fa-jira me-3 fs-1 px-3"></i>
-            <i className="fab fa-git me-3 fs-1 px-3"></i>
-            <i className="fab fa-trello me-3 fs-1 px-3"></i>
-           
-            <i className="fab fa-free-code-camp me-3 fs-1 px-3"></i>
+            <i className="fab fa-jira me-3 fs-1 px-3" title="Jira"></i>
+            <i className="fab fa-trello me-3 fs-1 px-3" title="Trello"></i>
+            <i className="fab fa-slack me-3 fs-1 px-3" title="Slack"></i>
+            <i className="fab fa-github me-3 fs-1 px-3" title="GitHub Project Management"></i>
+            <i className="fab fa-confluence me-3 fs-1 px-3" title="Confluence"></i>
+            <i className="fas fa-tasks me-3 fs-1 px-3" title="Sprint Planning"></i>
+            <i className="fas fa-users me-3 fs-1 px-3" title="Team Collaboration"></i>
+            <i className="fas fa-chart-bar me-3 fs-1 px-3" title="Sprint Analytics"></i>
+            <i className="fas fa-clock me-3 fs-1 px-3" title="Time Management"></i>
+            <i className="fas fa-sync-alt me-3 fs-1 px-3" title="Agile Iterations"></i>
           </div>
         </section>
         <section className="py-5">
@@ -441,9 +452,9 @@ function Services() {
             </div>
           </div>
           <div className="mt-4 text-center">
-            <i className="fab fa-google me-3 fs-1 px-3"></i>
-            <i className="fab fa-yahoo me-3 fs-1 px-3"></i>
-            <i className="fab fa-wordpress me-3 fs-1 px-3"></i>
+            <i className="fab fa-google me-3 fs-1 px-3" title="Google"></i>
+            <i className="fab fa-yahoo me-3 fs-1 px-3" title="Yahoo"></i>
+            <i className="fas fa-search me-3 fs-1 px-3" title="SEO"></i>
           </div>
         </section>
       </div>
