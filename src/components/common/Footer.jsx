@@ -97,15 +97,19 @@ function Footer() {
             </span>
             <div className="cont">
               <h6 className="mb-1 font-weight-600">{location.name}</h6>
-              <p className="m-0">
-                {location.address.line1},
-                {location.address.line2 && ` ${location.address.line2},`}
-                {location.address.area && ` ${location.address.area},`}
-                {location.address.street && ` ${location.address.street},`}
-                {` ${location.address.city},`}
-                {` ${location.address.state} -`}
-                {` ${location.address.pincode}`}
-              </p>
+              {location.status === "Coming Soon" ? (
+                <p className="m-0">Coming Soon</p>
+              ) : (
+                <p className="m-0">
+                  {location.address.line1},
+                  {location.address.line2 && ` ${location.address.line2},`}
+                  {location.address.area && ` ${location.address.area},`}
+                  {location.address.street && ` ${location.address.street},`}
+                  {` ${location.address.city},`}
+                  {` ${location.address.state} -`}
+                  {` ${location.address.pincode}`}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -179,15 +183,19 @@ function Footer() {
             <i className="fas fa-map-marker-alt text-primary me-2"></i>
             {location.name}
           </h6>
-          <p className="m-0">
-            {location.address.line1},
-            {location.address.line2 && ` ${location.address.line2},`}
-            {location.address.area && ` ${location.address.area},`}
-            {location.address.street && ` ${location.address.street},`}
-            {` ${location.address.city},`}
-            {` ${location.address.state} -`}
-            {` ${location.address.pincode}`}
-          </p>
+          {location.status === "Coming Soon" ? (
+            <p className="m-0">Coming Soon</p>
+          ) : (
+            <p className="m-0">
+              {location.address.line1},
+              {location.address.line2 && ` ${location.address.line2},`}
+              {location.address.area && ` ${location.address.area},`}
+              {location.address.street && ` ${location.address.street},`}
+              {` ${location.address.city},`}
+              {` ${location.address.state} -`}
+              {` ${location.address.pincode}`}
+            </p>
+          )}
         </div>
       ))}
     </div>
