@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.775f9017.css",
-    "main.js": "/static/js/main.a1ead4ba.js",
+    "main.js": "/static/js/main.e68efae3.js",
     "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
+    "static/media/bg12.jpg": "/static/media/bg12.571b1a6e5849e3b9d223.jpg",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
     "static/media/blog1.jpg": "/static/media/blog1.f2217bf0c31842883107.jpg",
     "static/media/blog2.jpg": "/static/media/blog2.d068ac28c5acb1666203.jpg",
-    "static/media/bg12.jpg": "/static/media/bg12.924636265364fb3002d4.jpg",
     "static/media/approach.jpg": "/static/media/approach.0e757f1e0d9ef3daa700.jpg",
     "static/media/team_wokring.png": "/static/media/team_wokring.7e535681673bb65c7f6b.png",
     "static/media/bg9.jpg": "/static/media/bg9.e1358859f46a16117174.jpg",
@@ -119,11 +119,11 @@
     "static/media/dataAnalytics.svg": "/static/media/dataAnalytics.b8987a5b9c7ecf1c922c3da9f017626b.svg",
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.d4db099d5ad11cc2f72a34836429018c.svg",
     "main.775f9017.css.map": "/static/css/main.775f9017.css.map",
-    "main.a1ead4ba.js.map": "/static/js/main.a1ead4ba.js.map",
+    "main.e68efae3.js.map": "/static/js/main.e68efae3.js.map",
     "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.775f9017.css",
-    "static/js/main.a1ead4ba.js"
+    "static/js/main.e68efae3.js"
   ]
 }
