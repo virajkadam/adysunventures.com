@@ -28,6 +28,45 @@ function findJsFiles() {
 
 const jsFiles = findJsFiles();
 
+// List of external scripts that shouldn't be minified to avoid breaking them
+const externalScriptPatterns = [
+  'GTM-', // Google Tag Manager scripts
+  'UA-', // Google Analytics scripts
+  'fbevents.js', // Facebook Pixel
+  'hotjar', // Hotjar scripts
+  'clarity' // Microsoft Clarity
+];
+
+// Check if a file is an external script we should skip
+const isExternalScript = (fileContent) => {
+  return externalScriptPatterns.some(pattern => fileContent.includes(pattern));
+}
+
+// Minification options
+const minifyOptions = {
+  compress: {
+    drop_console: true,
+    drop_debugger: true,
+    dead_code: true,
+    unused: true,
+    conditionals: true,
+    booleans: true,
+    if_return: true,
+    sequences: true,
+    properties: true,
+    comparisons: true,
+    evaluate: true,
+    loops: true,
+  },
+  mangle: {
+    toplevel: true
+  },
+  output: {
+    comments: false,
+    beautify: false
+  }
+};
+
 async function optimizeJs() {
   console.log('Optimizing JavaScript files...');
   
@@ -40,30 +79,25 @@ async function optimizeJs() {
     try {
       const code = fs.readFileSync(file, 'utf8');
       
-      // Skip files that are already highly minified
-      if (code.includes('/*! For license information please see')) {
-        console.log(`Skipping already minified file: ${path.relative(buildDir, file)}`);
+      // Skip files that are already highly minified or are external scripts
+      if (code.includes('/*! For license information please see') || isExternalScript(code)) {
+        console.log(`Skipping already minified/external file: ${path.relative(buildDir, file)}`);
         continue;
       }
       
       // Minify with terser
-      const result = await minify(code, {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          dead_code: true,
-          unused: true,
-        },
-        mangle: true,
-        output: {
-          comments: false
-        }
-      });
+      const result = await minify(code, minifyOptions);
       
       // Write minified code back to file
       if (result.code) {
         fs.writeFileSync(file, result.code);
-        console.log(`Optimized: ${path.relative(buildDir, file)}`);
+        
+        // Calculate size reduction
+        const originalSize = code.length;
+        const minifiedSize = result.code.length;
+        const reduction = ((originalSize - minifiedSize) / originalSize * 100).toFixed(2);
+        
+        console.log(`Optimized: ${path.relative(buildDir, file)} - reduced by ${reduction}%`);
       }
     } catch (err) {
       console.error(`Error processing ${file}:`, err);

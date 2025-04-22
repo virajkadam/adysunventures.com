@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
-  title = "Adysun Ventures | IT Solutions, Business Strategy & Technology Consulting Experts",
-  description = "Premier IT service provider specializing in business strategies, cloud computing, software development, and cutting-edge technology solutions. Partner with Adysun Ventures for reliable and innovative IT services.",
-  keywords = "Adysun Ventures, IT Solutions, Business Strategies, IT Services, Premium IT Products, Collaborative IT Partnerships, Innovative IT Solutions, Cloud Computing, Software Development, Digital Transformation",
+  title = "IT Solutions & Business Strategy | Software Development | Cloud Services | Adysun Ventures",
+  description = "Leading IT solutions provider specializing in software development, cloud computing, digital transformation, and business strategy consulting. Get expert technology services for your business growth needs.",
+  keywords = "IT Solutions, Business Strategy, Software Development, Cloud Computing, Digital Transformation, IT Consulting, Technology Services, Adysun Ventures, Web Development, Application Development",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg"
 }) => {
   const location = useLocation();
@@ -38,7 +38,7 @@ const MetaTags = ({
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="geo.placename" content="India" />
       
-      {/* Dynamic Canonical Link for each page */}
+      {/* Canonical Link */}
       <link rel="canonical" href={currentUrl} />
       
       {/* Open Graph Meta Tags */}

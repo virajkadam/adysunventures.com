@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SchemaMarkup = ({
   businessName = "Adysun Ventures",
-  description = "Premier IT service provider specializing in business strategies and cutting-edge technology.",
+  description = "Leading IT service provider specializing in business strategies, software development, cloud computing, and digital transformation.",
   logoUrl = "https://adysunventures.com/assets/adysun_ventures_image.jpg",
   siteUrl = "https://adysunventures.com",
   phone = "+91-7776827177", // Updated with actual phone from Navbar
@@ -19,14 +19,20 @@ const SchemaMarkup = ({
     facebook: "https://www.facebook.com/adysunventures/",
     twitter: "https://twitter.com/adysunventures", 
     linkedin: "https://www.linkedin.com/company/adysunventures", 
+    instagram: "https://www.instagram.com/adysunventures/"
   },
   foundingDate = "2020-12-01",
   services = [
     "IT Solutions",
     "Business Strategy",
     "Software Development",
+    "Cloud Computing",
     "Digital Transformation",
-    "IT Consulting"
+    "IT Consulting",
+    "Data Analytics",
+    "Cybersecurity",
+    "Web Development",
+    "Mobile Application Development"
   ],
   faqs = [
     {
@@ -40,6 +46,14 @@ const SchemaMarkup = ({
     {
       question: "What industries does Adysun Ventures specialize in?",
       answer: "We specialize in providing IT solutions for various industries including Transportation & Logistics, E-Commerce & Retail, Manufacturing, Stock Exchange & Financial Services, Healthcare, Education, and more."
+    },
+    {
+      question: "How does cloud computing benefit my business?",
+      answer: "Cloud computing offers improved scalability, cost efficiency, better collaboration, enhanced security, business continuity, and automatic updates. It allows businesses to access applications and data from anywhere, improving flexibility and productivity."
+    },
+    {
+      question: "What is digital transformation and why is it important?",
+      answer: "Digital transformation is the integration of digital technology into all areas of a business, changing how you operate and deliver value to customers. It's important because it helps businesses stay competitive, improve operational efficiency, enhance customer experiences, and unlock new opportunities for growth."
     }
   ],
   reviews = [
@@ -54,6 +68,12 @@ const SchemaMarkup = ({
       reviewBody: "The business strategy consulting services from Adysun Ventures were instrumental in helping us navigate our digital transformation journey.",
       reviewRating: 5,
       datePublished: "2023-07-22"
+    },
+    {
+      author: "Michael Brown",
+      reviewBody: "Their cloud migration services were exceptional. They seamlessly moved our infrastructure to the cloud with minimal disruption to our operations.",
+      reviewRating: 5,
+      datePublished: "2023-09-10"
     }
   ]
 }) => {
@@ -62,9 +82,15 @@ const SchemaMarkup = ({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     "name": businessName,
     "url": siteUrl,
-    "logo": logoUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": logoUrl,
+      "width": 720,
+      "height": 602
+    },
     "description": description,
     "foundingDate": foundingDate,
     "email": email,
@@ -80,7 +106,8 @@ const SchemaMarkup = ({
     "sameAs": [
       socialProfiles.facebook,
       socialProfiles.twitter,
-      socialProfiles.linkedin
+      socialProfiles.linkedin,
+      socialProfiles.instagram
     ]
   };
 
@@ -105,14 +132,23 @@ const SchemaMarkup = ({
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "18.5162", // Added actual coordinates for Pune
-      "longitude": "73.8553" // Added actual coordinates for Pune
+      "latitude": "18.5162",
+      "longitude": "73.8553"
     },
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00", // Updated from Navbar (Mon-Sat 9AM-9PM)
-    "priceRange": "₹₹"
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00",
+    "priceRange": "₹₹",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5162",
+        "longitude": "73.8553"
+      },
+      "geoRadius": "50000"
+    }
   };
 
-  // Professional Service schema - more specific than Local Business
+  // Professional Service schema
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -165,7 +201,10 @@ const SchemaMarkup = ({
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
-      "areaServed": "India"
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
     }
   };
 
@@ -191,14 +230,21 @@ const SchemaMarkup = ({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     "url": siteUrl,
     "name": businessName,
     "description": description,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${siteUrl}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+    "publisher": {
+      "@id": `${siteUrl}/#organization`
+    },
+    "inLanguage": "en-US",
+    "potentialAction": [
+      {
+        "@type": "SearchAction",
+        "target": `${siteUrl}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    ]
   };
 
   // BreadcrumbList schema for navigation hierarchy
@@ -221,12 +267,24 @@ const SchemaMarkup = ({
       {
         "@type": "ListItem",
         "position": 3,
+        "name": "Technologies",
+        "item": `${siteUrl}/technologies`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Industries",
+        "item": `${siteUrl}/industries`
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "name": "About Us",
         "item": `${siteUrl}/about-us`
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 6,
         "name": "Contact",
         "item": `${siteUrl}/contact-us`
       }
@@ -282,20 +340,29 @@ const SchemaMarkup = ({
     "@type": "Article",
     "headline": "Adysun Ventures: Leading IT Solutions Provider in India",
     "image": logoUrl,
+    "keywords": "IT Solutions, Business Strategy, Software Development, Cloud Computing",
     "author": {
       "@type": "Organization",
-      "name": businessName
+      "name": businessName,
+      "url": siteUrl
     },
     "publisher": {
       "@type": "Organization",
       "name": businessName,
       "logo": {
         "@type": "ImageObject",
-        "url": logoUrl
+        "url": logoUrl,
+        "width": 720,
+        "height": 602
       }
     },
     "datePublished": "2023-01-01",
-    "dateModified": new Date().toISOString().split('T')[0]
+    "dateModified": new Date().toISOString().split('T')[0],
+    "description": description,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": siteUrl
+    }
   };
 
   return (

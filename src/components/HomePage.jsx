@@ -221,12 +221,12 @@ function HomePage() {
                 <span className="text-white fs-2">When service matters</span>
                 <h1 className="text-white display-md-10 font-weight-700 m-0">
                   <span className="text-primary">Adysun Ventures: </span>
-                  <span>IT Solutions & Business Strategy Experts</span>
+                  <span>Premium IT Solutions & Business Strategy Services</span>
                 </h1>
                 <div className="separator-line-horrizontal-full bg-white opacity3 my-1-9 my-sm-2-3 my-md-2-9" />
                 <p className="text-white mb-1-9 w-xl-85">
-                  Adysun Ventures is a leading IT solutions provider, offering
-                  comprehensive <Link to="/services" className="text-white text-decoration-underline">technology services</Link> to meet your business needs.
+                  Adysun Ventures is a leading <Link to="/services" className="text-white text-decoration-underline">IT solutions provider</Link>, offering
+                  comprehensive <Link to="/services" className="text-white text-decoration-underline">technology services</Link> to meet your <Link to="/industries" className="text-white text-decoration-underline">industry-specific</Link> business needs.
                 </p>
                 <div className="mt-4">
                   <Link to="/services" className="btn btn-primary me-3">Our Services</Link>
@@ -250,7 +250,7 @@ function HomePage() {
                   </h2>
                   <p className="text-white m-0">
                     Adysun Ventures delivers professional <Link to="/services" className="text-white text-decoration-underline">IT services</Link> with
-                    unmatched expertise, ensuring timely delivery and utmost
+                    unmatched <Link to="/about-us" className="text-white text-decoration-underline">expertise</Link>, ensuring timely delivery and utmost
                     confidentiality for all your <Link to="/technologies" className="text-white text-decoration-underline">technology</Link> needs.
                   </p>
                 </div>
@@ -339,15 +339,15 @@ function HomePage() {
                   <div className="card-body p-4 p-lg-5">
                     <h3 className="h3 mb-3">Premier IT Solutions Provider in India</h3>
                     <p>
-                      Adysun Ventures is a leading IT solutions company specializing in providing comprehensive technology services 
+                      Adysun Ventures is a leading IT solutions company specializing in providing comprehensive <Link to="/technologies">technology services</Link> 
                       to businesses across various <Link to="/industries">industries</Link>. With our headquarters in Pune, we've established ourselves as a trusted 
-                      partner for organizations seeking to leverage technology for business growth and operational excellence.
+                      <Link to="/about-us"> partner</Link> for organizations seeking to leverage technology for business growth and operational excellence.
                     </p>
                     <p>
-                      Our team of experienced IT professionals delivers tailored solutions in <Link to="/services">software development</Link>, 
-                      <Link to="/technologies"> cloud computing</Link>, cybersecurity, data analytics, and 
+                      Our <Link to="/about-us">team of experienced IT professionals</Link> delivers tailored solutions in <Link to="/services">software development</Link>, 
+                      <Link to="/technologies"> cloud computing</Link>, <Link to="/services">cybersecurity</Link>, <Link to="/services">data analytics</Link>, and 
                       <Link to="/services"> digital transformation</Link>. We combine technical expertise 
-                      with business acumen to help organizations navigate the complex technology landscape and achieve their strategic objectives.
+                      with business acumen to help organizations navigate the complex technology landscape and achieve their <Link to="/services">strategic objectives</Link>.
                     </p>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ function HomePage() {
                 </div>
                 
                 <div className="text-center mb-4">
-                  <h3 className="h3">Why Choose Adysun Ventures?</h3>
+                  <h2 className="h3">Why Choose Adysun Ventures for IT Services?</h2>
                 </div>
                 
                 <div className="row g-4 mb-5">
@@ -500,7 +500,7 @@ function HomePage() {
                 <div className="card h-100 border-0 shadow text-center">
                   <div className="card-body p-4">
                     <i className="fas fa-chart-line fa-3x text-primary mb-3"></i>
-                    <h3 className="h4 mb-3"><Link to="/industries/stock-exchange" className="text-dark text-decoration-none">Stock Exchange</Link></h3>
+                    <h3 className="h4 mb-3"><Link to="/industries/stock-exchange" className="text-dark text-decoration-none">Stock Exchange & Financial Services</Link></h3>
                     <p>High-performance solutions for financial markets and trading platforms.</p>
                     <Link to="/industries/stock-exchange" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
                   </div>
@@ -510,7 +510,7 @@ function HomePage() {
                 <div className="card h-100 border-0 shadow text-center">
                   <div className="card-body p-4">
                     <i className="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
-                    <h3 className="h4 mb-3"><Link to="/industries/ecommerce" className="text-dark text-decoration-none">E-Commerce</Link></h3>
+                    <h3 className="h4 mb-3"><Link to="/industries/ecommerce" className="text-dark text-decoration-none">E-Commerce & Retail Solutions</Link></h3>
                     <p>Scalable platforms and solutions for online retail businesses.</p>
                     <Link to="/industries/ecommerce" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
                   </div>
@@ -520,7 +520,7 @@ function HomePage() {
                 <div className="card h-100 border-0 shadow text-center">
                   <div className="card-body p-4">
                     <i className="fas fa-truck fa-3x text-primary mb-3"></i>
-                    <h3 className="h4 mb-3"><Link to="/industries/transportation" className="text-dark text-decoration-none">Transportation</Link></h3>
+                    <h3 className="h4 mb-3"><Link to="/industries/transportation" className="text-dark text-decoration-none">Transportation & Logistics</Link></h3>
                     <p>Logistics and fleet management technology solutions.</p>
                     <Link to="/industries/transportation" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
                   </div>
