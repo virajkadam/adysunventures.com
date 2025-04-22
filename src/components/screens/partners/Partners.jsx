@@ -29,13 +29,7 @@ function Partners() {
                 className="text-primary text-center"
                 style={{ fontSize: "3.5rem" }}
               >
-                Our Company
-              </h1>
-              <h1
-                className="text-primary text-center"
-                style={{ fontSize: "3.5rem" }}
-              >
-                Affiliations
+                Our Company Affiliations
               </h1>
             </div>
             <div className="col-lg-6 text-center ">
@@ -72,7 +66,7 @@ function Partners() {
 
           <div className="col-md-8 col-lg-8 text-center text-md-left">
             <h2 className="fw-bold mb-3 d-none d-lg-block d-md-block">SUSE</h2>
-            <h5 className="text-uppercase my-3">Emerald Partner</h5>
+            <h3 className="text-uppercase my-3">Emerald Partner</h3>
             <p className="text-muted p-0">
               Our team offers comprehensive capabilities and expertise in
               designing, implementing, and deploying scalable and{" "}
@@ -116,7 +110,7 @@ function Partners() {
             <h2 className="fw-bold mb-3 d-none d-lg-block d-md-block">
               RED HAT
             </h2>
-            <h5 className="text-uppercase my-3">READY PARTNER</h5>
+            <h3 className="text-uppercase my-3">READY PARTNER</h3>
             <p className="text-muted p-0">
               Red Hat's comprehensive portfolio, encompassing{" "}
               <strong>hybrid cloud</strong> infrastructure,{" "}
@@ -157,7 +151,7 @@ function Partners() {
             <h2 className="fw-bold mb-3 d-none d-lg-block d-md-block">
               CANONICAL
             </h2>
-            <h5 className="text-uppercase my-3">BUSINESS PARTNER</h5>
+            <h3 className="text-uppercase my-3">BUSINESS PARTNER</h3>
             <p className="text-muted p-0">
               Canonical offers comprehensive services for open source solutions,
               spanning from cloud to desktop and devices. Their support for
@@ -200,7 +194,7 @@ function Partners() {
             <h2 className="fw-bold mb-3 d-none d-lg-block d-md-block">
               GITLAB
             </h2>
-            <h5 className="text-uppercase my-3">BUSINESS PARTNER</h5>
+            <h3 className="text-uppercase my-3">BUSINESS PARTNER</h3>
             <p className="text-muted p-0">
               GitLab is a <strong>DevOps Platform</strong> that enables
               organizations to <strong>optimize software development</strong> by
@@ -225,12 +219,12 @@ function Partners() {
         <div className="container text-center">
           <div className="section-heading title-style5 half white">
             <p className="fs-5 mb-3 mb-md-4">REACH OUT TO US</p>
-            <h1 className="text-primary" style={{ fontSize: "50px" }}>
+            <h2 className="text-primary" style={{ fontSize: "50px" }}>
               Interested?
-            </h1>
-            <h1 className="mt-3" style={{ fontSize: "50px" }}>
-              Let’s start a project together.
-            </h1>
+            </h2>
+            <h2 className="mt-3" style={{ fontSize: "50px" }}>
+              Let's start a project together.
+            </h2>
           </div>
           <Link to="/contact-us" className="butn primary white-hover mt-4">
             <span>

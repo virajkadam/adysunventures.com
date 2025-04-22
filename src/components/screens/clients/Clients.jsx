@@ -76,11 +76,11 @@ function Clients() {
                 alt="Soltic Africa"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Soltic Africa</h4>
+              <h3 className="text-white mt-4">Soltic Africa</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={ons} alt="ONS Fresh" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">ONS Fresh</h4>
+              <h3 className="text-white mt-4">ONS Fresh</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -88,13 +88,13 @@ function Clients() {
                 alt="Jayram Transport Corp."
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Jayram Transport Corp.</h4>
+              <h3 className="text-white mt-4">Jayram Transport Corp.</h3>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={dial} alt="Dial-a-Meal" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Dial-a-Meal</h4>
+              <h3 className="text-white mt-4">Dial-a-Meal</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -102,7 +102,7 @@ function Clients() {
                 alt="AptolinkPRO"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">AptolinkPRO</h4>
+              <h3 className="text-white mt-4">AptolinkPRO</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -110,7 +110,7 @@ function Clients() {
                 alt="Anand Road Lines"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Anand Road Lines</h4>
+              <h3 className="text-white mt-4">Anand Road Lines</h3>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ function Clients() {
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={ashoka} alt="Ashoka" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Ashoka</h4>
+              <h3 className="text-white mt-4">Ashoka</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -129,7 +129,7 @@ function Clients() {
                 alt="Sanklecha"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Sanklecha</h4>
+              <h3 className="text-white mt-4">Sanklecha</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -137,13 +137,13 @@ function Clients() {
                 alt="Peak Infrastructure"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Peak Infrastructure</h4>
+              <h3 className="text-white mt-4">Peak Infrastructure</h3>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={safeway} alt="Safeway" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Safeway</h4>
+              <h3 className="text-white mt-4">Safeway</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -151,7 +151,7 @@ function Clients() {
                 alt="Green Brier"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Green Brier</h4>
+              <h3 className="text-white mt-4">Green Brier</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -159,7 +159,7 @@ function Clients() {
                 alt="Fluid Robotics"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Fluid Robotics</h4>
+              <h3 className="text-white mt-4">Fluid Robotics</h3>
             </div>
           </div>
         </div>
@@ -172,11 +172,11 @@ function Clients() {
                 alt="Mahindra"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Mahindra</h4>
+              <h3 className="text-white mt-4">Mahindra</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={acma} alt="ACMA" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">ACMA</h4>
+              <h3 className="text-white mt-4">ACMA</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -184,13 +184,13 @@ function Clients() {
                 alt="Kirloskar"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Kirloskar</h4>
+              <h3 className="text-white mt-4">Kirloskar</h3>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={baxy} alt="Baxy" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Baxy</h4>
+              <h3 className="text-white mt-4">Baxy</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -198,11 +198,11 @@ function Clients() {
                 alt="Jayashree"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Jayashree</h4>
+              <h3 className="text-white mt-4">Jayashree</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={aryan} alt="Aryan" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Aryan</h4>
+              <h3 className="text-white mt-4">Aryan</h3>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ function Clients() {
                 alt="Wrestling"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Wrestling</h4>
+              <h3 className="text-white mt-4">Wrestling</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -223,7 +223,7 @@ function Clients() {
                 alt="Aanknaad"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Aanknaad</h4>
+              <h3 className="text-white mt-4">Aanknaad</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -231,7 +231,7 @@ function Clients() {
                 alt="ManaTarang"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">ManaTarang</h4>
+              <h3 className="text-white mt-4">ManaTarang</h3>
             </div>
           </div>
           <div className="row">
@@ -241,11 +241,11 @@ function Clients() {
                 alt="Online Stationers"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Online Stationers</h4>
+              <h3 className="text-white mt-4">Online Stationers</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img src={snovel} alt="Snovel" className="img-fluid rounded" />
-              <h4 className="text-white mt-4">Snovel</h4>
+              <h3 className="text-white mt-4">Snovel</h3>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mb-4">
               <img
@@ -253,7 +253,7 @@ function Clients() {
                 alt="Take Rent Pe"
                 className="img-fluid rounded"
               />
-              <h4 className="text-white mt-4">Take Rent Pe</h4>
+              <h3 className="text-white mt-4">Take Rent Pe</h3>
             </div>
           </div>
         </div>

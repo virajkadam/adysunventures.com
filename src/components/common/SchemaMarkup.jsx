@@ -6,19 +6,19 @@ const SchemaMarkup = ({
   description = "Premier IT service provider specializing in business strategies and cutting-edge technology.",
   logoUrl = "https://adysunventures.com/assets/adysun_ventures_image.jpg",
   siteUrl = "https://adysunventures.com",
-  phone = "+91-YOUR-PHONE", // Replace with your actual phone
-  email = "contact@adysunventures.com", // Replace with your actual email
+  phone = "+91-7776827177", // Updated with actual phone from Navbar
+  email = "info@adysunventures.com", // Updated with actual email
   address = {
-    streetAddress: "Your Street Address",
-    addressLocality: "Your City",
-    addressRegion: "Your State",
-    postalCode: "Your Postal Code",
+    streetAddress: "Office no 6, 2nd Floor Manogat Appt",
+    addressLocality: "Swarget, Pune",
+    addressRegion: "MH",
+    postalCode: "411037",
     addressCountry: "IN"
   },
   socialProfiles = {
     facebook: "https://www.facebook.com/adysunventures/",
-    twitter: "https://twitter.com/adysunventures", // Replace with actual Twitter
-    linkedin: "https://www.linkedin.com/company/adysunventures", // Replace with actual LinkedIn
+    twitter: "https://twitter.com/adysunventures", 
+    linkedin: "https://www.linkedin.com/company/adysunventures", 
   },
   foundingDate = "2020-12-01",
   services = [
@@ -77,10 +77,10 @@ const SchemaMarkup = ({
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "YOUR_LATITUDE", // Replace with actual coordinates
-      "longitude": "YOUR_LONGITUDE" // Replace with actual coordinates
+      "latitude": "18.5162", // Added actual coordinates for Pune
+      "longitude": "73.8553" // Added actual coordinates for Pune
     },
-    "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00", // Updated from Navbar (Mon-Sat 9AM-9PM)
     "priceRange": "₹₹"
   };
 
@@ -116,6 +116,38 @@ const SchemaMarkup = ({
     }
   };
 
+  // BreadcrumbList schema for navigation hierarchy
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": `${siteUrl}/services`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "About Us",
+        "item": `${siteUrl}/about-us`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Contact",
+        "item": `${siteUrl}/contact-us`
+      }
+    ]
+  };
+
   return (
     <Helmet>
       <script type="application/ld+json">
@@ -129,6 +161,9 @@ const SchemaMarkup = ({
       </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
       </script>
     </Helmet>
   );

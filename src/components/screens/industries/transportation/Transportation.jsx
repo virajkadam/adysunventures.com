@@ -23,7 +23,7 @@ function Transportation() {
           </h1>
           <div className="row">
             <div className="col-md-12">
-              <h1></h1>
+              {/* Empty h1 removed */}
             </div>
             <div className="col-md-12 ">
               <ul className="ps-0 ">
@@ -44,9 +44,9 @@ function Transportation() {
       </section>
 
       <section className="text-center p-lg-8">
-        <h1 className="fs-1 fs-md-3">
+        <h2 className="fs-1 fs-md-3">
           Operational Excellence of Fleet Efficiency
-        </h1>
+        </h2>
         <p className="my-4 mx-lg-20 fs-5  ">
           Real-time monitoring of vehicles, driver behavior, load, and traffic
           streamlines logistics while boosting asset utilization. Our preventive
@@ -58,8 +58,6 @@ function Transportation() {
       </section>
 
       <section className="p-lg-6 p-0 bg-light  ">
-    
-
         <div className="container mt-5 ">
           <div className="row ">
             <div className="col-lg-6 mt-4">
@@ -169,10 +167,10 @@ function Transportation() {
       <section className="p-lg-6 p-0 m-lg-5 m-1">
         <div className="row align-items-center justify-content-center">
           <div className="col-lg-8 text-lg-start text-center">
-            <h5 className="text-muted fs-3 fs-sm-5">The Solution:</h5>
-            <h1 className=" fs-2">
+            <h3 className="text-muted fs-3 fs-sm-5">The Solution:</h3>
+            <h2 className=" fs-2">
               Multi-phased implementation of the IoT Platform
-            </h1>
+            </h2>
             <p className="mt-3  fs-6">
               You should monitor fleet and freight on the move to streamline
               loading, unloading, and delivery. Internet of Things (IoT)
@@ -194,25 +192,21 @@ function Transportation() {
               enriched functionality.
             </p>
           </div>
-
-      
         </div>
       </section>
 
       <div className="container p-2 mt-4">
         <div className="container text-center  px-1 px-lg-0">
-          <h1 className="fw-normal ">
+          <h2 className="fw-normal ">
             Need Expert Help to Estimate Your App Modernization Costs?
-          </h1>
-          <h5 className="fw-normal my-lg-4">
+          </h2>
+          <h3 className="fw-normal my-lg-4">
             Choosing Infysion as your partner, Our architects and business
             analysts are ready to transform legacy app modernization services
             for your specific case and help you Step into the Future with Legacy
             Application Modernization Solutions.
-          </h5>
+          </h3>
         </div>
-
-
       </div>
       <Footer />
     </div>

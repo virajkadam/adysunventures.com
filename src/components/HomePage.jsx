@@ -34,41 +34,41 @@ function HomePage() {
               />
             </div>
             <div className="col-lg-6">
-              <h4 className="fw-bolder fs-3">Strategic Vision in IT</h4>
+              <h3 className="fw-bolder fs-3">Strategic Vision in IT</h3>
               <div className="mt-4">
-                <span className="fw-bold me-1">
+                <h4 className="d-inline fw-bold me-1">
                   Long-term Goals:
-                </span>
+                </h4>
                 At Adysun Ventures, we're committed to becoming
                 industry leaders in IT innovation, setting new
                 standards and inspiring both our team and clients
                 to reach their full potential.
               </div>
               <div className="mt-4">
-                <span className="fw-bold me-1">Innovation:</span>
+                <h4 className="d-inline fw-bold me-1">Innovation:</h4>
                 We're at the forefront of technological
                 advancements, constantly exploring new ways to
                 enhance business operations through IT solutions.
               </div>
               <div className="mt-4">
-                <span className="fw-bold me-1">
+                <h4 className="d-inline fw-bold me-1">
                   Customer Focus:
-                </span>
+                </h4>
                 Our strategies are built around understanding and
                 exceeding client expectations in the IT sector.
               </div>
               <div className="mt-4">
-                <span className="fw-bold me-1">
+                <h4 className="d-inline fw-bold me-1">
                   Market Leadership:
-                </span>
+                </h4>
                 We aim to set industry trends and establish
                 benchmarks in IT services that others aspire to
                 follow.
               </div>
               <div className="mt-4">
-                <span className="fw-bold me-1">
+                <h4 className="d-inline fw-bold me-1">
                   Social Impact:
-                </span>
+                </h4>
                 We leverage technology to create positive change,
                 improving lives and communities through our IT
                 initiatives.
@@ -88,15 +88,16 @@ function HomePage() {
           <div className="row align-items-center">
             <div className="col-lg-6 order-lg-1 order-2">
               <div className="pe-1-9">
-                <h4 className="fw-bolder fs-3">
+                <h3 className="fw-bolder fs-3">
                   IT Marketing Strategies
-                </h4>
+                </h3>
                 <p>
                   At Adysun Ventures, we develop targeted marketing
                   strategies for IT services, focusing on current
                   trends such as cloud adoption, cybersecurity,
                   and remote work solutions.
                 </p>
+                <h4>Key Marketing Approaches</h4>
                 <ul className="list-style-16">
                   <li>Analyzing IT Spending Patterns</li>
                   <li>Promoting Cloud Service Solutions</li>
@@ -140,9 +141,9 @@ function HomePage() {
             </div>
             <div className="col-lg-6">
               <div className="ps-lg-1-9">
-                <h4 className="fw-bolder fs-3">
+                <h3 className="fw-bolder fs-3">
                   Scaling IT Success
-                </h4>
+                </h3>
                 <p>
                   The IT consulting industry is experiencing
                   robust growth, driven by digital transformation
@@ -150,6 +151,7 @@ function HomePage() {
                   forefront of this evolution, helping businesses
                   leverage cutting-edge technologies.
                 </p>
+                <h4>Our Growth Solutions</h4>
                 <ul className="list-style-16">
                   <li>Cloud Consulting and Implementation</li>
                   <li>Advanced Cybersecurity Solutions</li>
@@ -185,8 +187,8 @@ function HomePage() {
               <div className="col-xl-7 col-lg-6 mb-1-9 mb-lg-0">
                 <span className="text-white fs-2">When service matters</span>
                 <h1 className="text-white display-md-10 font-weight-700 m-0">
-                  <span class="text-primary">We Are the best </span>
-                  <span>IT Solutions</span>
+                  <span className="text-primary">Adysun Ventures: </span>
+                  <span>IT Solutions & Business Strategy Experts</span>
                 </h1>
                 <div className="separator-line-horrizontal-full bg-white opacity3 my-1-9 my-sm-2-3 my-md-2-9" />
                 <p className="text-white mb-1-9 w-xl-85">
@@ -206,9 +208,9 @@ function HomePage() {
             >
               <div className="position-relative z-index-1 p-1-9 p-sm-2-3 p-md-2-9 p-lg-6">
                 <div className="w-md-85 mx-auto text-center">
-                  <p className="text-white font-weight-700 h2">
+                  <h2 className="text-white font-weight-700">
                     Expert IT Solutions with a Decade of Experience
-                  </p>
+                  </h2>
                   <p className="text-white m-0">
                     Adysun Ventures delivers professional IT services with
                     unmatched expertise, ensuring timely delivery and utmost
@@ -225,12 +227,10 @@ function HomePage() {
                             <i className="icon-tools display-18 display-md-16" />
                           </div>
                           <div className="features-flex-square-content">
-                            <h4>
-                              <i class="fa-solid fa-money-bill me-2 text-white"></i>
-                              <span className="text-white">
-                                Saving Investments
-                              </span>
-                            </h4>
+                            <h3 className="text-white">
+                              <i className="fa-solid fa-money-bill me-2 text-white"></i>
+                              Saving Investments
+                            </h3>
                             <p className="text-white">
                               Optimize your technology investments for long-term
                               growth and success.
@@ -248,15 +248,12 @@ function HomePage() {
                             <i className="icon-hotairballoon display-18 display-md-16" />
                           </div>
                           <div className="features-flex-square-content">
-                            <h4>
-                              <i class="fa-solid fa-globe me-2 text-white"></i>
-                              <span className="text-white">
-                                Online Consulting
-                              </span>
-                            </h4>
+                            <h3 className="text-white">
+                              <i className="fa-solid fa-money-bill me-2 text-white"></i>
+                              Industry Expertise
+                            </h3>
                             <p className="text-white">
-                              Access expert IT consulting services anytime,
-                              anywhere for efficient problem-solving.
+                              Leverage our deep industry knowledge to solve your most complex IT challenges.
                             </p>
                           </div>
                         </div>
@@ -264,24 +261,19 @@ function HomePage() {
                     </div>
                   </div>
                   <div className="col-lg-4 mt-1-9">
-                    <div>
-                      <div className="features-flex-square">
-                        <div className="clearfix">
-                          <div className="features-flex-square-icon">
-                            <i className="icon-layers display-18 display-md-16" />
-                          </div>
-                          <div className="features-flex-square-content">
-                            <h4>
-                              <i class="fa-solid fa-building-columns me-2 text-white"></i>
-                              <span className="text-white">
-                                Tech Innovation
-                              </span>
-                            </h4>
-                            <p className="text-white">
-                              Stay ahead with our innovative tech solutions,
-                              designed to future-proof your business.
-                            </p>
-                          </div>
+                    <div className="features-flex-square">
+                      <div className="clearfix">
+                        <div className="features-flex-square-icon">
+                          <i className="icon-target display-18 display-md-16" />
+                        </div>
+                        <div className="features-flex-square-content">
+                          <h3 className="text-white">
+                            <i className="fa-solid fa-money-bill me-2 text-white"></i>
+                            Solution Focused
+                          </h3>
+                          <p className="text-white">
+                            We deliver tailored IT solutions that directly address your business challenges.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -336,8 +328,7 @@ function HomePage() {
                     </h4>
                   </a>
                   <div className="d-inline-block me-4 align-top">
-                    <strong className="font-weight-700 text-primary">or</strong>
-                  </div> */}
+                    <strong className="font-weight-700 text-primary">or</strong> */}
                   <h4 className="d-inline-block h6 mb-0">
                     <a href="mailto:info@adysunventures.com">
                       info@adysunventures.com

@@ -67,7 +67,7 @@ function Industries() {
                   </p>
                   <Link className="read-more " to="/transportation">
                     Transportation use cases
-                    <i class="fa-solid fa-right-long ms-2 mt-2" />
+                    <i className="fa-solid fa-right-long ms-2 mt-2" />
                   </Link>
                 </div>
               </div>
@@ -95,7 +95,7 @@ function Industries() {
                   </p>
                   <Link className="read-more " to="/eCommerce">
                     E-Commerce use cases
-                    <i class="fa-solid fa-right-long ms-2" />
+                    <i className="fa-solid fa-right-long ms-2" />
                   </Link>
                 </div>
               </div>
@@ -119,7 +119,7 @@ function Industries() {
                   </p>
                   <Link className="read-more" to="/stock-exchange">
                     Trading use cases
-                    <i class="fa-solid fa-right-long ms-2 " />
+                    <i className="fa-solid fa-right-long ms-2 " />
                   </Link>
                 </div>
               </div>
@@ -128,10 +128,10 @@ function Industries() {
         </div>
 
         <div className="container text-center mt-4">
-          <h4 className="d-inline fw-normal me-2">Can’t find your industry?</h4>
+          <h3 className="d-inline fw-normal me-2">Can't find your industry?</h3>
           <Link
             to="/contact"
-            className="h4 fw-normal text-decoration-underline "
+            className="h3 fw-normal text-decoration-underline "
           >
             Contact Us Now!
           </Link>
@@ -139,22 +139,20 @@ function Industries() {
       </section>
 
       <div className="container text-center text-md-left">
-        <h1 className="fw-normal">
+        <h2 className="fw-normal">
           Need Expert Help to Estimate Your
           <span className="text-primary d-block d-md-inline mx-0 mx-md-3">
             Product Engineering Services
           </span>
           Costs?
-        </h1>
-        <h5 className="fw-normal my-3 my-md-4 fs-6 fs-md-5">
+        </h2>
+        <h3 className="fw-normal my-3 my-md-4 fs-6 fs-md-5">
           Choosing Infysion Technologies as your Digital Transformation
           Consultant, our skilled architects and business analysts are ready to
           transform Software Product Engineering for your specific case and help
           you Step into the Future with Product Engineering Services.
-        </h5>
+        </h3>
       </div>
-
-     
       <Footer />
     </div>
   );

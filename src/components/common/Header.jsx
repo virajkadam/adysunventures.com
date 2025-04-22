@@ -40,7 +40,7 @@ function Header() {
                           alt="logo"
                           className="img-fluid pe-3"
                         />
-                        <span className="h5 fw-bold mb-0 d-flex">ADYSUN VENTURES</span>
+                        <span className="fw-bold mb-0 d-flex">ADYSUN VENTURES</span>
                       </div>
                     </Link>
                   </div>

@@ -21,12 +21,12 @@ function ContactUs() {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <h1>Contact </h1>
+                <h1>Contact Us</h1>
               </div>
               <div className="col-md-12">
                 <ul className="ps-0">
                   <li>
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="#!">Contact</a>
@@ -36,8 +36,6 @@ function ContactUs() {
             </div>
           </div>
         </section>
-
-      
       </div>
       <Footer />
     </>

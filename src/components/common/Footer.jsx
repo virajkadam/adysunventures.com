@@ -96,7 +96,7 @@ function Footer() {
               <i className="fas fa-map-marker-alt text-primary" />
             </span>
             <div className="cont">
-              <h6 className="mb-1 font-weight-600">{location.name}</h6>
+              <div className="mb-1 font-weight-600 fw-bold">{location.name}</div>
               {location.status === "Coming Soon" ? (
                 <p className="m-0">Coming Soon</p>
               ) : (
@@ -125,7 +125,7 @@ function Footer() {
             <i className="fas fa-envelope text-primary" />
           </span>
           <div className="cont">
-            <h6 className="mb-3 font-weight-600">Email Contacts</h6>
+            <div className="mb-3 font-weight-600 fw-bold">Email Contacts</div>
             {companyInfo.contact.emails.map((email, index) => (
               <div key={email.type} className={index !== 0 ? 'mt-3' : ''}>
                 <p className="m-0">{email.address}</p>
@@ -141,7 +141,7 @@ function Footer() {
             <i className="fas fa-phone text-primary" />
           </span>
           <div className="cont">
-            <h6 className="mb-3 font-weight-600">Phone Numbers</h6>
+            <div className="mb-3 font-weight-600 fw-bold">Phone Numbers</div>
             {companyInfo.contact.phones.map((phone, index) => (
               <div key={phone.type} className={index !== 0 ? 'mt-3' : ''}>
                 <p className="m-0">{phone.number}</p>
@@ -179,10 +179,10 @@ function Footer() {
     <div className="locations-grid mt-4">
       {companyInfo.contact.locations.map(location => (
         <div key={location.id} className="location-item mb-4">
-          <h6 className="text-primary mb-2">
+          <div className="text-primary mb-2 fw-bold">
             <i className="fas fa-map-marker-alt text-primary me-2"></i>
             {location.name}
-          </h6>
+          </div>
           {location.status === "Coming Soon" ? (
             <p className="m-0">Coming Soon</p>
           ) : (
@@ -204,9 +204,9 @@ function Footer() {
   return (
     <>
       <div className="container mt-4 mb-4">
-        <h4 className="text-center text-uppercase my-5">
+        <h2 className="text-center text-uppercase my-5">
           Reach Out to {companyInfo.name.short}
-        </h4>
+        </h2>
         <div className="contact-info">
           {renderLocationInfo()}
           {renderContactDetails()}
@@ -230,9 +230,9 @@ function Footer() {
                 <span className="icon mb-0 d-block text-white display-18">
                   <i className="ti-user"></i>
                 </span>
-                <h4 className="countup text-white d-block">
+                <h3 className="countup text-white d-block">
                   {satisfiedVisitors}
-                </h4>
+                </h3>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
                   Total Projects
@@ -244,7 +244,7 @@ function Footer() {
                 <span className="icon mb-0 d-block text-white display-18">
                   <i className="ti-face-smile"></i>
                 </span>
-                <h4 className="countup text-white d-block">{happyClients}</h4>
+                <h3 className="countup text-white d-block">{happyClients}</h3>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
                   Happy Clients
@@ -254,12 +254,24 @@ function Footer() {
             <div className="col-sm-6 col-lg-3 mt-1-9">
               <div className="counter-box">
                 <span className="icon mb-0 d-block text-white display-18">
-                  <i className="ti-world"></i>
+                  <i className="ti-crown"></i>
                 </span>
-                <h4 className="countup text-white d-block">{awardsWon}</h4>
+                <h3 className="countup text-white d-block">{awardsWon}</h3>
                 <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
                 <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
-                  Awards
+                  Awards Won
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-3 mt-1-9">
+              <div className="counter-box">
+                <span className="icon mb-0 d-block text-white display-18">
+                  <i className="ti-check-box"></i>
+                </span>
+                <h3 className="countup text-white d-block">{constructions}</h3>
+                <div className="separator-line-horrizontal-medium-light3 bg-white my-3 opacity5 mx-auto"></div>
+                <p className="display-27 display-md-24 font-weight-600 text-white m-0 text-center">
+                  Task Completed
                 </p>
               </div>
             </div>

@@ -19,12 +19,11 @@ function ECommerce() {
       >
         <div className="container">
           <h1 className="text-center mt-n7 ">
-            Smart Retail: Operations and Customer Experience with Cloud
-            Solutions
+            Smart Retail: Operations and Customer Experience with Cloud Solutions
           </h1>
           <div className="row">
             <div className="col-md-12">
-              <h1></h1>
+              {/* Empty h1 removed */}
             </div>
             <div className="col-md-12 ">
               <ul className="ps-0 ">
@@ -46,10 +45,10 @@ function ECommerce() {
 
       <section className="p-md-4 p-0 text-center ">
         <div className="container ">
-          <h1 className="">
+          <h2 className="">
             Cloud-Powered Retail Transformation: Efficiency and Customer
             Experience
-          </h1>
+          </h2>
           <p className="my-lg-4 my-2  fs-5">
             Our Cloud Solutions for Retail, where innovation meets efficiency.
             Discover how our comprehensive suite of cloud-based tools optimizes
@@ -221,9 +220,9 @@ function ECommerce() {
           <div className="row align-items-center">
             <div className="col-lg-6 text-lg-start">
               <h5 className="text-muted">The Solution:</h5>
-              <h1 className="fw-bold">
+              <h2 className="fw-bold">
                 Retail Excellence with Cloud Solutions
-              </h1>
+              </h2>
               <p className="h5 text-muted">
                 Streamlining Operations, Enhancing Customer Experience, and
                 Unleashing Data Insights
@@ -268,18 +267,16 @@ function ECommerce() {
 
       <div className="container p-2">
         <div className="container">
-          <h1 className="fw-normal">
+          <h2 className="fw-normal">
             Need Expert Help to Estimate Your App Modernization Costs?
-          </h1>
-          <h5 className="fw-normal my-4 fs-5 ">
+          </h2>
+          <h3 className="fw-normal my-4 fs-5 ">
             Choosing Infysion as your partner, Our architects and business
             analysts are ready to transform legacy app modernization services
             for your specific case and help you and Step into the Future with
             Legacy Application Modernization Solutions.
-          </h5>
+          </h3>
         </div>
-
-      
       </div>
       <Footer />
     </div>

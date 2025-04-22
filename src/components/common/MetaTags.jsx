@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
   title = "Adysun Ventures | IT Solutions & Business Strategy Experts",
@@ -7,6 +8,9 @@ const MetaTags = ({
   keywords = "Adysun Ventures, IT Solutions, Business Strategies, IT Services, Premium IT Products, Collaborative IT Partnerships, Innovative IT Solutions",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg"
 }) => {
+  const location = useLocation();
+  const currentUrl = `https://adysunventures.com${location.pathname}`;
+  
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -34,18 +38,18 @@ const MetaTags = ({
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="geo.placename" content="India" />
       
-      {/* Single Canonical Link */}
-      <link rel="canonical" href="https://adysunventures.com/" />
+      {/* Dynamic Canonical Link for each page */}
+      <link rel="canonical" href={currentUrl} />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content="https://adysunventures.com/" />
+      <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content="Adysun Ventures" />
       <meta property="article:publisher" content="https://www.facebook.com/adysunventures/" />
-      <meta property="article:updated_time" content="2024-11-18" />
+      <meta property="article:modified_time" content={new Date().toISOString()} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content="Adysun Ventures Logo" />
       <meta property="og:image:width" content="720" />
