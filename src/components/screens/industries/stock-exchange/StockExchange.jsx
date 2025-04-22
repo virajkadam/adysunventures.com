@@ -159,8 +159,8 @@ function StockExchange() {
       </div>
 
       <div className="container text-center mt-6 ">
-        <h1>Our trading platform</h1>
-        <h1> services</h1>
+        <h2 className="h2 mb-0">Our trading platform</h2>
+        <h3 className="h3 mt-2"> services</h3>
       </div>
 
       <section className="p-0 p-lg-8 m-1 m-lg-6 bg-light-gray">
@@ -246,7 +246,7 @@ function StockExchange() {
 
       {/* <section className="p-lg-7 p-3">
         <div className="container text-center ">
-          <h1 className="mb-6">Asset classes we work with</h1>
+          <h2 className="h2 mb-6">Asset classes we work with</h2>
         </div>
         <div className="row mt-n1-9">
           <div className="col-md-6 col-lg-4 mt-1-9">
@@ -262,7 +262,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">Equities</p>
+                    <p className="text-white mb-3 h2">Equities</p>
                   </div>
                 </div>
               </div>
@@ -281,7 +281,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">FX</p>
+                    <p className="text-white mb-3 h2">FX</p>
                   </div>
                 </div>
               </div>
@@ -300,7 +300,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">Rates</p>
+                    <p className="text-white mb-3 h2">Rates</p>
                   </div>
                 </div>
               </div>
@@ -321,7 +321,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">Credit</p>
+                    <p className="text-white mb-3 h2">Credit</p>
                   </div>
                 </div>
               </div>
@@ -340,7 +340,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">Commodities</p>
+                    <p className="text-white mb-3 h2">Commodities</p>
                   </div>
                 </div>
               </div>
@@ -359,7 +359,7 @@ function StockExchange() {
                 </div>
                 <div className="service-text align-items-end d-flex">
                   <div className="p-2-3">
-                    <p className="text-white mb-3 h1">Energy</p>
+                    <p className="text-white mb-3 h2">Energy</p>
                   </div>
                 </div>
               </div>
@@ -370,9 +370,9 @@ function StockExchange() {
 
       <section className="p-2 m-3">
         <div className="container text-center ">
-          <h1 className="mb-6">
+          <h2 className="mb-6">
             Key Features of an Ideal Copy Trading Platform
-          </h1>
+          </h2>
         </div>
         <div className="row">
           <div className="col-12">
@@ -450,9 +450,9 @@ function StockExchange() {
 
       <section className="p-lg-4 bg-light-gray">
         <div className="text-center">
-          <h1 className="h3 h-sm2 d-block d-lg-none d-md-none">
+          <h2 className="h3 h-sm2 d-block d-lg-none d-md-none">
             How Shekru Labs helps our clients beat the competition
-          </h1>
+          </h2>
         </div>
         <div className="container mt-5">
           <div className="row">
@@ -483,9 +483,9 @@ function StockExchange() {
 
             {/* Content Section */}
             <div className="col-md-5 order-md-1 order-lg-1">
-              <h1 className="h3 h-sm2 d-lg-block d-md-block d-none">
+              <h2 className="h3 h-sm2 d-lg-block d-md-block d-none">
                 How DEMO helps to beat the competition
-              </h1>
+              </h2>
               <h2 className="h4">{activeMember.name}</h2>
               <h5 className="text-muted">{activeMember.position}</h5>
               <h5 className="mt-5 fw-normal">{activeMember.description}</h5>
@@ -510,7 +510,7 @@ function StockExchange() {
               <div className="section-heading title-style5">
                 <h2 className="text-center">Have a project in mind?</h2>
               </div>
-              <p className="h4 text-center">Let’s discuss how you can derive</p>
+              <p className="h4 text-center">Let's discuss how you can derive</p>
               <p className="h4 text-center">
                 maximum value from our expertise.
               </p>
@@ -527,10 +527,10 @@ function StockExchange() {
       </section>
 
       <div className="container">
-        <h1 className=" text-center">
+        <h2 className="text-center">
           Why choose <span className="text-primary">DEMO</span> for your
           trading software needs
-        </h1>
+        </h2>
 
         <div
           className="row mt-6"
@@ -603,7 +603,7 @@ function StockExchange() {
 
       <section className="bg-grey py-7">
         <div className="container text-center ">
-          <h1 className="mb-6">Join the trading revolution with DEMO</h1>
+          <h2 className="mb-6">Join the trading revolution with DEMO</h2>
           <div className="row">
             <div className="col-lg-4 col-md-6 d-flex align-items-center">
               <div className="p-1 position-relative">
@@ -612,10 +612,10 @@ function StockExchange() {
                   style={{ height: "140px" }}
                 >
                   <div className="text-start ms-4">
-                    <h1 className="d-flex align-items-center">
+                    <h3 className="d-flex align-items-center">
                       <i className="fas fa-users me-2"></i>
                       4784+
-                    </h1>
+                    </h3>
                     <div className="fs-3 fw-bold h2 ms-lg-9 ms-md-7 ms-5 ps-lg-3 ps-md-2">
                       Users
                     </div>
@@ -630,10 +630,10 @@ function StockExchange() {
                   style={{ height: "140px" }}
                 >
                   <div className="text-start ms-4">
-                    <h1 className="d-flex align-items-center">
+                    <h3 className="d-flex align-items-center">
                       <i className="fas fa-file-invoice me-2"></i>
                       6155+
-                    </h1>
+                    </h3>
                     <div className="fs-3 fw-bold h2 ms-lg-4 ms-md-4 ms-3 ps-3 ">
                       Demat Accounts
                     </div>
@@ -648,10 +648,10 @@ function StockExchange() {
                   style={{ height: "140px" }}
                 >
                   <div className="text-start ms-4">
-                    <h1 className="d-flex align-items-center">
-                      <i className="fas fa-chart-line me-2"></i>
-                      1807091
-                    </h1>
+                    <h3 className="d-flex align-items-center">
+                      <i className="fas fa-handshake me-2"></i>
+                      1.2 Billion+
+                    </h3>
                     <div className="fs-3 fw-bold h2 ms-lg-8 ms-md-6 ms-4 ps-lg-4 ps-md-4  ps-3">
                       Order Placed
                     </div>
@@ -664,9 +664,9 @@ function StockExchange() {
       </section>
 
       <div className="container">
-        <h1 className="text-lg-center text-md-center my-lg-5 my-2">
-          Our DEMO trading software services
-        </h1>
+        <h2 className="text-lg-center text-md-center my-lg-5 my-2">
+          Trade Like a Pro with Our Automated Copy Trading Software
+        </h2>
         <div className="row text-white ">
           <div className="col-md-6 col-lg-3">
             {/* Add an background image here */}
@@ -774,7 +774,7 @@ function StockExchange() {
         <div className="container text-center">
           <div className="section-heading title-style5 half white">
             <h2 className="mb-2">
-              Let’s discuss how DEMO trading software
+              Let's discuss how DEMO trading software
             </h2>
             <h2 className="mb-2">expertise can help you attain your goals</h2>
           </div>

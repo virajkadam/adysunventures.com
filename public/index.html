@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The meta tags are now managed through React Helmet in the MetaTags component -->
 
+    <!-- Performance optimization - DNS prefetch -->
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"></noscript>
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -31,18 +40,31 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" rel="stylesheet" />
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" rel="stylesheet" />
+    <!-- Non-critical CSS loaded asynchronously with low priority -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    
+    <!-- Font Awesome loaded with lower priority -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;" />
    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Fallback for CSS if JavaScript is disabled -->
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" rel="stylesheet" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" rel="stylesheet" />
+    </noscript>
+    
+    <!-- jQuery loaded with defer to not block rendering -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -60,6 +82,24 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXXXXX');</script>
     <!-- End Google Tag Manager -->
+    
+    <!-- Critical CSS inline -->
+    <style>
+      /* Minimal critical CSS for initial rendering */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -70,8 +110,26 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- Scripts loaded at the end and deferred to not block rendering -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    
+    <!-- CSS loading optimization script -->
+    <script>
+      /* Optimize CSS loading */
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementsByTagName("script")[0];
+        var replacement = document.createElement("div");
+        replacement.innerHTML = 'loading CSS';
+        document.body.appendChild(replacement);
+      };
+      
+      /* Run the function once the page has loaded */
+      if (window.addEventListener) {
+        window.addEventListener("load", loadDeferredStyles, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onload", loadDeferredStyles);
+      }
+    </script>
   </body>
 </html>

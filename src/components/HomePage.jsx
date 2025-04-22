@@ -362,7 +362,7 @@ function HomePage() {
                     <div className="card h-100 border-0 shadow text-center">
                       <div className="card-body p-4">
                         <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
-                          <i className="fas fa-lightbulb fa-2x"></i>
+                          <i className="fas fa-lightbulb fa-2x text-white"></i>
                         </div>
                         <h4 className="card-title mb-3">Innovative Approach</h4>
                         <p className="card-text mb-0">
@@ -375,7 +375,7 @@ function HomePage() {
                     <div className="card h-100 border-0 shadow text-center">
                       <div className="card-body p-4">
                         <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
-                          <i className="fas fa-users fa-2x"></i>
+                          <i className="fas fa-users fa-2x text-white"></i>
                         </div>
                         <h4 className="card-title mb-3">Expert Team</h4>
                         <p className="card-text mb-0">
@@ -388,7 +388,7 @@ function HomePage() {
                     <div className="card h-100 border-0 shadow text-center">
                       <div className="card-body p-4">
                         <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
-                          <i className="fas fa-handshake fa-2x"></i>
+                          <i className="fas fa-handshake fa-2x text-white"></i>
                         </div>
                         <h4 className="card-title mb-3">Client Partnership</h4>
                         <p className="card-text mb-0">
