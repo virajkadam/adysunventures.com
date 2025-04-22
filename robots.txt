@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://adysunventures.com/sitemap.xml
+
+# Disallow admin paths if any exists
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
