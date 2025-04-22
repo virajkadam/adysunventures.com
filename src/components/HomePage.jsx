@@ -7,6 +7,7 @@ import OptimizedImage from './common/OptimizedImage';
 import FAQ from './common/FAQ';
 import MetaTags from './common/MetaTags';
 import SchemaMarkup from './common/SchemaMarkup';
+import InternalLinks from './common/InternalLinks';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
@@ -219,10 +220,10 @@ function HomePage() {
             <div className="row align-items-center">
               <div className="col-xl-7 col-lg-6 mb-1-9 mb-lg-0">
                 <span className="text-white fs-2">When service matters</span>
-                <h1 className="text-white display-md-10 font-weight-700 m-0">
+                <h2 className="text-white display-md-10 font-weight-700 m-0">
                   <span className="text-primary">Adysun Ventures: </span>
                   <span>Premium IT Solutions & Business Strategy Services</span>
-                </h1>
+                </h2>
                 <div className="separator-line-horrizontal-full bg-white opacity3 my-1-9 my-sm-2-3 my-md-2-9" />
                 <p className="text-white mb-1-9 w-xl-85">
                   Adysun Ventures is a leading <Link to="/services" className="text-white text-decoration-underline">IT solutions provider</Link>, offering
@@ -550,6 +551,9 @@ function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Internal Links for SEO */}
+        <InternalLinks className="bg-light" currentPath="/" />
       </div>
       <Footer />
     </div>

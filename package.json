@@ -32,6 +32,27 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about-us",
+      "/contact-us",
+      "/services",
+      "/technologies",
+      "/careers",
+      "/clients",
+      "/industries",
+      "/industries/stock-exchange",
+      "/industries/ecommerce",
+      "/industries/transportation",
+      "/404"
+    ],
+    "inlineCss": true,
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -59,6 +80,7 @@
     "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
     "glob": "^10.4.5",
+    "react-snap": "^1.23.0",
     "terser": "^5.39.0"
   }
 }

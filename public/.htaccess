@@ -4,6 +4,7 @@
   ExpiresDefault "access plus 1 month"
 
   # Images - Extended cache time for better performance
+  ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"

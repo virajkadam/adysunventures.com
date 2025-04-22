@@ -8,6 +8,7 @@ import {
 import HomePage from "./components/HomePage";
 import SchemaMarkup from "./components/common/SchemaMarkup";
 import MetaTags from "./components/common/MetaTags";
+import ScriptLoader from "./components/common/ScriptLoader";
 import AboutUs from "./components/screens/about-us/AboutUs";
 import ContactUs from "./components/screens/contact-us/ContactUs";
 import Services from "./components/screens/services/Services";
@@ -27,8 +28,20 @@ function App() {
     <HelmetProvider>
       <Router>
         {/* Global default meta tags */}
-        <MetaTags />
+        <MetaTags 
+          description="Expert IT solutions, custom software development, and business strategy services tailored for modern enterprises. Transform your business with our technology solutions."
+        />
+        
+        {/* Global schema markup */}
         <SchemaMarkup />
+        
+        {/* External scripts loaded optimally */}
+        <ScriptLoader 
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXXXX" 
+          id="gtm-script"
+          async={true}
+        />
+        
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />

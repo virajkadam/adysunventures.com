@@ -6,10 +6,12 @@ const MetaTags = ({
   title = "Custom Software Development & Enterprise IT Solutions | Adysun Ventures",
   description = "Transform your business with custom software development, enterprise IT solutions, and strategic digital transformation services. Get innovative technology tailored to your needs.",
   keywords = "Custom Software Development, Enterprise IT Solutions, Digital Transformation, Cloud Computing, Cybersecurity, Business Technology, Web Applications, Mobile Apps, IT Consulting, Adysun Ventures",
-  ogImage = "https://adysunventures.com/assets/images/adysun_cover.png"
+  ogImage = "https://adysunventures.com/assets/images/adysun_cover.png",
+  canonicalUrl = ""
 }) => {
   const location = useLocation();
   const currentUrl = `https://adysunventures.com${location.pathname}`;
+  const actualCanonicalUrl = canonicalUrl || currentUrl;
   const siteName = "Adysun Ventures";
   
   return (
@@ -32,7 +34,7 @@ const MetaTags = ({
       <meta name="robots" content="index, follow" />
       
       {/* Canonical Link */}
-      <link rel="canonical" href={currentUrl} />
+      <link rel="canonical" href={actualCanonicalUrl} />
       
       {/* Open Graph Meta Tags - Essential for social media previews */}
       <meta property="og:locale" content="en_US" />
