@@ -6,31 +6,87 @@
   <!-- Main pages -->
   <url>
     <loc>https://adysunventures.com/</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2023-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Update these URLs with your actual site structure -->
   <url>
-    <loc>https://adysunventures.com/about</loc>
-    <lastmod>2025-04-22</lastmod>
+    <loc>https://adysunventures.com/about-us</loc>
+    <lastmod>2023-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://adysunventures.com/services</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2023-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://adysunventures.com/contact</loc>
-    <lastmod>2025-04-22</lastmod>
+    <loc>https://adysunventures.com/partners</loc>
+    <lastmod>2023-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/technologies</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/industries</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/industries/ecommerce</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/industries/transportation</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/industries/stock-exchange</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/careers</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/clients</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://adysunventures.com/contact-us</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   
   <!-- Add all service pages -->

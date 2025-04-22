@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Header from './common/Header';
 import Footer from './common/Footer';
 import Navbar2 from './common/Navbar2';
+import OptimizedImage from './common/OptimizedImage';
+import FAQ from './common/FAQ';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
@@ -25,7 +27,7 @@ function HomePage() {
         <div className="bg-white box-shadow-primary p-3">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
-              <LazyLoadImage
+              <OptimizedImage
                 src={content1}
                 className="img-fluid rounded"
                 alt="Strategic IT planning and vision at Adysun Ventures"
@@ -110,7 +112,7 @@ function HomePage() {
               </div>
             </div>
             <div className="col-lg-6 order-lg-2 order-1 text-center text-lg-start mb-4 mb-lg-0">
-              <LazyLoadImage
+              <OptimizedImage
                 src={content2}
                 className="img-fluid rounded"
                 alt="IT marketing strategies and digital promotion at Adysun Ventures"
@@ -131,7 +133,7 @@ function HomePage() {
         <div className="bg-white box-shadow-primary p-3">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
-              <LazyLoadImage
+              <OptimizedImage
                 src={content3}
                 className="img-fluid rounded"
                 alt="Technology growth and scaling IT solutions with Adysun Ventures"
@@ -203,7 +205,7 @@ function HomePage() {
         <section className="services-blocks p-0 bg-transparent">
           <div className="container">
             <div
-              className="bg-img cover-background primary-overlay  rounded-4"
+              className="bg-img cover-background primary-overlay rounded-4"
               data-overlay-dark={9}
             >
               <div className="position-relative z-index-1 p-1-9 p-sm-2-3 p-md-2-9 p-lg-6">
@@ -249,11 +251,12 @@ function HomePage() {
                           </div>
                           <div className="features-flex-square-content">
                             <h3 className="text-white">
-                              <i className="fa-solid fa-money-bill me-2 text-white"></i>
-                              Industry Expertise
+                              <i className="fa-solid fa-chart-simple me-2 text-white"></i>
+                              Effective Strategy
                             </h3>
                             <p className="text-white">
-                              Leverage our deep industry knowledge to solve your most complex IT challenges.
+                              Building effective strategies to optimize your IT
+                              infrastructure for maximum ROI.
                             </p>
                           </div>
                         </div>
@@ -261,19 +264,22 @@ function HomePage() {
                     </div>
                   </div>
                   <div className="col-lg-4 mt-1-9">
-                    <div className="features-flex-square">
-                      <div className="clearfix">
-                        <div className="features-flex-square-icon">
-                          <i className="icon-target display-18 display-md-16" />
-                        </div>
-                        <div className="features-flex-square-content">
-                          <h3 className="text-white">
-                            <i className="fa-solid fa-money-bill me-2 text-white"></i>
-                            Solution Focused
-                          </h3>
-                          <p className="text-white">
-                            We deliver tailored IT solutions that directly address your business challenges.
-                          </p>
+                    <div className="">
+                      <div className="features-flex-square">
+                        <div className="clearfix">
+                          <div className="features-flex-square-icon">
+                            <i className="icon-lightbulb display-18 display-md-16" />
+                          </div>
+                          <div className="features-flex-square-content">
+                            <h3 className="text-white">
+                              <i className="fa-solid fa-gears me-2 text-white"></i>
+                              Innovative Solutions
+                            </h3>
+                            <p className="text-white">
+                              Providing cutting-edge IT solutions that keep your
+                              business ahead of the curve.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -284,138 +290,168 @@ function HomePage() {
           </div>
         </section>
 
-        <section aria-labelledby="about-heading">
+        {/* New SEO-rich content section */}
+        <section className="bg-light py-5">
           <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6 order-md-2 order-sm-2 order-lg-1">
-                <div className="section-heading title-style5 left half">
-                  <h2 id="about-heading" className="fs-2">
-                    Adysun Ventures: Your IT Partner
-                  </h2>
-                  <div className="square">
-                    <span className="separator-left bg-primary" />
-                    <span className="separator-right bg-primary" />
+            <div className="row justify-content-center">
+              <div className="col-lg-10">
+                <div className="section-title text-center mb-5">
+                  <h2 className="h2 mb-3">Comprehensive IT Solutions & Business Strategy Services</h2>
+                  <p className="lead">Transforming businesses through innovative technology solutions and strategic consulting</p>
+                </div>
+                
+                <div className="card shadow border-0 mb-4">
+                  <div className="card-body p-4 p-lg-5">
+                    <h3 className="h3 mb-3">Premier IT Solutions Provider in India</h3>
+                    <p>
+                      Adysun Ventures is a leading IT solutions company specializing in providing comprehensive technology services 
+                      to businesses across various industries. With our headquarters in Pune, we've established ourselves as a trusted 
+                      partner for organizations seeking to leverage technology for business growth and operational excellence.
+                    </p>
+                    <p>
+                      Our team of experienced IT professionals delivers tailored solutions in software development, 
+                      cloud computing, cybersecurity, data analytics, and digital transformation. We combine technical expertise 
+                      with business acumen to help organizations navigate the complex technology landscape and achieve their strategic objectives.
+                    </p>
                   </div>
                 </div>
-                <p>
-                  At Adysun Ventures, we combine comprehensive business
-                  strategies with cutting-edge technology to deliver tailored IT
-                  solutions. Our focus is on fostering collaborative
-                  partnerships that drive your business forward.
-                </p>
-                <p>
-                  Founded in 2018, we've quickly become a leading IT service
-                  provider, known for our exceptional processes and innovative
-                  solutions. We understand the critical role of quality and
-                  reliability in modern business operations.
-                </p>
-                <p>
-                  Discover how Adysun Ventures can elevate your business with
-                  our premium IT services and products.
-                </p>
-                <div className="mb-4">
-                  <span>
-                    We're here to answer{" "}
-                    <strong className="font-weight-600 lead">
-                      all your IT-related questions.
-                    </strong>
-                  </span>
+                
+                <div className="row g-4 mb-5">
+                  <div className="col-md-6">
+                    <div className="card h-100 border-0 shadow">
+                      <div className="card-body p-4">
+                        <h3 className="h4 card-title mb-3">Business Strategy Consulting</h3>
+                        <p className="card-text">
+                          Our business strategy consulting services help organizations align their technology investments with business goals. 
+                          Through comprehensive analysis and strategic planning, we guide businesses in making informed decisions that drive 
+                          growth, improve efficiency, and create competitive advantages in the market.
+                        </p>
+                        <ul className="list-unstyled mb-0">
+                          <li className="mb-2"><i className="fas fa-check-circle text-primary me-2"></i>IT Strategic Planning</li>
+                          <li className="mb-2"><i className="fas fa-check-circle text-primary me-2"></i>Digital Transformation Roadmaps</li>
+                          <li><i className="fas fa-check-circle text-primary me-2"></i>Technology Investment Advisory</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card h-100 border-0 shadow">
+                      <div className="card-body p-4">
+                        <h3 className="h4 card-title mb-3">Advanced IT Solutions</h3>
+                        <p className="card-text">
+                          Our technical expertise spans across various domains including cloud infrastructure, application development, 
+                          cybersecurity, data analytics, and emerging technologies like AI and IoT. We deliver scalable, secure, and 
+                          efficient solutions that address specific business challenges and create new opportunities.
+                        </p>
+                        <ul className="list-unstyled mb-0">
+                          <li className="mb-2"><i className="fas fa-check-circle text-primary me-2"></i>Custom Software Development</li>
+                          <li className="mb-2"><i className="fas fa-check-circle text-primary me-2"></i>Cloud Migration & Management</li>
+                          <li><i className="fas fa-check-circle text-primary me-2"></i>Cybersecurity Services</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="border-bottom mb-3 mb-lg-4 pb-3 pb-lg-4">
-                  {/* <a href="tel:+91 7776827177">
-                    <h4 className="d-inline-block h6 mb-0 me-4">
-                      +91 7776827177
-                    </h4>
-                  </a>
-                  <div className="d-inline-block me-4 align-top">
-                    <strong className="font-weight-700 text-primary">or</strong> */}
-                  <h4 className="d-inline-block h6 mb-0">
-                    <a href="mailto:info@adysunventures.com">
-                      info@adysunventures.com
-                    </a>
-                  </h4>
+                
+                <div className="text-center mb-4">
+                  <h3 className="h3">Why Choose Adysun Ventures?</h3>
                 </div>
-              </div>
-
-              <div className="col-lg-6 order-md-1  order-sm-1 order-lg-2">
-                <div className="about-ceo ms-lg-5 ms-md-8 mb-md-3  ">
-                  <LazyLoadImage
-                    className="img-fluid rounded"
-                    src={slice2}
-                    alt=", CEO of Adysun Ventures - Leading IT Solutions Provider"
-                    width={600}
-                    height={500}
-                  />
+                
+                <div className="row g-4 mb-5">
+                  <div className="col-md-4">
+                    <div className="card h-100 border-0 shadow text-center">
+                      <div className="card-body p-4">
+                        <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
+                          <i className="fas fa-lightbulb fa-2x"></i>
+                        </div>
+                        <h4 className="card-title mb-3">Innovative Approach</h4>
+                        <p className="card-text mb-0">
+                          We stay ahead of technology trends to bring innovative solutions that drive business value.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="card h-100 border-0 shadow text-center">
+                      <div className="card-body p-4">
+                        <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
+                          <i className="fas fa-users fa-2x"></i>
+                        </div>
+                        <h4 className="card-title mb-3">Expert Team</h4>
+                        <p className="card-text mb-0">
+                          Our team of certified professionals brings deep technical expertise and industry knowledge.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="card h-100 border-0 shadow text-center">
+                      <div className="card-body p-4">
+                        <div className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style={{width: "70px", height: "70px"}}>
+                          <i className="fas fa-handshake fa-2x"></i>
+                        </div>
+                        <h4 className="card-title mb-3">Client Partnership</h4>
+                        <p className="card-text mb-0">
+                          We build long-term partnerships focused on your success and continuous improvement.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className="bg-light-gray pt-3"
-          aria-labelledby="what-we-do-heading"
-        >
+        <section className="tabs-style-2 p-0">
           <div className="container">
-            <div className="section-heading title-style5">
-              <p
-                className="text-uppercase font-weight-600  fs-2"
-                id="what-we-do-heading"
-              >
-                What we do
-              </p>
-              <div className="square">
-                <span className="separator-left bg-primary" />
-                <span className="separator-right bg-primary" />
+            <div className="row justify-content-center">
+              <div className="col-lg-7 mb-1-9 text-center">
+                <div className="mb-5">
+                  <span className="text-muted">how we can serve</span>
+                  <h2 className="display-18">
+                    Driving Success Through Strategic IT Solutions
+                  </h2>
+                </div>
               </div>
             </div>
             <div className="row">
               <div className="col-12">
-                <div className="horizontaltab tab-style4" role="tablist">
-                  <ul className="resp-tabs-list hor_1" role="tablist">
-                    {tabData.map((tab, index) => (
-                      <li
-                        key={tab.id}
-                        className={`ms-4 ${
-                          activeTab === index ? "active" : ""
-                        }`}
-                        role="tab"
-                        aria-controls={`tab-${tab.id}`}
-                        aria-selected={activeTab === index}
-                        onClick={() => setActiveTab(index)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span className="count display-5 display-md-2 alt-font font-weight-700">
-                          {tab.number}
-                        </span>
-                        <div className="tab-box">
-                          <p className="h6">{tab.title}</p>
-                          <span>{tab.subtitle}</span>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="resp-tabs-container box-shadow-large bg-white hor_1">
-                    {tabData.map((tab, index) => (
-                      <div
-                        key={tab.id}
-                        id={`tab-${tab.id}`}
-                        role="tabpanel"
-                        aria-labelledby={`tab-${tab.id}-trigger`}
-                        style={{
-                          display: activeTab === index ? "block" : "none",
-                        }}
-                      >
-                        {tab.content}
+                <div className="horizontaltab">
+                  <div className="row">
+                    <div className="col-md-12 col-lg-4 mb-1-9 mb-lg-0">
+                      <ul className="resp-tabs-list hor_1 text-center">
+                        {tabData.map((tab, index) => (
+                          <li
+                            className={activeTab === index ? "resp-tab-active" : ""}
+                            onClick={() => setActiveTab(index)}
+                            key={tab.id}
+                          >
+                            <div className="tab-boxes">
+                              <div className="tab-box-number">{tab.number}</div>
+                              <div className="tab-box-content">
+                                <h4 className="h6">{tab.title}</h4>
+                                <span className="d-sm-block">{tab.subtitle}</span>
+                              </div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="col-md-12 col-lg-8">
+                      <div className="resp-tabs-container hor_1 p-0">
+                        {tabData[activeTab].content}
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Add FAQ section */}
+        <FAQ className="bg-light" />
       </div>
       <Footer />
     </div>
