@@ -22,7 +22,7 @@ function HomePage() {
 
   // Page-specific SEO metadata
   const seoData = {
-    title: "IT Solutions & Business Strategy Experts | Adysun Ventures",
+    title: "IT Solutions & Software Development Experts | Adysun Ventures",
     description: "Adysun Ventures offers premium IT solutions, business strategy consulting, and technology services to help businesses grow. Contact us today for innovative IT expertise.",
     keywords: "IT Solutions, Business Strategy, Technology Services, Digital Transformation, Software Development, Cloud Computing, IT Consulting, Adysun Ventures",
     ogImage: "https://adysunventures.com/assets/images/adysun_cover.png"

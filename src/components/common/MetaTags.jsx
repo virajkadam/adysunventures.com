@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
-  title = "IT Solutions & Business Strategy | Software Development | Cloud Services | Adysun Ventures",
+  title = "IT Solutions & Software Development | Adysun Ventures",
   description = "Expert IT solutions for software development, cloud computing, and digital transformation. Boost your business growth with our strategic technology services.",
   keywords = "IT Solutions, Business Strategy, Software Development, Cloud Computing, Digital Transformation, IT Consulting, Technology Services, Adysun Ventures, Web Development, Application Development",
   ogImage = "https://adysunventures.com/assets/images/adysun_cover.png"
