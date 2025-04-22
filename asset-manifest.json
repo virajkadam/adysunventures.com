@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.775f9017.css",
-    "main.js": "/static/js/main.e3147e00.js",
-    "static/js/453.aa410426.chunk.js": "/static/js/453.aa410426.chunk.js",
+    "main.css": "/static/css/main.aa21fb7f.css",
+    "main.js": "/static/js/main.d4c40395.js",
+    "static/js/206.ec27e6c5.chunk.js": "/static/js/206.ec27e6c5.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
     "static/media/blog1.jpg": "/static/media/blog1.f2217bf0c31842883107.jpg",
@@ -116,13 +116,10 @@
     "static/media/cloudSolutions.svg": "/static/media/cloudSolutions.2337de999c7734f2391c390793ffe45f.svg",
     "static/media/design.svg": "/static/media/design.d9ea819fa29726996f92dd767019b2fc.svg",
     "static/media/dataAnalytics.svg": "/static/media/dataAnalytics.b8987a5b9c7ecf1c922c3da9f017626b.svg",
-    "static/media/qaAutomation.svg": "/static/media/qaAutomation.d4db099d5ad11cc2f72a34836429018c.svg",
-    "main.775f9017.css.map": "/static/css/main.775f9017.css.map",
-    "main.e3147e00.js.map": "/static/js/main.e3147e00.js.map",
-    "453.aa410426.chunk.js.map": "/static/js/453.aa410426.chunk.js.map"
+    "static/media/qaAutomation.svg": "/static/media/qaAutomation.d4db099d5ad11cc2f72a34836429018c.svg"
   },
   "entrypoints": [
-    "static/css/main.775f9017.css",
-    "static/js/main.e3147e00.js"
+    "static/css/main.aa21fb7f.css",
+    "static/js/main.d4c40395.js"
   ]
 }
