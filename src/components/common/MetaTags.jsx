@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
   title = "IT Solutions & Business Strategy | Software Development | Cloud Services | Adysun Ventures",
-  description = "Leading IT solutions provider specializing in software development, cloud computing, digital transformation, and business strategy consulting. Get expert technology services for your business growth needs.",
+  description = "Expert IT solutions for software development, cloud computing, and digital transformation. Boost your business growth with our strategic technology services.",
   keywords = "IT Solutions, Business Strategy, Software Development, Cloud Computing, Digital Transformation, IT Consulting, Technology Services, Adysun Ventures, Web Development, Application Development",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg"
 }) => {
