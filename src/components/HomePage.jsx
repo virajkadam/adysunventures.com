@@ -22,9 +22,9 @@ function HomePage() {
 
   // Page-specific SEO metadata
   const seoData = {
-    title: "IT Solutions & Software Development Experts | Adysun Ventures",
-    description: "Adysun Ventures offers premium IT solutions, business strategy consulting, and technology services to help businesses grow. Contact us today for innovative IT expertise.",
-    keywords: "IT Solutions, Business Strategy, Technology Services, Digital Transformation, Software Development, Cloud Computing, IT Consulting, Adysun Ventures",
+    title: "Innovative Custom Software & IT Solutions for Business Growth | Adysun Ventures",
+    description: "Partner with Adysun Ventures for tailored software development and IT solutions that drive real business results. Our strategic approach transforms technology challenges into growth opportunities.",
+    keywords: "Custom Software Development, IT Solutions, Business Technology, Digital Transformation, Enterprise Software, Cloud Migration, Cybersecurity Solutions, Web Applications, Mobile Apps, Adysun Ventures",
     ogImage: "https://adysunventures.com/assets/images/adysun_cover.png"
   };
 

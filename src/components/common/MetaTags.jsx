@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
-  title = "IT Solutions & Software Development | Adysun Ventures",
-  description = "Expert IT solutions for software development, cloud computing, and digital transformation. Boost your business growth with our strategic technology services.",
-  keywords = "IT Solutions, Business Strategy, Software Development, Cloud Computing, Digital Transformation, IT Consulting, Technology Services, Adysun Ventures, Web Development, Application Development",
+  title = "Custom Software Development & Enterprise IT Solutions | Adysun Ventures",
+  description = "Transform your business with custom software development, enterprise IT solutions, and strategic digital transformation services. Get innovative technology tailored to your needs.",
+  keywords = "Custom Software Development, Enterprise IT Solutions, Digital Transformation, Cloud Computing, Cybersecurity, Business Technology, Web Applications, Mobile Apps, IT Consulting, Adysun Ventures",
   ogImage = "https://adysunventures.com/assets/images/adysun_cover.png"
 }) => {
   const location = useLocation();
