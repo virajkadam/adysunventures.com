@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import Header from './common/Header';
 import Footer from './common/Footer';
 import Navbar2 from './common/Navbar2';
 import OptimizedImage from './common/OptimizedImage';
 import FAQ from './common/FAQ';
+import MetaTags from './common/MetaTags';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
@@ -16,6 +18,14 @@ import companyBanner from "../assets/images/bg/landing_bg.jpg"
 
 function HomePage() {
   const [activeTab, setActiveTab] = useState(0);
+
+  // Page-specific SEO metadata
+  const seoData = {
+    title: "IT Solutions & Business Strategy Experts | Adysun Ventures",
+    description: "Adysun Ventures offers premium IT solutions, business strategy consulting, and technology services to help businesses grow. Contact us today for innovative IT expertise.",
+    keywords: "IT Solutions, Business Strategy, Technology Services, Digital Transformation, Software Development, Cloud Computing, IT Consulting, Adysun Ventures",
+    ogImage: "/assets/adysun_ventures_image.jpg"
+  };
 
   const tabData = [
     {
@@ -171,6 +181,13 @@ function HomePage() {
 
   return (
     <div>
+      {/* Add page-specific meta tags */}
+      <MetaTags 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        ogImage={seoData.ogImage}
+      />
       <Header />
       {/* <Navbar2 /> */}
 
@@ -197,6 +214,10 @@ function HomePage() {
                   Adysun Ventures is a leading IT solutions provider, offering
                   comprehensive services to meet your business needs.
                 </p>
+                <div className="mt-4">
+                  <Link to="/services" className="btn btn-primary me-3">Our Services</Link>
+                  <Link to="/contact-us" className="btn btn-outline-light">Contact Us</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -231,7 +252,7 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h3 className="text-white">
                               <i className="fa-solid fa-money-bill me-2 text-white"></i>
-                              Saving Investments
+                              <Link to="/services" className="text-white">Saving Investments</Link>
                             </h3>
                             <p className="text-white">
                               Optimize your technology investments for long-term
@@ -252,7 +273,7 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h3 className="text-white">
                               <i className="fa-solid fa-chart-simple me-2 text-white"></i>
-                              Effective Strategy
+                              <Link to="/services" className="text-white">Effective Strategy</Link>
                             </h3>
                             <p className="text-white">
                               Building effective strategies to optimize your IT
@@ -273,7 +294,7 @@ function HomePage() {
                           <div className="features-flex-square-content">
                             <h3 className="text-white">
                               <i className="fa-solid fa-gears me-2 text-white"></i>
-                              Innovative Solutions
+                              <Link to="/services" className="text-white">Innovative Solutions</Link>
                             </h3>
                             <p className="text-white">
                               Providing cutting-edge IT solutions that keep your
@@ -309,8 +330,9 @@ function HomePage() {
                       partner for organizations seeking to leverage technology for business growth and operational excellence.
                     </p>
                     <p>
-                      Our team of experienced IT professionals delivers tailored solutions in software development, 
-                      cloud computing, cybersecurity, data analytics, and digital transformation. We combine technical expertise 
+                      Our team of experienced IT professionals delivers tailored solutions in <Link to="/services">software development</Link>, 
+                      <Link to="/technologies"> cloud computing</Link>, cybersecurity, data analytics, and 
+                      <Link to="/services"> digital transformation</Link>. We combine technical expertise 
                       with business acumen to help organizations navigate the complex technology landscape and achieve their strategic objectives.
                     </p>
                   </div>
@@ -322,7 +344,7 @@ function HomePage() {
                       <div className="card-body p-4">
                         <h3 className="h4 card-title mb-3">Business Strategy Consulting</h3>
                         <p className="card-text">
-                          Our business strategy consulting services help organizations align their technology investments with business goals. 
+                          Our <Link to="/services">business strategy consulting services</Link> help organizations align their technology investments with business goals. 
                           Through comprehensive analysis and strategic planning, we guide businesses in making informed decisions that drive 
                           growth, improve efficiency, and create competitive advantages in the market.
                         </p>
@@ -339,7 +361,7 @@ function HomePage() {
                       <div className="card-body p-4">
                         <h3 className="h4 card-title mb-3">Advanced IT Solutions</h3>
                         <p className="card-text">
-                          Our technical expertise spans across various domains including cloud infrastructure, application development, 
+                          Our technical expertise spans across various domains including <Link to="/technologies">cloud infrastructure</Link>, application development, 
                           cybersecurity, data analytics, and emerging technologies like AI and IoT. We deliver scalable, secure, and 
                           efficient solutions that address specific business challenges and create new opportunities.
                         </p>
@@ -379,7 +401,7 @@ function HomePage() {
                         </div>
                         <h4 className="card-title mb-3">Expert Team</h4>
                         <p className="card-text mb-0">
-                          Our team of certified professionals brings deep technical expertise and industry knowledge.
+                          Our <Link to="/about-us">team of certified professionals</Link> brings deep technical expertise and industry knowledge.
                         </p>
                       </div>
                     </div>
@@ -392,7 +414,7 @@ function HomePage() {
                         </div>
                         <h4 className="card-title mb-3">Client Partnership</h4>
                         <p className="card-text mb-0">
-                          We build long-term partnerships focused on your success and continuous improvement.
+                          We build long-term partnerships focused on your success and continuous improvement. See our <Link to="/clients">success stories</Link>.
                         </p>
                       </div>
                     </div>
@@ -450,8 +472,70 @@ function HomePage() {
           </div>
         </section>
 
+        {/* Industry section with links */}
+        <section className="bg-light py-5">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8 text-center mb-5">
+                <h2 className="mb-3">Industries We Serve</h2>
+                <p className="lead">Our IT solutions and business strategy services are tailored to the unique needs of various industries</p>
+              </div>
+            </div>
+            <div className="row g-4 justify-content-center mb-4">
+              <div className="col-md-4">
+                <div className="card h-100 border-0 shadow text-center">
+                  <div className="card-body p-4">
+                    <i className="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h3 className="h4 mb-3"><Link to="/industries/stock-exchange" className="text-dark text-decoration-none">Stock Exchange</Link></h3>
+                    <p>High-performance solutions for financial markets and trading platforms.</p>
+                    <Link to="/industries/stock-exchange" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card h-100 border-0 shadow text-center">
+                  <div className="card-body p-4">
+                    <i className="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
+                    <h3 className="h4 mb-3"><Link to="/industries/ecommerce" className="text-dark text-decoration-none">E-Commerce</Link></h3>
+                    <p>Scalable platforms and solutions for online retail businesses.</p>
+                    <Link to="/industries/ecommerce" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card h-100 border-0 shadow text-center">
+                  <div className="card-body p-4">
+                    <i className="fas fa-truck fa-3x text-primary mb-3"></i>
+                    <h3 className="h4 mb-3"><Link to="/industries/transportation" className="text-dark text-decoration-none">Transportation</Link></h3>
+                    <p>Logistics and fleet management technology solutions.</p>
+                    <Link to="/industries/transportation" className="btn btn-sm btn-outline-primary mt-3">Learn More</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <Link to="/industries" className="btn btn-primary">Explore All Industries</Link>
+            </div>
+          </div>
+        </section>
+
         {/* Add FAQ section */}
         <FAQ className="bg-light" />
+
+        {/* CTA Section */}
+        <section className="bg-primary py-5 text-white">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-8 mb-4 mb-lg-0">
+                <h2 className="text-white mb-3">Ready to Transform Your Business with IT Solutions?</h2>
+                <p className="lead mb-0">Contact us today to discuss how our services can drive your business growth.</p>
+              </div>
+              <div className="col-lg-4 text-lg-end">
+                <Link to="/contact-us" className="btn btn-light btn-lg">Get in Touch</Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
     </div>
