@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import SchemaMarkup from "./components/common/SchemaMarkup";
+import MetaTags from "./components/common/MetaTags";
 import AboutUs from "./components/screens/about-us/AboutUs";
 import ContactUs from "./components/screens/contact-us/ContactUs";
 import Services from "./components/screens/services/Services";
@@ -21,11 +22,12 @@ import NotFound from "./components/pages/NotFound";
 import { HelmetProvider } from 'react-helmet-async';
 import Industries from "./components/screens/industries/Industries";
 
-
 function App() {
   return (
     <HelmetProvider>
       <Router>
+        {/* Global default meta tags */}
+        <MetaTags />
         <SchemaMarkup />
         <Routes>
           <Route path="/" element={<HomePage />} />

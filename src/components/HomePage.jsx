@@ -25,7 +25,7 @@ function HomePage() {
     title: "IT Solutions & Business Strategy Experts | Adysun Ventures",
     description: "Adysun Ventures offers premium IT solutions, business strategy consulting, and technology services to help businesses grow. Contact us today for innovative IT expertise.",
     keywords: "IT Solutions, Business Strategy, Technology Services, Digital Transformation, Software Development, Cloud Computing, IT Consulting, Adysun Ventures",
-    ogImage: "/assets/adysun_ventures_image.jpg"
+    ogImage: "https://adysunventures.com/assets/images/adysun_cover.png"
   };
 
   const tabData = [
@@ -182,7 +182,7 @@ function HomePage() {
 
   return (
     <div>
-      {/* Add page-specific meta tags */}
+      {/* Add page-specific meta tags that override global ones */}
       <MetaTags 
         title={seoData.title}
         description={seoData.description}
@@ -210,7 +210,7 @@ function HomePage() {
           className="bg-img cover-background"
           data-overlay-dark={7}
           style={{
-            backgroundImage: `url(https://c1.wallpaperflare.com/preview/652/531/737/wood-aerial-background-beverage.jpg)`,
+            backgroundImage: `url(/assets/images/adysun_cover.png)`,
             width: "100%",
             height: "100%",
           }}

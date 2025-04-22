@@ -2,9 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The meta tags are now managed through React Helmet in the MetaTags component -->
+    
+    <!-- Preload cover image -->
+    <link rel="preload" href="%PUBLIC_URL%/assets/images/adysun_cover.png" as="image" />
+    
+    <!-- Basic meta tags for initial page load and metatags.io compatibility -->
+    <title>IT Solutions & Business Strategy | Software Development | Cloud Services | Adysun Ventures</title>
+    <meta name="description" content="Expert IT solutions for software development, cloud computing, and digital transformation. Boost your business growth with our strategic technology services." />
+    <meta name="keywords" content="IT Solutions, Business Strategy, Software Development, Cloud Computing, Digital Transformation" />
+    <meta property="og:title" content="IT Solutions & Business Strategy | Adysun Ventures" />
+    <meta property="og:description" content="Expert IT solutions for software development, cloud computing, and digital transformation." />
+    <meta property="og:image" content="https://adysunventures.com/assets/images/adysun_cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://adysunventures.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IT Solutions & Business Strategy | Adysun Ventures" />
+    <meta name="twitter:description" content="Expert IT solutions for software development, cloud computing, and digital transformation." />
+    <meta name="twitter:image" content="https://adysunventures.com/assets/images/adysun_cover.png" />
+    
+    <!-- Note: These tags will be overridden by React Helmet in the MetaTags component -->
 
     <!-- Performance optimization - DNS prefetch -->
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
