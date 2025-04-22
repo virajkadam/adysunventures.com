@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const MetaTags = ({ 
-  title = "Adysun Ventures | IT Solutions & Business Strategy Experts | Tailored IT Services",
-  description = "Adysun Ventures, founded in Dec 2020, is a premier IT service provider specializing in business strategies and cutting-edge technology. Partner with us for reliable and innovative IT solutions.",
+  title = "Adysun Ventures | IT Solutions & Business Strategy Experts",
+  description = "Premier IT service provider specializing in business strategies and cutting-edge technology. Partner with us for reliable and innovative IT solutions.",
   keywords = "Adysun Ventures, IT Solutions, Business Strategies, IT Services, Premium IT Products, Collaborative IT Partnerships, Innovative IT Solutions",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg"
 }) => {
@@ -20,7 +20,7 @@ const MetaTags = ({
       
       {/* HTTP Equiv Tags */}
       <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta httpEquiv="pragma" content="no-cache" />
       <meta httpEquiv="expires" content="never" />
       
@@ -34,9 +34,8 @@ const MetaTags = ({
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="geo.placename" content="India" />
       
-      {/* Canonical Links */}
+      {/* Single Canonical Link */}
       <link rel="canonical" href="https://adysunventures.com/" />
-      <link rel="shortlink" href="https://adysunventures.com/" />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:locale" content="en_US" />
@@ -47,9 +46,7 @@ const MetaTags = ({
       <meta property="og:site_name" content="Adysun Ventures" />
       <meta property="article:publisher" content="https://www.facebook.com/adysunventures/" />
       <meta property="article:updated_time" content="2024-11-18" />
-      <meta property="og:image" itemProp="image" content={ogImage} />
-      <meta property="og:image:url" content={ogImage} />
-      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content="Adysun Ventures Logo" />
       <meta property="og:image:width" content="720" />
       <meta property="og:image:height" content="602" />
@@ -61,8 +58,11 @@ const MetaTags = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Favicon and Apple Touch Icon */}
-      <link href="https://adysunventures.com/assets/adysun_ventures_logo.jpg" rel="icon" />
-      <link href="https://adysunventures.com/assets/adysun_ventures_logo.jpg" rel="apple-touch-icon" />
+      <link href={ogImage} rel="icon" />
+      <link href={ogImage} rel="apple-touch-icon" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
     </Helmet>
   );
 };
