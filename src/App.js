@@ -6,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import MetaTags from "./components/common/MetaTags";
 import SchemaMarkup from "./components/common/SchemaMarkup";
 import AboutUs from "./components/screens/about-us/AboutUs";
 import ContactUs from "./components/screens/contact-us/ContactUs";
@@ -27,7 +26,6 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <MetaTags />
         <SchemaMarkup />
         <Routes>
           <Route path="/" element={<HomePage />} />
