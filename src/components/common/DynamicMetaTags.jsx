@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const DynamicMetaTags = ({
-  title = "Adysun Ventures | IT Solutions & Business Strategy Experts",
-  description = "Adysun Ventures, founded in Dec 2020, is a premier IT service provider...",
-  keywords = "Adysun Ventures, IT Solutions, Business Strategies...",
+  title = "Adysun Ventures | IT Solutions, Business Strategy & Technology Consulting Experts",
+  description = "Adysun Ventures, founded in Dec 2020, is a premier IT service provider specializing in business strategy, cloud computing, software development, and digital transformation...",
+  keywords = "Adysun Ventures, IT Solutions, Business Strategies, Cloud Computing, Software Development, Digital Transformation, Cybersecurity, Technology Consulting",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg",
 }) => {
   return (

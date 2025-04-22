@@ -25,7 +25,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build && npm run postbuild",
+    "postbuild": "node ./scripts/optimize-js.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -55,6 +56,9 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "babel-preset-react-app": "^10.0.1",
-    "gh-pages": "^6.3.0"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
+    "glob": "^10.4.5",
+    "terser": "^5.39.0"
   }
 }

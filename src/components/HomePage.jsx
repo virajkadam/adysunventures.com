@@ -6,6 +6,7 @@ import Navbar2 from './common/Navbar2';
 import OptimizedImage from './common/OptimizedImage';
 import FAQ from './common/FAQ';
 import MetaTags from './common/MetaTags';
+import SchemaMarkup from './common/SchemaMarkup';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import slider21 from "../assets/images/slider/slide21.jpg";
@@ -188,6 +189,19 @@ function HomePage() {
         keywords={seoData.keywords}
         ogImage={seoData.ogImage}
       />
+      {/* Add Schema.org structured data */}
+      <SchemaMarkup 
+        businessName="Adysun Ventures"
+        description={seoData.description}
+        services={[
+          "IT Solutions",
+          "Business Strategy",
+          "Software Development",
+          "Cloud Computing",
+          "Digital Transformation",
+          "IT Consulting"
+        ]}
+      />
       <Header />
       {/* <Navbar2 /> */}
 
@@ -212,7 +226,7 @@ function HomePage() {
                 <div className="separator-line-horrizontal-full bg-white opacity3 my-1-9 my-sm-2-3 my-md-2-9" />
                 <p className="text-white mb-1-9 w-xl-85">
                   Adysun Ventures is a leading IT solutions provider, offering
-                  comprehensive services to meet your business needs.
+                  comprehensive <Link to="/services" className="text-white text-decoration-underline">technology services</Link> to meet your business needs.
                 </p>
                 <div className="mt-4">
                   <Link to="/services" className="btn btn-primary me-3">Our Services</Link>
@@ -235,9 +249,9 @@ function HomePage() {
                     Expert IT Solutions with a Decade of Experience
                   </h2>
                   <p className="text-white m-0">
-                    Adysun Ventures delivers professional IT services with
+                    Adysun Ventures delivers professional <Link to="/services" className="text-white text-decoration-underline">IT services</Link> with
                     unmatched expertise, ensuring timely delivery and utmost
-                    confidentiality for all your technology needs.
+                    confidentiality for all your <Link to="/technologies" className="text-white text-decoration-underline">technology</Link> needs.
                   </p>
                 </div>
                 <div className="separator-line-horrizontal-full bg-white opacity3 my-1-9 my-sm-2-3 my-md-2-9" />
@@ -318,7 +332,7 @@ function HomePage() {
               <div className="col-lg-10">
                 <div className="section-title text-center mb-5">
                   <h2 className="h2 mb-3">Comprehensive IT Solutions & Business Strategy Services</h2>
-                  <p className="lead">Transforming businesses through innovative technology solutions and strategic consulting</p>
+                  <p className="lead">Transforming businesses through <Link to="/services">innovative technology solutions</Link> and <Link to="/services">strategic consulting</Link></p>
                 </div>
                 
                 <div className="card shadow border-0 mb-4">
@@ -326,7 +340,7 @@ function HomePage() {
                     <h3 className="h3 mb-3">Premier IT Solutions Provider in India</h3>
                     <p>
                       Adysun Ventures is a leading IT solutions company specializing in providing comprehensive technology services 
-                      to businesses across various industries. With our headquarters in Pune, we've established ourselves as a trusted 
+                      to businesses across various <Link to="/industries">industries</Link>. With our headquarters in Pune, we've established ourselves as a trusted 
                       partner for organizations seeking to leverage technology for business growth and operational excellence.
                     </p>
                     <p>
@@ -432,7 +446,7 @@ function HomePage() {
                 <div className="mb-5">
                   <span className="text-muted">how we can serve</span>
                   <h2 className="display-18">
-                    Driving Success Through Strategic IT Solutions
+                    Driving Success Through <Link to="/services">Strategic IT Solutions</Link>
                   </h2>
                 </div>
               </div>

@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const MetaTags = ({ 
-  title = "Adysun Ventures | IT Solutions & Business Strategy Experts",
-  description = "Premier IT service provider specializing in business strategies and cutting-edge technology. Partner with us for reliable and innovative IT solutions.",
-  keywords = "Adysun Ventures, IT Solutions, Business Strategies, IT Services, Premium IT Products, Collaborative IT Partnerships, Innovative IT Solutions",
+  title = "Adysun Ventures | IT Solutions, Business Strategy & Technology Consulting Experts",
+  description = "Premier IT service provider specializing in business strategies, cloud computing, software development, and cutting-edge technology solutions. Partner with Adysun Ventures for reliable and innovative IT services.",
+  keywords = "Adysun Ventures, IT Solutions, Business Strategies, IT Services, Premium IT Products, Collaborative IT Partnerships, Innovative IT Solutions, Cloud Computing, Software Development, Digital Transformation",
   ogImage = "https://adysunventures.com/assets/adysun_ventures_image.jpg"
 }) => {
   const location = useLocation();
@@ -49,11 +49,18 @@ const MetaTags = ({
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content="Adysun Ventures" />
       <meta property="article:publisher" content="https://www.facebook.com/adysunventures/" />
+      <meta property="article:author" content="https://www.facebook.com/adysunventures/" />
       <meta property="article:modified_time" content={new Date().toISOString()} />
+      <meta property="og:updated_time" content={new Date().toISOString()} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:secure_url" content={ogImage.replace('http:', 'https:')} />
       <meta property="og:image:alt" content="Adysun Ventures Logo" />
       <meta property="og:image:width" content="720" />
       <meta property="og:image:height" content="602" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="article:tag" content={keywords.split(',')[0]} />
+      <meta property="article:tag" content={keywords.split(',')[1]} />
+      <meta property="article:tag" content="Technology" />
       
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
