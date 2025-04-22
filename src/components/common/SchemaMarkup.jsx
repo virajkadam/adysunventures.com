@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SchemaMarkup = ({
   businessName = "Adysun Ventures",
   description = "Leading IT service provider specializing in business strategies, software development, cloud computing, and digital transformation.",
-  logoUrl = "https://adysunventures.com/assets/adysun_ventures_image.jpg",
+  logoUrl = "https://adysunventures.com/assets/images/adysun_cover.png",
   siteUrl = "https://adysunventures.com",
   phone = "+91-7776827177", // Updated with actual phone from Navbar
   email = "info@adysunventures.com", // Updated with actual email
@@ -78,6 +78,20 @@ const SchemaMarkup = ({
   ]
 }) => {
   
+  // FAQPage schema
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   // Organization schema
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -88,8 +102,8 @@ const SchemaMarkup = ({
     "logo": {
       "@type": "ImageObject",
       "url": logoUrl,
-      "width": 720,
-      "height": 602
+      "width": 1200,
+      "height": 630
     },
     "description": description,
     "foundingDate": foundingDate,
@@ -111,7 +125,7 @@ const SchemaMarkup = ({
     ]
   };
 
-  // Local Business schema
+  // LocalBusiness schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -136,95 +150,8 @@ const SchemaMarkup = ({
       "longitude": "73.8553"
     },
     "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00",
-    "priceRange": "₹₹",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "18.5162",
-        "longitude": "73.8553"
-      },
-      "geoRadius": "50000"
-    }
+    "priceRange": "₹₹"
   };
-
-  // Professional Service schema
-  const professionalServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${siteUrl}/#professionalservice`,
-    "name": businessName,
-    "image": logoUrl,
-    "url": siteUrl,
-    "telephone": phone,
-    "email": email,
-    "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": address.streetAddress,
-      "addressLocality": address.addressLocality,
-      "addressRegion": address.addressRegion,
-      "postalCode": address.postalCode,
-      "addressCountry": address.addressCountry
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "18.5162",
-      "longitude": "73.8553"
-    },
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00",
-    "priceRange": "₹₹",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "IT Services",
-      "itemListElement": services.map((service, index) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": service
-        }
-      }))
-    }
-  };
-
-  // Service schema
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "IT Solutions and Business Strategy",
-    "provider": {
-      "@type": "Organization",
-      "name": businessName,
-      "url": siteUrl
-    },
-    "description": description,
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      }
-    }
-  };
-
-  // Individual Service schemas for each service
-  const servicesSchemas = services.map((service, index) => ({
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${siteUrl}/services#${service.toLowerCase().replace(/\s+/g, '-')}`,
-    "name": service,
-    "provider": {
-      "@type": "Organization",
-      "name": businessName,
-      "url": siteUrl
-    },
-    "serviceOutput": `Professional ${service}`,
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
-    }
-  }));
 
   // WebSite schema
   const websiteSchema = {
@@ -246,8 +173,8 @@ const SchemaMarkup = ({
       }
     ]
   };
-
-  // BreadcrumbList schema for navigation hierarchy
+  
+  // BreadcrumbList schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -267,106 +194,129 @@ const SchemaMarkup = ({
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Technologies",
-        "item": `${siteUrl}/technologies`
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Industries",
-        "item": `${siteUrl}/industries`
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
         "name": "About Us",
         "item": `${siteUrl}/about-us`
       },
       {
         "@type": "ListItem",
-        "position": 6,
-        "name": "Contact",
+        "position": 4,
+        "name": "Contact Us",
         "item": `${siteUrl}/contact-us`
       }
     ]
   };
-
-  // FAQ schema
-  const faqSchema = {
+  
+  // Product schema for software development service
+  const productSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
-  // Review schema
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${siteUrl}/#reviews`,
-    "name": businessName,
-    "review": reviews.map((review) => ({
+    "@type": "Product",
+    "name": "Custom Software Development Services",
+    "description": "Enterprise-grade custom software development services tailored to your business needs. Our expert team delivers scalable, secure, and innovative solutions.",
+    "image": "https://adysunventures.com/assets/images/adysun_cover.png",
+    "sku": "SVC-SOFTWARE-DEV",
+    "brand": {
+      "@type": "Brand",
+      "name": businessName
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `${siteUrl}/services`,
+      "priceCurrency": "INR",
+      "price": "30000",
+      "priceValidUntil": "2024-12-31",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": reviews.length.toString()
+    },
+    "review": reviews.map(review => ({
       "@type": "Review",
       "author": {
         "@type": "Person",
         "name": review.author
       },
+      "datePublished": review.datePublished,
       "reviewBody": review.reviewBody,
       "reviewRating": {
         "@type": "Rating",
-        "ratingValue": review.reviewRating,
+        "ratingValue": review.reviewRating.toString(),
         "bestRating": "5"
-      },
-      "datePublished": review.datePublished
-    })),
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": reviews.length.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+      }
+    }))
   };
 
-  // Article schema for blog posts
-  const articleSchema = {
+  // AggregateRating schema for the business
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Adysun Ventures: Leading IT Solutions Provider in India",
-    "image": logoUrl,
-    "keywords": "IT Solutions, Business Strategy, Software Development, Cloud Computing",
-    "author": {
+    "@type": "AggregateRating",
+    "itemReviewed": {
       "@type": "Organization",
       "name": businessName,
       "url": siteUrl
     },
-    "publisher": {
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": reviews.length.toString()
+  };
+
+  // Service schema for IT services
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "IT Solutions and Services",
+    "name": "IT Solutions & Services",
+    "description": "Professional IT solutions and services including software development, cloud computing, digital transformation, and IT consulting tailored to meet your business objectives.",
+    "provider": {
       "@type": "Organization",
       "name": businessName,
-      "logo": {
-        "@type": "ImageObject",
-        "url": logoUrl,
-        "width": 720,
-        "height": 602
-      }
+      "@id": `${siteUrl}/#organization`
     },
-    "datePublished": "2023-01-01",
-    "dateModified": new Date().toISOString().split('T')[0],
-    "description": description,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": siteUrl
-    }
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5162",
+        "longitude": "73.8553"
+      },
+      "geoRadius": "50000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IT Services Catalog",
+      "itemListElement": services.map((service, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service
+        },
+        "position": index + 1
+      }))
+    },
+    "termsOfService": `${siteUrl}/terms-of-service`,
+    "review": reviews.map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "datePublished": review.datePublished,
+      "reviewBody": review.reviewBody,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.reviewRating.toString(),
+        "bestRating": "5"
+      }
+    }))
   };
 
   return (
     <Helmet>
+      {/* All schemas as JSON-LD */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
@@ -374,30 +324,22 @@ const SchemaMarkup = ({
         {JSON.stringify(localBusinessSchema)}
       </script>
       <script type="application/ld+json">
-        {JSON.stringify(professionalServiceSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(serviceSchema)}
-      </script>
-      {servicesSchemas.map((schema, index) => (
-        <script key={`service-${index}`} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
-      <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(faqPageSchema)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </script>
       <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
+        {JSON.stringify(productSchema)}
       </script>
       <script type="application/ld+json">
-        {JSON.stringify(reviewSchema)}
+        {JSON.stringify(serviceSchema)}
       </script>
       <script type="application/ld+json">
-        {JSON.stringify(articleSchema)}
+        {JSON.stringify(aggregateRatingSchema)}
       </script>
     </Helmet>
   );

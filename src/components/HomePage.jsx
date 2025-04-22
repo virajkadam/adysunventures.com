@@ -210,7 +210,7 @@ function HomePage() {
           className="bg-img cover-background"
           data-overlay-dark={7}
           style={{
-            backgroundImage: `url(/assets/images/adysun_cover.png)`,
+            backgroundImage: `url(https://c1.wallpaperflare.com/preview/652/531/737/wood-aerial-background-beverage.jpg)`,
             width: "100%",
             height: "100%",
           }}
