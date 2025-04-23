@@ -352,94 +352,128 @@ function Footer() {
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/about-us")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/about-us"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/about-us");
+                        }}
                       >
                         About
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/contact-us")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/contact-us"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/contact-us");
+                        }}
                       >
                         Contact
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/services")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/services"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/services");
+                        }}
                       >
                         Services
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/technologies")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/technologies"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/technologies");
+                        }}
                       >
                         Technologies
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/careers")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/careers"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/careers");
+                        }}
                       >
                         Careers
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 {/* <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-0 ps-0">
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/partners")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/partners"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/partners");
+                        }}
                       >
                         Partners
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() => handleNavigation("/clients")}
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/clients"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/clients");
+                        }}
                       >
                         Clients
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() =>
-                          handleNavigation("/industries/stock-exchange")
-                        }
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/industries/stock-exchange"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/industries/stock-exchange");
+                        }}
                       >
                         Stock Exchange
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() =>
-                          handleNavigation("/industries/ecommerce")
-                        }
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/industries/ecommerce"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/industries/ecommerce");
+                        }}
                       >
                         E-Commerce
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        onClick={() =>
-                          handleNavigation("/industries/transportation")
-                        }
-                        style={{ cursor: "pointer" }}
+                      <Link 
+                        to="/industries/transportation"
+                        className="text-decoration-none"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigation("/industries/transportation");
+                        }}
                       >
                         Transportation
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div> */}
