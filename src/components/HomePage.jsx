@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './common/Header';
 import Footer from './common/Footer';
@@ -24,6 +24,7 @@ import homeSectionBgSmall from "../assets/images/bg/home-section-bg.jpg"
 
 function HomePage() {
   const [activeTab, setActiveTab] = useState(0);
+  const heroSectionRef = useRef(null);
 
   // Page-specific SEO metadata
   const seoData = {
@@ -185,26 +186,23 @@ function HomePage() {
     }
   ];
 
-  // Add this useEffect to preload the image
   useEffect(() => {
-    // Preload the image based on viewport size
-    const preloadImage = () => {
-      const width = window.innerWidth;
-      let imageToPreload;
-      
-      if (width > 1200) {
-        imageToPreload = homeSectionBgLarge;
-      } else if (width > 768) {
-        imageToPreload = homeSectionBgMedium;
-      } else {
-        imageToPreload = homeSectionBgSmall;
-      }
-      
-      const img = new Image();
-      img.src = imageToPreload;
-    };
+    // Preload hero image
+    const img = new Image();
+    img.src = homeSectionBg;
+    img.fetchPriority = "high";
     
-    preloadImage();
+    // Add connection preload in head
+    const linkPreload = document.createElement('link');
+    linkPreload.rel = 'preload';
+    linkPreload.as = 'image';
+    linkPreload.href = homeSectionBg;
+    linkPreload.fetchPriority = 'high';
+    document.head.appendChild(linkPreload);
+    
+    return () => {
+      document.head.removeChild(linkPreload);
+    };
   }, []);
 
   // Helper function to select the right image based on screen size
@@ -246,20 +244,50 @@ function HomePage() {
 
       <div className="main-wrapper">
         <section
-          className="bg-img cover-background"
+          ref={heroSectionRef}
+          className="bg-img cover-background position-relative"
           data-overlay-dark={7}
           style={{
-            backgroundImage: `url(${getBackgroundImage()})`,
             width: "100%",
             height: "100%",
             backgroundSize: "cover",
             backgroundPosition: "center center",
             willChange: "transform", // Helps with compositing
+            contain: "layout paint",
+            backgroundColor: "rgba(0, 0, 0, 0.7)", // Add dark background color
           }}
           role="img"
           aria-label="Adysun Ventures hero section background"
         >
-          <div className="container py-10">
+          {/* Add a dark overlay */}
+          <div 
+            className="position-absolute top-0 start-0 w-100 h-100"
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.2)",
+              zIndex: 0,
+            }}
+          ></div>
+          
+          {/* Main background image */}
+          <img 
+            src={homeSectionBg}
+            alt="Adysun Ventures hero background"
+            className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+            style={{ 
+              opacity: 0.6, 
+              zIndex: -1,
+              objectFit: "cover",
+              width: "100%",
+              height: "100%",
+              transform: "translateZ(0)",
+              willChange: "transform",
+              filter: "brightness(0.7) contrast(1.1)", // Make image darker
+            }}
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="container py-10 position-relative" style={{ zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-xl-7 col-lg-6 mb-1-9 mb-lg-0">
                 <span className="text-white fs-2">When service matters</span>

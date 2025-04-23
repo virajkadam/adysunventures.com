@@ -171,11 +171,7 @@ function Header() {
                         <li>
                           <NavLink
                             className="dropdown-item"
-                            style={{
-                              backgroundColor: "#ff5a2e",
-                              color: "#ffffff",
-                              fontWeight: "500"
-                            }}
+                            style={{backgroundColor:"#ff5a2e;"}}
                             to="/industries/ecommerce"
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -200,28 +196,6 @@ function Header() {
                           .dropdown-menu.show {
                             transform: translateY(0) !important;
                             opacity: 1 !important;
-                          }
-                          
-                          @media (max-width: 1200px) and (min-width: 992px) {
-                            .navbar-nav .nav-link {
-                              padding-left: 8px !important;
-                              padding-right: 8px !important;
-                              font-size: 0.9rem !important;
-                            }
-                          }
-                          
-                          @media (max-width: 991px) {
-                            .navbar-nav {
-                              max-height: 80vh;
-                              overflow-y: auto;
-                            }
-                            
-                            .dropdown-menu {
-                              border: none;
-                              padding-left: 1.5rem;
-                              margin-top: 0;
-                              background-color: transparent;
-                            }
                           }
                         `}
                       </style>
