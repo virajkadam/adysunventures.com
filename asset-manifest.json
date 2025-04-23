@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.163c08dd.css",
-    "main.js": "/static/js/main.9e828909.js",
+    "main.css": "/static/css/main.fabd81e4.css",
+    "main.js": "/static/js/main.3249a005.js",
     "static/css/150.7eaeb09e.chunk.css": "/static/css/150.7eaeb09e.chunk.css",
     "static/js/150.57fc7c88.chunk.js": "/static/js/150.57fc7c88.chunk.js",
     "static/css/632.562d866f.chunk.css": "/static/css/632.562d866f.chunk.css",
@@ -108,8 +108,8 @@
     "static/media/s-6.jpg": "/static/media/s-6.b79b3732d4675eb93947.jpg",
     "static/media/t-4.jpg": "/static/media/t-4.b4a8d2b0517010105368.jpg",
     "static/media/tigera.png": "/static/media/tigera.ff5ed29c4c08c3dc0828.png",
+    "static/media/home-section-bg-320w.jpg": "/static/media/home-section-bg-320w.4cae387ac6af9b420db5.jpg",
     "static/media/clientBanner.jpg": "/static/media/clientBanner.8263b20a9013d74439db.jpg",
-    "static/media/home-section-bg-320w.jpg": "/static/media/home-section-bg-320w.2bc464e2d25a37828743.jpg",
     "static/media/home-section-bg-320w.webp": "/static/media/home-section-bg-320w.c06af9d3e26f6deb1e88.webp",
     "static/media/energy.png": "/static/media/energy.70fe659f76322b3971cf.png",
     "static/media/02.png": "/static/media/02.4b667fecdf66f8979f46.png",
@@ -133,7 +133,7 @@
     "static/media/qaAutomation.svg": "/static/media/qaAutomation.d4db099d5ad11cc2f72a34836429018c.svg"
   },
   "entrypoints": [
-    "static/css/main.163c08dd.css",
-    "static/js/main.9e828909.js"
+    "static/css/main.fabd81e4.css",
+    "static/js/main.3249a005.js"
   ]
 }
