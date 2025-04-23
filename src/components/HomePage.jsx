@@ -301,8 +301,25 @@ function HomePage() {
                   comprehensive <Link to="/services" className="text-white text-decoration-underline">technology services</Link> to meet your <Link to="/industries" className="text-white text-decoration-underline">industry-specific</Link> business needs.
                 </p>
                 <div className="mt-4">
-                  <Link to="/services" className="btn btn-primary me-3">Our Services</Link>
-                  <Link to="/contact-us" className="btn btn-outline-light">Contact Us</Link>
+                  <Link to="/services" className="btn me-3" style={{
+                    backgroundColor: "#ff5a2e",
+                    color: "#ffffff",
+                    fontWeight: "600",
+                    padding: "0.5rem 1.5rem",
+                    borderRadius: "4px",
+                    border: "2px solid #ff5a2e",
+                    transition: "all 0.3s ease"
+                  }}>Our Services</Link>
+                  <Link to="/contact-us" className="btn" style={{
+                    backgroundColor: "transparent",
+                    color: "#ffffff",
+                    fontWeight: "600",
+                    padding: "0.5rem 1.5rem",
+                    borderRadius: "4px",
+                    border: "2px solid #ffffff",
+                    transition: "all 0.3s ease",
+                    boxShadow: "none"
+                  }}>Contact Us</Link>
                 </div>
               </div>
             </div>
