@@ -16,6 +16,8 @@ import content1 from "../assets/images/content/content-01.jpg";
 import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
 import companyBanner from "../assets/images/bg/landing_bg.jpg"
+import homeSectionBg from "../assets/images/bg/home-section-bg.jpg"
+
 
 
 function HomePage() {
@@ -211,7 +213,7 @@ function HomePage() {
           className="bg-img cover-background"
           data-overlay-dark={7}
           style={{
-            backgroundImage: `url(https://c1.wallpaperflare.com/preview/652/531/737/wood-aerial-background-beverage.jpg)`,
+            backgroundImage: `url(${homeSectionBg})`,
             width: "100%",
             height: "100%",
           }}
