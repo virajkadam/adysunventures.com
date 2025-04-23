@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aa21fb7f.css",
-    "main.js": "/static/js/main.ebad7b6a.js",
+    "main.js": "/static/js/main.5373bd08.js",
     "static/js/206.ec27e6c5.chunk.js": "/static/js/206.ec27e6c5.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -104,6 +104,8 @@
     "static/media/t-4.jpg": "/static/media/t-4.b4a8d2b0517010105368.jpg",
     "static/media/tigera.png": "/static/media/tigera.ff5ed29c4c08c3dc0828.png",
     "static/media/clientBanner.jpg": "/static/media/clientBanner.8263b20a9013d74439db.jpg",
+    "static/media/home-section-bg-320w.jpg": "/static/media/home-section-bg-320w.2bc464e2d25a37828743.jpg",
+    "static/media/home-section-bg-320w.webp": "/static/media/home-section-bg-320w.c06af9d3e26f6deb1e88.webp",
     "static/media/energy.png": "/static/media/energy.70fe659f76322b3971cf.png",
     "static/media/02.png": "/static/media/02.4b667fecdf66f8979f46.png",
     "static/media/01.png": "/static/media/01.51ee696943956d6ee71d.png",
@@ -117,9 +119,7 @@
     "static/media/t-5.jpg": "/static/media/t-5.6dbd2d32e82745e47525.jpg",
     "static/media/take-rent-pe.jpg": "/static/media/take-rent-pe.661c47ae50a95e2b6724.jpg",
     "static/media/manatarang.jpg": "/static/media/manatarang.3e9fb7afb5d721e6411f.jpg",
-    "static/media/home-section-bg-320w.webp": "/static/media/home-section-bg-320w.439bd1609846d4890ea3.webp",
     "static/media/safeAndSecure.png": "/static/media/safeAndSecure.0ef1faf332455867e980.png",
-    "static/media/home-section-bg-320w.jpg": "/static/media/home-section-bg-320w.1665f87880ae563c30f8.jpg",
     "static/media/greenbrier-living.jpg": "/static/media/greenbrier-living.93dd712883cd327e53eb.jpg",
     "index.html": "/index.html",
     "static/media/cloudSolutions.svg": "/static/media/cloudSolutions.2337de999c7734f2391c390793ffe45f.svg",
@@ -129,6 +129,6 @@
   },
   "entrypoints": [
     "static/css/main.aa21fb7f.css",
-    "static/js/main.ebad7b6a.js"
+    "static/js/main.5373bd08.js"
   ]
 }
