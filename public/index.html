@@ -5,6 +5,13 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://adysunventures.com" />
     
@@ -36,9 +43,83 @@
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
 
-    <!-- Preload critical CSS -->
+    <!-- Optimized Google Fonts loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400,500,700&display=swap" rel="stylesheet" type="text/css"></noscript>
+
+    <!-- Preload critical CSS - KEEP BOOTSTRAP! -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"></noscript>
+
+    <!-- Critical CSS inline -->
+    <style>
+      /* Minimal critical CSS for initial rendering */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Critical Bootstrap classes for above-the-fold content */
+      .container {width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}
+      @media (min-width: 576px) {.container {max-width: 540px;}}
+      @media (min-width: 768px) {.container {max-width: 720px;}}
+      @media (min-width: 992px) {.container {max-width: 960px;}}
+      @media (min-width: 1200px) {.container {max-width: 1140px;}}
+      .row {display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;}
+      .col-12 {flex: 0 0 100%; max-width: 100%; position: relative; width: 100%; padding-right: 15px; padding-left: 15px;}
+      .navbar {position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0.5rem 1rem;}
+      .navbar-brand {display: inline-block; padding-top: 0.3125rem; padding-bottom: 0.3125rem; margin-right: 1rem; font-size: 1.25rem; line-height: inherit; white-space: nowrap;}
+      .navbar-nav {display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none;}
+      .bg-white {background-color: #fff !important;}
+      .text-white {color: #fff !important;}
+      .d-flex {display: flex !important;}
+      .align-items-center {align-items: center !important;}
+      
+      /* Hero section styles */
+      .bg-img {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      
+      /* Fix for text contrast */
+      .text-white {
+        color: #fff !important;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+      }
+    </style>
+
+    <!-- Load CSS asynchronously -->
+    <script>
+      // Function to load CSS files asynchronously
+      function loadCSS(href) {
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = href;
+        css.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(css);
+      }
+      
+      // Function to load scripts after page load
+      window.addEventListener('load', function() {
+        // Load non-critical CSS
+        setTimeout(function() {
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
+        }, 100);
+      });
+    </script>
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
@@ -107,24 +188,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXXXXX');</script>
     <!-- End Google Tag Manager -->
-    
-    <!-- Critical CSS inline -->
-    <style>
-      /* Minimal critical CSS for initial rendering */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      
-      #root {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

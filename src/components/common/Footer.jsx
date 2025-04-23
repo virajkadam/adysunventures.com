@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import bgImage from "../../assets/images/bg/bg12.jpg"; // Import the background image
+import bgImage from "../../assets/images/bg/bg12.webp"; // Import the background image
 import useCounter from "../../hooks/useCounter";
 import companyInfo from "../../config/companyInfo";
 
