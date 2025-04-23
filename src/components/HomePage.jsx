@@ -16,15 +16,21 @@ import content1 from "../assets/images/content/content-01.jpg";
 import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
 import companyBanner from "../assets/images/bg/landing_bg.jpg"
-import homeSectionBg from "../assets/images/bg/home-section-bg.jpg"
-// Temporary fix until WebP versions are created
-import homeSectionBgLarge from "../assets/images/bg/home-section-bg.jpg"
-import homeSectionBgMedium from "../assets/images/bg/home-section-bg.jpg"
-import homeSectionBgSmall from "../assets/images/bg/home-section-bg.jpg"
+// Import optimized hero images for different resolutions
+import homeSectionBgSmall from "../assets/images/bg/home-section-bg-480w.webp"
+import homeSectionBgMedium from "../assets/images/bg/home-section-bg-800w.webp"
+import homeSectionBgLarge from "../assets/images/bg/home-section-bg.webp"
+// Fallback for browsers that don't support WebP
+import homeSectionBgSmallFallback from "../assets/images/bg/home-section-bg-480w.jpg"
+import homeSectionBgMediumFallback from "../assets/images/bg/home-section-bg-800w.jpg"
+import homeSectionBgLargeFallback from "../assets/images/bg/home-section-bg.jpg"
+// Import tiny placeholder for LQIP technique
+import homeSectionBgPlaceholder from "../assets/images/bg/home-section-bg-placeholder.jpg"
 
 function HomePage() {
   const [activeTab, setActiveTab] = useState(0);
   const heroSectionRef = useRef(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Page-specific SEO metadata
   const seoData = {
@@ -187,33 +193,64 @@ function HomePage() {
   ];
 
   useEffect(() => {
-    // Preload hero image
-    const img = new Image();
-    img.src = homeSectionBg;
-    img.fetchPriority = "high";
-    
-    // Add connection preload in head
-    const linkPreload = document.createElement('link');
-    linkPreload.rel = 'preload';
-    linkPreload.as = 'image';
-    linkPreload.href = homeSectionBg;
-    linkPreload.fetchPriority = 'high';
-    document.head.appendChild(linkPreload);
-    
-    return () => {
-      document.head.removeChild(linkPreload);
+    // Optimized image preloading strategy
+    const preloadImages = () => {
+      const imagesToPreload = [
+        homeSectionBgSmall, 
+        homeSectionBgMedium,
+        homeSectionBgLarge
+      ];
+      
+      // Only preload the image size we need based on viewport
+      const imageToPreload = getImageForViewport();
+      
+      const img = new Image();
+      img.src = imageToPreload;
+      img.fetchPriority = "high";
+      img.onload = () => setImageLoaded(true);
+      
+      // Add resource hints for the current viewport's image
+      const linkPreload = document.createElement('link');
+      linkPreload.rel = 'preload';
+      linkPreload.as = 'image';
+      linkPreload.href = imageToPreload;
+      linkPreload.fetchPriority = 'high';
+      linkPreload.type = 'image/webp';
+      document.head.appendChild(linkPreload);
+      
+      return () => {
+        if (document.head.contains(linkPreload)) {
+          document.head.removeChild(linkPreload);
+        }
+      };
     };
+    
+    return preloadImages();
   }, []);
 
   // Helper function to select the right image based on screen size
-  const getBackgroundImage = () => {
-    // Use media queries to determine which image to use
-    if (window.innerWidth > 1200) {
-      return homeSectionBgLarge;
-    } else if (window.innerWidth > 768) {
+  const getImageForViewport = () => {
+    if (typeof window === 'undefined') return homeSectionBgMedium;
+    
+    if (window.innerWidth <= 480) {
+      return homeSectionBgSmall;
+    } else if (window.innerWidth <= 800) {
       return homeSectionBgMedium;
     } else {
-      return homeSectionBgSmall;
+      return homeSectionBgLarge;
+    }
+  };
+  
+  // Get webp fallback image for browsers that don't support webp
+  const getFallbackImage = () => {
+    if (typeof window === 'undefined') return homeSectionBgMediumFallback;
+    
+    if (window.innerWidth <= 480) {
+      return homeSectionBgSmallFallback;
+    } else if (window.innerWidth <= 800) {
+      return homeSectionBgMediumFallback;
+    } else {
+      return homeSectionBgLargeFallback;
     }
   };
 
@@ -254,7 +291,7 @@ function HomePage() {
             backgroundPosition: "center center",
             willChange: "transform", // Helps with compositing
             contain: "layout paint",
-            backgroundColor: "rgba(0, 0, 0, 0.7)", // Add dark background color
+            backgroundColor: "#0a0a0a", // Dark background for before image loads
           }}
           role="img"
           aria-label="Adysun Ventures hero section background"
@@ -268,25 +305,61 @@ function HomePage() {
             }}
           ></div>
           
-          {/* Main background image */}
+          {/* Tiny placeholder image - loaded immediately for LQIP technique */}
           <img 
-            src={homeSectionBg}
-            alt="Adysun Ventures hero background"
+            src={homeSectionBgPlaceholder}
+            alt=""
             className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
             style={{ 
-              opacity: 0.6, 
+              opacity: imageLoaded ? 0 : 0.6,
               zIndex: -1,
               objectFit: "cover",
               width: "100%",
               height: "100%",
-              transform: "translateZ(0)",
-              willChange: "transform",
-              filter: "brightness(0.7) contrast(1.1)", // Make image darker
+              filter: "blur(10px) brightness(0.7)",
+              transition: "opacity 0.5s ease",
             }}
-            fetchpriority="high"
-            loading="eager"
-            decoding="async"
+            width="20"
+            height="12"
           />
+          
+          {/* Main background image - optimized implementation */}
+          <picture>
+            {/* WebP format for modern browsers */}
+            <source
+              srcSet={`${homeSectionBgSmall} 480w, ${homeSectionBgMedium} 800w, ${homeSectionBgLarge} 1200w`}
+              sizes="100vw"
+              type="image/webp"
+            />
+            {/* JPG fallback for older browsers */}
+            <source
+              srcSet={`${homeSectionBgSmallFallback} 480w, ${homeSectionBgMediumFallback} 800w, ${homeSectionBgLargeFallback} 1200w`}
+              sizes="100vw"
+              type="image/jpeg"
+            />
+            <img 
+              src={getFallbackImage()}
+              alt="Adysun Ventures hero background"
+              className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+              style={{ 
+                opacity: 0.6, 
+                zIndex: -1,
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                transform: "translateZ(0)",
+                willChange: "transform",
+                filter: "brightness(0.7) contrast(1.1)",
+              }}
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              onLoad={() => setImageLoaded(true)}
+              width="1200"
+              height="800"
+            />
+          </picture>
+
           <div className="container py-10 position-relative" style={{ zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-xl-7 col-lg-6 mb-1-9 mb-lg-0">
