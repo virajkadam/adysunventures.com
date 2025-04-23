@@ -17,21 +17,79 @@ import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
 import companyBanner from "../assets/images/bg/landing_bg.jpg"
 // Import optimized hero images for different resolutions
+import homeSectionBgTiny from "../assets/images/bg/home-section-bg-320w.webp"
 import homeSectionBgSmall from "../assets/images/bg/home-section-bg-480w.webp"
 import homeSectionBgMedium from "../assets/images/bg/home-section-bg-800w.webp"
 import homeSectionBgLarge from "../assets/images/bg/home-section-bg.webp"
 // Fallback for browsers that don't support WebP
+import homeSectionBgTinyFallback from "../assets/images/bg/home-section-bg-320w.jpg"
 import homeSectionBgSmallFallback from "../assets/images/bg/home-section-bg-480w.jpg"
 import homeSectionBgMediumFallback from "../assets/images/bg/home-section-bg-800w.jpg"
 import homeSectionBgLargeFallback from "../assets/images/bg/home-section-bg.jpg"
 // Import tiny placeholder for LQIP technique
 import homeSectionBgPlaceholder from "../assets/images/bg/home-section-bg-placeholder.jpg"
 
+// Create a component for preloading critical resources
+const CriticalPreload = () => {
+  useEffect(() => {
+    // Add preload links for critical resources
+    const preloadLinks = [
+      { 
+        href: homeSectionBgTiny, 
+        as: 'image', 
+        type: 'image/webp', 
+        media: '(max-width: 320px)', 
+        fetchpriority: 'high' 
+      },
+      { 
+        href: homeSectionBgSmall, 
+        as: 'image', 
+        type: 'image/webp', 
+        media: '(min-width: 321px) and (max-width: 480px)', 
+        fetchpriority: 'high' 
+      },
+      { 
+        href: homeSectionBgMedium, 
+        as: 'image', 
+        type: 'image/webp', 
+        media: '(min-width: 481px) and (max-width: 800px)', 
+        fetchpriority: 'high' 
+      },
+      { 
+        href: homeSectionBgLarge, 
+        as: 'image', 
+        type: 'image/webp', 
+        media: '(min-width: 801px)', 
+        fetchpriority: 'high' 
+      }
+    ];
+
+    preloadLinks.forEach(linkProps => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      Object.entries(linkProps).forEach(([key, value]) => {
+        link[key] = value;
+      });
+      document.head.appendChild(link);
+    });
+
+    return () => {
+      // Clean up preload links
+      document.querySelectorAll('link[rel="preload"][as="image"]').forEach(link => {
+        document.head.removeChild(link);
+      });
+    };
+  }, []);
+
+  return null;
+};
+
 function HomePage() {
   const [activeTab, setActiveTab] = useState(0);
   const heroSectionRef = useRef(null);
   const [imageLoaded, setImageLoaded] = useState(false);
-
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  
   // Page-specific SEO metadata
   const seoData = {
     title: "Innovative Custom Software & IT Solutions for Business Growth | Adysun Ventures",
@@ -195,34 +253,28 @@ function HomePage() {
   useEffect(() => {
     // Optimized image preloading strategy
     const preloadImages = () => {
-      const imagesToPreload = [
-        homeSectionBgSmall, 
-        homeSectionBgMedium,
-        homeSectionBgLarge
-      ];
+      // Don't need to manually preload here anymore, using the CriticalPreload component instead
       
-      // Only preload the image size we need based on viewport
-      const imageToPreload = getImageForViewport();
+      // Mark as loaded immediately in development for better experience
+      if (process.env.NODE_ENV === 'development') {
+        setImageLoaded(true);
+      }
       
-      const img = new Image();
-      img.src = imageToPreload;
-      img.fetchPriority = "high";
-      img.onload = () => setImageLoaded(true);
-      
-      // Add resource hints for the current viewport's image
-      const linkPreload = document.createElement('link');
-      linkPreload.rel = 'preload';
-      linkPreload.as = 'image';
-      linkPreload.href = imageToPreload;
-      linkPreload.fetchPriority = 'high';
-      linkPreload.type = 'image/webp';
-      document.head.appendChild(linkPreload);
-      
-      return () => {
-        if (document.head.contains(linkPreload)) {
-          document.head.removeChild(linkPreload);
-        }
-      };
+      // Create an observer for the hero section
+      if (heroSectionRef.current) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            setIsIntersecting(entry.isIntersecting);
+            if (entry.isIntersecting) {
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.1 }
+        );
+        
+        observer.observe(heroSectionRef.current);
+        return () => observer.disconnect();
+      }
     };
     
     return preloadImages();
@@ -232,7 +284,9 @@ function HomePage() {
   const getImageForViewport = () => {
     if (typeof window === 'undefined') return homeSectionBgMedium;
     
-    if (window.innerWidth <= 480) {
+    if (window.innerWidth <= 320) {
+      return homeSectionBgTiny;
+    } else if (window.innerWidth <= 480) {
       return homeSectionBgSmall;
     } else if (window.innerWidth <= 800) {
       return homeSectionBgMedium;
@@ -245,7 +299,9 @@ function HomePage() {
   const getFallbackImage = () => {
     if (typeof window === 'undefined') return homeSectionBgMediumFallback;
     
-    if (window.innerWidth <= 480) {
+    if (window.innerWidth <= 320) {
+      return homeSectionBgTinyFallback;
+    } else if (window.innerWidth <= 480) {
       return homeSectionBgSmallFallback;
     } else if (window.innerWidth <= 800) {
       return homeSectionBgMediumFallback;
@@ -256,12 +312,21 @@ function HomePage() {
 
   return (
     <div>
+      {/* Add critical preload component */}
+      <CriticalPreload />
+      
       {/* Add page-specific meta tags that override global ones */}
       <MetaTags 
         title={seoData.title}
         description={seoData.description}
         keywords={seoData.keywords}
         ogImage={seoData.ogImage}
+        preloadImages={[
+          { href: homeSectionBgTiny, media: "(max-width: 320px)" },
+          { href: homeSectionBgSmall, media: "(min-width: 321px) and (max-width: 480px)" },
+          { href: homeSectionBgMedium, media: "(min-width: 481px) and (max-width: 800px)" },
+          { href: homeSectionBgLarge, media: "(min-width: 801px)" }
+        ]}
       />
       {/* Add Schema.org structured data */}
       <SchemaMarkup 
@@ -321,19 +386,20 @@ function HomePage() {
             }}
             width="20"
             height="12"
+            loading="eager"
           />
           
           {/* Main background image - optimized implementation */}
           <picture>
             {/* WebP format for modern browsers */}
             <source
-              srcSet={`${homeSectionBgSmall} 480w, ${homeSectionBgMedium} 800w, ${homeSectionBgLarge} 1200w`}
+              srcSet={`${homeSectionBgTiny} 320w, ${homeSectionBgSmall} 480w, ${homeSectionBgMedium} 800w, ${homeSectionBgLarge} 1200w`}
               sizes="100vw"
               type="image/webp"
             />
             {/* JPG fallback for older browsers */}
             <source
-              srcSet={`${homeSectionBgSmallFallback} 480w, ${homeSectionBgMediumFallback} 800w, ${homeSectionBgLargeFallback} 1200w`}
+              srcSet={`${homeSectionBgTinyFallback} 320w, ${homeSectionBgSmallFallback} 480w, ${homeSectionBgMediumFallback} 800w, ${homeSectionBgLargeFallback} 1200w`}
               sizes="100vw"
               type="image/jpeg"
             />
@@ -357,6 +423,8 @@ function HomePage() {
               onLoad={() => setImageLoaded(true)}
               width="1200"
               height="800"
+              importance="high"
+              data-lcp="true"
             />
           </picture>
 
