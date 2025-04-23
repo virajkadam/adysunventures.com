@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './common/Header';
 import Footer from './common/Footer';
@@ -17,8 +17,10 @@ import content2 from "../assets/images/content/content-02.jpg";
 import content3 from "../assets/images/content/content-03.jpg";
 import companyBanner from "../assets/images/bg/landing_bg.jpg"
 import homeSectionBg from "../assets/images/bg/home-section-bg.jpg"
-
-
+// Temporary fix until WebP versions are created
+import homeSectionBgLarge from "../assets/images/bg/home-section-bg.jpg"
+import homeSectionBgMedium from "../assets/images/bg/home-section-bg.jpg"
+import homeSectionBgSmall from "../assets/images/bg/home-section-bg.jpg"
 
 function HomePage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -183,6 +185,40 @@ function HomePage() {
     }
   ];
 
+  // Add this useEffect to preload the image
+  useEffect(() => {
+    // Preload the image based on viewport size
+    const preloadImage = () => {
+      const width = window.innerWidth;
+      let imageToPreload;
+      
+      if (width > 1200) {
+        imageToPreload = homeSectionBgLarge;
+      } else if (width > 768) {
+        imageToPreload = homeSectionBgMedium;
+      } else {
+        imageToPreload = homeSectionBgSmall;
+      }
+      
+      const img = new Image();
+      img.src = imageToPreload;
+    };
+    
+    preloadImage();
+  }, []);
+
+  // Helper function to select the right image based on screen size
+  const getBackgroundImage = () => {
+    // Use media queries to determine which image to use
+    if (window.innerWidth > 1200) {
+      return homeSectionBgLarge;
+    } else if (window.innerWidth > 768) {
+      return homeSectionBgMedium;
+    } else {
+      return homeSectionBgSmall;
+    }
+  };
+
   return (
     <div>
       {/* Add page-specific meta tags that override global ones */}
@@ -213,10 +249,15 @@ function HomePage() {
           className="bg-img cover-background"
           data-overlay-dark={7}
           style={{
-            backgroundImage: `url(${homeSectionBg})`,
+            backgroundImage: `url(${getBackgroundImage()})`,
             width: "100%",
             height: "100%",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            willChange: "transform", // Helps with compositing
           }}
+          role="img"
+          aria-label="Adysun Ventures hero section background"
         >
           <div className="container py-10">
             <div className="row align-items-center">
