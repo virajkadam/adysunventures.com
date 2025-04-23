@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Adysun Ventures",
+  "name": "Adysun Ventures - Custom Software Development & Enterprise IT Solutions",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,11 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0066cc",
+  "background_color": "#ffffff",
+  "description": "Transform your business with custom software development, enterprise IT solutions, and strategic digital transformation services.",
+  "categories": ["business", "technology", "software", "enterprise"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "any"
 }
