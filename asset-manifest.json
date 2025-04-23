@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aa21fb7f.css",
-    "main.js": "/static/js/main.3c229aed.js",
+    "main.js": "/static/js/main.ebad7b6a.js",
     "static/js/206.ec27e6c5.chunk.js": "/static/js/206.ec27e6c5.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -42,6 +42,7 @@
     "static/media/blog-19.jpg": "/static/media/blog-19.a1cfaa64ad62ed375ba0.jpg",
     "static/media/landing_bg.jpg": "/static/media/landing_bg.497fa199605ae7725186.jpg",
     "static/media/pro-10.jpg": "/static/media/pro-10.a6c5cde22d8fa45c65b1.jpg",
+    "static/media/home-section-bg.webp": "/static/media/home-section-bg.ce2004c7e78190524597.webp",
     "static/media/slide21.jpg": "/static/media/slide21.10320e45fecba301eeeb.jpg",
     "static/media/blog-3.jpg": "/static/media/blog-3.3c108de091c2c3f92b9c.jpg",
     "static/media/blog-6.jpg": "/static/media/blog-6.7843a184c80affbd24f5.jpg",
@@ -49,14 +50,13 @@
     "static/media/feature-03.jpg": "/static/media/feature-03.dbf1c4977265e0f3f795.jpg",
     "static/media/blog-5.jpg": "/static/media/blog-5.8ce9dda6484d2040fb28.jpg",
     "static/media/bg2.jpg": "/static/media/bg2.4d3cfc85e59d08be8f60.jpg",
-    "static/media/home-section-bg.webp": "/static/media/home-section-bg.b4634959ab0b58cfc0fb.webp",
     "static/media/bg12.webp": "/static/media/bg12.b282cbeb09ccc0bb4027.webp",
     "static/media/blog-8.jpg": "/static/media/blog-8.872b3714ef4c382181a9.jpg",
     "static/media/pro-9.jpg": "/static/media/pro-9.e89e1d1bf9e0df3d736e.jpg",
     "static/media/list-2.jpg": "/static/media/list-2.36c13640498084abfd3f.jpg",
-    "static/media/home-section-bg-800w.webp": "/static/media/home-section-bg-800w.ace7af0a09e6021f8d78.webp",
     "static/media/home-section-bg-800w.jpg": "/static/media/home-section-bg-800w.90c55071ddf6c152ce1b.jpg",
     "static/media/service-6b.jpg": "/static/media/service-6b.10a8d35136d63419d1fa.jpg",
+    "static/media/home-section-bg-800w.webp": "/static/media/home-section-bg-800w.085184ce0c3f3404d843.webp",
     "static/media/blog-2.jpg": "/static/media/blog-2.cb136d278b51960dd15a.jpg",
     "static/media/feature-02.jpg": "/static/media/feature-02.9cbd088ae695120387e0.jpg",
     "static/media/blog-03.jpg": "/static/media/blog-03.a364638b846db22aeb6d.jpg",
@@ -92,13 +92,13 @@
     "static/media/feature-05.jpg": "/static/media/feature-05.de59c3ff65d671ae8df2.jpg",
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
-    "static/media/home-section-bg-480w.webp": "/static/media/home-section-bg-480w.2cb8460d284ec45a3b48.webp",
     "static/media/content-01.jpg": "/static/media/content-01.d363728612c66b2a1cbd.jpg",
-    "static/media/home-section-bg-480w.jpg": "/static/media/home-section-bg-480w.99063db1a1fe6a48bb25.jpg",
     "static/media/teammember-01.jpg": "/static/media/teammember-01.c983de44c6329c041d01.jpg",
     "static/media/bg4.jpg": "/static/media/bg4.25f98a963aad1ab686db.jpg",
     "static/media/s-4.jpg": "/static/media/s-4.af7db47fa323d691b3d4.jpg",
     "static/media/content-02.jpg": "/static/media/content-02.c1cd7c3a870a66047dc2.jpg",
+    "static/media/home-section-bg-480w.jpg": "/static/media/home-section-bg-480w.aecffcc6fe887b1504db.jpg",
+    "static/media/home-section-bg-480w.webp": "/static/media/home-section-bg-480w.831333e9114bab809e67.webp",
     "static/media/eCommerce.png": "/static/media/eCommerce.c10f28a6047748214cf1.png",
     "static/media/s-6.jpg": "/static/media/s-6.b79b3732d4675eb93947.jpg",
     "static/media/t-4.jpg": "/static/media/t-4.b4a8d2b0517010105368.jpg",
@@ -117,7 +117,9 @@
     "static/media/t-5.jpg": "/static/media/t-5.6dbd2d32e82745e47525.jpg",
     "static/media/take-rent-pe.jpg": "/static/media/take-rent-pe.661c47ae50a95e2b6724.jpg",
     "static/media/manatarang.jpg": "/static/media/manatarang.3e9fb7afb5d721e6411f.jpg",
+    "static/media/home-section-bg-320w.webp": "/static/media/home-section-bg-320w.439bd1609846d4890ea3.webp",
     "static/media/safeAndSecure.png": "/static/media/safeAndSecure.0ef1faf332455867e980.png",
+    "static/media/home-section-bg-320w.jpg": "/static/media/home-section-bg-320w.1665f87880ae563c30f8.jpg",
     "static/media/greenbrier-living.jpg": "/static/media/greenbrier-living.93dd712883cd327e53eb.jpg",
     "index.html": "/index.html",
     "static/media/cloudSolutions.svg": "/static/media/cloudSolutions.2337de999c7734f2391c390793ffe45f.svg",
@@ -127,6 +129,6 @@
   },
   "entrypoints": [
     "static/css/main.aa21fb7f.css",
-    "static/js/main.3c229aed.js"
+    "static/js/main.ebad7b6a.js"
   ]
 }
