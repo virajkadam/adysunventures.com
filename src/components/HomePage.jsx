@@ -105,56 +105,60 @@ function HomePage() {
       title: 'Planning',
       subtitle: 'Vision to Execution',
       content: (
-        <div className="bg-white box-shadow-primary p-3">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+        <div className="position-relative h-100">
+          {/* Image Section with Overlay */}
+          <div className="col-lg-7 position-absolute top-0 end-0 h-100 bg-light rounded-4 overflow-hidden d-none d-lg-block">
+            <div className="h-100 p-0" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)' }}>
               <OptimizedImage
                 src={content1}
-                className="img-fluid rounded"
+                className="w-100 h-100 object-fit-cover"
                 alt="Strategic IT planning and vision at Adysun Ventures"
-                width={545}
-                height={348}
+                width={745}
+                height={548}
               />
             </div>
-            <div className="col-lg-6">
-              <h3 className="fw-bolder fs-3">Strategic Vision in IT</h3>
-              <div className="mt-4">
-                <h4 className="d-inline fw-bold me-1">
-                  Long-term Goals:
-                </h4>
-                At Adysun Ventures, we're committed to becoming
-                industry leaders in IT innovation, setting new
-                standards and inspiring both our team and clients
-                to reach their full potential.
-              </div>
-              <div className="mt-4">
-                <h4 className="d-inline fw-bold me-1">Innovation:</h4>
-                We're at the forefront of technological
-                advancements, constantly exploring new ways to
-                enhance business operations through IT solutions.
-              </div>
-              <div className="mt-4">
-                <h4 className="d-inline fw-bold me-1">
-                  Customer Focus:
-                </h4>
-                Our strategies are built around understanding and
-                exceeding client expectations in the IT sector.
-              </div>
-              <div className="mt-4">
-                <h4 className="d-inline fw-bold me-1">
-                  Market Leadership:
-                </h4>
-                We aim to set industry trends and establish
-                benchmarks in IT services that others aspire to
-                follow.
-              </div>
-              <div className="mt-4">
-                <h4 className="d-inline fw-bold me-1">
-                  Social Impact:
-                </h4>
-                We leverage technology to create positive change,
-                improving lives and communities through our IT
-                initiatives.
+          </div>
+
+          {/* Content Section */}
+          <div className="col-lg-6 position-relative">
+            <div className="content-wrapper bg-white rounded-4 shadow-sm p-4 p-lg-5">
+              <span className="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Strategic Planning</span>
+              <h3 className="display-6 fw-bold mb-4">Strategic Vision in IT</h3>
+              <p className="lead text-secondary mb-5">At Adysun Ventures, we're committed to becoming industry leaders in IT innovation.</p>
+              
+              <div className="strategy-items">
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4" 
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-bullseye fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Long-term Goals</h4>
+                    <p className="text-secondary mb-0">Setting new standards and inspiring both our team and clients to reach their full potential.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-lightbulb fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Innovation Focus</h4>
+                    <p className="text-secondary mb-0">Exploring cutting-edge technologies to enhance business operations and efficiency.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-users fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Customer Success</h4>
+                    <p className="text-secondary mb-0">Building strategies around understanding and exceeding client expectations.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -167,39 +171,61 @@ function HomePage() {
       title: 'Marketing',
       subtitle: 'Plan to market',
       content: (
-        <div className="bg-white box-shadow-primary p-3">
-          <div className="row align-items-center">
-            <div className="col-lg-6 order-lg-1 order-2">
-              <div className="pe-1-9">
-                <h3 className="fw-bolder fs-3">
-                  IT Marketing Strategies
-                </h3>
-                <p>
-                  At Adysun Ventures, we develop targeted marketing
-                  strategies for IT services, focusing on current
-                  trends such as cloud adoption, cybersecurity,
-                  and remote work solutions.
-                </p>
-                <h4>Key Marketing Approaches</h4>
-                <ul className="list-style-16">
-                  <li>Analyzing IT Spending Patterns</li>
-                  <li>Promoting Cloud Service Solutions</li>
-                  <li>Addressing Cybersecurity Concerns</li>
-                  <li>Content Marketing for IT Services</li>
-                  <li>
-                    Showcasing Cutting-Edge Software Solutions 
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-6 order-lg-2 order-1 text-center text-lg-start mb-4 mb-lg-0">
+        <div className="position-relative h-100">
+          {/* Image Section with Overlay */}
+          <div className="col-lg-7 position-absolute top-0 end-0 h-100 bg-light rounded-4 overflow-hidden d-none d-lg-block">
+            <div className="h-100 p-0" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)' }}>
               <OptimizedImage
                 src={content2}
-                className="img-fluid rounded"
-                alt="IT marketing strategies and digital promotion at Adysun Ventures"
-                width={545}
-                height={348}
+                className="w-100 h-100 object-fit-cover"
+                alt="IT marketing strategies and digital promotion"
+                width={745}
+                height={548}
               />
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="col-lg-6 position-relative">
+            <div className="content-wrapper bg-white rounded-4 shadow-sm p-4 p-lg-5">
+              <span className="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Marketing Strategy</span>
+              <h3 className="display-6 fw-bold mb-4">IT Marketing Strategies</h3>
+              <p className="lead text-secondary mb-5">Developing targeted strategies that drive growth and innovation in IT services.</p>
+              
+              <div className="strategy-items">
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-chart-line fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Market Analysis</h4>
+                    <p className="text-secondary mb-0">Analyzing IT spending patterns and market trends to optimize solutions.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-cloud fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Cloud Solutions</h4>
+                    <p className="text-secondary mb-0">Promoting innovative cloud services that scale with your business needs.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-shield-alt fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Security First</h4>
+                    <p className="text-secondary mb-0">Implementing robust cybersecurity measures for complete protection.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -211,37 +237,60 @@ function HomePage() {
       title: 'Growth',
       subtitle: 'Start to growth',
       content: (
-        <div className="bg-white box-shadow-primary p-3">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+        <div className="position-relative h-100">
+          {/* Image Section with Overlay */}
+          <div className="col-lg-7 position-absolute top-0 end-0 h-100 bg-light rounded-4 overflow-hidden d-none d-lg-block">
+            <div className="h-100 p-0" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)' }}>
               <OptimizedImage
                 src={content3}
-                className="img-fluid rounded"
-                alt="Technology growth and scaling IT solutions with Adysun Ventures"
-                width={545}
-                height={348}
+                className="w-100 h-100 object-fit-cover"
+                alt="Technology growth and scaling solutions"
+                width={745}
+                height={548}
               />
             </div>
-            <div className="col-lg-6">
-              <div className="ps-lg-1-9">
-                <h3 className="fw-bolder fs-3">
-                  Scaling IT Success
-                </h3>
-                <p>
-                  The IT consulting industry is experiencing
-                  robust growth, driven by digital transformation
-                  initiatives. At Adysun Ventures, we're at the
-                  forefront of this evolution, helping businesses
-                  leverage cutting-edge technologies.
-                </p>
-                <h4>Our Growth Solutions</h4>
-                <ul className="list-style-16">
-                  <li>Cloud Consulting and Implementation</li>
-                  <li>Advanced Cybersecurity Solutions</li>
-                  <li>Data-Driven IT Decision Making</li>
-                  <li>Remote Work Technology Integration</li>
-                  <li>AI and Machine Learning Applications</li>
-                </ul>
+          </div>
+
+          {/* Content Section */}
+          <div className="col-lg-6 position-relative">
+            <div className="content-wrapper bg-white rounded-4 shadow-sm p-4 p-lg-5">
+              <span className="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Growth Strategy</span>
+              <h3 className="display-6 fw-bold mb-4">Scaling IT Success</h3>
+              <p className="lead text-secondary mb-5">Empowering businesses with cutting-edge technologies for sustainable growth.</p>
+              
+              <div className="strategy-items">
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-rocket fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Digital Transformation</h4>
+                    <p className="text-secondary mb-0">Guiding businesses through comprehensive digital transformation journeys.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start mb-4 pb-4">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-brain fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">AI Integration</h4>
+                    <p className="text-secondary mb-0">Implementing AI and machine learning solutions for smarter operations.</p>
+                  </div>
+                </div>
+
+                <div className="strategy-item d-flex align-items-start">
+                  <div className="strategy-icon rounded-4 bg-gradient p-3 me-4"
+                       style={{ background: 'linear-gradient(135deg, #ff6700 0%, #ff8e3c 100%)' }}>
+                    <i className="fas fa-chart-bar fa-lg text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="h5 fw-bold mb-2">Data Analytics</h4>
+                    <p className="text-secondary mb-0">Leveraging data-driven insights for strategic decision making.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -576,7 +625,7 @@ function HomePage() {
                     <p>
                       Our <Link to="/about-us">team of experienced IT professionals</Link> delivers tailored solutions in <Link to="/services">software development</Link>, 
                       <Link to="/technologies"> cloud computing</Link>, <Link to="/services">cybersecurity</Link>, <Link to="/services">data analytics</Link>, and 
-                      <Link to="/services"> digital transformation</Link>. We combine technical expertise 
+                     <Link to="/services"> digital transformation</Link>. We combine technical expertise 
                       with business acumen to help organizations navigate the complex technology landscape and achieve their <Link to="/services">strategic objectives</Link>.
                     </p>
                   </div>
@@ -669,44 +718,256 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="tabs-style-2 p-0">
+        <section className="py-5" style={{ background: 'linear-gradient(to bottom, #f8f9fa, #ffffff)' }}>
           <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-7 mb-1-9 text-center">
-                <div className="mb-5">
-                  <span className="text-muted">how we can serve</span>
-                  <h2 className="display-18">
-                    Driving Success Through <Link to="/services">Strategic IT Solutions</Link>
-                  </h2>
-                </div>
+            <div className="row justify-content-center mb-5">
+              <div className="col-lg-7 text-center">
+                <span className="text-uppercase small fw-semibold" 
+                      style={{ color: '#6B7280', letterSpacing: '2px' }}>
+                  HOW WE CAN SERVE
+                </span>
+                <h2 className="display-4 fw-bold mt-2 mb-0" 
+                    style={{ 
+                      background: 'linear-gradient(45deg, #1a1a1a, #404040)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}>
+                  Driving Success Through <br/> Strategic IT Solutions
+                </h2>
               </div>
             </div>
-            <div className="row">
-              <div className="col-12">
-                <div className="horizontaltab">
-                  <div className="row">
-                    <div className="col-md-12 col-lg-4 mb-1-9 mb-lg-0">
-                      <ul className="resp-tabs-list hor_1 text-center">
-                        {tabData.map((tab, index) => (
-                          <li
-                            className={activeTab === index ? "resp-tab-active" : ""}
-                            onClick={() => setActiveTab(index)}
-                            key={tab.id}
-                          >
-                            <div className="tab-boxes">
-                              <div className="tab-box-number">{tab.number}</div>
-                              <div className="tab-box-content">
-                                <h4 className="h6">{tab.title}</h4>
-                                <span className="d-sm-block">{tab.subtitle}</span>
+
+            <div className="row g-4">
+              {/* Left sidebar with steps */}
+              <div className="col-lg-4">
+                <div className="steps-wrapper pe-lg-4">
+                  {tabData.map((tab, index) => (
+                    <div
+                      key={tab.id}
+                      onClick={() => setActiveTab(index)}
+                      className={`step-item d-flex align-items-start p-4 rounded-4 mb-3 ${
+                        activeTab === index 
+                          ? 'shadow-sm border-start border-4' 
+                          : ''
+                      }`}
+                      style={{ 
+                        cursor: 'pointer', 
+                        transition: 'all 0.3s ease',
+                        background: activeTab === index 
+                          ? 'linear-gradient(to right, rgba(255,103,0,0.03), rgba(255,255,255,1))' 
+                          : 'transparent',
+                        borderColor: activeTab === index ? '#ff6700' : 'transparent'
+                      }}
+                    >
+                      <div 
+                        className="step-number rounded-circle d-flex align-items-center justify-content-center"
+                        style={{
+                          width: '40px',
+                          height: '40px',
+                          background: activeTab === index 
+                            ? 'linear-gradient(135deg, #ff6700, #ff8e3c)' 
+                            : '#f3f4f6',
+                          color: activeTab === index ? 'white' : '#6B7280',
+                          fontSize: '15px',
+                          fontWeight: '600',
+                          boxShadow: activeTab === index 
+                            ? '0 4px 12px rgba(255, 103, 0, 0.15)' 
+                            : 'none',
+                          transition: 'all 0.3s ease'
+                        }}
+                      >
+                        {tab.number}
+                      </div>
+                      <div className="ms-3">
+                        <h3 className="h5 mb-1" 
+                            style={{ 
+                              color: activeTab === index ? '#ff6700' : '#1a1a1a',
+                              transition: 'color 0.3s ease'
+                            }}>
+                          {tab.title}
+                        </h3>
+                        <p className="small mb-0" 
+                           style={{ color: '#6B7280' }}>
+                          {tab.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right content area */}
+              <div className="col-lg-8">
+                <div className="content-area rounded-4 overflow-hidden"
+                     style={{ 
+                       background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
+                       boxShadow: '0 10px 40px rgba(0,0,0,0.05)'
+                     }}>
+                  <div className="row h-100">
+                    <div className="col-lg-6 p-4 p-lg-5">
+                      <div className="badge mb-3 px-3 py-2" 
+                           style={{ 
+                             background: 'rgba(255,103,0,0.1)',
+                             color: '#ff6700',
+                             fontWeight: '500'
+                           }}>
+                        {activeTab === 0 ? 'Strategic Planning' : 
+                         activeTab === 1 ? 'Marketing Strategy' : 'Growth Strategy'}
+                      </div>
+                      <h3 className="h2 mb-4" 
+                          style={{ color: '#1a1a1a' }}>
+                        {tabData[activeTab].title === 'Planning' ? 'Strategic Vision in IT' :
+                         tabData[activeTab].title === 'Marketing' ? 'IT Marketing Strategies' :
+                         'Scaling IT Success'}
+                      </h3>
+                      <p className="lead mb-5" 
+                         style={{ color: '#4B5563' }}>
+                        {activeTab === 0 ? 'Empowering businesses with strategic IT planning and innovative solutions.' :
+                         activeTab === 1 ? 'Developing targeted strategies that drive growth and innovation in IT services.' :
+                         'Empowering businesses with cutting-edge technologies for sustainable growth.'}
+                      </p>
+
+                      <div className="features-list">
+                        {activeTab === 0 && (
+                          <>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-rocket" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Digital Transformation</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Guiding businesses through comprehensive digital transformation journeys.</p>
                               </div>
                             </div>
-                          </li>
-                        ))}
-                      </ul>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-brain" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>AI Integration</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing AI and machine learning solutions for smarter operations.</p>
+                              </div>
+                            </div>
+                            <div className="feature-item d-flex align-items-start">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-chart-bar" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Data Analytics</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Leveraging data-driven insights for strategic decision making.</p>
+                              </div>
+                            </div>
+                          </>
+                        )}
+                        {activeTab === 1 && (
+                          <>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-bullseye" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Market Analysis</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Analyzing IT spending patterns and market trends to optimize solutions.</p>
+                              </div>
+                            </div>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-cloud" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Cloud Solutions</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Promoting innovative cloud services that scale with your business needs.</p>
+                              </div>
+                            </div>
+                            <div className="feature-item d-flex align-items-start">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-shield-alt" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Security First</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing robust cybersecurity measures for complete protection.</p>
+                              </div>
+                            </div>
+                          </>
+                        )}
+                        {activeTab === 2 && (
+                          <>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-rocket" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Digital Transformation</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Guiding businesses through comprehensive digital transformation journeys.</p>
+                              </div>
+                            </div>
+                            <div className="feature-item d-flex align-items-start mb-4">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-brain" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>AI Integration</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing AI and machine learning solutions for smarter operations.</p>
+                              </div>
+                            </div>
+                            <div className="feature-item d-flex align-items-start">
+                              <div className="feature-icon rounded-3 p-3"
+                                   style={{ 
+                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
+                                   }}>
+                                <i className="fas fa-chart-bar" style={{ color: '#ff6700' }}></i>
+                              </div>
+                              <div className="ms-4">
+                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Data Analytics</h4>
+                                <p className="mb-0" style={{ color: '#6B7280' }}>Leveraging data-driven insights for strategic decision making.</p>
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </div>
                     </div>
-                    <div className="col-md-12 col-lg-8">
-                      <div className="resp-tabs-container hor_1 p-0">
-                        {tabData[activeTab].content}
+                    <div className="col-lg-6 position-relative">
+                      <div className="image-wrapper h-100">
+                        <div className="overlay position-absolute top-0 start-0 w-100 h-100"
+                             style={{
+                               background: 'linear-gradient(45deg, rgba(255,103,0,0.05), rgba(255,142,60,0.1))',
+                               mixBlendMode: 'multiply',
+                               zIndex: 1
+                             }}></div>
+                        <OptimizedImage
+                          src={activeTab === 0 ? content1 : activeTab === 1 ? content2 : content3}
+                          className="w-100 h-100 object-fit-cover"
+                          alt={activeTab === 0 ? "Strategic IT planning and vision" :
+                               activeTab === 1 ? "IT marketing strategies" :
+                               "Technology growth and scaling solutions"}
+                          width={545}
+                          height={400}
+                          style={{ transform: 'scale(1.02)' }}
+                        />
                       </div>
                     </div>
                   </div>
