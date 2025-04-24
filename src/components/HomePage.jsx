@@ -798,184 +798,202 @@ function HomePage() {
 
               {/* Right content area */}
               <div className="col-lg-8">
-                <div className="content-area rounded-4 overflow-hidden"
-                     style={{ 
-                       background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
-                       boxShadow: '0 10px 40px rgba(0,0,0,0.05)'
-                     }}>
-                  <div className="row h-100">
-                    <div className="col-lg-6 p-4 p-lg-5">
-                      <div className="badge mb-3 px-3 py-2" 
-                           style={{ 
-                             background: 'rgba(255,103,0,0.1)',
-                             color: '#ff6700',
-                             fontWeight: '500'
-                           }}>
-                        {activeTab === 0 ? 'Strategic Planning' : 
-                         activeTab === 1 ? 'Marketing Strategy' : 'Growth Strategy'}
-                      </div>
-                      <h3 className="h2 mb-4" 
-                          style={{ color: '#1a1a1a' }}>
-                        {tabData[activeTab].title === 'Planning' ? 'Strategic Vision in IT' :
-                         tabData[activeTab].title === 'Marketing' ? 'IT Marketing Strategies' :
-                         'Scaling IT Success'}
-                      </h3>
-                      <p className="lead mb-5" 
-                         style={{ color: '#4B5563' }}>
-                        {activeTab === 0 ? 'Empowering businesses with strategic IT planning and innovative solutions.' :
-                         activeTab === 1 ? 'Developing targeted strategies that drive growth and innovation in IT services.' :
-                         'Empowering businesses with cutting-edge technologies for sustainable growth.'}
-                      </p>
-
-                      <div className="features-list">
-                        {activeTab === 0 && (
-                          <>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-rocket" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Digital Transformation</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Guiding businesses through comprehensive digital transformation journeys.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-brain" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>AI Integration</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing AI and machine learning solutions for smarter operations.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-chart-bar" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Data Analytics</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Leveraging data-driven insights for strategic decision making.</p>
-                              </div>
-                            </div>
-                          </>
-                        )}
-                        {activeTab === 1 && (
-                          <>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-bullseye" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Market Analysis</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Analyzing IT spending patterns and market trends to optimize solutions.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-cloud" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Cloud Solutions</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Promoting innovative cloud services that scale with your business needs.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-shield-alt" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Security First</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing robust cybersecurity measures for complete protection.</p>
-                              </div>
-                            </div>
-                          </>
-                        )}
-                        {activeTab === 2 && (
-                          <>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-rocket" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Digital Transformation</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Guiding businesses through comprehensive digital transformation journeys.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start mb-4">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-brain" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>AI Integration</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Implementing AI and machine learning solutions for smarter operations.</p>
-                              </div>
-                            </div>
-                            <div className="feature-item d-flex align-items-start">
-                              <div className="feature-icon rounded-3 p-3"
-                                   style={{ 
-                                     background: 'linear-gradient(135deg, rgba(255,103,0,0.1), rgba(255,142,60,0.1))',
-                                   }}>
-                                <i className="fas fa-chart-bar" style={{ color: '#ff6700' }}></i>
-                              </div>
-                              <div className="ms-4">
-                                <h4 className="h6 fw-bold mb-2" style={{ color: '#1a1a1a' }}>Data Analytics</h4>
-                                <p className="mb-0" style={{ color: '#6B7280' }}>Leveraging data-driven insights for strategic decision making.</p>
-                              </div>
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                    <div className="col-lg-6 position-relative">
-                      <div className="image-wrapper h-100">
-                        <div className="overlay position-absolute top-0 start-0 w-100 h-100"
-                             style={{
-                               background: 'linear-gradient(45deg, rgba(255,103,0,0.05), rgba(255,142,60,0.1))',
-                               mixBlendMode: 'multiply',
-                               zIndex: 1
-                             }}></div>
+                <div className="content-area rounded-4 overflow-hidden bg-white">
+                  <div className="row g-0">
+                    {/* Left Column */}
+                    <div className="col-lg-6 p-4">
+                      {/* Image Section */}
+                      <div className="image-wrapper mb-4">
                         <OptimizedImage
                           src={activeTab === 0 ? content1 : activeTab === 1 ? content2 : content3}
-                          className="w-100 h-100 object-fit-cover"
+                          className="w-100 rounded-3"
                           alt={activeTab === 0 ? "Strategic IT planning and vision" :
                                activeTab === 1 ? "IT marketing strategies" :
                                "Technology growth and scaling solutions"}
-                          width={545}
-                          height={400}
-                          style={{ transform: 'scale(1.02)' }}
+                          width={500}
+                          height={300}
+                          style={{ objectFit: 'cover' }}
                         />
+                      </div>
+                      
+                      {/* Content Section */}
+                      <div className="content-section">
+                        <div className="position-relative mb-3">
+                          <div className="badge d-inline-flex align-items-center px-3 py-2" 
+                               style={{ 
+                                 background: 'rgba(255,103,0,0.1)',
+                                 color: '#ff6700',
+                                 fontWeight: '500',
+                                 fontSize: '0.875rem'
+                               }}>
+                              {activeTab === 0 ? 'Strategic Planning' :
+                               activeTab === 1 ? 'Marketing Strategy' :
+                               'Growth Strategy'}
+                            </div>
+                            {/* Connector Line Element */}
+                            <div className="connector-line position-absolute" style={{
+                              width: '24px',
+                              height: '2px',
+                              background: '#E5E7EB',
+                              bottom: '18px',
+                              left: '-32px'
+                            }}></div>
+                            {/* Connector Dot */}
+                            <div className="connector-dot position-absolute" style={{
+                              width: '6px',
+                              height: '6px',
+                              background: '#E5E7EB',
+                              borderRadius: '50%',
+                              bottom: '16px',
+                              left: '-38px'
+                            }}></div>
+                          </div>
+
+                          <h2 className="h2 mb-3" style={{ 
+                            color: '#1a1a1a',
+                            fontSize: '2.25rem',
+                            fontWeight: '600',
+                            lineHeight: '1.2'
+                          }}>
+                            {activeTab === 0 ? 'Strategic Vision in IT' :
+                             activeTab === 1 ? 'Marketing Excellence' :
+                             'Scaling IT Success'}
+                          </h2>
+
+                          <p className="lead mb-0" style={{ 
+                            color: '#4B5563',
+                            fontSize: '1.125rem',
+                            lineHeight: '1.6'
+                          }}>
+                            {activeTab === 0 ? 'Empowering businesses with strategic IT planning and innovative solutions.' :
+                             activeTab === 1 ? 'Developing targeted strategies that drive growth and innovation in IT services.' :
+                             'Empowering businesses with cutting-edge technologies for sustainable growth.'}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Right Column - Feature Items */}
+                      <div className="col-lg-6 bg-light p-4">
+                        <div className="features-list">
+                          {activeTab === 0 ? (
+                            <>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-rocket text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Digital Transformation</h4>
+                                  <p className="text-muted mb-0">Guiding businesses through comprehensive digital transformation journeys.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-brain text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">AI Integration</h4>
+                                  <p className="text-muted mb-0">Implementing AI and machine learning solutions.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-chart-bar text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Data Analytics</h4>
+                                  <p className="text-muted mb-0">Leveraging data-driven insights for decisions.</p>
+                                </div>
+                              </div>
+                            </>
+                          ) : activeTab === 1 ? (
+                            <>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-bullseye text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Market Analysis</h4>
+                                  <p className="text-muted mb-0">Analyzing IT spending patterns and market trends.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-cloud text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Cloud Solutions</h4>
+                                  <p className="text-muted mb-0">Promoting innovative cloud services that scale.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-shield-alt text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Security First</h4>
+                                  <p className="text-muted mb-0">Implementing robust cybersecurity measures.</p>
+                                </div>
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-rocket text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Digital Transformation</h4>
+                                  <p className="text-muted mb-0">Guiding businesses through digital transformation.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start mb-4">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-brain text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">AI Integration</h4>
+                                  <p className="text-muted mb-0">Implementing AI and machine learning solutions.</p>
+                                </div>
+                              </div>
+                              <div className="feature-item d-flex align-items-start">
+                                <div className="feature-icon-wrapper me-3 rounded-2 p-3" style={{
+                                  background: 'rgba(255, 103, 0, 0.1)'
+                                }}>
+                                  <i className="fas fa-chart-bar text-primary"></i>
+                                </div>
+                                <div>
+                                  <h4 className="h6 fw-bold mb-2">Data Analytics</h4>
+                                  <p className="text-muted mb-0">Leveraging data-driven insights for strategic decisions.</p>
+                                </div>
+                              </div>
+                            </>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+       
         </section>
+        
 
         {/* Industry section with links */}
         <section className="bg-light py-5">
