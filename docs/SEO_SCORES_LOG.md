@@ -104,3 +104,21 @@ These fixes directly address the highest priority technical SEO issues identifie
 | | | | | |
 
 *This document will be updated as improvements are made and new scores are available.* 
+
+## Latest Lighthouse Scores (June 2024)
+
+### Mobile
+- Performance: 64
+- Accessibility: 89
+- Best Practices: 96
+- SEO: 100
+
+### Desktop
+- Performance: 89
+- Accessibility: 89
+- Best Practices: 96
+- SEO: 100
+
+// write down here latest scores for desktop and mobile
+
+
