@@ -732,7 +732,21 @@ function HomePage() {
                     <i className="fas fa-chart-line fa-3x text-primary mb-3"></i>
                     <h3 className="h4 mb-3"><Link to="/industries/stock-exchange" className="text-dark text-decoration-none">Stock Exchange & Financial Services</Link></h3>
                     <p>High-performance solutions for financial markets and trading platforms.</p>
-                    <Link to="/industries/stock-exchange" className="btn btn-sm btn-outline-primary mt-3">Explore Financial Services Solutions</Link>
+                    <Link 
+                      to="/industries/stock-exchange" 
+                      className="btn" 
+                      style={{
+                        backgroundColor: "#ff5a2e",
+                        color: "#ffffff",
+                        fontWeight: "600",
+                        padding: "0.5rem 1.5rem",
+                        borderRadius: "4px",
+                        border: "2px solid #ff5a2e",
+                        transition: "all 0.3s ease"
+                      }}
+                    >
+                      Explore Financial Services Solutions
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -742,7 +756,7 @@ function HomePage() {
                     <i className="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
                     <h3 className="h4 mb-3"><Link to="/industries/ecommerce" className="text-dark text-decoration-none">E-Commerce & Retail Solutions</Link></h3>
                     <p>Scalable platforms and solutions for online retail businesses.</p>
-                    <Link to="/industries/ecommerce" className="btn btn-sm btn-outline-primary mt-3">Discover E-Commerce Solutions</Link>
+                    <Link to="/industries/ecommerce" className="btn" style={{backgroundColor: "#ff5a2e", color: "#ffffff", fontWeight: "600", padding: "0.5rem 1.5rem", borderRadius: "4px", border: "2px solid #ff5a2e", transition: "all 0.3s ease"}}>Discover E-Commerce Solutions</Link>
                   </div>
                 </div>
               </div>
@@ -752,13 +766,13 @@ function HomePage() {
                     <i className="fas fa-truck fa-3x text-primary mb-3"></i>
                     <h3 className="h4 mb-3"><Link to="/industries/transportation" className="text-dark text-decoration-none">Transportation & Logistics</Link></h3>
                     <p>Logistics and fleet management technology solutions.</p>
-                    <Link to="/industries/transportation" className="btn btn-sm btn-outline-primary mt-3">View Transportation Solutions</Link>
+                    <Link to="/industries/transportation" className="btn" style={{backgroundColor: "#ff5a2e", color: "#ffffff", fontWeight: "600", padding: "0.5rem 1.5rem", borderRadius: "4px", border: "2px solid #ff5a2e", transition: "all 0.3s ease"}}>View Transportation Solutions</Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="text-center">
-              <Link to="/industries" className="btn btn-primary">Explore All Industries</Link>
+              <Link to="/industries" className="btn" style={{backgroundColor: "#ff5a2e", color: "#ffffff", fontWeight: "600", padding: "0.5rem 1.5rem", borderRadius: "4px", border: "2px solid #ff5a2e", transition: "all 0.3s ease"}}>Explore All Industries</Link>
             </div>
           </div>
         </section>
@@ -772,7 +786,7 @@ function HomePage() {
             <div className="row align-items-center">
               <div className="col-lg-8 mb-4 mb-lg-0">
                 <h2 className="text-white mb-3">Ready to Transform Your Business with IT Solutions?</h2>
-                <p className="lead mb-0">Contact us today to discuss how our services can drive your business growth.</p>
+                <p className="lead mb-0 text-white">Contact us today to discuss how our services can drive your business growth.</p>
               </div>
               <div className="col-lg-4 text-lg-end">
                 <Link to="/contact-us" className="btn btn-light btn-lg">Get in Touch</Link>
