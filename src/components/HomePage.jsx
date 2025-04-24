@@ -27,7 +27,7 @@ import homeSectionBgSmallFallback from "../assets/images/bg/home-section-bg-480w
 import homeSectionBgMediumFallback from "../assets/images/bg/home-section-bg-800w.jpg"
 import homeSectionBgLargeFallback from "../assets/images/bg/home-section-bg.jpg"
 // Import tiny placeholder for LQIP technique
-import homeSectionBgPlaceholder from "../assets/images/bg/home-section-bg-placeholder.jpg"
+import homeSectionBgPlaceholder from "../assets/images/bg/home-section-bg.webp"
 
 // Create a component for preloading critical resources
 const CriticalPreload = () => {
