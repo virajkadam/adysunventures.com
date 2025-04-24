@@ -60,8 +60,8 @@ const FAQ = ({
       <div className="container">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-8 text-center">
-            <h2 className="mb-3">{title}</h2>
-            <p className="lead">{subtitle}</p>
+            <h2 className="display-5 fw-bold mb-3">{title}</h2>
+            <p className="lead text-secondary mb-0">{subtitle}</p>
           </div>
         </div>
         
@@ -69,27 +69,34 @@ const FAQ = ({
           <div className="col-lg-10">
             <div className="accordion" id="faqAccordion">
               {faqs.map((faq, index) => (
-                <div className="accordion-item border mb-3 rounded shadow-sm" key={index}>
-                  <h3 className="accordion-header m-0" id={`heading${index}`}>
+                <div className="accordion-item border border-1 border-light-subtle mb-3" key={index}>
+                  <h3 className="accordion-header" id={`heading${index}`}>
                     <button 
-                      className="accordion-button fw-bold collapsed" 
+                      className="accordion-button fw-semibold rounded-3 shadow-sm collapsed" 
                       type="button" 
                       data-bs-toggle="collapse" 
                       data-bs-target={`#collapse${index}`} 
                       aria-expanded={index === 0 ? "true" : "false"} 
                       aria-controls={`collapse${index}`}
+                      style={{
+                        '--bs-accordion-active-bg': 'rgba(255, 103, 0, 0.03)',
+                        '--bs-accordion-active-color': '#ff6700',
+                        '--bs-accordion-btn-focus-border-color': '#ff6700',
+                        '--bs-accordion-btn-focus-box-shadow': '0 0 0 0.25rem rgba(255, 103, 0, 0.25)',
+                        backgroundColor: '#f8f9fa'
+                      }}
                     >
                       {faq.question}
                     </button>
                   </h3>
                   <div 
                     id={`collapse${index}`} 
-                    className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`} 
+                    className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
                     aria-labelledby={`heading${index}`} 
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      <p className="mb-0">{faq.answer}</p>
+                    <div className="accordion-body bg-light rounded-bottom pt-0 px-4 pb-4">
+                      <p className="mb-0 text-secondary">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
