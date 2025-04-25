@@ -224,14 +224,46 @@ const SchemaMarkup = ({
       "priceCurrency": "INR",
       "price": "30000",
       "priceValidUntil": "2024-12-31",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "bestRating": "5",
       "worstRating": "1",
-      "ratingCount": reviews.length.toString()
+      "ratingCount": reviews.length.toString(),
+      "reviewCount": reviews.length.toString()
     },
     "review": reviews.map(review => ({
       "@type": "Review",
@@ -244,7 +276,8 @@ const SchemaMarkup = ({
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": review.reviewRating.toString(),
-        "bestRating": "5"
+        "bestRating": "5",
+        "worstRating": "1"
       }
     }))
   };

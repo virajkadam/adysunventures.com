@@ -51,12 +51,6 @@ const FAQ = ({
 
   return (
     <section className={`faq-section py-5 ${className}`}>
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
-      
       <div className="container">
         <div className="row justify-content-center mb-5">
           <div className="col-lg-8 text-center">
