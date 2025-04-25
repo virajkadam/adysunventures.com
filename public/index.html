@@ -208,7 +208,8 @@
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementsByTagName("script")[0];
         var replacement = document.createElement("div");
-        replacement.innerHTML = 'loading CSS';
+        replacement.innerHTML = '';
+        replacement.style.display = 'none'; // Make sure it doesn't take up space
         document.body.appendChild(replacement);
       };
       
