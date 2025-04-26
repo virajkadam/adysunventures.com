@@ -25,8 +25,13 @@ const companyInfo = {
     phones: [
       {
         type: "mobile",
-        number: "+91 9420245878",
+        number: "+91 7276451723",
         department: "Mobile 1",
+      },
+      {
+        type: "mobile",
+        number: "+91 7276691723",
+        department: "Mobile 2",
       },
       //   {
       //     type: "mobile2",
