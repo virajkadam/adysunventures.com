@@ -115,6 +115,12 @@ const companyInfo = {
         icon: "fab fa-google",
         isActive: true,
       },
+      {
+        name: "Google Maps",
+        url: "https://maps.app.goo.gl/jNeCJZb1iwNb9Fya7",
+        icon: "fas fa-map-marker-alt",
+        isActive: true,
+      },
     ],
   },
   meta: {
