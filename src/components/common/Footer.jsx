@@ -100,13 +100,37 @@ function Footer() {
               {location.status === "Coming Soon" ? (
                 <p className="m-0">Coming Soon</p>
               ) : (
-                <div className="m-0">
-                  {Object.keys(location.address)
-                    .filter(key => key.startsWith('line') && location.address[key])
-                    .map(key => (
-                      <div key={key}>{location.address[key]}</div>
-                    ))}
-                </div>
+                <>
+                  <div className="m-0">
+                    {Object.keys(location.address)
+                      .filter(key => key.startsWith('line') && location.address[key])
+                      .map(key => (
+                        <div key={key}>{location.address[key]}</div>
+                      ))}
+                  </div>
+                  {location.googleMapsUrl && (
+                    <a
+                      href={location.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        backgroundColor: "#ff5a2e",
+                        color: "#fff",
+                        fontWeight: 500,
+                        padding: "0.25rem 0.75rem",
+                        fontSize: "0.9rem",
+                        border: "none",
+                        borderRadius: "15px",
+                        transition: "all 0.2s ease",
+                        display: "inline-block",
+                        marginTop: "0.5rem",
+                        boxShadow: "none"
+                      }}
+                    >
+                      Visit Us on Google Maps
+                    </a>
+                  )}
+                </>
               )}
             </div>
           </div>
@@ -184,13 +208,37 @@ function Footer() {
           {location.status === "Coming Soon" ? (
             <p className="m-0">Coming Soon</p>
           ) : (
-            <div className="m-0">
-              {Object.keys(location.address)
-                .filter(key => key.startsWith('line') && location.address[key])
-                .map(key => (
-                  <div key={key}>{location.address[key]}</div>
-                ))}
-            </div>
+            <>
+              <div className="m-0">
+                {Object.keys(location.address)
+                  .filter(key => key.startsWith('line') && location.address[key])
+                  .map(key => (
+                    <div key={key}>{location.address[key]}</div>
+                  ))}
+              </div>
+              {location.googleMapsUrl && (
+                <a
+                  href={location.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: "#ff5a2e",
+                    color: "#fff",
+                    fontWeight: 500,
+                    padding: "0.25rem 0.75rem",
+                    fontSize: "0.9rem",
+                    border: "none",
+                    borderRadius: "15px",
+                    transition: "all 0.2s ease",
+                    display: "inline-block",
+                    marginTop: "0.5rem",
+                    boxShadow: "none"
+                  }}
+                >
+                  Visit Us on Google Maps
+                </a>
+              )}
+            </>
           )}
         </div>
       ))}
