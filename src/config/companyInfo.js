@@ -25,14 +25,14 @@ const companyInfo = {
     phones: [
       {
         type: "mobile",
-        number: "+91 7276451723",
+        number: "+91 9970627630",
         department: "HR Department",
       },
-      {
-        type: "mobile",
-        number: "+91 7276691723",
-        department: "Business Enquries",
-      },
+      // {
+      //   type: "mobile",
+      //   number: "+91 7276691723",
+      //   department: "Business Enquries",
+      // },
       //   {
       //     type: "mobile2",
       //     number: "+91 9420245878",
