@@ -55,7 +55,7 @@ const companyInfo = {
           lng: 73.8315561,
         },
         googleMapsUrl:
-          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.0673799286385!2d73.8315561!3d18.4892741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebd3a2f2a8b7%3A0x3a4a9f9c3f9f9f9f!2sWorkplex%2C%20S%20no%2047%2C%20Near%20Bhapkar%20Petrol%20Pump%2C%20Pune%2C%20Maharashtra%20411009!5e0!3m2!1sen!2sin!4v1619788888888!5m2!1sen!2sin",
+          "https://maps.app.goo.gl/ABiUMnGGjcG7sT6o6",
       },
       {
         id: "location-2",
