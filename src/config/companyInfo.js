@@ -117,7 +117,7 @@ const companyInfo = {
       },
       {
         name: "Google Maps",
-        url: "https://maps.app.goo.gl/jNeCJZb1iwNb9Fya7",
+        url: "https://maps.app.goo.gl/ABiUMnGGjcG7sT6o6",
         icon: "fas fa-map-marker-alt",
         isActive: true,
       },
