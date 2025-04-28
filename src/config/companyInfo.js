@@ -26,12 +26,12 @@ const companyInfo = {
       {
         type: "mobile",
         number: "+91 7276451723",
-        department: "Mobile 1",
+        department: "HR Department",
       },
       {
         type: "mobile",
         number: "+91 7276691723",
-        department: "Mobile 2",
+        department: "Business Enquries",
       },
       //   {
       //     type: "mobile2",
