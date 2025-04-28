@@ -31,7 +31,7 @@ const companyInfo = {
       // {
       //   type: "mobile",
       //   number: "+91 7276691723",
-      //   department: "Business Enquries",
+      //   department: "Business Enquries",
       // },
       //   {
       //     type: "mobile2",
@@ -43,15 +43,12 @@ const companyInfo = {
       {
         id: "location-1",
         type: "headquarters",
-        name: "Location 1",
+        name: "Pune Office (Head Office)",
         address: {
-          line1: "Workplex",
-          line2: "S no 47",
-          area: "Near Bhapkar Petrol Pump",
-          city: "Pune",
-          state: "Maharashtra",
-          pincode: "411009",
-          country: "India",
+          line1: "Adysun Ventures Pvt. Ltd.",
+          line2: "Workplex, S no 47,",
+          line3: "Near Bhapkar Petrol Pump,",
+          line4: "Pune, Maharashtra - 411009"
         },
         coordinates: {
           lat: 18.4892741,
@@ -65,13 +62,7 @@ const companyInfo = {
         type: "branch",
         name: "Location 2",
         address: {
-          line1: "Coming Soon",
-          line2: null,
-          area: null,
-          city: null,
-          state: null,
-          pincode: null,
-          country: null
+          line1: "Coming Soon"
         },
         status: "Coming Soon"
       },

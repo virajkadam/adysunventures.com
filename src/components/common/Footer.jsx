@@ -100,15 +100,13 @@ function Footer() {
               {location.status === "Coming Soon" ? (
                 <p className="m-0">Coming Soon</p>
               ) : (
-                <p className="m-0">
-                  {location.address.line1},
-                  {location.address.line2 && ` ${location.address.line2},`}
-                  {location.address.area && ` ${location.address.area},`}
-                  {location.address.street && ` ${location.address.street},`}
-                  {` ${location.address.city},`}
-                  {` ${location.address.state} -`}
-                  {` ${location.address.pincode}`}
-                </p>
+                <div className="m-0">
+                  {Object.keys(location.address)
+                    .filter(key => key.startsWith('line') && location.address[key])
+                    .map(key => (
+                      <div key={key}>{location.address[key]}</div>
+                    ))}
+                </div>
               )}
             </div>
           </div>
@@ -186,15 +184,13 @@ function Footer() {
           {location.status === "Coming Soon" ? (
             <p className="m-0">Coming Soon</p>
           ) : (
-            <p className="m-0">
-              {location.address.line1},
-              {location.address.line2 && ` ${location.address.line2},`}
-              {location.address.area && ` ${location.address.area},`}
-              {location.address.street && ` ${location.address.street},`}
-              {` ${location.address.city},`}
-              {` ${location.address.state} -`}
-              {` ${location.address.pincode}`}
-            </p>
+            <div className="m-0">
+              {Object.keys(location.address)
+                .filter(key => key.startsWith('line') && location.address[key])
+                .map(key => (
+                  <div key={key}>{location.address[key]}</div>
+                ))}
+            </div>
           )}
         </div>
       ))}
