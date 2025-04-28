@@ -127,7 +127,8 @@ function Footer() {
                         boxShadow: "none"
                       }}
                     >
-                      Visit Us on Google Maps
+                      <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i>
+                      Google Maps
                     </a>
                   )}
                 </>
@@ -235,7 +236,8 @@ function Footer() {
                     boxShadow: "none"
                   }}
                 >
-                  Visit Us on Google Maps
+                  <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i>
+                  Google Maps
                 </a>
               )}
             </>
