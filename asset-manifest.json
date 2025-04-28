@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aa21fb7f.css",
-    "main.js": "/static/js/main.813af826.js",
+    "main.js": "/static/js/main.03d8933b.js",
     "static/js/206.ec27e6c5.chunk.js": "/static/js/206.ec27e6c5.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -129,6 +129,6 @@
   },
   "entrypoints": [
     "static/css/main.aa21fb7f.css",
-    "static/js/main.813af826.js"
+    "static/js/main.03d8933b.js"
   ]
 }
