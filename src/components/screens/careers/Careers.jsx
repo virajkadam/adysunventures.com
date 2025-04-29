@@ -6,6 +6,7 @@ import bg2 from "../../../assets/images/bg/bg2.jpg";
 import bringRole from "../../../assets/images/bg/bringRole.png";
 import Header from "../../common/Header";
 import Footer from "../../common/Footer";
+import companyInfo from "../../../config/companyInfo";
 // import android from "../../../assets/images/brand-logos/android.png";
 function Careers() {
   useEffect(() => {
@@ -13,6 +14,16 @@ function Careers() {
     const separatorRight = document.querySelector(".separator-right");
     separatorRight.style.setProperty("color", "#ff5a2e", "important");
   }, []);
+
+  // Get primary email address
+  const primaryEmail = companyInfo.contact.emails.find(email => email.type === "primary")?.address || "";
+  
+  // Get HR phone number
+  const hrPhone = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.number || "";
+  
+  // Get headquarters address
+  const headquarters = companyInfo.contact.locations.find(location => location.type === "headquarters");
+  
   return (
     <div>
       <Header />
@@ -42,7 +53,7 @@ function Careers() {
                     />
                   </div>
                   <p className="mt-3 fs-5 fs-md-4 fs-lg-3 ">
-                    At Adysun Ventures, we're passionate about innovation and
+                    At {companyInfo.name.short}, we're passionate about innovation and
                     shaping the future. Be part of a team that's dedicated to
                     creating solutions that make a difference.
                   </p>
@@ -293,7 +304,7 @@ function Careers() {
                     </span>
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">Phone: </h6>
-                      <p>+91 7776827177</p>
+                      <p>{hrPhone}</p>
                     </div>
                   </div>
                   <div className="item bg-white">
@@ -303,9 +314,10 @@ function Careers() {
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">Address: </h6>
                       <p className="m-0">
-                        Office no 6 , 2nd Floor Manogat Appt , Swarget,{" "}
+                        {headquarters?.address.line1}
                       </p>
-                      <p className="m-0">Pune , Maharashtra-411037</p>
+                      <p className="m-0">{headquarters?.address.line2} {headquarters?.address.line3}</p>
+                      <p className="m-0">{headquarters?.address.line4}</p>
                     </div>
                   </div>
                   <div className="item bg-white">
@@ -314,7 +326,7 @@ function Careers() {
                     </span>
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">Email: </h6>
-                      <p>info@adysunventures.com</p>
+                      <p>{primaryEmail}</p>
                     </div>
                   </div>
                 </div>
