@@ -681,7 +681,7 @@ function StockExchange() {
                   Automate trade from Master account to other child accounts
                   with cross broker operation.
                 </p>
-                <Link to="https://DEMO.com" target="_blank" className="">
+                <Link to="#" target="_blank" className="">
                   LEARN MORE &gt;
                 </Link>
               </div>
@@ -701,7 +701,7 @@ function StockExchange() {
                   Place trades in multiple custom quantities in child accounts.
                 </p>
                 <div className="pt-md-4 pt-lg-4">
-                  <Link to="https://DEMO.com" target="_blank">
+                  <Link to="#" target="_blank">
                     LEARN MORE &gt;
                   </Link>
                 </div>
@@ -723,7 +723,7 @@ function StockExchange() {
                 </p>
                 <div className="pt-lg-4 ">
                   <Link
-                    to="https://DEMO.com"
+                    to="#"
                     target="_blank"
                     className=""
                   >
@@ -749,7 +749,7 @@ function StockExchange() {
                 </p>
                 <div className=" ">
                   <Link
-                    to="https://DEMO.com"
+                    to="#"
                     target="_blank"
                     className=""
                   >
