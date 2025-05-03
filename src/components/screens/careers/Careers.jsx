@@ -18,6 +18,13 @@ function Careers() {
   // Get primary email address
   const primaryEmail = companyInfo.contact.emails.find(email => email.type === "primary")?.address || "";
   
+  // Get HR email address
+  const hrEmail = companyInfo.contact.emails.find(email => email.type === "careers")?.address || "";
+  
+  // Get email departments
+  const primaryEmailDept = companyInfo.contact.emails.find(email => email.type === "primary")?.department || "";
+  const hrEmailDept = companyInfo.contact.emails.find(email => email.type === "careers")?.department || "";
+  
   // Get HR phone number
   const hrPhone = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.number || "";
   
@@ -378,8 +385,12 @@ function Careers() {
                       <i className="fas fa-envelope text-primary" />
                     </span>
                     <div className="cont">
-                      <h6 className="mb-1 font-weight-600">Email: </h6>
-                      <p>{primaryEmail}</p>
+                      <h6 className="mb-1 font-weight-600">Email Contacts</h6>
+                      <p className="m-0">{primaryEmail}</p>
+                      <p className="text-muted small">{primaryEmailDept}</p>
+                      
+                      <p className="m-0 mt-3">{hrEmail}</p>
+                      <p className="text-muted small">{hrEmailDept}</p>
                     </div>
                   </div>
                 </div>
