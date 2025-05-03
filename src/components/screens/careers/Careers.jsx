@@ -27,6 +27,9 @@ function Careers() {
   // Get headquarters address
   const headquarters = companyInfo.contact.locations.find(location => location.type === "headquarters");
   
+  // Get second location (Coming Soon)
+  const locationTwo = companyInfo.contact.locations.find(location => location.id === "location-2");
+  
   // Get Google Maps URL
   const googleMapsUrl = headquarters?.googleMapsUrl || "";
   
@@ -201,8 +204,8 @@ function Careers() {
         </div>
         <section className="p-lg-8 p-4 text-center">
           <div className="row mt-n1-9 justify-content-center">
-            <div className="col-md-6 col-lg-3 mt-1-9">
-              <div className="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="col-md-6 col-lg-3 mt-1-9">
+              <div class="feature-box-05 py-2-3 px-1-9 bg-white h-100 d-flex flex-column align-items-center justify-content-center">
                 <div className="mb-3">
                   <div className="features-icon">
                     <i className="fa-solid fa-ship"></i>
@@ -325,13 +328,49 @@ function Careers() {
                       <p className="m-0">{headquarters?.address.line3}</p>
                       <p className="mb-3">{headquarters?.address.line4}</p>
                       <div className="d-flex gap-2">
-                        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
-                          <i className="fas fa-map-marker-alt me-1"></i> Google Maps
+                        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" 
+                          style={{
+                            backgroundColor: "#ff5a2e",
+                            color: "#fff",
+                            fontWeight: 500,
+                            padding: "0.25rem 0.75rem",
+                            fontSize: "0.9rem",
+                            border: "none",
+                            borderRadius: "15px",
+                            transition: "all 0.2s ease",
+                            display: "inline-block",
+                            marginTop: "0.5rem",
+                            boxShadow: "none"
+                          }}>
+                          <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i> Google Maps
                         </a>
-                        <a href="https://www.google.com/search?q=adysun+ventures" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
-                          <i className="fab fa-google me-1"></i> Google Search
+                        <a href="https://g.co/kgs/C5Fe6uz" target="_blank" rel="noopener noreferrer" 
+                          style={{
+                            backgroundColor: "#ff5a2e",
+                            color: "#fff",
+                            fontWeight: 500,
+                            padding: "0.25rem 0.75rem",
+                            fontSize: "0.9rem",
+                            border: "none",
+                            borderRadius: "15px",
+                            transition: "all 0.2s ease",
+                            display: "inline-block",
+                            marginTop: "0.5rem",
+                            boxShadow: "none",
+                            marginLeft: "10px"
+                          }}>
+                          <i className="fab fa-google" style={{marginRight: '6px'}}></i> Google Search
                         </a>
                       </div>
+                    </div>
+                  </div>
+                  <div className="item bg-white">
+                    <span className="icon">
+                      <i className="fas fa-map-marker-alt text-primary" />
+                    </span>
+                    <div className="cont">
+                      <h6 className="mb-1 font-weight-600">{locationTwo?.name}</h6>
+                      <p className="m-0">{locationTwo?.status}</p>
                     </div>
                   </div>
                   <div className="item bg-white">
