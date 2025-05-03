@@ -27,6 +27,9 @@ function Careers() {
   // Get headquarters address
   const headquarters = companyInfo.contact.locations.find(location => location.type === "headquarters");
   
+  // Get Google Maps URL
+  const googleMapsUrl = headquarters?.googleMapsUrl || "";
+  
   return (
     <div>
       <Header />
@@ -316,12 +319,19 @@ function Careers() {
                       <i className="fas fa-map-marker-alt text-primary" />
                     </span>
                     <div className="cont">
-                      <h6 className="mb-1 font-weight-600">Address: </h6>
-                      <p className="m-0">
-                        {headquarters?.address.line1}
-                      </p>
-                      <p className="m-0">{headquarters?.address.line2} {headquarters?.address.line3}</p>
-                      <p className="m-0">{headquarters?.address.line4}</p>
+                      <h6 className="mb-1 font-weight-600">{headquarters?.name}</h6>
+                      <p className="m-0">{headquarters?.address.line1}</p>
+                      <p className="m-0">{headquarters?.address.line2}</p>
+                      <p className="m-0">{headquarters?.address.line3}</p>
+                      <p className="mb-3">{headquarters?.address.line4}</p>
+                      <div className="d-flex gap-2">
+                        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
+                          <i className="fas fa-map-marker-alt me-1"></i> Google Maps
+                        </a>
+                        <a href="https://www.google.com/search?q=adysun+ventures" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
+                          <i className="fab fa-google me-1"></i> Google Search
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="item bg-white">
