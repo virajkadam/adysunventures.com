@@ -1075,7 +1075,7 @@ function HomePage() {
         </section>
 
         {/* Internal Links for SEO */}
-        <InternalLinks className="bg-light" currentPath="/" />
+        {/* <InternalLinks className="bg-light" currentPath="/" /> */}
       </div>
       <Footer />
     </div>
