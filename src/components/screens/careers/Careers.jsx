@@ -21,6 +21,9 @@ function Careers() {
   // Get HR phone number
   const hrPhone = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.number || "";
   
+  // Get HR department name
+  const hrDepartment = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.department || "";
+  
   // Get headquarters address
   const headquarters = companyInfo.contact.locations.find(location => location.type === "headquarters");
   
@@ -305,6 +308,7 @@ function Careers() {
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">Phone: </h6>
                       <p>{hrPhone}</p>
+                      <p className="text-muted small">{hrDepartment}</p>
                     </div>
                   </div>
                   <div className="item bg-white">

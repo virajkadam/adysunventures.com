@@ -189,7 +189,7 @@ function Footer() {
             <i className="fas fa-phone text-primary" />
           </span>
           <div className="cont">
-            <div className="mb-3 font-weight-600 fw-bold">Phone Numbers</div>
+            <div className="mb-3 font-weight-600 fw-bold">Phone:</div>
             {companyInfo.contact.phones.map((phone, index) => (
               <div key={phone.type} className={index !== 0 ? 'mt-3' : ''}>
                 <p className="m-0">{phone.number}</p>
