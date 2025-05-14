@@ -26,7 +26,9 @@ const companyInfo = {
       {
         type: "mobile",
         number: "+91 9579537523",
-        department: "HR Department",
+        // department: "HR Department",
+        workingHours: "Mon-Sat 10:00 AM - 6:00 PM",
+        notice: "Closed on Sundays & National Holidays"
       },
       // {
       //   type: "mobile",

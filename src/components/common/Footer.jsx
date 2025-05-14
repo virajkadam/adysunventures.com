@@ -194,6 +194,18 @@ function Footer() {
               <div key={phone.type} className={index !== 0 ? 'mt-3' : ''}>
                 <p className="m-0">{phone.number}</p>
                 <small className="text-muted">{phone.department}</small>
+                {phone.workingHours && (
+                  <small className="d-block text-muted">
+                    <i className="far fa-clock me-1"></i>
+                    {phone.workingHours}
+                  </small>
+                )}
+                {phone.notice && (
+                  <small className="d-block text-muted">
+                    <i className="fas fa-info-circle me-1"></i>
+                    {phone.notice}
+                  </small>
+                )}
               </div>
             ))}
           </div>
