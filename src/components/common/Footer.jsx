@@ -293,7 +293,7 @@ function Footer() {
                         display: "inline-block",
                         marginTop: "0.5rem",
                         boxShadow: "none",
-                        marginLeft: "10px"
+                        // marginLeft: "10px"
                       }}
                     >
                       <i className="fab fa-google" style={{marginRight: '6px'}}></i>
