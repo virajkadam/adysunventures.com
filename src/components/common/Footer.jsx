@@ -586,7 +586,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 mt-1-9">
+            <div className="col-lg-3 col-md-6 mt-1-9">
               <h3 className="footer-title-style2 text-primary">
                 <i className="fas fa-map-marked-alt me-2"></i>
                 Our Locations
@@ -594,7 +594,7 @@ function Footer() {
               {renderAllLocations()}
             </div>
 
-            <div className="col-lg-2 col-md-6 mt-1-9">
+            <div className="col-lg-3 col-md-6 mt-1-9 pe-0">
               <h3 className="footer-title-style2 text-primary">
                 <i className="fas fa-address-book me-2"></i>
                 Contact Us
@@ -640,8 +640,22 @@ function Footer() {
                         <i className="fas fa-mobile-alt"></i>
                         {phone.number}
                       </a>
+                      {phone.workingHours && (
+                  <small className="d-block text-white">
+                    <i className="far fa-clock me-1"></i>
+                    {phone.workingHours}
+                  </small>
+                )}
+                {phone.notice && (
+                  <small className="d-block text-white text-nowrap">
+                    <i className="fas fa-info-circle me-1"></i>
+                    {phone.notice}
+                  </small>
+                )}
                     </div>
+                    
                   ))}
+                  
                 </div>
               </div>
             </div>
