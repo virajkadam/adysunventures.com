@@ -389,319 +389,906 @@ function Footer() {
       <div className="section-clients bg-light py-5">
         <div className="container">
           <div className="owl-carousel owl-theme clients" id="clients">
+            {/* Define the style that will be applied to all logo images */}
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="android"
                 src={require("../../assets/images/brand-logos/android.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="angularjs"
                 src={require("../../assets/images/brand-logos/angularjs.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="aws"
                 src={require("../../assets/images/brand-logos/aws.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="azure"
                 src={require("../../assets/images/brand-logos/azure.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="bigdata"
                 src={require("../../assets/images/brand-logos/bigdata.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="blockchain"
                 src={require("../../assets/images/brand-logos/blockchain.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="cpp"
                 src={require("../../assets/images/brand-logos/c++.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="cHash"
+                alt="chash"
                 src={require("../../assets/images/brand-logos/chash.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="coigniter"
+                alt="coeigniter"
                 src={require("../../assets/images/brand-logos/coeigniter.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="drupal"
                 src={require("../../assets/images/brand-logos/drupal.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="electronjs"
                 src={require("../../assets/images/brand-logos/electronjs.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="firebase"
                 src={require("../../assets/images/brand-logos/firebase.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="flutter"
                 src={require("../../assets/images/brand-logos/flutter.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="googleCloud"
+                alt="googlecloud"
                 src={require("../../assets/images/brand-logos/googlecloud.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="hadoop"
                 src={require("../../assets/images/brand-logos/hadoop.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="hybrid"
+                alt="hybrid-app"
                 src={require("../../assets/images/brand-logos/hybrid-app.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="iCloud"
+                alt="icloud"
                 src={require("../../assets/images/brand-logos/icloud.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="ionic"
                 src={require("../../assets/images/brand-logos/ionic.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="IOS"
                 src={require("../../assets/images/brand-logos/IOS.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
+            {/* Additional images that need to be added */}
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="java"
                 src={require("../../assets/images/brand-logos/java.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="javascript"
                 src={require("../../assets/images/brand-logos/javascript.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="joomla"
                 src={require("../../assets/images/brand-logos/joomla.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="laravel"
                 src={require("../../assets/images/brand-logos/laravel.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="machineLearning"
+                alt="machinelearning"
                 src={require("../../assets/images/brand-logos/machinelearning.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="magento"
                 src={require("../../assets/images/brand-logos/magento.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="native"
+                alt="native-app"
                 src={require("../../assets/images/brand-logos/native-app.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="nodejs"
                 src={require("../../assets/images/brand-logos/nodejs.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="objectivec"
+                alt="objective-c"
                 src={require("../../assets/images/brand-logos/objective-c.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="opencart"
                 src={require("../../assets/images/brand-logos/opencart.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="phoneGap"
+                alt="phone-gap"
                 src={require("../../assets/images/brand-logos/phone-gap.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="php"
                 src={require("../../assets/images/brand-logos/php.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="powerbi"
                 src={require("../../assets/images/brand-logos/powerbi.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="pwa"
                 src={require("../../assets/images/brand-logos/pwa.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="python"
                 src={require("../../assets/images/brand-logos/python.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="reactnative"
+                alt="react-native"
                 src={require("../../assets/images/brand-logos/react-native.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="reactjs"
                 src={require("../../assets/images/brand-logos/reactjs.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="ruby"
                 src={require("../../assets/images/brand-logos/ruby.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="spagobi"
                 src={require("../../assets/images/brand-logos/spagobi.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="swift"
                 src={require("../../assets/images/brand-logos/swift.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="symfony"
                 src={require("../../assets/images/brand-logos/symfony.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="tensorflow"
                 src={require("../../assets/images/brand-logos/tensorflow.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="vuejs"
                 src={require("../../assets/images/brand-logos/vuejs.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="wordpress"
                 src={require("../../assets/images/brand-logos/wordpress.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="wpf"
                 src={require("../../assets/images/brand-logos/wpf.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
             <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
                 alt="xamarin"
                 src={require("../../assets/images/brand-logos/xamarin.png")}
-                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+                style={{ 
+                  maxHeight: "70px", 
+                  maxWidth: "120px", 
+                  objectFit: "contain",
+                  filter: "grayscale(100%)",
+                  opacity: "0.5",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.opacity = "0.9";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.opacity = "0.5";
+                }}
               />
             </div>
           </div>
