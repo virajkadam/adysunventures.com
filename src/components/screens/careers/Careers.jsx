@@ -26,7 +26,7 @@ function Careers() {
   const hrEmailDept = companyInfo.contact.emails.find(email => email.type === "careers")?.department || "";
   
   // Get HR phone number
-  const hrPhone = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.number || "";
+  const hrPhone = companyInfo.contact.phones.find(phone => phone.type === "mobile")?.number || "";
   
   // Get HR department name
   const hrDepartment = companyInfo.contact.phones.find(phone => phone.department === "HR Department")?.department || "";
