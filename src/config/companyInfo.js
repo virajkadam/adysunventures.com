@@ -25,7 +25,7 @@ const companyInfo = {
     phones: [
       {
         type: "mobile",
-        number: "+91 9970627630",
+        number: "+91 9579537523",
         department: "HR Department",
       },
       // {
