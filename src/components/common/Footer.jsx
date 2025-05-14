@@ -151,7 +151,7 @@ function Footer() {
                         marginLeft: "10px"
                       }}
                     >
-                      <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i>
+                      <i className="fab fa-google" style={{marginRight: '6px'}}></i>
                       Google Search
                     </a>
             
@@ -284,7 +284,7 @@ function Footer() {
                         marginLeft: "10px"
                       }}
                     >
-                      <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i>
+                      <i className="fab fa-google" style={{marginRight: '6px'}}></i>
                       Google Search
                     </a>
 
