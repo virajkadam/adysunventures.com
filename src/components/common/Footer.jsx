@@ -386,43 +386,322 @@ function Footer() {
       </section>
 
       {/* CLIENTS */}
-      <div className="section-clients bg-light">
+      <div className="section-clients bg-light py-5">
         <div className="container">
           <div className="owl-carousel owl-theme clients" id="clients">
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-01"
-                src={require("../../assets/images/partners/client-01.png")}
+                alt="android"
+                src={require("../../assets/images/brand-logos/android.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-02"
-                src={require("../../assets/images/partners/client-02.png")}
+                alt="angularjs"
+                src={require("../../assets/images/brand-logos/angularjs.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-03"
-                src={require("../../assets/images/partners/client-03.png")}
+                alt="aws"
+                src={require("../../assets/images/brand-logos/aws.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-04"
-                src={require("../../assets/images/partners/client-04.png")}
+                alt="azure"
+                src={require("../../assets/images/brand-logos/azure.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-05"
-                src={require("../../assets/images/partners/client-05.png")}
+                alt="bigdata"
+                src={require("../../assets/images/brand-logos/bigdata.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
-            <div className="item">
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
               <img
-                alt="client-06"
-                src={require("../../assets/images/partners/client-06.png")}
+                alt="blockchain"
+                src={require("../../assets/images/brand-logos/blockchain.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="cpp"
+                src={require("../../assets/images/brand-logos/c++.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="cHash"
+                src={require("../../assets/images/brand-logos/chash.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="coigniter"
+                src={require("../../assets/images/brand-logos/coeigniter.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="drupal"
+                src={require("../../assets/images/brand-logos/drupal.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="electronjs"
+                src={require("../../assets/images/brand-logos/electronjs.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="firebase"
+                src={require("../../assets/images/brand-logos/firebase.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="flutter"
+                src={require("../../assets/images/brand-logos/flutter.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="googleCloud"
+                src={require("../../assets/images/brand-logos/googlecloud.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="hadoop"
+                src={require("../../assets/images/brand-logos/hadoop.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="hybrid"
+                src={require("../../assets/images/brand-logos/hybrid-app.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="iCloud"
+                src={require("../../assets/images/brand-logos/icloud.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="ionic"
+                src={require("../../assets/images/brand-logos/ionic.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="IOS"
+                src={require("../../assets/images/brand-logos/IOS.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="java"
+                src={require("../../assets/images/brand-logos/java.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="javascript"
+                src={require("../../assets/images/brand-logos/javascript.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="joomla"
+                src={require("../../assets/images/brand-logos/joomla.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="laravel"
+                src={require("../../assets/images/brand-logos/laravel.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="machineLearning"
+                src={require("../../assets/images/brand-logos/machinelearning.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="magento"
+                src={require("../../assets/images/brand-logos/magento.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="native"
+                src={require("../../assets/images/brand-logos/native-app.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="nodejs"
+                src={require("../../assets/images/brand-logos/nodejs.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="objectivec"
+                src={require("../../assets/images/brand-logos/objective-c.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="opencart"
+                src={require("../../assets/images/brand-logos/opencart.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="phoneGap"
+                src={require("../../assets/images/brand-logos/phone-gap.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="php"
+                src={require("../../assets/images/brand-logos/php.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="powerbi"
+                src={require("../../assets/images/brand-logos/powerbi.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="pwa"
+                src={require("../../assets/images/brand-logos/pwa.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="python"
+                src={require("../../assets/images/brand-logos/python.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="reactnative"
+                src={require("../../assets/images/brand-logos/react-native.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="reactjs"
+                src={require("../../assets/images/brand-logos/reactjs.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="ruby"
+                src={require("../../assets/images/brand-logos/ruby.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="spagobi"
+                src={require("../../assets/images/brand-logos/spagobi.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="swift"
+                src={require("../../assets/images/brand-logos/swift.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="symfony"
+                src={require("../../assets/images/brand-logos/symfony.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="tensorflow"
+                src={require("../../assets/images/brand-logos/tensorflow.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="vuejs"
+                src={require("../../assets/images/brand-logos/vuejs.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="wordpress"
+                src={require("../../assets/images/brand-logos/wordpress.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="wpf"
+                src={require("../../assets/images/brand-logos/wpf.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
+              />
+            </div>
+            <div className="item d-flex justify-content-center align-items-center" style={{ height: "100px" }}>
+              <img
+                alt="xamarin"
+                src={require("../../assets/images/brand-logos/xamarin.png")}
+                style={{ maxHeight: "70px", maxWidth: "120px", objectFit: "contain" }}
               />
             </div>
           </div>
