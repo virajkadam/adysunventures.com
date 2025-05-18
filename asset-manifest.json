@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aa21fb7f.css",
-    "main.js": "/static/js/main.043c8439.js",
+    "main.js": "/static/js/main.9d96c56e.js",
     "static/js/206.ec27e6c5.chunk.js": "/static/js/206.ec27e6c5.chunk.js",
     "static/media/bringRole.png": "/static/media/bringRole.b05f1def7cd590052f98.png",
     "static/media/projectInMind.jpg": "/static/media/projectInMind.0739a177fd555543a150.jpg",
@@ -56,6 +56,7 @@
     "static/media/list-2.jpg": "/static/media/list-2.36c13640498084abfd3f.jpg",
     "static/media/home-section-bg-800w.jpg": "/static/media/home-section-bg-800w.90c55071ddf6c152ce1b.jpg",
     "static/media/service-6b.jpg": "/static/media/service-6b.10a8d35136d63419d1fa.jpg",
+    "static/media/2025-04-23.png": "/static/media/2025-04-23.b7620e1ccfea3e3ce529.png",
     "static/media/home-section-bg-800w.webp": "/static/media/home-section-bg-800w.085184ce0c3f3404d843.webp",
     "static/media/blog-2.jpg": "/static/media/blog-2.cb136d278b51960dd15a.jpg",
     "static/media/feature-02.jpg": "/static/media/feature-02.9cbd088ae695120387e0.jpg",
@@ -76,12 +77,17 @@
     "static/media/s-1.jpg": "/static/media/s-1.b6a24bdce8d5d426624c.jpg",
     "static/media/feature-04.jpg": "/static/media/feature-04.ad0de1da9c93cbc23960.jpg",
     "static/media/home-section-bg.jpg": "/static/media/home-section-bg.7ff11b2af5b2e2afacf2.jpg",
+    "static/media/2025-05-18 (1).jpg": "/static/media/2025-05-18 (1).94fdd92d0f199730e606.jpg",
     "static/media/s-2.jpg": "/static/media/s-2.67b61dc53ac214fed9c9.jpg",
     "static/media/blog-7.jpg": "/static/media/blog-7.7765bb31280fae578164.jpg",
     "static/media/teammember-04.jpg": "/static/media/teammember-04.c9663d0cb6dbd33efbcb.jpg",
+    "static/media/2025-05-13.jpg": "/static/media/2025-05-13.5bc9fb0b20c9d8f8ef38.jpg",
+    "static/media/2025-05-13 (1).jpg": "/static/media/2025-05-13 (1).ecb976cf66950508c2cf.jpg",
     "static/media/content-03.jpg": "/static/media/content-03.7342b9d1a71a6c7eeb2a.jpg",
+    "static/media/2025-05-18.jpg": "/static/media/2025-05-18.1acd9b287d475a1d91cf.jpg",
     "static/media/teammember-02.jpg": "/static/media/teammember-02.1b35d75cc8c8330122f7.jpg",
     "static/media/blog-9.jpg": "/static/media/blog-9.929690c7fa8a30ae35de.jpg",
+    "static/media/2025-04-23 (1).jpg": "/static/media/2025-04-23 (1).bde6682b5547ba223a2c.jpg",
     "static/media/transportation.png": "/static/media/transportation.34f00fe986f28f545c4b.png",
     "static/media/s-5.jpg": "/static/media/s-5.9894150a3c584cab7067.jpg",
     "static/media/logo.png": "/static/media/logo.34ee44b2ca03d2da8c99.png",
@@ -93,14 +99,18 @@
     "static/media/blog-02.jpg": "/static/media/blog-02.e36a9105ef4aa3c1afb6.jpg",
     "static/media/teammember-03.jpg": "/static/media/teammember-03.227ebf258ddc0e791804.jpg",
     "static/media/content-01.jpg": "/static/media/content-01.d363728612c66b2a1cbd.jpg",
+    "static/media/2025-04-23.jpg": "/static/media/2025-04-23.62ddb54c1a776506b34c.jpg",
     "static/media/teammember-01.jpg": "/static/media/teammember-01.c983de44c6329c041d01.jpg",
     "static/media/bg4.jpg": "/static/media/bg4.25f98a963aad1ab686db.jpg",
+    "static/media/2025-04-23 (4).jpg": "/static/media/2025-04-23 (4).708f491f33fc960f8bc8.jpg",
+    "static/media/2025-04-23 (3).jpg": "/static/media/2025-04-23 (3).61bb1d938de5ae6f02b6.jpg",
     "static/media/s-4.jpg": "/static/media/s-4.af7db47fa323d691b3d4.jpg",
     "static/media/content-02.jpg": "/static/media/content-02.c1cd7c3a870a66047dc2.jpg",
     "static/media/home-section-bg-480w.jpg": "/static/media/home-section-bg-480w.aecffcc6fe887b1504db.jpg",
     "static/media/home-section-bg-480w.webp": "/static/media/home-section-bg-480w.831333e9114bab809e67.webp",
     "static/media/eCommerce.png": "/static/media/eCommerce.c10f28a6047748214cf1.png",
     "static/media/s-6.jpg": "/static/media/s-6.b79b3732d4675eb93947.jpg",
+    "static/media/2025-04-23 (2).jpg": "/static/media/2025-04-23 (2).067b79677cb3915c4b61.jpg",
     "static/media/t-4.jpg": "/static/media/t-4.b4a8d2b0517010105368.jpg",
     "static/media/tigera.png": "/static/media/tigera.ff5ed29c4c08c3dc0828.png",
     "static/media/clientBanner.jpg": "/static/media/clientBanner.8263b20a9013d74439db.jpg",
@@ -129,6 +139,6 @@
   },
   "entrypoints": [
     "static/css/main.aa21fb7f.css",
-    "static/js/main.043c8439.js"
+    "static/js/main.9d96c56e.js"
   ]
 }
