@@ -46,6 +46,10 @@ const images = [
   },
 ];
 
+// Optional: Set these to control image height or width dynamically. Leave as null to use default behavior.
+const GALLERY_IMG_HEIGHT = null; // e.g., '250px' or null
+const GALLERY_IMG_WIDTH = null;  // e.g., '350px' or null
+
 const Gallery = () => {
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -129,35 +133,41 @@ const Gallery = () => {
       <div className="py-5">
         {/* Section Heading */}
         <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
-              Gallery
-            </h2>
-            <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
-            <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
-          </div>
+        <div className="text-center mb-5">
+          <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
+            Gallery
+          </h2>
+          <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
+          <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
+        </div>
           {/* Masonry Grid */}
           <div className="gallery-masonry">
-            {images.map((img, idx) => (
+              {images.map((img, idx) => (
               <div className="gallery-masonry-item" key={idx}>
                 {!imgLoaded[idx] && (
                   <div className="gallery-img-placeholder" />
                 )}
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="gallery-img-masonry"
-                  style={{ display: imgLoaded[idx] ? 'block' : 'none' }}
-                  onClick={() => handleImageClick(idx)}
-                  tabIndex={0}
-                  aria-label={`Open image: ${img.alt}`}
-                  onKeyDown={e => (e.key === "Enter" || e.key === " ") && handleImageClick(idx)}
-                  onLoad={() => handleImgLoad(idx)}
-                />
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="gallery-img-masonry"
+                    style={{
+                      display: imgLoaded[idx] ? 'block' : 'none',
+                      height: GALLERY_IMG_HEIGHT ? GALLERY_IMG_HEIGHT : 'auto',
+                      width: GALLERY_IMG_WIDTH ? GALLERY_IMG_WIDTH : '100%',
+                      maxWidth: GALLERY_IMG_WIDTH ? GALLERY_IMG_WIDTH : '100%',
+                      objectFit: (GALLERY_IMG_HEIGHT || GALLERY_IMG_WIDTH) ? 'cover' : 'unset'
+                    }}
+                    onClick={() => handleImageClick(idx)}
+                    tabIndex={0}
+                    aria-label={`Open image: ${img.alt}`}
+                    onKeyDown={e => (e.key === "Enter" || e.key === " ") && handleImageClick(idx)}
+                    onLoad={() => handleImgLoad(idx)}
+                  />
                 <div className="gallery-caption">{img.alt}</div>
-              </div>
-            ))}
+                </div>
+              ))}
           </div>
         </div>
         {/* Modal for full image view */}
