@@ -5,28 +5,44 @@ import Footer from "../common/Footer";
 // Test images from bg and slider folders
 const images = [
   {
-    src: require("../../assets/images/bg/bg12.jpg"),
-    alt: "Office workspace 1"
+    src: require("../../assets/images/gallery/2025-04-23 (1).jpg"),
+    alt: "Adysun Ventures office workspace 1"
   },
   {
-    src: require("../../assets/images/bg/about-02.jpg"),
-    alt: "Team meeting room"
+    src: require("../../assets/images/gallery/2025-04-23 (2).jpg"),
+    alt: "Adysun Ventures office workspace 2"
   },
   {
-    src: require("../../assets/images/slider/slide1.jpg"),
-    alt: "Open office area"
+    src: require("../../assets/images/gallery/2025-04-23 (3).jpg"),
+    alt: "Adysun Ventures team area"
   },
   {
-    src: require("../../assets/images/slider/slide3.jpg"),
-    alt: "Breakout zone"
+    src: require("../../assets/images/gallery/2025-04-23 (4).jpg"),
+    alt: "Adysun Ventures meeting room"
   },
   {
-    src: require("../../assets/images/slider/slide7.jpg"),
-    alt: "Company event"
+    src: require("../../assets/images/gallery/2025-04-23.jpg"),
+    alt: "Adysun Ventures workspace overview"
   },
   {
-    src: require("../../assets/images/slider/slide9.jpg"),
-    alt: "Reception area"
+    src: require("../../assets/images/gallery/2025-04-23.png"),
+    alt: "Adysun Ventures branding slide"
+  },
+  {
+    src: require("../../assets/images/gallery/2025-05-13 (1).jpg"),
+    alt: "Adysun Ventures office sign 1"
+  },
+  {
+    src: require("../../assets/images/gallery/2025-05-13.jpg"),
+    alt: "Adysun Ventures office sign 2"
+  },
+  {
+    src: require("../../assets/images/gallery/2025-05-18 (1).jpg"),
+    alt: "Adysun Ventures workspace with window"
+  },
+  {
+    src: require("../../assets/images/gallery/2025-05-18.jpg"),
+    alt: "Adysun Ventures workspace with computers"
   },
 ];
 
