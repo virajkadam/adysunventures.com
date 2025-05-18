@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import bgImage from "../../assets/images/bg/bg12.webp"; // Import the background image
 import useCounter from "../../hooks/useCounter";
 import companyInfo from "../../config/companyInfo";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -566,6 +567,18 @@ function Footer() {
                         Careers
                       </Link>
                     </li>
+                    <li>
+                    <NavLink
+                      to="/gallery"
+                      className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
+                    >
+                      Gallery
+                    </NavLink>
+                  </li>
                   </ul>
                 </div>
                 {/* <div className="col-md-6 pe-md-0">

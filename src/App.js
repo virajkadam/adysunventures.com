@@ -22,6 +22,7 @@ import Transportation from "./components/screens/industries/transportation/Trans
 import NotFound from "./components/pages/NotFound";
 import { HelmetProvider } from 'react-helmet-async';
 import Industries from "./components/screens/industries/Industries";
+import Gallery from "./components/pages/Gallery";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/industries/stock-exchange" element={<StockExchange />} />
           <Route path="/industries/ecommerce" element={<ECommerce />} />
           <Route path="/industries/transportation" element={<Transportation />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -192,6 +192,18 @@ const Navbar = React.memo(() => {
                       Technologies
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      to="/gallery"
+                      className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
+                    >
+                      Gallery
+                    </NavLink>
+                  </li>
                   <li className="">
                     <span className="" />
                     <NavLink
