@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 
@@ -61,6 +61,38 @@ const Gallery = () => {
   };
 
   const handleModalClose = () => setModalOpen(false);
+
+  const handlePrevImage = () => {
+    setSelectedIdx(prev => (prev > 0 ? prev - 1 : images.length - 1));
+  };
+
+  const handleNextImage = () => {
+    setSelectedIdx(prev => (prev < images.length - 1 ? prev + 1 : 0));
+  };
+
+  // Add keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!modalOpen) return;
+      
+      switch(e.key) {
+        case 'ArrowLeft':
+          handlePrevImage();
+          break;
+        case 'ArrowRight':
+          handleNextImage();
+          break;
+        case 'Escape':
+          handleModalClose();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [modalOpen]);
 
   const handleImgLoad = idx => {
     setImgLoaded(prev => {
@@ -175,28 +207,113 @@ const Gallery = () => {
           <div
             className="modal fade show"
             tabIndex={-1}
-            style={{ display: "block", background: "rgba(0,0,0,0.7)" }}
+            style={{ display: "block", background: "rgba(0,0,0,0.85)" }}
             role="dialog"
             aria-modal="true"
             onClick={handleModalClose}
           >
-            <div className="modal-dialog modal-dialog-centered" role="document" onClick={e => e.stopPropagation()}>
+            <div 
+              className="modal-dialog modal-dialog-centered modal-xl" 
+              role="document" 
+              onClick={e => e.stopPropagation()}
+              style={{ maxWidth: "95vw" }}
+            >
               <div className="modal-content bg-transparent border-0">
+                {/* Close Button */}
                 <button
                   type="button"
-                  className="btn-close btn-close-white ms-auto me-2 mt-2"
+                  className="btn-close btn-close-white"
                   aria-label="Close"
                   onClick={handleModalClose}
-                  style={{ position: "absolute", right: 0, top: 0, zIndex: 2 }}
+                  style={{ position: "absolute", right: 15, top: 15, zIndex: 2 }}
                 ></button>
-                <img
-                  src={images[selectedIdx].src}
-                  alt={images[selectedIdx].alt}
-                  className="img-fluid rounded shadow-lg"
-                  style={{ maxHeight: "80vh", maxWidth: "90vw", display: "block", margin: "0 auto" }}
-                />
-                <div className="text-center text-white mt-3" style={{ fontSize: 18, fontWeight: 500 }}>
-                  {images[selectedIdx].alt}
+                {/* Company Logo */}
+                <div className="position-absolute" style={{ top: 15, left: 15, zIndex: 3 }}>
+                  <img 
+                    src={require("../../assets/images/logos/logo.png")}
+                    alt="Adysun Ventures"
+                    style={{ height: "50px", width: "auto" }}
+                  />
+                </div>
+                {/* Previous Button */}
+                <button
+                  className="btn text-white fs-3"
+                  onClick={handlePrevImage}
+                  style={{
+                    position: "absolute",
+                    left: 10,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    zIndex: 2,
+                    background: "none",
+                    width: 40,
+                    height: 40,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 0,
+                    fontSize: "2rem"
+                  }}
+                  aria-label="Previous image"
+                >
+                  <i className="fas fa-angle-left"></i>
+                </button>
+                {/* Next Button */}
+                <button
+                  className="btn text-white fs-3"
+                  onClick={handleNextImage}
+                  style={{
+                    position: "absolute",
+                    right: 10,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    zIndex: 2,
+                    background: "none",
+                    width: 40,
+                    height: 40,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 0,
+                    fontSize: "2rem"
+                  }}
+                  aria-label="Next image"
+                >
+                  <i className="fas fa-angle-right"></i>
+                </button>
+                {/* Image Container */}
+                <div style={{ 
+                  position: "relative",
+                  width: "100%",
+                  height: "85vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}>
+                  <img
+                    src={images[selectedIdx].src}
+                    alt={images[selectedIdx].alt}
+                    style={{ 
+                      maxHeight: "100%",
+                      maxWidth: "100%",
+                      objectFit: "contain",
+                      display: "block"
+                    }}
+                  />
+                </div>
+                {/* Caption and Navigation */}
+                <div className="position-absolute w-100" style={{ bottom: 20, left: 0 }}>
+                  <div className="text-center text-white mb-2" style={{ fontSize: 18, fontWeight: 500 }}>
+                    {images[selectedIdx].alt}
+                  </div>
+                  <div className="d-flex justify-content-center align-items-center gap-3">
+                    <span className="text-white-50">Previous</span>
+                    <span className="text-white">{selectedIdx + 1} / {images.length}</span>
+                    <span className="text-white-50">Next</span>
+                  </div>
                 </div>
               </div>
             </div>
