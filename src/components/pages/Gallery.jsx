@@ -61,17 +61,26 @@ const Gallery = () => {
     <>
       <Header />
       <div className="container py-5">
-        <div className="row">
+        {/* Section Heading */}
+        <div className="text-center mb-5">
+          <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
+            Gallery
+          </h2>
+          <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
+          <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
+        </div>
+        <div className="row align-items-start g-4">
           {/* Left: Scrollable Thumbnails */}
           <div className="col-md-3 mb-4 mb-md-0">
             <div
               style={{
                 maxHeight: "70vh",
                 overflowY: "auto",
-                borderRadius: 12,
-                border: "1px solid #eee",
-                background: "#fafbfc",
-                padding: 8,
+                borderRadius: 16,
+                boxShadow: "0 4px 24px 0 rgba(0,0,0,0.07)",
+                background: "#fff",
+                padding: 12,
+                border: "1px solid #f2f2f2"
               }}
               tabIndex={0}
               aria-label="Gallery thumbnails"
@@ -80,18 +89,29 @@ const Gallery = () => {
                 <div
                   key={idx}
                   className={`mb-3 rounded gallery-thumb ${selectedIdx === idx ? "border border-2 border-primary" : "border border-1 border-light"}`}
-                  style={{ cursor: "pointer", background: selectedIdx === idx ? "#fff7f3" : "#fff", transition: "background 0.2s", width: "100%", aspectRatio: "1 / 1", overflow: "hidden" }}
+                  style={{
+                    cursor: "pointer",
+                    background: selectedIdx === idx ? "#fff7f3" : "#f9f9f9",
+                    transition: "background 0.2s, box-shadow 0.2s, border 0.2s",
+                    width: "100%",
+                    aspectRatio: "1 / 1",
+                    overflow: "hidden",
+                    boxShadow: selectedIdx === idx ? "0 2px 12px 0 rgba(255,90,46,0.10)" : "none",
+                    outline: "none"
+                  }}
                   onClick={() => setSelectedIdx(idx)}
                   onKeyDown={e => (e.key === "Enter" || e.key === " ") && setSelectedIdx(idx)}
                   tabIndex={0}
                   aria-label={`Show image: ${img.alt}`}
+                  onMouseOver={e => e.currentTarget.style.boxShadow = "0 2px 12px 0 rgba(255,90,46,0.18)"}
+                  onMouseOut={e => e.currentTarget.style.boxShadow = selectedIdx === idx ? "0 2px 12px 0 rgba(255,90,46,0.10)" : "none"}
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
                     className="img-fluid rounded"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", filter: selectedIdx === idx ? "none" : "grayscale(40%)", transition: "filter 0.2s", display: "block" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", filter: selectedIdx === idx ? "none" : "grayscale(40%)", transition: "filter 0.2s" }}
                   />
                 </div>
               ))}
@@ -100,20 +120,13 @@ const Gallery = () => {
 
           {/* Right: Large Image Preview */}
           <div className="col-md-9">
-            <div className="w-100 mb-4">
-              <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
-                Gallery
-              </h2>
-              <div className="separator-line-horrizontal-medium-light3 mb-3" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
-              <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
-            </div>
             <div className="w-100">
               <img
                 src={images[selectedIdx].src}
                 alt={images[selectedIdx].alt}
                 loading="lazy"
-                className="img-fluid rounded"
-                style={{ width: "100%", height: "auto", maxHeight: "70vh", objectFit: "contain", cursor: "pointer", transition: "box-shadow 0.2s" }}
+                className="img-fluid"
+                style={{ width: "100%", height: "auto", maxHeight: "70vh", objectFit: "contain", cursor: "pointer", borderRadius: 18, transition: "box-shadow 0.2s" }}
                 onClick={() => setModalOpen(true)}
                 tabIndex={0}
                 aria-label="Open image in modal"
