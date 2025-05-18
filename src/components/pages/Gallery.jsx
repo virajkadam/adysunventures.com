@@ -99,21 +99,21 @@ const Gallery = () => {
           </div>
 
           {/* Right: Large Image Preview */}
-          <div className="col-md-9 d-flex flex-column align-items-center justify-content-center">
-            <div className="w-100 text-center mb-4">
+          <div className="col-md-9">
+            <div className="w-100 mb-4">
               <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
                 Gallery
               </h2>
-              <div className="separator-line-horrizontal-medium-light3 mx-auto mb-3" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
+              <div className="separator-line-horrizontal-medium-light3 mb-3" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
               <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
             </div>
-            <div className="w-100 d-flex justify-content-center align-items-center" style={{ minHeight: 320 }}>
+            <div className="w-100">
               <img
                 src={images[selectedIdx].src}
                 alt={images[selectedIdx].alt}
                 loading="lazy"
-                className="img-fluid rounded shadow"
-                style={{ maxHeight: 400, maxWidth: "100%", cursor: "pointer", transition: "box-shadow 0.2s" }}
+                className="img-fluid rounded"
+                style={{ width: "100%", height: "auto", maxHeight: "70vh", objectFit: "contain", cursor: "pointer", transition: "box-shadow 0.2s" }}
                 onClick={() => setModalOpen(true)}
                 tabIndex={0}
                 aria-label="Open image in modal"
