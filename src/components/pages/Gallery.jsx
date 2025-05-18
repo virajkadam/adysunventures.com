@@ -6,43 +6,43 @@ import Footer from "../common/Footer";
 const images = [
   {
     src: require("../../assets/images/gallery/2025-04-23 (1).jpg"),
-    alt: "Adysun Ventures office workspace 1"
+    alt: "Modern workspace with natural light"
   },
   {
     src: require("../../assets/images/gallery/2025-04-23 (2).jpg"),
-    alt: "Adysun Ventures office workspace 2"
+    alt: "Collaborative desk area with yellow dividers"
   },
   {
     src: require("../../assets/images/gallery/2025-04-23 (3).jpg"),
-    alt: "Adysun Ventures team area"
+    alt: "Open team area for group collaboration"
   },
   {
     src: require("../../assets/images/gallery/2025-04-23 (4).jpg"),
-    alt: "Adysun Ventures meeting room"
+    alt: "Private meeting room with window view"
   },
   {
     src: require("../../assets/images/gallery/2025-04-23.jpg"),
-    alt: "Adysun Ventures workspace overview"
+    alt: "Main office space overview"
   },
   {
     src: require("../../assets/images/gallery/2025-04-23.png"),
-    alt: "Adysun Ventures branding slide"
+    alt: "Digital branding and contact card"
   },
   {
     src: require("../../assets/images/gallery/2025-05-13 (1).jpg"),
-    alt: "Adysun Ventures office sign 1"
+    alt: "Company entrance signage"
   },
   {
     src: require("../../assets/images/gallery/2025-05-13.jpg"),
-    alt: "Adysun Ventures office sign 2"
+    alt: "Office window signage with contact details"
   },
   {
     src: require("../../assets/images/gallery/2025-05-18 (1).jpg"),
-    alt: "Adysun Ventures workspace with window"
+    alt: "Workspace corner with large window"
   },
   {
     src: require("../../assets/images/gallery/2025-05-18.jpg"),
-    alt: "Adysun Ventures workspace with computers"
+    alt: "Desk setup facing the garden"
   },
 ];
 
