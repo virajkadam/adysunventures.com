@@ -47,10 +47,10 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [selectedIdx, setSelectedIdx] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const handleThumbnailClick = (idx) => {
+  const handleImageClick = (idx) => {
     setSelectedIdx(idx);
     setModalOpen(true);
   };
@@ -60,7 +60,7 @@ const Gallery = () => {
   return (
     <>
       <Header />
-      <div className="container py-5">
+      <div className="py-5">
         {/* Section Heading */}
         <div className="text-center mb-5">
           <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
@@ -69,74 +69,33 @@ const Gallery = () => {
           <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
           <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
         </div>
-        <div className="row align-items-start g-4">
-          {/* Left: Scrollable Thumbnails */}
-          <div className="col-md-3 mb-4 mb-md-0">
-            <div
-              style={{
-                maxHeight: "70vh",
-                overflowY: "auto",
-                borderRadius: 16,
-                boxShadow: "0 4px 24px 0 rgba(0,0,0,0.07)",
-                background: "#fff",
-                padding: 12,
-                border: "1px solid #f2f2f2"
-              }}
-              tabIndex={0}
-              aria-label="Gallery thumbnails"
-            >
-              {images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className={`mb-3 rounded gallery-thumb ${selectedIdx === idx ? "border border-2 border-primary" : "border border-1 border-light"}`}
-                  style={{
-                    cursor: "pointer",
-                    background: selectedIdx === idx ? "#fff7f3" : "#f9f9f9",
-                    transition: "background 0.2s, box-shadow 0.2s, border 0.2s",
-                    width: "100%",
-                    aspectRatio: "1 / 1",
-                    overflow: "hidden",
-                    boxShadow: selectedIdx === idx ? "0 2px 12px 0 rgba(255,90,46,0.10)" : "none",
-                    outline: "none"
-                  }}
-                  onClick={() => setSelectedIdx(idx)}
-                  onKeyDown={e => (e.key === "Enter" || e.key === " ") && setSelectedIdx(idx)}
-                  tabIndex={0}
-                  aria-label={`Show image: ${img.alt}`}
-                  onMouseOver={e => e.currentTarget.style.boxShadow = "0 2px 12px 0 rgba(255,90,46,0.18)"}
-                  onMouseOut={e => e.currentTarget.style.boxShadow = selectedIdx === idx ? "0 2px 12px 0 rgba(255,90,46,0.10)" : "none"}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="img-fluid rounded"
-                    style={{ width: "100%", height: "100%", objectFit: "cover", filter: selectedIdx === idx ? "none" : "grayscale(40%)", transition: "filter 0.2s" }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: Large Image Preview */}
-          <div className="col-md-9">
-            <div className="w-100">
-              <img
-                src={images[selectedIdx].src}
-                alt={images[selectedIdx].alt}
-                loading="lazy"
-                className="img-fluid"
-                style={{ width: "100%", height: "auto", maxHeight: "70vh", objectFit: "contain", cursor: "pointer", borderRadius: 18, transition: "box-shadow 0.2s" }}
-                onClick={() => setModalOpen(true)}
+        {/* Gallery Grid */}
+        <div className="row g-4">
+          {images.map((img, idx) => (
+            <div className="col-6 d-flex flex-column align-items-center" key={idx}>
+              <div
+                className="gallery-img-wrapper mb-2 w-100"
+                style={{ cursor: "pointer", borderRadius: 16, overflow: "hidden" }}
+                onClick={() => handleImageClick(idx)}
                 tabIndex={0}
-                aria-label="Open image in modal"
-              />
+                aria-label={`Open image: ${img.alt}`}
+                onKeyDown={e => (e.key === "Enter" || e.key === " ") && handleImageClick(idx)}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="d-block mx-auto"
+                  style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px", transition: "filter 0.2s" }}
+                />
+              </div>
+              <div className="text-center text-muted small" style={{ minHeight: 40, fontWeight: 500 }}>{img.alt}</div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Modal for full image view */}
-        {modalOpen && (
+        {modalOpen && selectedIdx !== null && (
           <div
             className="modal fade show"
             tabIndex={-1}
@@ -160,6 +119,9 @@ const Gallery = () => {
                   className="img-fluid rounded shadow-lg"
                   style={{ maxHeight: "80vh", maxWidth: "90vw", display: "block", margin: "0 auto" }}
                 />
+                <div className="text-center text-white mt-3" style={{ fontSize: 18, fontWeight: 500 }}>
+                  {images[selectedIdx].alt}
+                </div>
               </div>
             </div>
           </div>
