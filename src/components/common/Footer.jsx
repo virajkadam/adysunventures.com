@@ -508,64 +508,64 @@ function Footer() {
                 <div className="col-md-6 pe-md-0">
                   <ul className="footer-list mb-2 mb-md-0 ps-0">
                     <li>
-                      <Link 
+                      <NavLink 
                         to="/about-us"
-                        className="text-decoration-none"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavigation("/about-us");
-                        }}
+                        className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
                       >
                         About
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link 
+                      <NavLink 
                         to="/contact-us"
-                        className="text-decoration-none"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavigation("/contact-us");
-                        }}
+                        className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
                       >
                         Contact
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link 
+                      <NavLink 
                         to="/services"
-                        className="text-decoration-none"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavigation("/services");
-                        }}
+                        className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
                       >
                         Services
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link 
+                      <NavLink 
                         to="/technologies"
-                        className="text-decoration-none"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavigation("/technologies");
-                        }}
+                        className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
                       >
                         Technologies
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link 
+                      <NavLink 
                         to="/careers"
-                        className="text-decoration-none"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavigation("/careers");
-                        }}
+                        className={({ isActive }) =>
+                        `nav-link custom-nav-link ${
+                          isActive ? "text-primary" : ""
+                        }`
+                      }
                       >
                         Careers
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
                     <NavLink
