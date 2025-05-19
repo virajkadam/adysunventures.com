@@ -62,21 +62,6 @@ const Gallery = () => {
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD_COUNT);
   const [preloadedImages, setPreloadedImages] = useState([]);
 
-  // Scroll to top on component mount
-  useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    };
-
-    // Small delay to ensure DOM is ready and any transitions are complete
-    const timeoutId = setTimeout(scrollToTop, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
   // Preload images in batches
   const preloadImages = useCallback((startIdx, count) => {
     const endIdx = Math.min(startIdx + count, images.length);

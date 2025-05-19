@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import SchemaMarkup from "./components/common/SchemaMarkup";
@@ -24,10 +25,34 @@ import { HelmetProvider } from 'react-helmet-async';
 import Industries from "./components/screens/industries/Industries";
 import Gallery from "./components/pages/Gallery";
 
+// ScrollToTop component that handles scrolling on route changes
+function ScrollToTop() {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+
+    // Small delay to ensure smooth transition
+    const timeoutId = setTimeout(scrollToTop, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [location.pathname]); // Re-run when the path changes
+
+  return null;
+}
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
+        {/* Scroll to top handler */}
+        <ScrollToTop />
+        
         {/* Global default meta tags */}
         <MetaTags 
           description="Expert IT solutions, custom software development, and business strategy services tailored for modern enterprises. Transform your business with our technology solutions."
