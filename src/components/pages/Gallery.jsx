@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
 
@@ -50,27 +50,120 @@ const images = [
 const GALLERY_IMG_HEIGHT = null; // e.g., '250px' or null
 const GALLERY_IMG_WIDTH = null;  // e.g., '350px' or null
 
+// Number of images to load initially and in each batch
+const INITIAL_LOAD_COUNT = 4;
+const BATCH_LOAD_COUNT = 3;
+
 const Gallery = () => {
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(Array(images.length).fill(false));
+  const [imgError, setImgError] = useState(Array(images.length).fill(false));
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD_COUNT);
+  const [preloadedImages, setPreloadedImages] = useState([]);
 
+  // Preload images in batches
+  const preloadImages = useCallback((startIdx, count) => {
+    const endIdx = Math.min(startIdx + count, images.length);
+    const imagePromises = [];
+
+    for (let i = startIdx; i < endIdx; i++) {
+      if (!preloadedImages.includes(i)) {
+        const img = new Image();
+        const promise = new Promise((resolve, reject) => {
+          img.onload = () => {
+            setImgLoaded(prev => {
+              const next = [...prev];
+              next[i] = true;
+              return next;
+            });
+            resolve(i);
+          };
+          img.onerror = () => {
+            setImgError(prev => {
+              const next = [...prev];
+              next[i] = true;
+              return next;
+            });
+            reject(i);
+          };
+        });
+        img.src = images[i].src;
+        imagePromises.push(promise);
+      }
+    }
+
+    Promise.allSettled(imagePromises).then(() => {
+      setPreloadedImages(prev => [...prev, ...Array.from({ length: count }, (_, i) => startIdx + i)]);
+    });
+  }, [preloadedImages]);
+
+  // Initial load
+  useEffect(() => {
+    preloadImages(0, INITIAL_LOAD_COUNT);
+  }, [preloadImages]);
+
+  // Intersection Observer for infinite loading
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && visibleCount < images.length) {
+          setVisibleCount(prev => {
+            const next = Math.min(prev + BATCH_LOAD_COUNT, images.length);
+            preloadImages(prev, BATCH_LOAD_COUNT);
+            return next;
+          });
+        }
+      });
+    }, {
+      rootMargin: '100px',
+      threshold: 0.1
+    });
+
+    const sentinel = document.querySelector('#gallery-sentinel');
+    if (sentinel) {
+      observer.observe(sentinel);
+    }
+
+    return () => observer.disconnect();
+  }, [visibleCount, preloadImages]);
+
+  // Modal and navigation handlers
   const handleImageClick = (idx) => {
     setSelectedIdx(idx);
     setModalOpen(true);
+    // Preload next few images when modal opens
+    const nextIdx = idx + 1;
+    if (nextIdx < images.length) {
+      preloadImages(nextIdx, 2);
+    }
   };
 
   const handleModalClose = () => setModalOpen(false);
 
   const handlePrevImage = () => {
-    setSelectedIdx(prev => (prev > 0 ? prev - 1 : images.length - 1));
+    setSelectedIdx(prev => {
+      const newIdx = prev > 0 ? prev - 1 : images.length - 1;
+      // Preload previous images
+      if (newIdx > 0) {
+        preloadImages(newIdx - 1, 1);
+      }
+      return newIdx;
+    });
   };
 
   const handleNextImage = () => {
-    setSelectedIdx(prev => (prev < images.length - 1 ? prev + 1 : 0));
+    setSelectedIdx(prev => {
+      const newIdx = prev < images.length - 1 ? prev + 1 : 0;
+      // Preload next images
+      if (newIdx < images.length - 1) {
+        preloadImages(newIdx + 1, 1);
+      }
+      return newIdx;
+    });
   };
 
-  // Add keyboard navigation for modal
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!modalOpen) return;
@@ -93,14 +186,6 @@ const Gallery = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [modalOpen]);
-
-  const handleImgLoad = idx => {
-    setImgLoaded(prev => {
-      const next = [...prev];
-      next[idx] = true;
-      return next;
-    });
-  };
 
   return (
     <>
@@ -161,28 +246,46 @@ const Gallery = () => {
           50% { opacity: 0.6; }
           100% { opacity: 1; }
         }
+        .gallery-img-error {
+          width: 100%;
+          height: 220px;
+          background: #fee;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #c33;
+          font-size: 0.9rem;
+          text-align: center;
+          padding: 1rem;
+        }
       `}</style>
       <div className="py-5">
         {/* Section Heading */}
         <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
-            Gallery
-          </h2>
-          <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
-          <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
-        </div>
+          <div className="text-center mb-5">
+            <h2 className="text-uppercase fw-bold mb-2" style={{ color: "#ff5a2e", letterSpacing: 2 }}>
+              Gallery
+            </h2>
+            <div className="separator-line-horrizontal-medium-light3 mb-3 mx-auto" style={{ background: "#ff5a2e", height: 3, width: 60 }}></div>
+            <p className="text-muted mb-0">A glimpse of our workplace and culture</p>
+          </div>
           {/* Masonry Grid */}
           <div className="gallery-masonry">
-              {images.map((img, idx) => (
+            {images.slice(0, visibleCount).map((img, idx) => (
               <div className="gallery-masonry-item" key={idx}>
-                {!imgLoaded[idx] && (
+                {!imgLoaded[idx] && !imgError[idx] && (
                   <div className="gallery-img-placeholder" />
                 )}
+                {imgError[idx] ? (
+                  <div className="gallery-img-error">
+                    <span>Failed to load image.<br />Please try refreshing the page.</span>
+                  </div>
+                ) : (
                   <img
                     src={img.src}
                     alt={img.alt}
-                    loading="lazy"
+                    loading={idx < INITIAL_LOAD_COUNT ? "eager" : "lazy"}
                     className="gallery-img-masonry"
                     style={{
                       display: imgLoaded[idx] ? 'block' : 'none',
@@ -195,11 +298,15 @@ const Gallery = () => {
                     tabIndex={0}
                     aria-label={`Open image: ${img.alt}`}
                     onKeyDown={e => (e.key === "Enter" || e.key === " ") && handleImageClick(idx)}
-                    onLoad={() => handleImgLoad(idx)}
                   />
+                )}
                 <div className="gallery-caption">{img.alt}</div>
-                </div>
-              ))}
+              </div>
+            ))}
+            {/* Sentinel element for infinite loading */}
+            {visibleCount < images.length && (
+              <div id="gallery-sentinel" style={{ height: '20px' }} />
+            )}
           </div>
         </div>
         {/* Modal for full image view */}
