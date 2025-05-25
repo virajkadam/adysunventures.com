@@ -40,7 +40,10 @@ function Header() {
                           alt="logo"
                           className="img-fluid pe-3"
                         />
-                        <span className="fw-bold mb-0 d-flex">ADYSUN VENTURES</span>
+                        <div className="d-flex flex-column">
+                          <span className="fw-bold mb-0 fs-4">ADYSUN VENTURES</span>
+                          <span className=" text-muted fs-6" style={{marginTop: '-10px'}}>Inspire. Imagine. Implement.</span>
+                        </div>
                       </div>
                     </Link>
                   </div>
