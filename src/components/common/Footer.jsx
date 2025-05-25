@@ -491,9 +491,10 @@ function Footer() {
                     alt="logo"
                     className="img-fluid pe-3"
                   />
-                  <span className="h3 text-white fw-bold mb-0">
-                    {companyInfo.name.short}
-                  </span>
+                  <div className="d-flex flex-column">
+                    <span className="fw-bold mb-0 fs-4 text-white">ADYSUN VENTURES</span>
+                    <span className="text-white fs-6" style={{marginTop: '-10px'}}>Inspire. Imagine. Implement.</span>
+                  </div>
                 </div>
               </Link>
               <p className="mt-4 display-30 text-default-color">
