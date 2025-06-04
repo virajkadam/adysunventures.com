@@ -480,7 +480,7 @@ function HomePage() {
           <div className="container py-10 position-relative" style={{ zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-xl-7 col-lg-6 mb-1-9 mb-lg-0">
-                <span className="text-white fs-2">When service matters--</span>
+                <span className="text-white fs-2">When service matters</span>
                 <h2 className="text-white display-md-10 font-weight-700 m-0">
                   <span className="text-primary">Adysun Ventures: </span>
                   <span>Premium IT Solutions & Business Strategy Services</span>
