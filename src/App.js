@@ -49,7 +49,7 @@ function ScrollToTop() {
 function App() {
   return (
     <HelmetProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         {/* Scroll to top handler */}
         <ScrollToTop />
         
