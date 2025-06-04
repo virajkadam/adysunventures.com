@@ -271,7 +271,8 @@ function Footer() {
                     transition: "all 0.2s ease",
                     display: "inline-block",
                     marginTop: "0.5rem",
-                    boxShadow: "none"
+                    boxShadow: "none",
+                    marginRight: "10px"
                   }}
                 >
                   <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i>
