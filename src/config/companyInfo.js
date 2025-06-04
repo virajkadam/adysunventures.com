@@ -62,11 +62,13 @@ const companyInfo = {
       {
         id: "location-2",
         type: "branch",
-        name: "Location 2",
+        name: "Thane Office (Mumbai Division)",
         address: {
-          line1: "Coming Soon"
+          line1: "A2, 704, KANCHANPUSHP SOCIETY",
+          line2: "Kavesar, Thane West",
+          line3: "Thane, Maharashtra - 400607"
         },
-        status: "Coming Soon"
+        // status: "Coming Soon"
       },
     ],
   },
