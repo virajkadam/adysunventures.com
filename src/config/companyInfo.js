@@ -64,9 +64,10 @@ const companyInfo = {
         type: "branch",
         name: "Thane Office (Mumbai Division)",
         address: {
-          line1: "A2, 704, Kanchanpushp Society",
-          line2: "Kavesar, Thane West,",
-          line3: "Thane, Maharashtra - 400607"
+          line1: "Adysun Ventures Pvt. Ltd.",
+          line2: "A2, 704, Kanchanpushp Society",
+          line3: "Kavesar, Thane West,",
+          line4: "Thane, Maharashtra - 400607"
         },
         googleMapsUrl:
           "https://maps.app.goo.gl/tziAu2cdmPzLm9ie9",
