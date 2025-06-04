@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "npm run optimize-images",
-    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build && npm run postbuild",
+    "build": "CI=false cross-env GENERATE_SOURCEMAP=false react-scripts build && npm run postbuild",
     "postbuild": "node ./scripts/optimize-js.js && npm run generate-cache-headers",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
