@@ -303,7 +303,7 @@ const SchemaMarkup = ({
     "ratingCount": reviews.length.toString()
   };
 
-  // Service schema for IT services
+  // Service schema for IT services - Remove reviews as they're not supported
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -336,19 +336,35 @@ const SchemaMarkup = ({
         "position": index + 1
       }))
     },
-    "termsOfService": `${siteUrl}/terms-of-service`,
-    "review": reviews.map(review => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": review.author
-      },
-      "datePublished": review.datePublished,
-      "reviewBody": review.reviewBody,
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": review.reviewRating.toString(),
-        "bestRating": "5"
+    "termsOfService": `${siteUrl}/terms-of-service`
+  };
+
+  // Create a new ReviewSchema for the reviews
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": reviews.map((review, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": businessName,
+          "@id": `${siteUrl}/#organization`
+        },
+        "author": {
+          "@type": "Person",
+          "name": review.author
+        },
+        "datePublished": review.datePublished,
+        "reviewBody": review.reviewBody,
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": review.reviewRating.toString(),
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       }
     }))
   };
@@ -379,6 +395,9 @@ const SchemaMarkup = ({
       </script>
       <script type="application/ld+json">
         {JSON.stringify(aggregateRatingSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(reviewSchema)}
       </script>
     </Helmet>
   );
