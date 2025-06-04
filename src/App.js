@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
   useLocation,
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
