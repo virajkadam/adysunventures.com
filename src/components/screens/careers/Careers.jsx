@@ -377,7 +377,28 @@ function Careers() {
                     </span>
                     <div className="cont">
                       <h6 className="mb-1 font-weight-600">{locationTwo?.name}</h6>
-                      <p className="m-0">{locationTwo?.status}</p>
+                      <p className="m-0">{locationTwo?.address.line1}</p>
+                      <p className="m-0">{locationTwo?.address.line2}</p>
+                      <p className="m-0">{locationTwo?.address.line3}</p>
+                      <p className="mb-3">{locationTwo?.address.line4}</p>
+                      <div className="d-flex gap-2">
+                        <a href={locationTwo?.googleMapsUrl} target="_blank" rel="noopener noreferrer" 
+                          style={{
+                            backgroundColor: "#ff5a2e",
+                            color: "#fff",
+                            fontWeight: 500,
+                            padding: "0.25rem 0.75rem",
+                            fontSize: "0.9rem",
+                            border: "none",
+                            borderRadius: "15px",
+                            transition: "all 0.2s ease",
+                            display: "inline-block",
+                            marginTop: "0.5rem",
+                            boxShadow: "none"
+                          }}>
+                          <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i> Google Maps
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="item bg-white">
