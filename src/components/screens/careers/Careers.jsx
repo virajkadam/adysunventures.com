@@ -398,6 +398,23 @@ function Careers() {
                           }}>
                           <i className="fas fa-map-marker-alt" style={{marginRight: '6px'}}></i> Google Maps
                         </a>
+                        <a href="https://g.co/kgs/C5Fe6uz" target="_blank" rel="noopener noreferrer" 
+                          style={{
+                            backgroundColor: "#ff5a2e",
+                            color: "#fff",
+                            fontWeight: 500,
+                            padding: "0.25rem 0.75rem",
+                            fontSize: "0.9rem",
+                            border: "none",
+                            borderRadius: "15px",
+                            transition: "all 0.2s ease",
+                            display: "inline-block",
+                            marginTop: "0.5rem",
+                            boxShadow: "none",
+                            marginLeft: "10px"
+                          }}>
+                          <i className="fab fa-google" style={{marginRight: '6px'}}></i> Google Search
+                        </a>
                       </div>
                     </div>
                   </div>
